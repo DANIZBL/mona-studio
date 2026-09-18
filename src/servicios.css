@@ -1,0 +1,700 @@
+/* =====================================================
+   SERVICIO
+===================================================== */
+
+.servicio {
+  width: min(1200px, 90%);
+
+  margin: 0 auto;
+
+  padding: 70px 0 100px;
+}
+
+/* =====================================================
+   PRESENTACIÓN
+===================================================== */
+
+.servicio-presentacion {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  margin-bottom: 100px;
+}
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.servicio-presentacion-info {
+  max-width: 520px;
+}
+
+.servicio-categoria {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--color-rojo);
+
+  font-family: var(--font-secundaria);
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.servicio-presentacion-info h1 {
+  margin-bottom: 25px;
+
+  color: var(--color-rojo);
+
+  font-family: var(--font-secundaria);
+
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+  font-weight: 600;
+
+  line-height: 1.05;
+}
+
+.servicio-presentacion-info p {
+  max-width: 500px;
+
+  color: #333;
+
+  font-family: var(--font-secundaria);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+/* =====================================================
+   FOTO DE PRESENTACIÓN
+===================================================== */
+
+.servicio-presentacion-imagen {
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 1 / 1;
+  margin-left: auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.servicio-presentacion-imagen img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* =====================================================
+   PROFESIONAL
+===================================================== */
+
+.servicio-profesional {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 45px 40px;
+  background: var(--color-rosa);
+  border-radius: 10px;
+}
+
+.profesional-contenido {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 2000px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.profesional-foto {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.profesional-foto img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.profesional-info {
+  max-width: 1000px;
+}
+
+.profesional-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--color-rojo);
+
+  font-family: var(--font-secundaria);
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.profesional-info h2 {
+  margin-bottom: 20px;
+  color: var(--color-rojo);
+  font-family: var(--font-secundaria);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: 10px;
+}
+
+.profesional-info p {
+  color: var(--color-rojo);
+  font-family: var(--font-secundaria);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.servicio-galeria-section {
+  width: 100%;
+}
+
+.galeria-titulo {
+  margin-bottom: 35px;
+}
+
+.galeria-titulo span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--color-rojo);
+
+  font-family: var(--font-secundaria);
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.galeria-titulo h2 {
+  color: var(--color-rojo);
+
+  font-family: var(--font-secundaria);
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  font-weight: 600;
+}
+
+/* =====================================================
+   GALERÍA DESKTOP
+===================================================== */
+
+.servicio-galeria {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+/* =====================================================
+   CADA ELEMENTO
+===================================================== */
+
+.galeria-item {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 3 / 4;
+
+  overflow: hidden;
+
+  background: #eee;
+
+  cursor: pointer;
+}
+
+/* =====================================================
+   FOTO / VIDEO
+===================================================== */
+
+.galeria-item img,
+.galeria-item video {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.galeria-item:hover img,
+.galeria-item:hover video {
+  transform: scale(1.05);
+}
+
+/* =====================================================
+   ICONO VIDEO
+===================================================== */
+
+.galeria-video-icon {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 55px;
+
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  color: white;
+
+  font-size: 20px;
+
+  pointer-events: none;
+}
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.galeria-lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.94);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.galeria-lightbox.activo {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+}
+
+/* =====================================================
+   CONTENIDO LIGHTBOX
+===================================================== */
+
+.lightbox-contenido {
+  width: min(1000px, 85vw);
+
+  height: min(85vh, 850px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.lightbox-media {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.lightbox-media img,
+.lightbox-media video {
+  max-width: 100%;
+
+  max-height: 100%;
+
+  width: auto;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =====================================================
+   CERRAR
+===================================================== */
+
+.lightbox-cerrar {
+  position: absolute;
+
+  top: 25px;
+
+  right: 30px;
+
+  width: 50px;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 2;
+}
+
+.lightbox-cerrar:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.lightbox-navegacion {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 55px;
+
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  z-index: 2;
+}
+
+.lightbox-navegacion:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-anterior {
+  left: 25px;
+}
+
+.lightbox-siguiente {
+  right: 25px;
+}
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body.lightbox-abierto {
+  overflow: hidden;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  .servicio-presentacion {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    margin-bottom: 70px;
+  }
+
+  .servicio-presentacion-info {
+    max-width: 650px;
+  }
+
+  .servicio-presentacion-imagen {
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+
+  .servicio-profesional {
+    padding: 50px 40px;
+  }
+
+  .profesional-contenido {
+    grid-template-columns: 230px 1fr;
+
+    gap: 40px;
+  }
+
+  .profesional-foto {
+    width: 230px;
+  }
+
+  .servicio-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+  .servicio {
+    width: 90%;
+
+    padding: 40px 0 70px;
+  }
+
+  /* ==============================================
+       PRESENTACIÓN
+    ============================================== */
+
+  .servicio-presentacion {
+    gap: 30px;
+
+    margin-bottom: 60px;
+  }
+
+  .servicio-presentacion-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .servicio-presentacion-info p {
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+  }
+
+  /* ==============================================
+       PROFESIONAL
+    ============================================== */
+
+  .servicio-profesional {
+    width: calc(100% + 20%);
+
+    margin-left: -10%;
+
+    margin-bottom: 65px;
+
+    padding: 50px 8%;
+  }
+
+  .profesional-contenido {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    text-align: center;
+  }
+
+  .profesional-foto {
+    width: 190px;
+
+    margin: 0 auto;
+  }
+
+  .profesional-info {
+    max-width: none;
+  }
+
+  .profesional-info h2 {
+    font-size: 2rem;
+  }
+
+  .profesional-info p {
+    font-size: 0.95rem;
+  }
+
+  /* ==============================================
+       GALERÍA MOBILE
+    ============================================== */
+
+  .galeria-titulo {
+    margin-bottom: 25px;
+  }
+
+  .galeria-titulo h2 {
+    font-size: 2rem;
+  }
+
+  .servicio-galeria {
+    display: flex;
+
+    gap: 12px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    -webkit-overflow-scrolling: touch;
+
+    padding-bottom: 10px;
+
+    scrollbar-width: none;
+  }
+
+  /*
+        Ocultar scrollbar en Chrome,
+        Edge y Safari.
+    */
+
+  .servicio-galeria::-webkit-scrollbar {
+    display: none;
+  }
+
+  .galeria-item {
+    flex: 0 0 75vw;
+
+    aspect-ratio: 1 / 1;
+
+    scroll-snap-align: start;
+  }
+
+  /* ==============================================
+       LIGHTBOX MOBILE
+    ============================================== */
+
+  .galeria-lightbox {
+    padding: 10px;
+  }
+
+  .lightbox-contenido {
+    width: 88vw;
+
+    height: 75vh;
+  }
+
+  .lightbox-navegacion {
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 22px;
+  }
+
+  .lightbox-anterior {
+    left: 8px;
+  }
+
+  .lightbox-siguiente {
+    right: 8px;
+  }
+
+  .lightbox-cerrar {
+    top: 10px;
+
+    right: 10px;
+
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 28px;
+  }
+}
+
+/* ==============================================
+ESPECIFICO DE CADA APGINA
+    ============================================== */
+
+/* ==============================================
+Limpiezas faciales
+============================================== */
+
+.limpieza_facial {
+  margin-bottom: 25px;
+}
+
+.limpieza_titulo {
+  margin-bottom: 5px;
+  color: var(--color-rojo);
+  margin: 15px 15px;
+  font-family: var(--font-secundaria);
+}
+
+.limpieza_facial p {
+  margin-top: 5px;
+  margin: 15px 15px;
+}
+
+.limpieza_contenedor {
+  border: solid 3px var(--color-rojo);
+  background-color: var(--color-rosa);
+  border-radius: 15px;
+  margin: 5px;
+  gap: 5px;
+  box-shadow: #333;
+}
+/* ================================================== */

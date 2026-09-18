@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/variables.css" />
+    <link rel="stylesheet" href="./src/header.css" />
+    <link rel="stylesheet" href="./src/footer.css" />
+    <link rel="stylesheet" href="./src/novias.css" />
+  </head>
+  <body>
+    <!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <a href="index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
+
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="cart">
+            <button class="cart-icon">
+              <img src="./src/img/carrito.svg" alt="" />
+            </button>
+
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="boton" href="index.html">INICIO</a>
+        <a class="boton" href="#servicios">SERVICIOS</a>
+        <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        <a class="boton" href="productos.html">TIENDA</a>
+
+        <a class="boton" href="#">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="./src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->
+    <main class="novias-page">
+      <!-- ======================================================
+                            HERO
+    ======================================================= -->
+
+      <section class="novias-hero">
+        <!-- IMÁGENES DEL HERO -->
+        <div class="novias-hero-images">
+          <img
+            src="./src/img/noviasheader1.webp"
+            alt="Novia MONA Studio"
+            class="novias-hero-image active"
+          />
+
+          <img
+            src="./src/img/noviasheader2.webp"
+            alt="Novia MONA Studio"
+            class="novias-hero-image"
+          />
+
+          <img
+            src="./src/img/noviasheader3.webp"
+            alt="Novia MONA Studio"
+            class="novias-hero-image"
+          />
+        </div>
+
+        <!-- OVERLAY -->
+        <div class="novias-hero-overlay"></div>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="novias-container">
+          <div class="novias-hero-content">
+            <span class="novias-subtitle"> MONA STUDIO </span>
+
+            <h1>
+              Tu día.<br />
+              Tu momento.<br />
+              Tu experiencia.
+            </h1>
+
+            <p>
+              Viví una experiencia de maquillaje y peinado completamente
+              personalizada para disfrutar uno de los días más importantes de tu
+              vida.
+            </p>
+
+            <a href="#experiencia-mona" class="novias-btn"> LO QUIERO! </a>
+          </div>
+        </div>
+
+        <!-- TESTIMONIO -->
+        <div class="novias-hero-testimonial">
+          <span>TESTIMONIO DE UNA NOVIA</span>
+
+          <blockquote>
+            "No fue solamente maquillaje y peinado. Fue uno de los momentos más
+            lindos de todo nuestro casamiento."
+          </blockquote>
+        </div>
+
+        <!-- SCROLL -->
+        <div class="novias-scroll"></div>
+      </section>
+
+      <!-- ======================================================
+                        INTRODUCCIÓN
+    ======================================================= -->
+
+      <section class="novias-intro">
+        <div class="novias-container">
+          <div class="novias-intro-grid">
+            <div class="novias-intro-text">
+              <span class="section-subtitle"> CADA NOVIA ES ÚNICA </span>
+
+              <h2>Una experiencia creada especialmente para vos.</h2>
+
+              <p>
+                En MONA entendemos que el maquillaje y el peinado de novia no
+                son solamente un servicio. Son parte de uno de los momentos más
+                importantes de tu vida.
+              </p>
+
+              <p>
+                Cada propuesta se diseña de forma personalizada, teniendo en
+                cuenta tu estilo, tu vestido, el tipo de ceremonia y la esencia
+                que querés transmitir.
+              </p>
+            </div>
+
+            <div class="novias-intro-image">
+              <img src="./src/img/novias2.webp" alt="Novia" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+              NOS ADAPTAMOS
+====================================================== -->
+
+      <section class="novias-vision">
+        <div class="novias-vision-container">
+          <h2>
+            NOS ADAPTAMOS A TU VISIÓN PARA ESE DÍA, DONDE TE PREPARES AHÍ
+            ESTAREMOS
+          </h2>
+
+          <p>
+            Cada novia vive su gran día de una manera única, por eso llevamos
+            nuestro servicio hasta donde lo necesites. Podemos atenderte en
+            nuestro estudio, en la comodidad de tu hogar, en el hotel donde te
+            prepares o incluso viajar a otras localidades para acompañarte en
+            ese momento tan especial.
+          </p>
+        </div>
+      </section>
+      <!-- ======================================================
+                EXPERIENCIA MONA
+====================================================== -->
+
+      <section class="novias-experience" id="experiencia-mona">
+        <div class="novias-container">
+          <div class="experience-grid">
+            <div class="experience-image">
+              <img src="./src/img/novias3.webp" alt="Experiencia Mona" />
+            </div>
+
+            <div class="experience-content">
+              <span class="section-subtitle"> EXPERIENCIA MONA </span>
+
+              <h2>
+                Una preparación exclusiva junto a las personas que más querés.
+              </h2>
+
+              <p>
+                Un espacio pensado para que el momento previo a tu evento sea
+                tan especial como el evento en sí. La Experiencia MONA está
+                diseñada para novias y sus acompañantes que desean prepararse
+                juntas en un ambiente íntimo, cuidado y exclusivo.
+              </p>
+
+              <p>
+                Durante un rango horario reservado, el estudio se adapta
+                completamente para ustedes, creando una atmósfera cálida,
+                estética y personalizada.
+              </p>
+
+              <p>
+                Podés venir con tus amigas, familiares o personas más cercanas y
+                compartir desde adentro uno de los momentos más importantes del
+                día. Nos ocupamos de cada detalle para que solo tengas que
+                disfrutar, relajarte y vivir la experiencia.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-includes">
+            <h3>¿Qué incluye?</h3>
+
+            <div class="experience-includes-grid">
+              <div class="include-item">Reserva exclusiva del estudio.</div>
+
+              <div class="include-item">
+                Ambientación especial personalizada.
+              </div>
+
+              <div class="include-item">
+                Servicios de maquillaje y peinado para la novia y su grupo.
+              </div>
+
+              <div class="include-item">
+                Bebidas y detalle de bienvenida (incluye brindis con espumante).
+              </div>
+
+              <div class="include-item">
+                Asistencia y acompañamiento durante toda la preparación.
+              </div>
+
+              <div class="include-item">
+                Espacio ideal para fotos y contenido previo al evento.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+                        GALERÍA
+    ======================================================= -->
+
+      <section class="novias-gallery">
+        <div class="novias-container">
+          <span class="section-subtitle"> GALERÍA </span>
+
+          <h2>Inspiración para tu gran día.</h2>
+
+          <div class="gallery-grid">
+            <img src="./src/img/novias4.webp" alt="" />
+            <img src="./src/img/novias2.webp" alt="" />
+            <img src="./src/img/novias7.webp" alt="" />
+            <img src="./src/img/novias1.webp" alt="" />
+
+            <img src="./src/img/novias9.webp" alt="" />
+            <img src="./src/img/novias5.webp" alt="" />
+            <img src="./src/img/novias6.webp" alt="" />
+            <img src="./src/img/novias8.webp" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+                        PROCESO
+    ======================================================= -->
+
+      <section class="novias-process">
+        <div class="novias-container">
+          <span class="section-subtitle"> ¿CÓMO TRABAJAMOS? </span>
+
+          <h2>Tu experiencia paso a paso.</h2>
+
+          <div class="process-grid">
+            <article>
+              <span>01</span>
+
+              <h3>Contacto</h3>
+
+              <p>Contanos cómo imaginás tu gran día.</p>
+            </article>
+
+            <article>
+              <span>02</span>
+
+              <h3>Propuesta</h3>
+
+              <p>Diseñamos una experiencia personalizada.</p>
+            </article>
+
+            <article>
+              <span>03</span>
+
+              <h3>Prueba (Opcional)</h3>
+
+              <p>Definimos maquillaje y peinado ideales.</p>
+            </article>
+
+            <article>
+              <span>04</span>
+
+              <h3>Tu día</h3>
+
+              <p>Solo disfrutá de cada momento.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+                        TESTIMONIO
+    ======================================================= -->
+
+      <section class="novias-testimonial">
+        <div class="novias-container">
+          <blockquote>
+            "No fue solamente maquillaje y peinado. Fue uno de los momentos más
+            lindos de todo nuestro casamiento."
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ======================================================
+                        CTA FINAL
+    ======================================================= -->
+
+      <section class="novias-cta">
+        <div class="novias-container">
+          <h2>
+            Cada novia es única.<br />
+            Su experiencia también debería serlo.
+          </h2>
+
+          <p>
+            Escribinos y armemos juntas una propuesta pensada exclusivamente
+            para vos.
+          </p>
+
+          <a href="#" class="novias-btn"> SOLICITAR INFORMACIÓN </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- SEGUINOS -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">SEGUINOS</h3>
+          <div class="footer-content">
+            <div class="social-icons">
+              <img
+                src="./src/img/redes1.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">NAVEGACIÓN</h3>
+          <div class="footer-content">
+            <ul>
+              <li><a href="#">INICIO</a></li>
+              <li><a href="#">SERVICIOS</a></li>
+              <li><a href="#">TIENDA</a></li>
+              <li><a href="#">CURSOS</a></li>
+              <li><a href="#">INFO Y CONTACTO</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">CONTACTÁNOS</h3>
+          <div class="footer-content">
+            <p>WHATSAPP</p>
+            <p>EMAIL</p>
+            <p>DIRECCION</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ======================================================
+                GALERÍA MODAL
+====================================================== -->
+
+    <div class="gallery-modal" id="galleryModal">
+      <button
+        class="gallery-close"
+        id="galleryClose"
+        aria-label="Cerrar galería"
+      >
+        &times;
+      </button>
+
+      <button
+        class="gallery-arrow gallery-prev"
+        id="galleryPrev"
+        aria-label="Imagen anterior"
+      >
+        &#10094;
+      </button>
+
+      <div class="gallery-modal-content">
+        <img id="galleryModalImage" class="gallery-modal-image" src="" alt="" />
+      </div>
+
+      <button
+        class="gallery-arrow gallery-next"
+        id="galleryNext"
+        aria-label="Siguiente imagen"
+      >
+        &#10095;
+      </button>
+
+      <div class="gallery-counter" id="galleryCounter"></div>
+    </div>
+    <script src="./js/header.js"></script>
+    <script src="./js/novias.js"></script>
+  </body>
+</html>

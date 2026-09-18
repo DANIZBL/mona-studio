@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/servicios.css" />
+    <link rel="stylesheet" href="../src/variables.css" />
+    <link rel="stylesheet" href="../src/header.css" />
+      <link rel="stylesheet" href="../src/footer.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+      <!-- ============================HEDER========================== -->
+      <header class="main-header">
+        <div class="mobile-header">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <a href="index.html">
+            <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+          </a>
+
+          <div class="mobile-actions">
+            <button class="mobile-search-toggle">
+              <img src="./src/img/lupa.svg" alt="Buscar" />
+            </button>
+
+            <div class="cart">
+              <button class="cart-icon">
+                <img src="./src/img/carrito.svg" alt="" />
+              </button>
+
+              <span class="cart-count">0</span>
+            </div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a class="boton" href="../index.html">INICIO</a>
+          <a class="boton" href="#servicios">SERVICIOS</a>
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+          <a class="boton" href="productos.html">TIENDA</a>
+
+          <a class="boton" href="#">INFO Y CONTACTO</a>
+
+          <div class="search-container">
+            <button class="search-toggle">
+              <img src="../src/img/lupa.svg" alt="Buscar" />
+            </button>
+
+            <div class="search-box">
+              <input
+                type="text"
+                id="header-search"
+                placeholder="Buscar productos..."
+                autocomplete="off"
+              />
+
+              <div id="search-results"></div>
+            </div>
+          </div>
+
+          <div class="cart">
+            <button class="cart-icon">
+              <img src="../src/img/carrito.svg" alt="" />
+            </button>
+            <span class="cart-count">0</span>
+          </div>
+        </nav>
+      </header>
+      <div class="overlay"></div>
+
+    <!-- =================================================
+         CONTENIDO PRINCIPAL
+    ================================================== -->
+    <main class="servicio">
+        <!-- ================================================
+             PRESENTACIÓN DEL SERVICIO
+        ================================================== -->
+
+        <section class="servicio-presentacion">
+            <!-- TEXTO -->
+            <div class="servicio-presentacion-info">
+                <h1 id="servicioTitulo">SPA FACIAL</h1>
+
+                <p id="servicioDescripcion">Cada tratamiento se adapta a las
+                    necesidades de tu piel y es realizado por profesionales de 
+                    la cosmetología y la dermocosmiatría.
+                </p>
+
+            </div>
+            <!-- FOTO 1080 x 1080 -->
+            <div class="servicio-presentacion-imagen">
+                <img  id="servicioPortada" src="../src/img_servicios/img_limpieza1.webp" alt="">
+            </div>
+        </section>
+
+        <!-- =================================================
+             PROFESIONAL
+        ================================================== -->
+
+        <section class="servicio-profesional">
+            <div class="profesional-contenido">
+                <!-- FOTO PROFESIONAL -->
+                <div class="profesional-foto">
+                    <img
+                        id="profesionalFoto"
+                        src="../src/img_servicios/profesional_regi.webp"
+                        alt="">
+                </div>
+                <!-- INFORMACIÓN -->
+                <div class="profesional-info">
+                    <span class="profesional-label">
+                        Profesional
+                    </span>
+                    <h2 id="profesionalNombre">
+                      Hola! Soy Regi
+                    </h2>
+                    <p>
+                     Soy dermocosmiatra y esteticista, y me dedico a la estética desde 2017. Me formé en la Universidad de Morón, en Buenos Aires, y a lo largo de estos años continué capacitándome en distintas técnicas.
+                      Actualmente trabajo especialmente con pestañas y cejas, realizando depilación con hilo, laminado de cejas y lifting de pestañas, con técnica parcializada y técnica coreana. Tanto en el lifting como en el laminado priorizo el cuidado y la salud de las pestañas y cejas, buscando realzar su belleza natural y lograr un resultado duradero.
+                      Me gusta trabajar cada servicio de manera personalizada y prestar atención a los detalles, buscando que el resultado se adapte a las características de cada persona.
+                    </p>
+                    <p id="profesionalDescripcion"></p>
+                </div>
+            </div>
+        </section>
+
+            <section class="servicio-profesional">
+            <div class="profesional-contenido">
+                <!-- FOTO PROFESIONAL -->
+                <div class="profesional-foto">
+                    <img
+                        id="profesionalFoto"
+                        src="../src/img_servicios/profesional_aixa.webp"
+                        alt="">
+                </div>
+                <!-- INFORMACIÓN -->
+                <div class="profesional-info">
+                    <span class="profesional-label">
+                        Profesional
+                    </span>
+                    <h2 id="profesionalNombre">
+                      Hola! Soy Aixa
+                    </h2>
+                    <p>
+                     ...
+                    </p>
+                    <p id="profesionalDescripcion"></p>
+                </div>
+            </div>
+        </section>
+
+       <!-- ================================================
+             GALERÍA
+        =================================================== -->
+
+        <section class="servicio-galeria-section">
+            <div class="galeria-titulo">
+                <span>GALERÍA</span>
+                <h2>Algunos de nuestros trabajos</h2>
+            </div>
+            <div class="servicio-galeria">
+            
+                <!-- VIDEO-->
+                <div class="galeria-item">
+                    <video
+                        src="../src/img_servicios/video_limpieza1.mp4"
+                        muted
+                        loop
+                        autoplay
+                        playsinline
+                        preload="metadata"
+                    ></video>
+                </div>
+                   <!-- FOTO 1 -->
+                <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/img_limpieza2.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
+                </div>
+
+                <!-- FOTO 3-->
+              <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/img_limpieza3.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
+                </div>
+
+                <div class="galeria-item">
+                    <video
+                        src="../src/img_servicios/video_limpieza2.mp4"
+                        muted
+                        loop
+                        autoplay
+                        playsinline
+                        preload="metadata"
+                    ></video>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =================================================
+         LIGHTBOX
+    ================================================== -->
+
+    <div
+        id="galeriaLightbox"
+        class="galeria-lightbox"
+        aria-hidden="true">
+        <!-- CERRAR -->
+
+        <button
+            id="lightboxCerrar"
+            class="lightbox-cerrar"
+            type="button"
+            aria-label="Cerrar galería">
+            &times;
+        </button>
+        <!-- ANTERIOR -->
+
+        <button
+            id="lightboxAnterior"
+            class="lightbox-navegacion lightbox-anterior"
+            type="button"
+            aria-label="Imagen anterior">
+            &#10094;
+        </button>
+
+        <!-- CONTENIDO -->
+        <div class="lightbox-contenido">
+
+            <div
+                id="lightboxMedia"
+                class="lightbox-media">
+            </div>
+        </div>
+        <!-- SIGUIENTE -->
+        <button
+            id="lightboxSiguiente"
+            class="lightbox-navegacion lightbox-siguiente"
+            type="button"
+            aria-label="Imagen siguiente">
+            &#10095;
+        </button>
+    </div>
+
+        <footer class="footer">
+      <div class="footer-container">
+        <!-- SEGUINOS -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">SEGUINOS</h3>
+          <div class="footer-content">
+            <div class="social-icons">
+              <img
+                src="../src/img/redes1.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">NAVEGACIÓN</h3>
+          <div class="footer-content">
+            <ul>
+              <li><a href="#">INICIO</a></li>
+              <li><a href="#">SERVICIOS</a></li>
+              <li><a href="#">TIENDA</a></li>
+              <li><a href="#">CURSOS</a></li>
+              <li><a href="#">INFO Y CONTACTO</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">CONTACTÁNOS</h3>
+          <div class="footer-content">
+            <p>WHATSAPP</p>
+            <p>EMAIL</p>
+            <p>DIRECCION</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/seervicios.js"></script>
+        <script src="../js/header.js"></script>
+  </body>
+</html>

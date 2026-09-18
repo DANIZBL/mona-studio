@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/variables.css" />
+    <link rel="stylesheet" href="./src/quinceañeras.css" />
+    <link rel="stylesheet" href="./src/header.css" />
+    <link rel="stylesheet" href="./src/footer.css" />
+  </head>
+  <body>
+    <!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <a href="index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
+
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="cart">
+            <button class="cart-icon">
+              <img src="./src/img/carrito.svg" alt="" />
+            </button>
+
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="boton" href="index.html">INICIO</a>
+        <a class="boton" href="#servicios">SERVICIOS</a>
+        <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        <a class="boton" href="productos.html">TIENDA</a>
+
+        <a class="boton" href="#">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="./src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->
+    <!-- ===========================================
+                QUINCEAÑERAS
+============================================ -->
+
+    <section class="quinceaneras-section">
+      <!-- =========================
+       PRESENTACIÓN
+  ========================== -->
+
+      <div class="quinceaneras-presentacion">
+        <!-- IMAGEN -->
+        <div class="quinceaneras-imagen">
+          <img
+            src="./src/img/quincieañeras1.webp"
+            alt="Maquillaje y peinado para quinceañeras"
+          />
+        </div>
+
+        <!-- TÍTULO + FRASE -->
+        <div class="quinceaneras-titulo">
+          <h1>QUINCEAÑERAS</h1>
+
+          <p class="quinceaneras-frase">
+            Un look pensado para acompañarte en cada emoción.<br />
+            Belleza que se siente, se disfruta y se recuerda.
+          </p>
+
+          <div class="quinceaneras-descripcion">
+            <p>
+              Creamos looks que acompañan este momento único, combinando
+              tendencia, frescura y personalidad. Cada maquillaje y peinado se
+              adapta al estilo de la quinceañera, al vestido y al tipo de
+              celebración, logrando un resultado armónico, prolijo y duradero.
+            </p>
+
+            <p>
+              Trabajamos con productos de primeras marcas y técnicas
+              profesionales que garantizan comodidad, definición y larga
+              duración, para que pueda disfrutar su noche con seguridad y sin
+              retoques constantes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== PROCESO QUINCEAÑERAS ======================================================= -->
+    <section class="egresadas-process">
+      <div class="egresadas-container">
+        <span class="egresadas-section-subtitle"> ¿CÓMO TRABAJAMOS? </span>
+        <h2>Tu experiencia paso a paso.</h2>
+        <div class="egresadas-process-grid">
+          <article>
+            <span>01</span>
+            <h3>Contacto</h3>
+            <p>Contanos cómo imaginás tu look para esa noche tan especial.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Propuesta</h3>
+            <p>
+              Diseñamos una propuesta de maquillaje y peinado pensada para vos.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Preparación</h3>
+            <p>Definimos cada detalle para que te sientas cómoda y segura.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Tu gran noche</h3>
+            <p>Disfrutá, celebrá y viví cada momento sintiéndote increíble.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="egresadas-reviews">
+      <div class="egresadas-reviews-container">
+        <span class="egresadas-section-subtitle">
+          LO QUE DICEN DE NOSOTRAS
+        </span>
+
+        <h2>Ellas ya vivieron la experiencia.</h2>
+
+        <div class="review-whatsapp">
+          <div class="review-message">
+            <p id="review-text"></p>
+
+            <div class="review-info">
+              <strong id="review-name"></strong>
+              <span id="review-time"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-dots" id="review-dots"></div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                GALERÍA QUINCEAÑERAS
+============================================ -->
+
+    <section class="quinceaneras-gallery-section">
+      <div class="quinceaneras-gallery-header">
+        <h2>Momentos que inspiran</h2>
+
+        <p>Looks pensados para una noche inolvidable.</p>
+      </div>
+
+      <div id="quinceanerasGallery" class="quinceaneras-gallery"></div>
+    </section>
+
+    <!-- ====================FOOTER================================== -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- SEGUINOS -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">SEGUINOS</h3>
+          <div class="footer-content">
+            <div class="social-icons">
+              <img
+                src="./src/img/redes1.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">NAVEGACIÓN</h3>
+          <div class="footer-content">
+            <ul>
+              <li><a href="#">INICIO</a></li>
+              <li><a href="#">SERVICIOS</a></li>
+              <li><a href="#">TIENDA</a></li>
+              <li><a href="#">CURSOS</a></li>
+              <li><a href="#">INFO Y CONTACTO</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">CONTACTÁNOS</h3>
+          <div class="footer-content">
+            <p>WHATSAPP</p>
+            <p>EMAIL</p>
+            <p>DIRECCION</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/quinceañeras.js"></script>
+  </body>
+</html>

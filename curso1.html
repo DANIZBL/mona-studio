@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/variables.css" />
+    <link rel="stylesheet" href="./src/curso1.css" />
+    <link rel="stylesheet" href="./src/header.css" />
+    <link rel="stylesheet" href="./src/footer.css" />
+  </head>
+  <body>
+    <!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <a href="index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
+
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="cart">
+            <button class="cart-icon">
+              <img src="./src/img/carrito.svg" alt="" />
+            </button>
+
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="boton" href="index.html">INICIO</a>
+        <a class="boton" href="#servicios">SERVICIOS</a>
+        <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        <a class="boton" href="productos.html">TIENDA</a>
+
+        <a class="boton" href="#">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="./src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->
+
+    <!-- ===========================================
+                HERO
+    ============================================ -->
+
+    <section class="hero reveal">
+      <div class="hero-container">
+        <div class="hero-image">
+          <img
+            src="./src/img/curso1_1.webp"
+            alt="Curso Profesional de Maquillaje"
+          />
+        </div>
+
+        <div class="hero-content">
+          <span class="hero-tag"> CURSO PROFESIONAL </span>
+
+          <h1>
+            MAQUILLAJE
+            <br />
+            PROFESIONAL
+            <br />
+            INICIAL
+          </h1>
+
+          <p class="hero-description">
+            Un programa diseñado para convertirte en
+            <strong>Make-Up Artist Profesional</strong>, integrando teoría,
+            práctica y técnicas avanzadas. Aprenderás desde las bases esenciales
+            hasta la creación de looks personalizados, desarrollando criterio,
+            creatividad y seguridad profesional.
+          </p>
+
+          <div class="hero-benefits">
+            <div class="benefit-card">✓ 4 Meses</div>
+            <div class="benefit-card">✓ 16 clases presenciales</div>
+            <div class="benefit-card">✓ 100% Práctico</div>
+
+            <div class="benefit-card">✓ Materiales incluidos</div>
+
+            <div class="benefit-card">✓ Certificación profesional</div>
+
+            <div class="benefit-card">✓ Seguimiento personalizado</div>
+          </div>
+
+          <div class="hero-info">
+            <span> 🕒 Sábados · 9 a 13 hs </span>
+
+            <span> 📍 Mona Studio </span>
+          </div>
+
+          <a href="#contacto" class="hero-button"> QUIERO INSCRIBIRME </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                INFORMACIÓN
+    ============================================ -->
+
+    <section class="course-info reveal">
+      <div class="section-header">
+        <span>INFORMACIÓN DEL CURSO</span>
+
+        <h2>Todo lo que necesitás saber</h2>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <div class="info-icon">📅</div>
+
+          <h3>Duración</h3>
+
+          <p>4 meses</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon">🎓</div>
+
+          <h3>Modalidad</h3>
+
+          <p>Presencial</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon">🚀</div>
+
+          <h3>Inicio</h3>
+
+          <p>18 de Abril</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon">🗓</div>
+
+          <h3>Días</h3>
+
+          <p>Sábados</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon">🕒</div>
+
+          <h3>Horario</h3>
+
+          <p>9 a 13 hs</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon">📍</div>
+
+          <h3>Ubicación</h3>
+
+          <p>Mona Studio</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================= GALERÍA VIDEOS PERFECCIONAMIENTO ========================================================= -->
+    <section class="perfeccionamiento-videos-gallery-section">
+      <div class="perfeccionamiento-videos-gallery-header">
+        <h2>Ellas ya vivieron la experiencia</h2>
+      </div>
+      <div
+        id="perfeccionamientoVideosGallery"
+        class="perfeccionamiento-videos-gallery"
+      ></div>
+    </section>
+
+    <!-- ===========================================
+            PRESENTACIÓN
+    ============================================ -->
+
+    <section class="presentation reveal">
+      <div class="presentation-header">
+        <span>NUESTRA PROPUESTA</span>
+
+        <h2>Una formación completa para comenzar tu carrera profesional.</h2>
+
+        <p>
+          Un recorrido intensivo donde aprenderás maquillaje profesional desde
+          cero, combinando teoría, práctica y acompañamiento personalizado en
+          cada clase.
+        </p>
+      </div>
+
+      <div class="presentation-grid">
+        <article class="presentation-card">
+          <span class="module-number"> #1 </span>
+
+          <h3>THE BASICS</h3>
+
+          <p>
+            Todo lo necesario para dominar la preparación de la piel,
+            colorimetría, herramientas, visagismo y las bases del maquillaje.
+          </p>
+        </article>
+
+        <article class="presentation-card">
+          <span class="module-number"> #2 </span>
+
+          <h3>THE FOUNDATIONS</h3>
+
+          <p>
+            Técnicas profesionales para ojos, esfumados, delineados, smokey
+            eyes, pigmentos y tendencias.
+          </p>
+        </article>
+
+        <article class="presentation-card">
+          <span class="module-number"> #3 </span>
+
+          <h3>LIKE A PRO</h3>
+
+          <p>
+            Novias, quinceañeras, pieles maduras, presupuesto, marketing y
+            examen final.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                    MÓDULO 1
+    ============================================ -->
+
+    <section class="module reveal">
+      <div class="module-container">
+        <div class="module-header">
+          <div class="module-title">
+            <span>MÓDULO #1</span>
+
+            <h2>THE BASICS</h2>
+
+            <p>
+              Comenzá construyendo una base sólida en maquillaje profesional,
+              comprendiendo la piel, las herramientas y las técnicas esenciales
+              para lograr resultados impecables.
+            </p>
+          </div>
+
+          <div class="module-icon">+</div>
+        </div>
+
+        <div class="module-content">
+          <div class="module-grid">
+            <article class="module-card">
+              <h3>Piel y preparación</h3>
+
+              <ul>
+                <li>Preparación según el tipo de piel</li>
+                <li>Bioseguridad e higiene</li>
+                <li>Pieles sociales</li>
+                <li>Acabados Matte, Satin y Glow</li>
+              </ul>
+            </article>
+
+            <article class="module-card">
+              <h3>Color y rostro</h3>
+
+              <ul>
+                <li>Colorimetría</li>
+                <li>Subtonos de piel</li>
+                <li>Visagismo</li>
+                <li>Definición del rostro</li>
+              </ul>
+            </article>
+
+            <article class="module-card">
+              <h3>Técnicas básicas</h3>
+
+              <ul>
+                <li>Aplicación de bases</li>
+                <li>Correcciones</li>
+                <li>Sellado correcto</li>
+                <li>Productos en crema y polvo</li>
+              </ul>
+            </article>
+
+            <article class="module-card">
+              <h3>Mirada</h3>
+
+              <ul>
+                <li>Pestañas postizas</li>
+                <li>Visagismo de cejas</li>
+                <li>Corrección de cejas</li>
+                <li>Herramientas del maquillador</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                    MÓDULO 2
+    ============================================ -->
+
+    <section class="module reveal">
+      <div class="module-container">
+        <div class="module-header">
+          <div class="module-title">
+            <span>MÓDULO #2</span>
+
+            <h2>THE FOUNDATIONS</h2>
+
+            <p>
+              Perfeccioná tus técnicas aprendiendo los maquillajes más
+              solicitados y desarrollando dominio sobre color, ojos y tendencias
+              actuales.
+            </p>
+          </div>
+
+          <div class="module-icon">+</div>
+        </div>
+
+        <div class="module-content">
+          <div class="module-grid">
+            <article class="module-card">
+              <h3>Teoría del color</h3>
+
+              <ul>
+                <li>Introducción al color</li>
+
+                <li>Integración de colores</li>
+
+                <li>Pigmentos</li>
+
+                <li>Armonías</li>
+              </ul>
+            </article>
+
+            <article class="module-card">
+              <h3>Ojos</h3>
+
+              <ul>
+                <li>Esfumados profesionales</li>
+
+                <li>Delineados</li>
+
+                <li>Halo Eyes</li>
+
+                <li>Semi Cut Crease</li>
+              </ul>
+            </article>
+
+            <article class="module-card">
+              <h3>Looks</h3>
+
+              <ul>
+                <li>Smokey Matte</li>
+
+                <li>Smokey Glam</li>
+
+                <li>Smokey Colorido</li>
+
+                <li>Párpado encapotado</li>
+              </ul>
+            </article>
+
+            <article class="module-card">
+              <h3>Labios</h3>
+
+              <ul>
+                <li>Labios Nude</li>
+
+                <li>Labios Rojos</li>
+
+                <li>Efecto 3D</li>
+
+                <li>Correcciones</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                    MÓDULO 3
+    ============================================ -->
+
+    <section class="module reveal">
+      <div class="module-container">
+        <div class="module-header">
+          <div class="module-title">
+            <span>MÓDULO #3</span>
+
+            <h2>LIKE A PRO</h2>
+
+            <p>
+              Aplicá todo lo aprendido en situaciones reales, desarrollando
+              criterio profesional y herramientas para comenzar a trabajar de
+              forma independiente.
+            </p>
+          </div>
+
+          <div class="module-icon">+</div>
+        </div>
+
+        <div class="module-content">
+          <div class="module-grid">
+            <article class="module-card">
+              <h3>Maquillaje Social</h3>
+
+              <ul>
+                <li>Novias</li>
+
+                <li>Quinceañeras</li>
+
+                <li>Madrinas</li>
+
+                <li>Pieles maduras</li>
+              </ul>
+            </article>
+
+            <article class="module-card">
+              <h3>Profesionalización</h3>
+
+              <ul>
+                <li>Presupuestos</li>
+
+                <li>Armado del maletín</li>
+
+                <li>Venta del servicio</li>
+
+                <li>Organización laboral</li>
+              </ul>
+            </article>
+
+            <article class="module-card">
+              <h3>Marca Personal</h3>
+
+              <ul>
+                <li>Redes Sociales</li>
+
+                <li>Creación de contenido</li>
+
+                <li>Imagen profesional</li>
+
+                <li>Clientes</li>
+              </ul>
+            </article>
+
+            <article class="module-card">
+              <h3>Evaluación</h3>
+
+              <ul>
+                <li>Examen Final</li>
+
+                <li>Práctica Integral</li>
+
+                <li>Correcciones</li>
+
+                <li>Entrega de Certificado</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                OBJETIVOS + INCLUYE
+    ============================================ -->
+
+    <section class="benefits-section reveal">
+      <div class="section-header">
+        <span>¿POR QUÉ ELEGIR ESTE CURSO?</span>
+
+        <h2>Una formación pensada para impulsar tu carrera.</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Objetivos -->
+
+        <div class="benefits-card">
+          <h3>Objetivos</h3>
+
+          <p>
+            Desarrollar habilidades prácticas y teóricas que te permitan
+            realizar maquillajes completos y personalizados, sentando las bases
+            para destacarte en el mundo del maquillaje profesional de manera
+            segura e inmediata.
+          </p>
+        </div>
+
+        <!-- Incluye -->
+
+        <div class="benefits-card">
+          <h3>El curso incluye</h3>
+
+          <ul>
+            <li>✓ Productos para la práctica.</li>
+
+            <li>✓ Regalo de bienvenida.</li>
+
+            <li>✓ Material teórico de apoyo.</li>
+
+            <li>✓ Certificado de finalización.</li>
+
+            <li>✓ Carnet profesional.</li>
+
+            <li>✓ Descuentos en productos.</li>
+
+            <li>✓ Descuentos en futuras capacitaciones.</li>
+
+            <li>✓ Espacio de trabajo completamente equipado.</li>
+
+            <li>✓ Iluminación y cámara para crear contenido.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                    PROFESORAS
+    ============================================ -->
+
+    <section class="teachers reveal">
+      <div class="section-header">
+        <span>CONOCÉ AL EQUIPO</span>
+
+        <h2>Tus profesoras</h2>
+      </div>
+
+      <div class="teachers-card">
+        <div class="teachers-image">
+          <img
+            src="./src/img/curso1_2.png"
+            alt="Aixa Grinóvero y Antonella Sangoy"
+          />
+        </div>
+
+        <div class="teachers-content">
+          <article class="teacher-info">
+            <h3>Aixa Grinóvero</h3>
+
+            <span>Maquilladora Profesional</span>
+
+            <p>
+              Especializada en maquillaje social y novias. Fundadora de Mona
+              Studio y referente en formación profesional, combina experiencia
+              técnica, criterio laboral y acompañamiento personalizado.
+            </p>
+          </article>
+
+          <article class="teacher-info">
+            <h3>Antonella Sangoy</h3>
+
+            <span>Cosmetóloga · Maquilladora · Peinadora</span>
+
+            <p>
+              Especialista en cosmetología aplicada al maquillaje. Su enfoque
+              permite comprender la piel desde una mirada profesional para
+              obtener resultados conscientes y duraderos.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                    MÉTODOS DE PAGO
+    ============================================ -->
+
+    <section class="payments reveal">
+      <div class="section-header">
+        <span>PLANES DE PAGO</span>
+
+        <h2>Elegí la opción que mejor se adapte a vos</h2>
+      </div>
+
+      <div class="promo-banner">
+        <h3>🎉 PROMO LANZAMIENTO</h3>
+
+        <p>
+          Obtené <strong>$20.000 de descuento</strong>
+          durante el período promocional.
+        </p>
+      </div>
+
+      <div class="payments-grid">
+        <article class="payment-card">
+          <h3>Transferencia / Efectivo</h3>
+
+          <ul>
+            <li>Inscripción $25.000</li>
+
+            <li>Cuota 1 (5 a 20 de abril): $155.000</li>
+
+            <li>Cuota 2 (5 a 20 de mayo): $155.000</li>
+
+            <li>Cuota 3 (5 a 20 de junio): $155.000</li>
+
+            <li>Cuota 4 (5 a 20 de julio): $155.000</li>
+          </ul>
+        </article>
+
+        <article class="payment-card">
+          <h3>Tarjeta de débito o crédito a través de Mercado Pago</h3>
+
+          <ul>
+            <li>Inscripción $34.500</li>
+
+            <li>Cuota 1 (1 a 10 de abril): $178.250</li>
+
+            <li>Cuota 2 (1 a 10 de mayo): $178.250</li>
+
+            <li>Cuota 3 (1 a 10 de junio): $178.250</li>
+
+            <li>Cuota 4 (1 a 10 de julio): $178.250</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                    MATERIALES
+    ============================================ -->
+
+    <section class="materials reveal">
+      <div class="section-header">
+        <span>MATERIALES</span>
+
+        <h2>¿Qué necesitás para comenzar?</h2>
+      </div>
+
+      <div class="materials-grid">
+        <div class="materials-card">
+          <h3>Primer módulo</h3>
+
+          <ul>
+            <li>Línea de limpieza e hidratación.</li>
+
+            <li>Pinceles y brochas.</li>
+
+            <li>Máscara de pestañas.</li>
+
+            <li>Alcohol sanitizante.</li>
+
+            <li>Brush Cleaner.</li>
+
+            <li>Descartables de pestañas y labios</li>
+          </ul>
+        </div>
+
+        <div class="materials-card">
+          <h3>Durante el cursado</h3>
+
+          <p>
+            A partir del segundo mes de cursado, se le solicitara al alumno ir
+            adquiriendo gradualmente los siguientes elementos:
+          </p>
+          <ul>
+            <li>1 caja de pestañas en grupo individuales</li>
+
+            <li>Pegamento de pestañas</li>
+
+            <li>2 Bases y 2 correctores</li>
+
+            <li>1 Polvo sellador universal</li>
+
+            <li>1 Deliandor de ojos en gel</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                    CONDICIONES
+    ============================================ -->
+
+    <section class="rules reveal">
+      <div class="section-header">
+        <span>IMPORTANTE</span>
+
+        <h2>Condiciones de cursado</h2>
+      </div>
+
+      <div class="rules-card">
+        <ul>
+          <li>Asistir con materiales y anotador.</li>
+
+          <li>Algunas clases requieren modelo.</li>
+
+          <li>No repetir la misma modelo más de dos veces.</li>
+
+          <li>Asistencia mínima del 80%.</li>
+
+          <li>Los pagos se realizan del 1 al 15 de cada mes.</li>
+
+          <li>Los pagos no son reembolsables.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                    GALERIA
+    ============================================ -->
+    <section class="media-gallery-section">
+      <div class="media-gallery-header">
+        <h2>Momentos que inspiran</h2>
+        <p>Algunos momentos especiales.</p>
+      </div>
+
+      <div id="mediaGallery" class="media-gallery"></div>
+    </section>
+
+    <!-- ===========================================
+                    CTA FINAL
+    ============================================ -->
+
+    <section class="final-cta reveal" id="contacto">
+      <div class="cta-content">
+        <span>COMENZÁ HOY</span>
+
+        <h2>Convertite en Make-Up Artist Profesional</h2>
+
+        <p>
+          Sumate a una formación diseñada para potenciar tu talento, desarrollar
+          tu perfil profesional y comenzar a trabajar haciendo lo que más te
+          gusta.
+        </p>
+
+        <a href="#" class="hero-button"> QUIERO INSCRIBIRME </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- SEGUINOS -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">SEGUINOS</h3>
+          <div class="footer-content">
+            <div class="social-icons">
+              <img
+                src="./src/img/redes1.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">NAVEGACIÓN</h3>
+          <div class="footer-content">
+            <ul>
+              <li><a href="#">INICIO</a></li>
+              <li><a href="#">SERVICIOS</a></li>
+              <li><a href="#">TIENDA</a></li>
+              <li><a href="#">CURSOS</a></li>
+              <li><a href="#">INFO Y CONTACTO</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">CONTACTÁNOS</h3>
+          <div class="footer-content">
+            <p>WHATSAPP</p>
+            <p>EMAIL</p>
+            <p>DIRECCION</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/curso1.js"></script>
+  </body>
+</html>

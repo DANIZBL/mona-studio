@@ -1,0 +1,136 @@
+.product-container-detail {
+  max-width: 1300px;
+  margin: 80px auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  gap: 50px;
+}
+
+.product-thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.product-thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.product-thumbnail.active {
+  border-color: var(--color-rojo);
+}
+
+.product-main-image img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.product-info-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  font-family: var(--font-principal);
+  color: var(--color-rojo);
+}
+
+.product-description {
+  line-height: 1.8;
+  color: #555;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.current-price {
+  font-size: 2rem;
+  color: var(--color-rojo);
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.discount-badge-detail {
+  background: var(--color-rojo);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  width: fit-content;
+}
+
+.product-categories {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.product-category {
+  background: var(--color-rosa);
+  color: var(--color-rojo);
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.back-btn {
+  width: fit-content;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: var(--color-rojo);
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .product-container-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .product-thumbnails {
+    flex-direction: row;
+    order: 2;
+  }
+
+  .product-main-image {
+    order: 1;
+  }
+
+  .product-info-detail {
+    order: 3;
+  }
+}
+
+.related-products-section {
+  max-width: 1300px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+.related-products-section h2 {
+  margin-bottom: 40px;
+  color: var(--color-rojo);
+  font-size: 2rem;
+}
+
+.related-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/variables.css" />
+    <link rel="stylesheet" href="./src/header.css" />
+    <link rel="stylesheet" href="./src/footer.css" />
+    <link rel="stylesheet" href="./src/egresadas.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <a href="index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
+
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="cart">
+            <button class="cart-icon">
+              <img src="./src/img/carrito.svg" alt="" />
+            </button>
+
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="boton" href="index.html">INICIO</a>
+        <a class="boton" href="#servicios">SERVICIOS</a>
+        <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        <a class="boton" href="productos.html">TIENDA</a>
+
+        <a class="boton" href="#">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="./src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->
+    <!-- ===========================================
+                EGRESADAS 2026
+============================================ -->
+
+    <section class="egresadas-section">
+      <!-- =========================
+       PRESENTACIÓN
+  ========================== -->
+
+      <div class="egresadas-presentacion">
+        <!-- IMAGEN -->
+        <div class="egresadas-imagen">
+          <img
+            src="./src/img/egre2.webp"
+            alt="Maquillaje y peinado para egresadas"
+          />
+        </div>
+
+        <!-- TÍTULO + FRASE -->
+        <div class="egresadas-titulo">
+          <h1>EGRESADAS</h1>
+
+          <p class="egresadas-frase">
+            Un look pensado para celebrar todo lo que lograste.
+            <br />
+            Belleza, confianza y actitud para una noche inolvidable.
+          </p>
+
+          <!-- =========================
+       DESCRIPCIÓN
+  ========================== -->
+
+          <div class="egresadas-frase2">
+            <p>
+              Creamos looks pensados para acompañarte en una noche tan especial
+              como tu egreso, combinando tendencia, personalidad y elegancia.
+              Cada maquillaje y peinado se adapta a tu estilo, tu vestido y al
+              tipo de celebración, logrando un resultado armónico, fresco y
+              duradero.
+            </p>
+
+            <p>
+              Trabajamos con productos de primeras marcas y técnicas
+              profesionales que garantizan comodidad, definición y larga
+              duración, para que puedas disfrutar, bailar y celebrar toda la
+              noche sintiéndote increíble y sin preocuparte por retoques
+              constantes.
+            </p>
+          </div>
+
+          <a href="#contacto" class="egresadas-boton"> LO QUIERO </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="combos-egresadas">
+      <div class="combos-header">
+        <h2>✨ COMBOS EGRESADAS ✨</h2>
+      </div>
+
+      <div class="combos-container">
+        <!-- COMBO CLASSIC -->
+        <article class="combo-card">
+          <div class="combo-icon">👩🏼‍🎓</div>
+
+          <h3>COMBO CLASSIC</h3>
+
+          <ul>
+            <li>💄 Maquillaje</li>
+            <li>🎀 Peinado</li>
+            <li>🎁 Pestañas postizas de regalo</li>
+          </ul>
+        </article>
+
+        <!-- COMBO COMPLETO -->
+        <article class="combo-card">
+          <div class="combo-icon">🎓</div>
+
+          <h3>COMBO COMPLETO</h3>
+
+          <ul>
+            <li>💄 Maquillaje</li>
+            <li>🎀 Peinado</li>
+            <li>💓 Pruebas de maquillaje y peinado</li>
+            <li>✨ Perfilado de cejas + lifting de pestañas</li>
+            <li>🎁 Pestañas postizas de regalo</li>
+          </ul>
+        </article>
+
+        <!-- COMBO PREMIUM -->
+        <article class="combo-card combo-premium">
+          <span class="combo-badge">✨ MÁS COMPLETO</span>
+
+          <div class="combo-icon">👑</div>
+
+          <h3>COMBO PREMIUM</h3>
+
+          <ul>
+            <li>💄 Maquillaje</li>
+            <li>🎀 Peinado</li>
+            <li>💓 Pruebas de maquillaje y peinado</li>
+            <li>💅🏽 Manicuría (semipermanente liso)</li>
+            <li>🧖‍♀️ Limpieza facial</li>
+            <li>✨ Lifting nutritivo de pestañas</li>
+            <li>🎁 Pestañas postizas + perfilado de cejas de regalo</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===========================================
+                GALERÍA EGRESADAS
+============================================ -->
+
+    <section class="egresadas-gallery-section">
+      <div class="egresadas-gallery-header">
+        <h2>Momentos que inspiran</h2>
+
+        <p>Looks para celebrar una noche que vas a recordar siempre.</p>
+      </div>
+
+      <div id="egresadasGallery" class="egresadas-gallery"></div>
+    </section>
+    <!-- ====================================================== -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- SEGUINOS -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">SEGUINOS</h3>
+          <div class="footer-content">
+            <div class="social-icons">
+              <img
+                src="./src/img/redes1.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">NAVEGACIÓN</h3>
+          <div class="footer-content">
+            <ul>
+              <li><a href="#">INICIO</a></li>
+              <li><a href="#">SERVICIOS</a></li>
+              <li><a href="#">TIENDA</a></li>
+              <li><a href="#">CURSOS</a></li>
+              <li><a href="#">INFO Y CONTACTO</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">CONTACTÁNOS</h3>
+          <div class="footer-content">
+            <p>WHATSAPP</p>
+            <p>EMAIL</p>
+            <p>DIRECCION</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/egresadas.js"></script>
+  </body>
+</html>

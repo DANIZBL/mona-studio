@@ -1,0 +1,525 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mona</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./src/principal.css" />
+    <link rel="stylesheet" href="./src/variables.css" />
+    <link rel="stylesheet" href="./src/header.css" />
+    <link rel="stylesheet" href="./src/footer.css" />
+  </head>
+  <body>
+    <!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <a href="index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
+
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="cart">
+            <button class="cart-icon">
+              <img src="./src/img/carrito.svg" alt="" />
+            </button>
+
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="boton" href="index.html">INICIO</a>
+        <a class="boton" href="#servicios">SERVICIOS</a>
+        <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        <a class="boton" href="productos.html">TIENDA</a>
+
+        <a class="boton" href="#">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="./src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->
+
+    <section class="banner-slider">
+      <video class="banner-video" autoplay muted playsinline></video>
+
+      <div class="banner-content">
+        <h1 id="bannerTitle"></h1>
+
+        <p id="bannerDescription"></p>
+      </div>
+    </section>
+
+    <section class="presentacion">
+      <p>
+        DONDE LA BELLEZA, LA FORMACIÓN Y EL ESTILO SE ENCUENTRAN. SERVICIOS
+        PROFESIONALES, FORMACIÓN ESPECIALIZADA Y PRODUCTOS CUIDADOSAMENTE
+        SELECCIONADOS
+      </p>
+    </section>
+
+    <section id="servicios" class="servicios-home">
+      <div class="servicios-container">
+        <div class="servicios-imagen">
+          <img src="./src/img/imagen_servicio.png" alt="Nuestros servicios" />
+        </div>
+
+        <div class="servicios-info">
+          <h2>NUESTROS SERVICIOS</h2>
+
+          <p class="servicios-descripcion">
+            Descubrí todos nuestros tratamientos diseñados para realzar tu
+            belleza, cuidar tu piel y brindarte un momento de bienestar.
+          </p>
+
+          <div class="servicios-grid">
+            <!-- BELLEZA FACIAL -->
+            <div class="servicio-item">
+              <div class="servicio-header">
+                <h3>Belleza Facial</h3>
+              </div>
+
+              <ul>
+                <li>
+                  <a href="./servicios/lifting.html"> Lifting de pestañas </a>
+                </li>
+
+                <li>
+                  <a href="./servicios/laminado_cejas.html">
+                    Laminado de cejas
+                  </a>
+                </li>
+
+                <li>
+                  <a href="./servicios/perfilado.html"> Perfilado </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- COSMETOLOGÍA -->
+            <div class="servicio-item">
+              <div class="servicio-header">
+                <h3>Cosmetología</h3>
+              </div>
+
+              <ul>
+                <li>
+                  <a href="./servicios/limpieza_facil.html">
+                    Limpiezas faciales
+                  </a>
+                </li>
+
+                <li>
+                  <a href="./servicios/peelings.html"> Peelings </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- MANOS Y PIES -->
+            <div class="servicio-item">
+              <div class="servicio-header">
+                <h3>Manos y Pies</h3>
+              </div>
+
+              <ul>
+                <li>
+                  <a href="./servicios/manicura.html"> Manicuría </a>
+                </li>
+
+                <li>
+                  <a href="./servicios/pedicura.html"> Pedicuría </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- RELAJACIÓN -->
+            <div class="servicio-item">
+              <div class="servicio-header">
+                <h3>Relajación</h3>
+              </div>
+
+              <ul>
+                <li>
+                  <a href="./servicios/masajes_corporales.html">
+                    Masajes corporales
+                  </a>
+                </li>
+
+                <li>
+                  <a href="./servicios/spa_facial.html"> Spa facial </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- MAQUILLAJE Y PEINADO -->
+            <div class="servicio-item">
+              <div class="servicio-header">
+                <h3>Maquillaje y peinado</h3>
+              </div>
+
+              <ul>
+                <li>
+                  <a href="./novias.html"> Novias </a>
+                </li>
+
+                <li>
+                  <a href="./quinceañeras.html"> Quinceañeras </a>
+                </li>
+
+                <li>
+                  <a href="./servicios/social.html"> Social </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="novias-section">
+      <div class="novias-container">
+        <!-- Información -->
+        <div class="novias-content">
+          <h2>Novias</h2>
+
+          <h3>
+            Un look pensado para acompañarte en cada emoción.<br />
+            Belleza que se siente, se disfruta y se recuerda.
+          </h3>
+
+          <p>
+            En MONA entendemos que el maquillaje y el peinado de novia no son
+            solo un servicio, sino una experiencia pensada en cada detalle.
+            Nuestra propuesta es completamente personalizada, diseñada a partir
+            de tu estilo, tu vestido, el tipo de ceremonia y la esencia que
+            querés transmitir en uno de los días más importantes de tu vida.
+          </p>
+          <a href="novias.html" class="btn-novias"> MÁS INFORMACIÓN </a>
+        </div>
+        <!-- Slider -->
+        <div class="slider-novias">
+          <div class="slide-novias active">
+            <img src="./src/img/novias1.webp" alt="Novias Mona" />
+          </div>
+
+          <div class="slide-novias">
+            <img src="./src/img/novias2.webp" alt="Novias Mona" />
+          </div>
+
+          <div class="slide-novias">
+            <img src="./src/img/novias3.webp" alt="Novias Mona" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion_curso">
+      <div class="titulocurso">
+        <img class="imagen_beuty" src="./src/img/beauty_acedemy.webp" alt="" />
+        <h2>
+          El lugar para aprender, perfeccionarte y potenciar tu maquillaje
+        </h2>
+      </div>
+
+      <section id="cursos" class="cursos-section">
+        <a href="cursos_profesionales.html" class="curso-card">
+          <img src="./src/img/img_curso1.webp" alt="Curso 1" />
+          <div class="curso-overlay">
+            <h3>CURSOS PROFESIONALES</h3>
+            <p>
+              CONOCE NUESTROS CURSOS PARA ENTRAR AL MUNDO DEL MAQUILLAJE
+              PROFESIONA
+            </p>
+          </div>
+        </a>
+
+        <a href="curso2.html" class="curso-card">
+          <img src="./src/img/img_curso2.webp" alt="Curso 2" />
+          <div class="curso-overlay">
+            <h3>CURSOS DE AUTO-MAQUILLAJE</h3>
+            <p>
+              UNA EXPERIENCIA DISEÑADA PARA QUE APRENDAS A MAQUILLARTE DE FORMA
+              SIMPLE, FUNCIONAL Y ADAPTADA A TU VIDA REAL
+            </p>
+          </div>
+        </a>
+
+        <a href="curso3.html" class="curso-card">
+          <img src="./src/img/img_curso3.webp" alt="Curso 3" />
+          <div class="curso-overlay">
+            <h3>PERFECCIONAMIENTOS EN MAQUILLAJE</h3>
+            <p>
+              PARA PROFESIONALES DEL MAQUILLAJE INTERESADOS EN REFINAR TÉCNICAS
+              Y ELEVAR LA CALIDAD DE SUS TRABAJOS.
+            </p>
+          </div>
+        </a>
+      </section>
+      <!-- =========================================================
+        TESTIMONIOS
+      ==================================================== -->
+
+      <section class="testimonios-section">
+        <div class="testimonios-container">
+          <div class="testimonios-header">
+            <p>Ellas ya vivieron la experiencia</p>
+          </div>
+
+          <div id="testimoniosGallery" class="testimonios-gallery"></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="egresadas-section">
+      <div class="egresadas-container">
+        <!-- Contenido -->
+        <div class="egresadas-content">
+          <h2>Egresadas</h2>
+
+          <h3>
+            Un look pensado para acompañarte en cada emoción.<br />
+            Belleza que se siente, se disfruta y se recuerda.
+          </h3>
+
+          <a href="egresadas.html" class="egresadas-button">
+            MÁS INFORMACIÓN
+          </a>
+        </div>
+
+        <!-- Imagen -->
+        <div class="egresadas-image">
+          <img
+            src="./src/img/egre5.webp"
+            alt="Maquillaje y peinado para egresadas"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="quince-section">
+      <div class="quince-container">
+        <div class="quince-images">
+          <img
+            src="./src/img/quincieañeras1.webp"
+            alt="Maquillaje para quinceañeras"
+            class="quince-img img-1"
+          />
+
+          <img
+            src="./src/img/quincieañeras2.webp"
+            alt="Belleza para quinceañeras"
+            class="quince-img img-2"
+          />
+        </div>
+
+        <div class="quince-content">
+          <h1>Quinceañeras</h1>
+
+          <p>
+            Un look pensado para acompañarte en cada emoción. Belleza que se
+            siente, se disfruta y se recuerda.
+          </p>
+
+          <a href="quinceañeras.html" class="quince-btn"> Más información </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="studio-section">
+      <div class="studio-container">
+        <div class="studio-content">
+          <p>
+            Nuestro studio se originó hace muchos años en una habitación pequeña
+            donde solo importaba descubrir el mundo a través de colores y
+            formas. Hoy, el maquillaje y su complemento perfecto nos identifica
+            y destaca como especialistas en el rubro.
+          </p>
+
+          <a href="./servicios/social.html" class="studio-button">
+            Más información
+          </a>
+        </div>
+
+        <div class="studio-image">
+          <!-- Colocá tu imagen 1:1 acá -->
+          <img src="./src/img/makeupypeinado.webp" alt="Nuestro studio" />
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <div class="products-header">
+        <h2>OFERTAS ESPECIALES</h2>
+
+        <p>
+          Aprovechá nuestros productos seleccionados con descuentos exclusivos y
+          descubrí tus nuevos favoritos.
+        </p>
+      </div>
+
+      <div class="products-grid" id="discount-products-grid">
+        <!-- Los productos con descuento se insertan aquí desde JavaScript -->
+      </div>
+    </section>
+
+    <section class="instagram-section">
+      <div class="instagram-header">
+        <div class="instagram-title-row">
+          <div class="story-ring">
+            <img src="./src/img/logo_ig.webp" alt="Mona Beauty" />
+          </div>
+
+          <div class="instagram-text">
+            <h2>SEGUINOS EN INSTAGRAM</h2>
+
+            <p>
+              Descubrí nuestros trabajos, resultados reales, novedades y
+              transformaciones.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="instagram-grid">
+        <!-- Publicación 1 -->
+        <a href="https://instagram.com/monastudio._" class="insta-card">
+          <img src="./src/img/insta1.webp" alt="Trabajo realizado" />
+
+          <div class="instagram-overlay">
+            <img
+              src="./src/img/ig.webp"
+              alt="Instagram"
+              class="instagram-overlay-icon"
+            />
+          </div>
+        </a>
+
+        <!-- Publicación 2 -->
+        <a href="https://instagram.com/monastudio._" class="insta-card">
+          <img src="./src/img/insta2.webp" alt="Trabajo realizado" />
+
+          <div class="instagram-overlay">
+            <img
+              src="./src/img/ig.webp"
+              alt="Instagram"
+              class="instagram-overlay-icon"
+            />
+          </div>
+        </a>
+
+        <!-- Publicación 3 -->
+        <a href="https://instagram.com/monastudio._" class="insta-card">
+          <img src="./src/img/insta3.webp" alt="Trabajo realizado" />
+
+          <div class="instagram-overlay">
+            <img
+              src="./src/img/ig.webp"
+              alt="Instagram"
+              class="instagram-overlay-icon"
+            />
+          </div>
+        </a>
+      </div>
+
+      <div class="instagram-footer">
+        <a
+          href="https://instagram.com/monastudio._"
+          target="_blank"
+          class="instagram-btn"
+        >
+          @monastudio._
+        </a>
+      </div>
+    </section>
+
+    <!-- INDICADORES -->
+    <div class="cursos-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- SEGUINOS -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">SEGUINOS</h3>
+          <div class="footer-content">
+            <div class="social-icons">
+              <img
+                src="./src/img/redes1.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">NAVEGACIÓN</h3>
+          <div class="footer-content">
+            <ul>
+              <li><a href="#">INICIO</a></li>
+              <li><a href="#">SERVICIOS</a></li>
+              <li><a href="#">TIENDA</a></li>
+              <li><a href="#">CURSOS</a></li>
+              <li><a href="#">INFO Y CONTACTO</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-column">
+          <h3 class="footer-toggle">CONTACTÁNOS</h3>
+          <div class="footer-content">
+            <p>WHATSAPP</p>
+            <p>EMAIL</p>
+            <p>DIRECCION</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/principal.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/curso1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+.footer {
+  background-color: #92251f;
+  color: #fff;
+  padding: 50px 20px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-column h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-column ul {
+  color: white;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column p {
+  color: #ffffff;
+}
+
+.footer-column ul li {
+  margin: 6px 0;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* ✨ animación sutil links */
+.footer-column a:hover {
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+/* redes */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ✨ animación sutil iconos */
+.social-icon:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* MOBILE acordeón */
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .footer-column {
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 5px 0;
+    }
+
+    .footer-toggle {
+      cursor: pointer;
+      position: relative;
+      padding: 12px 0;
+      transition: color 0.3s ease;
+    }
+
+    .footer-toggle:hover {
+      color: #f5d0c5;
+    }
+
+    /* flecha animada */
+    .footer-toggle::after {
+      content: "+";
+      position: absolute;
+      right: 10px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .footer-column.active .footer-toggle::after {
+      transform: rotate(180deg);
+      content: "−";
+    }
+
+    .footer-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .footer-column.active .footer-content {
+      opacity: 1;
+      transform: translateY(0);
+      max-height: 500px;
+    }
+
+    .footer-container {
+      align-items: stretch;
+      text-align: left;
+    }
+
+    .social-icons {
+      justify-content: flex-start;
+    }
+  }
+}

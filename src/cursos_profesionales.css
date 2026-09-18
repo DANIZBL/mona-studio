@@ -1,0 +1,194 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5e0ed;
+  font-family: var(--fuente-secundaria, Arial, sans-serif);
+  color: #000;
+  font-family: var(--fuente-secundaria);
+}
+
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
+
+.cursos {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 8%;
+}
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+.cursos-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.cursos-header h1 {
+  color: var(--color-rojo);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cursos-header p {
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ================================
+   LISTA DE CURSOS
+================================ */
+
+.lista-cursos {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* ================================
+   CURSO
+================================ */
+
+.curso {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ================================
+   IMAGEN
+================================ */
+
+.curso-imagen {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.curso-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+
+/* ================================
+   INFORMACIÓN
+================================ */
+
+.curso-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.curso-info h2 {
+  color: var(--color-rojo);
+
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.curso-info p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* ================================
+   BOTÓN
+================================ */
+
+.btn-curso {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+
+  background-color: var(--color-rojo);
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  transition: all 0.3s ease;
+}
+
+.btn-curso:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* ================================
+   📱 MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .cursos {
+    padding: 3rem 1.5rem;
+  }
+
+  /* ENCABEZADO */
+
+  .cursos-header {
+    margin-bottom: 3rem;
+  }
+
+  .cursos-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .cursos-header p {
+    font-size: 1rem;
+  }
+
+  /* CURSOS */
+
+  .lista-cursos {
+    gap: 4rem;
+  }
+
+  .curso {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* IMAGEN */
+
+  .curso-imagen {
+    width: 100%;
+  }
+
+  /* INFORMACIÓN */
+
+  .curso-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .curso-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .curso-info p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}

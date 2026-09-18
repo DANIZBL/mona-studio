@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Upstair Sans";
+  src: url("./fonts/principal.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Honick Free";
+  src: url("./fonts/secundaria.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Perfect girl";
+  src: url("./fonts/Perfect-girl.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Perfect girl cursiva";
+  src: url("./fonts/Perfect-girl-cursiva.otf") format("opentype");
+}
+
+:root {
+  /* Fuentes */
+  --font-principal: "Upstair Sans", sans-serif;
+  --font-secundaria: "Honick Free", sans-serif;
+  --font-girl: "Perfect girl", sans-serif;
+  --font-girl-cursiva: "Perfect girl cursiva", sans-serif;
+
+  /* Colores */
+  --color-rojo: #b82b2a;
+  --color-blanco: #ffff;
+  --color-rosa: #ffeef6;
+}
+
+/* GENERALES */
+
+p,
+li {
+  font-family: var(--font-secundaria);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-principal);
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,632 @@
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   QUINCEAÑERAS
+========================================================= */
+
+.quinceaneras-section {
+  width: 100%;
+  padding: 80px 5%;
+
+  background: #fff;
+
+  font-family: var(--font-secundaria);
+}
+
+/* =========================================================
+   PRESENTACIÓN
+========================================================= */
+
+.quinceaneras-presentacion {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 60px;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   IMAGEN
+========================================================= */
+
+.quinceaneras-imagen {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+}
+
+.quinceaneras-imagen img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.quinceaneras-titulo {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.quinceaneras-titulo h1 {
+  margin: 0 0 25px;
+
+  color: var(--color-rojo);
+
+  font-family: var(--font-secundaria);
+
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  line-height: 1.1;
+}
+
+/* =========================================================
+   FRASE
+========================================================= */
+
+.quinceaneras-frase {
+  margin: 0;
+
+  color: var(--color-rojo);
+
+  font-family: var(--font-secundaria);
+
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
+.quinceaneras-descripcion {
+  max-width: 1100px;
+
+  margin: 30px auto 0;
+
+  text-align: left;
+}
+
+.quinceaneras-descripcion p {
+  margin: 0 0 25px;
+
+  color: #222;
+
+  font-family: var(--font-secundaria);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+.quinceaneras-gallery-section {
+  width: 100%;
+
+  padding: 15px 5% 80px;
+
+  background: #fff;
+
+  font-family: var(--font-secundaria);
+}
+
+/* =========================================================
+   ENCABEZADO GALERÍA
+========================================================= */
+
+.quinceaneras-gallery-header {
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.quinceaneras-gallery-header h2 {
+  margin: 0 0 10px;
+
+  color: var(--color-rojo);
+
+  font-family: var(--font-secundaria);
+}
+
+.quinceaneras-gallery-header p {
+  margin: 0;
+
+  color: #222;
+
+  font-family: var(--font-secundaria);
+}
+
+/* =========================================================
+   GALERÍA PC
+========================================================= */
+
+.quinceaneras-gallery {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+/* =========================================================
+   CADA ELEMENTO
+========================================================= */
+
+.quinceaneras-gallery-item {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 3 / 4;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #eee;
+}
+
+/* =========================================================
+   IMÁGENES Y VIDEOS
+========================================================= */
+
+.quinceaneras-gallery-item img,
+.quinceaneras-gallery-item video {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.quinceaneras-gallery-item:hover img,
+.quinceaneras-gallery-item:hover video {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .quinceaneras-section {
+    padding: 60px 20px;
+  }
+
+  .quinceaneras-presentacion {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .quinceaneras-titulo {
+    text-align: center;
+  }
+
+  .quinceaneras-titulo h1 {
+    font-size: 2.8rem;
+
+    margin-bottom: 20px;
+  }
+
+  .quinceaneras-frase {
+    font-size: 1.2rem;
+  }
+
+  .quinceaneras-descripcion {
+    margin-top: 45px;
+
+    text-align: center;
+  }
+
+  .quinceaneras-descripcion p {
+    font-size: 1rem;
+
+    line-height: 1.7;
+  }
+
+  .quinceaneras-gallery-section {
+    padding: 15px 0 60px;
+  }
+
+  .quinceaneras-gallery-header {
+    padding: 0 20px;
+
+    margin-bottom: 25px;
+  }
+
+  .quinceaneras-gallery {
+    display: flex;
+
+    overflow-x: auto;
+
+    gap: 12px;
+
+    padding: 0 20px 15px;
+
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+  }
+
+  .quinceaneras-gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .quinceaneras-gallery-item {
+    flex: 0 0 75%;
+
+    scroll-snap-align: start;
+
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/*================================================== PROCESO EGRESADAS ==================================================*/
+.egresadas-process {
+  background: #fff;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-family: var(--font-secundaria);
+}
+.egresadas-process h2 {
+  color: #222;
+  font-family: var(--font-secundaria);
+  font-size: 3rem;
+  margin-bottom: 80px;
+}
+
+.egresadas-section-subtitle {
+  color: var(--color-rojo);
+}
+.egresadas-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.egresadas-process-grid article {
+  position: relative;
+  padding: 35px;
+}
+.egresadas-process-grid article::after {
+  content: "";
+  position: absolute;
+  top: 32px;
+  right: -20px;
+  width: 40px;
+  height: 2px;
+  background: #ddd;
+}
+.egresadas-process-grid article:last-child::after {
+  display: none;
+}
+.egresadas-process-grid span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--color-rojo);
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.egresadas-process-grid h3 {
+  font-size: 1.35rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+.egresadas-process-grid p {
+  margin: 0;
+}
+
+/* =========================
+   EGRESADAS - MOBILE
+   SCROLL HORIZONTAL
+   ========================= */
+
+@media (max-width: 768px) {
+  .egresadas-process {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 50px 0;
+    overflow: hidden;
+  }
+
+  .egresadas-section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .egresadas-process h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 10px 20px 40px;
+  }
+
+  .egresadas-process-grid {
+    display: flex;
+    gap: 16px;
+
+    /* Scroll horizontal */
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    /* Evita que los elementos se achiquen */
+    flex-wrap: nowrap;
+
+    /* Espacio inicial y final */
+    padding: 10px 20px 25px;
+
+    margin-bottom: 20px;
+
+    /* Scroll suave */
+    scroll-behavior: smooth;
+
+    /* Permite swipe en celular */
+    -webkit-overflow-scrolling: touch;
+
+    /* Oculta scrollbar */
+    scrollbar-width: none;
+  }
+
+  .egresadas-process-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .egresadas-process-grid article {
+    position: relative;
+
+    /* Tamaño de cada tarjeta */
+    flex: 0 0 280px;
+
+    padding: 30px 25px;
+
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Eliminamos las líneas horizontales de desktop */
+  .egresadas-process-grid article::after {
+    display: none;
+  }
+
+  .egresadas-process-grid span {
+    width: 60px;
+    height: 60px;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 20px;
+  }
+
+  .egresadas-process-grid h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .egresadas-process-grid p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+/* =========================
+   EGRESADAS - RESEÑAS
+   ========================= */
+
+.egresadas-reviews {
+  background: #f8f8f8;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: var(--font-secundaria);
+  overflow: hidden;
+}
+
+.egresadas-reviews-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.egresadas-reviews h2 {
+  color: #222;
+  font-family: var(--font-secundaria);
+  font-size: 3rem;
+  margin: 10px 0 60px;
+}
+
+/* =========================
+   GLOBO DE MENSAJE
+   ========================= */
+
+.review-whatsapp {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.review-message {
+  position: relative;
+
+  width: min(100%, 600px);
+
+  background: #e7f9df;
+
+  padding: 25px 28px 18px;
+
+  border-radius: 18px;
+  border-bottom-right-radius: 4px;
+
+  text-align: left;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Colita del globo */
+
+.review-message::after {
+  content: "";
+
+  position: absolute;
+
+  right: -8px;
+  bottom: 0;
+
+  width: 0;
+  height: 0;
+
+  border-left: 12px solid #e7f9df;
+  border-top: 12px solid transparent;
+}
+
+/* Texto */
+
+.review-message p {
+  margin: 0 0 15px;
+
+  color: #222;
+
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Nombre + hora */
+
+.review-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-info strong {
+  color: #555;
+  font-size: 0.85rem;
+}
+
+.review-info span {
+  color: #777;
+  font-size: 0.75rem;
+}
+
+/* =========================
+   INDICADORES
+   ========================= */
+
+.review-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 30px;
+}
+
+.review-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #ccc;
+
+  transition: all 0.3s ease;
+}
+
+.review-dot.active {
+  width: 20px;
+  border-radius: 10px;
+  background: var(--color-rojo);
+}
+
+.review-message {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.review-message.review-changing {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+  .egresadas-reviews {
+    padding: 60px 15px;
+  }
+
+  .egresadas-reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .review-whatsapp {
+    padding: 0 10px;
+  }
+
+  .review-message {
+    padding: 20px 20px 15px;
+  }
+
+  .review-message p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}

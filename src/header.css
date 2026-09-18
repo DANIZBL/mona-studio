@@ -1,0 +1,514 @@
+body {
+  margin: 0;
+}
+
+/* ==========================================
+   HEADER GENERAL
+========================================== */
+
+.main-header {
+  background-color: var(--color-rojo);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* HEADER AL HACER SCROLL */
+
+.main-header.scrolled {
+  padding: 5px 20px;
+  background-color: #92251f;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo {
+  height: 80px;
+  margin: 0 40px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.main-header.scrolled .logo {
+  height: 45px;
+}
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.3s ease;
+
+  z-index: 998;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==========================================
+   CARRITO
+========================================== */
+
+.cart {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cart:hover {
+  transform: scale(1.15);
+}
+
+.cart-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cart-icon img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+
+.cart:hover .cart-icon img {
+  transform: scale(1.15);
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+
+  min-width: 18px;
+  height: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f7d7b6;
+  color: #92251f;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  border-radius: 50%;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   NAVEGACIÓN DESKTOP
+========================================== */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.boton {
+  font-family: var(--font-principal);
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+
+  position: relative;
+
+  transition: all 0.3s ease;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+}
+
+.boton::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 3px;
+
+  background: white;
+
+  transition: width 0.3s ease;
+}
+
+.boton:hover::after {
+  width: 100%;
+}
+
+/* ==========================================
+   HAMBURGUESA
+========================================== */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+
+  background: white;
+
+  transition: all 0.3s ease;
+}
+
+/* Animación a X */
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+.mobile-header {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Botón hamburguesa visible */
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Menú lateral */
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+
+    width: 75%;
+    height: 100vh;
+
+    z-index: 999;
+
+    background: linear-gradient(180deg, #b6312a, #92251f);
+
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.35);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+    transition: left 0.4s ease;
+  }
+
+  .nav.active {
+    left: 0;
+  }
+
+  /* Ocultar logo dentro del menú */
+
+  .nav .logo {
+    display: none;
+  }
+
+  /* Botones mobile */
+
+  .boton {
+    font-size: 20px;
+    font-family: var(--font-secundaria);
+  }
+
+  /* Logo más pequeño */
+
+  .logo {
+    height: 50px;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    min-height: 60px;
+  }
+
+  .mobile-logo {
+    height: 50px;
+  }
+  .nav .cart {
+    display: none;
+  }
+}
+
+.mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ==========================================
+   BUSCADOR
+========================================== */
+
+.search-container {
+  position: relative;
+}
+
+.search-toggle,
+.mobile-search-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-toggle img,
+.mobile-search-toggle img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.search-toggle:hover img,
+.mobile-search-toggle:hover img {
+  transform: scale(1.1);
+}
+
+.search-box {
+  position: absolute;
+  top: 55px;
+  right: 0;
+
+  width: 340px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+
+  transition: all 0.3s ease;
+
+  z-index: 1100;
+}
+
+.search-box.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.search-box input {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+#search-results {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-item:hover {
+  background: #f5f5f5;
+}
+
+.search-item img {
+  width: 55px;
+  height: 55px;
+
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.search-info h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #353535;
+  font-weight: 600;
+}
+
+.search-info p {
+  margin: 4px 0 0;
+  color: #92251f;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #f1e6e4;
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.search-item:hover {
+  background: #fff5f4;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+.mobile-header {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    min-height: 60px;
+  }
+
+  .mobile-logo {
+    height: 50px;
+  }
+
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+
+    width: 75%;
+    height: 100vh;
+
+    z-index: 999;
+
+    background: linear-gradient(180deg, #b6312a, #92251f);
+
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.35);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+    transition: left 0.4s ease;
+  }
+
+  .nav.active {
+    left: 0;
+  }
+
+  .nav .logo {
+    display: none;
+  }
+
+  .nav .cart {
+    display: none;
+  }
+
+  .boton {
+    font-size: 20px;
+    font-family: var(--font-secundaria);
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .search-box {
+    position: fixed;
+
+    top: 80px;
+    left: 15px;
+    right: 15px;
+
+    width: auto;
+    max-width: none;
+
+    border-radius: 15px;
+
+    z-index: 1100;
+  }
+
+  .search-box input {
+    font-size: 16px;
+  }
+}
