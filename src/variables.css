@@ -18,30 +18,48 @@
   src: url("./fonts/Perfect-girl-cursiva.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "League Spartan";
+  src: url("./fonts/LeagueSpartan.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Arimo";
+  src: url("./fonts/Arimo.ttf") format("opentype");
+}
+@font-face {
+  font-family: "the seasons";
+  src: url("./fonts/the-seasons.ttf") format("opentype");
+}
+
 :root {
   /* Fuentes */
   --font-principal: "Upstair Sans", sans-serif;
   --font-secundaria: "Honick Free", sans-serif;
   --font-girl: "Perfect girl", sans-serif;
   --font-girl-cursiva: "Perfect girl cursiva", sans-serif;
+  --font-3: "League Spartan", sans-serif;
+  --font-4: "Arimo", sans-serif;
+  --font-elegante: "the seasons", sans-serif;
 
   /* Colores */
   --color-rojo: #b82b2a;
   --color-blanco: #ffff;
   --color-rosa: #ffeef6;
+  --color-beige: #858071;
 }
 
 /* GENERALES */
 
 p,
 li {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-principal);
+  font-family: var(--font-4);
 }
 
 html,

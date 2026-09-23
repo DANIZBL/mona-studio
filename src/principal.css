@@ -22,7 +22,7 @@ h2,
 h3,
 p {
   color: #424040;
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 }
 
 html {
@@ -74,32 +74,22 @@ html {
 }
 
 .banner-content h1 {
-  font-family: var(--font-secundaria);
-
-  color: var(--color-rojo);
-
+  font-family: var(--font-3);
+  color: var(--color-blanco);
   margin: 0 0 25px;
-
   font-size: 3rem;
-
-  font-weight: 700;
-
+  font-weight: bold;
   line-height: 1.1;
-
   transition: opacity 0.5s ease;
 }
 
 .banner-content p {
-  font-family: var(--font-secundaria);
-
+  max-width: 80%;
+  font-family: var(--font-4);
   color: var(--color-blanco);
-
   margin: 0;
-
   font-size: 1.2rem;
-
   line-height: 1.5;
-
   transition: opacity 0.5s ease;
 }
 
@@ -140,7 +130,7 @@ html {
 
   .banner-content p {
     font-size: 1rem;
-
+    max-width: 100%;
     line-height: 1.6;
   }
 }
@@ -156,6 +146,8 @@ html {
 }
 
 .presentacion p {
+  color: var(--color-beige);
+  font-family: var(--font-4);
   text-align: center;
   font-size: 24px;
   margin-left: 10px;
@@ -231,7 +223,7 @@ html {
 }
 
 .servicios-info h2 {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
   color: var(--color-rojo);
 
   font-size: clamp(2.8rem, 4vw, 4rem);
@@ -254,8 +246,8 @@ html {
 }
 
 .servicios-descripcion {
-  font-family: var(--font-principal);
-  color: #444;
+  font-family: var(--font-4);
+  color: var(--color-rojo);
 
   font-size: 1.1rem;
   line-height: 1.8;
@@ -300,7 +292,7 @@ html {
 .servicio-item h3 {
   color: var(--color-rojo);
 
-  font-family: var(--font-principal);
+  font-family: var(--font-4);
 
   font-size: 1.15rem;
 
@@ -334,7 +326,7 @@ html {
 .servicio-item li a {
   display: inline-block;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
   font-size: 0.9rem;
 
@@ -655,35 +647,25 @@ html {
 
 .instagram-text h2 {
   margin: 0 0 12px 0;
-
-  font-family: var(--font-principal);
-
+  font-family: var(--font-3);
   font-size: clamp(2.5rem, 4vw, 5rem);
-
   font-weight: 300;
-
   letter-spacing: 3px;
-
   color: var(--color-rojo);
-
   line-height: 1;
 }
 
 .instagram-text p {
   margin: 0;
-
-  font-family: var(--font-secundaria);
-
+  font-family: var(--font-elegante);
   color: #666;
-
   max-width: 700px;
-
   line-height: 1.6;
 }
 
 .instagram-header h2 {
   margin: 0;
-  font-family: var(--font-principal);
+  font-family: var(--font-elegante);
   font-size: clamp(2rem, 4vw, 4rem);
   color: var(--color-rojo);
   font-weight: 300;
@@ -692,8 +674,8 @@ html {
 }
 
 .instagram-header p {
-  font-family: var(--font-secundaria);
-  color: #666;
+  font-family: var(--font-3);
+  color: var(--color-rojo);
   max-width: 700px;
   margin: 0 auto 60px;
   line-height: 1.8;
@@ -862,7 +844,7 @@ html {
 
   text-decoration: none;
 
-  font-family: var(--font-principal);
+  font-family: var(--font-4);
   letter-spacing: 1px;
 
   transition: 0.3s ease;
@@ -987,7 +969,7 @@ html {
 }
 
 .products-header h2 {
-  font-family: var(--font-principal);
+  font-family: var(--font-elegante);
   font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 300;
   color: var(--color-rojo);
@@ -998,11 +980,11 @@ html {
 .products-header p {
   max-width: 700px;
   margin: 0 auto;
-
+  font-size: 1.5rem;
   color: #666;
   line-height: 1.8;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 }
 
 .products-grid {
@@ -1035,7 +1017,7 @@ html {
 
   color: var(--color-rojo);
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
   font-weight: 400;
   font-size: 1.2rem;
 }
@@ -1047,7 +1029,7 @@ html {
 
   color: var(--color-rojo);
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   font-size: 1.1rem;
 }
 
@@ -1224,7 +1206,7 @@ html {
 }
 
 .novias-content h2 {
-  font-family: var(--font-principal);
+  font-family: var(--font-elegante);
 
   font-size: 68px;
 
@@ -1236,27 +1218,21 @@ html {
 }
 
 .novias-content h3 {
-  font-family: var(--font-secundaria);
-
+  font-family: var(--font-4);
   font-size: 24px;
-
   line-height: 1.45;
-
-  color: #333;
-
+  color: var(--color-rojo);
   margin-bottom: 30px;
-
-  font-weight: 500;
 }
 
 .novias-content p {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
   font-size: 18px;
 
   line-height: 1.9;
 
-  color: #555;
+  color: var(--color-beige);
 
   margin-bottom: 45px;
 }
@@ -1513,7 +1489,7 @@ html {
 }
 
 .quince-content h1 {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   color: var(--color-rojo);
   font-size: clamp(2.3rem, 4vw, 4rem);
   font-weight: 400;
@@ -1521,7 +1497,7 @@ html {
 }
 
 .quince-content p {
-  font-family: var(--font-principal);
+  font-family: var(--font-4);
   color: #252525;
   font-size: 1.7rem;
   line-height: 1.8;
@@ -1532,7 +1508,7 @@ html {
 .quince-btn {
   display: inline-block;
   padding: 14px 35px;
-
+  font-family: var(--font-4);
   background: var(--color-rojo);
   color: #fff;
 
@@ -1673,7 +1649,7 @@ EGRESADAS
 .egresadas-content h2 {
   margin: 0 0 30px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   font-size: 3.2rem;
   font-weight: 400;
 
@@ -1683,7 +1659,7 @@ EGRESADAS
 .egresadas-content h3 {
   margin: 0 0 30px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
   font-size: 1.45rem;
   font-weight: 400;
   line-height: 1.6;
@@ -1716,7 +1692,7 @@ EGRESADAS
 
   border-radius: 30px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
   font-size: 0.9rem;
   font-weight: 600;
 
@@ -1795,24 +1771,20 @@ TESTIMONIOS
 
 .testimonios-header {
   text-align: center;
-
   margin-bottom: 5px;
 }
 
 .testimonios-header h2 {
   margin: 0 0 10px;
-
   color: var(--color-rojo);
-
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 }
 
 .testimonios-header p {
-  margin: 0;
-
-  color: #222;
-
-  font-family: var(--font-secundaria);
+  margin-top: 3rem;
+  margin-bottom: 0;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
 }
 
 /* =========================
@@ -2015,12 +1987,10 @@ MAKE UP Y PEINADO
 .studio-button {
   display: inline-block;
   padding: 14px 30px;
-
+  font-family: var(--font-4);
   background-color: var(--color-rojo);
   color: #fff;
-
   border-radius: 15px;
-
   text-decoration: none;
   font-size: 17px;
   font-weight: 600;

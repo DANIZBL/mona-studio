@@ -89,22 +89,15 @@
 ==================================================*/
 
 .novias-btn {
+  font-family: var(--font-4);
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   padding: 18px 42px;
-
   background: var(--color-rojo);
-
   color: var(--color-blanco);
-
   border-radius: 50px;
-
   font-weight: 600;
-
   transition: 0.35s;
 }
 
@@ -205,24 +198,17 @@
 }
 
 .novias-hero h1 {
-  font-family: var(--font-secundaria);
-
-  font-size: 5rem;
-
+  font-family: var(--font-elegante);
+  font-size: 4rem;
   line-height: 0.95;
-
-  font-weight: 400;
-
   margin-bottom: 35px;
 }
 
 .novias-hero p {
+  font-family: var(--font-4);
   max-width: 560px;
-
   color: rgba(255, 255, 255, 0.92);
-
   font-size: 1.15rem;
-
   margin-bottom: 45px;
 }
 
@@ -272,20 +258,13 @@
 
 .novias-hero-testimonial {
   position: absolute;
-
   right: 50px;
   bottom: 55px;
-
   width: 360px;
-
   padding: 25px 28px;
-
   color: white;
-
-  background: rgba(223, 138, 138, 0.26);
-
+  background: rgba(241, 207, 185, 0.26);
   border: 1px solid rgba(255, 142, 142, 0.25);
-
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
@@ -307,16 +286,17 @@
   opacity: 0.75;
 }
 
+.novias-hero-testimonial span {
+  font-family: var(--font-3);
+  font-size: 0.8rem;
+  margin-left: 25px;
+}
+
 .novias-hero-testimonial blockquote {
   margin: 15px;
-
-  font-family: var(--font-secundaria);
-
+  font-family: var(--font-4);
   font-size: 1rem;
-
   line-height: 1.5;
-
-  font-weight: 400;
 }
 
 .novias-hero-testimonial-name {
@@ -365,8 +345,13 @@
   align-items: center;
 }
 
+.novias-intro-text h2 {
+  font-family: var(--font-elegante);
+}
+
 .novias-intro-text p {
   margin-bottom: 25px;
+  color: var(--color-rojo);
 }
 
 .novias-intro-image {
@@ -414,10 +399,12 @@
 .experience-content h2 {
   font-size: 3rem;
   margin-top: 12px;
+  font-family: var(--font-elegante);
 }
 
 .experience-content p {
   margin-bottom: 30px;
+  font-family: var(--font-4);
 }
 
 .experience-content ul {
@@ -485,11 +472,10 @@
 }
 
 .experience-includes h3 {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-elegante);
+  color: var(--color-rojo);
 
   font-size: 2.4rem;
-
-  font-weight: 400;
 
   text-align: center;
 
@@ -505,7 +491,7 @@
 }
 
 .include-item {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
   display: flex;
 
   align-items: flex-start;
@@ -576,7 +562,7 @@
 }
 
 .benefits-grid h3 {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-elegante);
 
   font-size: 2rem;
 
@@ -603,6 +589,7 @@
 
 .novias-process h2 {
   margin-bottom: 80px;
+  font-family: var(--font-elegante);
 }
 
 .process-grid {
@@ -665,6 +652,7 @@
 
 .process-grid h3 {
   font-size: 1.35rem;
+  font-family: var(--font-elegante);
 
   color: #222;
 
@@ -687,6 +675,7 @@
 
 .novias-gallery h2 {
   margin-bottom: 70px;
+  font-family: var(--font-elegante);
 }
 
 /*======================================
@@ -953,7 +942,7 @@ body.gallery-open {
 
   margin: auto;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
   font-size: clamp(2rem, 4vw, 3.8rem);
 
@@ -976,7 +965,7 @@ body.gallery-open {
 
 .novias-cta h2 {
   max-width: 900px;
-
+  font-family: var(--font-elegante);
   margin: auto auto 30px;
 }
 
@@ -1960,14 +1949,14 @@ img {
 
 .novias-vision h2 {
   color: var(--color-rojo);
-  font-family: var(--font-principal);
+  font-family: var(--font-elegante);
   font-size: 2.3rem;
   margin-bottom: 25px;
 }
 
 .novias-vision p {
   color: var(--color-rojo);
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
   font-size: 1.15rem;
   line-height: 1.8;
   max-width: 750px;

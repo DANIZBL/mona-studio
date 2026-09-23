@@ -29,14 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     {
       video: "../src/vid/video_header1.mp4",
-      title: "Quinceañeras",
+      title: "QUINCEAÑERAS",
       description:
         "Maquillaje y peinado pensados para que disfrutes y brilles en cada ocasión.",
     },
     {
       video: "../src/vid/video_header4.mp4",
-      title: "",
-      description: "",
+      title: "MAKE UP Y PEINADO",
+      description:
+        "Un día único merece un look que te haga sentir completamente vos.",
     },
   ];
 

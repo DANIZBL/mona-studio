@@ -52,25 +52,16 @@
 
 .servicio-presentacion-info h1 {
   margin-bottom: 25px;
-
   color: var(--color-rojo);
-
-  font-family: var(--font-secundaria);
-
+  font-family: var(--font-4);
   font-size: clamp(2.5rem, 5vw, 4.5rem);
-
-  font-weight: 600;
-
   line-height: 1.05;
 }
 
 .servicio-presentacion-info p {
   max-width: 500px;
-
-  color: #333;
-
-  font-family: var(--font-secundaria);
-
+  color: var(--color-rojo);
+  font-family: var(--font-3);
   font-size: 1.05rem;
 
   line-height: 1.8;
@@ -156,7 +147,7 @@
 .profesional-info h2 {
   margin-bottom: 20px;
   color: var(--color-rojo);
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
   line-height: 1.1;
@@ -165,7 +156,7 @@
 
 .profesional-info p {
   color: var(--color-rojo);
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
   font-size: 1rem;
   line-height: 1.2;
 }
@@ -184,28 +175,19 @@
 
 .galeria-titulo span {
   display: block;
-
-  margin-bottom: 8px;
-
+  margin-top: 2rem;
   color: var(--color-rojo);
-
-  font-family: var(--font-secundaria);
-
+  font-family: var(--font-4);
   font-size: 0.8rem;
-
   font-weight: 600;
-
   letter-spacing: 2px;
 }
 
 .galeria-titulo h2 {
   color: var(--color-rojo);
-
-  font-family: var(--font-secundaria);
-
-  font-size: clamp(2rem, 4vw, 3rem);
-
-  font-weight: 600;
+  font-family: var(--font-3);
+  font-size: 3rem;
+  margin-top: 1rem;
 }
 
 /* =====================================================
