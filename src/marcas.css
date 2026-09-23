@@ -1,0 +1,83 @@
+.marcas {
+  width: 100%;
+  padding: 60px 5%;
+  margin-bottom: 60px;
+}
+
+.marcas h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--color-rojo);
+}
+
+.marcas-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 25px;
+  align-items: center;
+}
+
+.marca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.marca img {
+  max-width: 100%;
+  max-height: 10rem;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .marcas {
+    padding: 45px 0;
+    margin-bottom: 20px;
+  }
+
+  .marcas h2 {
+    padding: 0 20px;
+    margin-bottom: 60px;
+  }
+
+  .marcas-container {
+    display: flex;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    gap: 25px;
+
+    padding: 10px 20px 20px;
+
+    scroll-snap-type: x mandatory;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+  }
+
+  /* Ocultar scrollbar */
+  .marcas-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .marca {
+    flex: 0 0 120px;
+
+    height: 100px;
+
+    scroll-snap-align: center;
+  }
+
+  .marca img {
+    max-width: 100%;
+    max-height: 9rem;
+  }
+}
