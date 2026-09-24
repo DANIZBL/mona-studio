@@ -48,17 +48,12 @@
 
 .section-subtitle {
   display: inline-block;
-
+  font-family: var(--font-4);
   margin-bottom: 18px;
-
-  color: var(--color-rojo);
-
-  font-size: 0.85rem;
-
+  color: var(--color-beige);
+  font-size: 1rem;
   letter-spacing: 4px;
-
   text-transform: uppercase;
-
   font-weight: 600;
 }
 
@@ -347,11 +342,13 @@
 
 .novias-intro-text h2 {
   font-family: var(--font-elegante);
+  color: var(--color-oro);
+  margin-top: 15px;
 }
 
 .novias-intro-text p {
   margin-bottom: 25px;
-  color: var(--color-rojo);
+  color: var(--color-beige);
 }
 
 .novias-intro-image {
@@ -400,11 +397,13 @@
   font-size: 3rem;
   margin-top: 12px;
   font-family: var(--font-elegante);
+  color: var(--color-oro);
 }
 
 .experience-content p {
   margin-bottom: 30px;
   font-family: var(--font-4);
+  color: var(--color-beige);
 }
 
 .experience-content ul {
@@ -438,8 +437,6 @@
 
   border-radius: 50%;
 
-  background: var(--color-rojo);
-
   flex-shrink: 0;
 }
 
@@ -450,7 +447,7 @@
 }
 
 .experience-price strong {
-  color: var(--color-rojo);
+  color: var(--color-oro);
 
   font-size: 2rem;
 
@@ -590,6 +587,7 @@
 .novias-process h2 {
   margin-bottom: 80px;
   font-family: var(--font-elegante);
+  color: var(--color-oro);
 }
 
 .process-grid {
@@ -675,6 +673,7 @@
 
 .novias-gallery h2 {
   margin-bottom: 70px;
+  color: var(--color-oro);
   font-family: var(--font-elegante);
 }
 
@@ -967,6 +966,7 @@ body.gallery-open {
   max-width: 900px;
   font-family: var(--font-elegante);
   margin: auto auto 30px;
+  color: var(--color-oro);
 }
 
 .novias-cta p {
@@ -1784,10 +1784,6 @@ img {
 
 .experience-content h2 {
   transition: 0.35s;
-}
-
-.novias-experience:hover h2 {
-  color: var(--color-rojo);
 }
 
 .experience-price {

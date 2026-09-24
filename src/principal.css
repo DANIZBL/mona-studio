@@ -1207,13 +1207,9 @@ html {
 
 .novias-content h2 {
   font-family: var(--font-elegante);
-
-  font-size: 68px;
-
-  color: var(--color-rojo);
-
+  font-size: 4.5rem;
+  color: #bf930d;
   margin-bottom: 25px;
-
   font-weight: 400;
 }
 
@@ -1221,7 +1217,7 @@ html {
   font-family: var(--font-4);
   font-size: 24px;
   line-height: 1.45;
-  color: var(--color-rojo);
+  color: #bf930d;
   margin-bottom: 30px;
 }
 
@@ -1283,7 +1279,6 @@ html {
 }
 .btn-novias {
   display: inline-flex;
-
   align-items: center;
 
   justify-content: center;
@@ -1294,7 +1289,7 @@ html {
 
   text-decoration: none;
 
-  background: var(--color-rojo);
+  background: #bf930d;
 
   color: var(--color-blanco);
 
@@ -1491,7 +1486,7 @@ html {
 .quince-content h1 {
   font-family: var(--font-3);
   color: var(--color-rojo);
-  font-size: clamp(2.3rem, 4vw, 4rem);
+  font-size: 4rem;
   font-weight: 400;
   margin-bottom: 30px;
 }
@@ -1650,7 +1645,7 @@ EGRESADAS
   margin: 0 0 30px;
 
   font-family: var(--font-3);
-  font-size: 3.2rem;
+  font-size: 4rem;
   font-weight: 400;
 
   color: var(--color-rojo);
@@ -1955,7 +1950,7 @@ MAKE UP Y PEINADO
 .studio-section {
   width: 100%;
   padding: 80px 20px;
-  background-color: #fff;
+  background-color: #333333;
 }
 
 .studio-container {
@@ -1977,8 +1972,9 @@ MAKE UP Y PEINADO
 
 .studio-content p {
   margin: 0 0 35px;
-  color: var(--color-rojo);
-  font-size: 22px;
+  color: var(--color-blanco);
+  font-family: var(--font-3);
+  font-size: 2rem;
   line-height: 1.7;
 }
 

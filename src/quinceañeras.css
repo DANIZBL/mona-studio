@@ -8,7 +8,7 @@ body {
 }
 
 *,
-*::before,
+quinceaneras-titulo *::before,
 *::after {
   box-sizing: border-box;
 }
@@ -85,9 +85,9 @@ body {
 
   color: var(--color-rojo);
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: 4rem;
 
   line-height: 1.1;
 }
@@ -101,7 +101,7 @@ body {
 
   color: var(--color-rojo);
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
   font-size: clamp(1.2rem, 2vw, 1.8rem);
 
@@ -137,12 +137,10 @@ body {
 ========================================================= */
 
 .quinceaneras-gallery-section {
+  margin-top: 2rem;
   width: 100%;
-
   padding: 15px 5% 80px;
-
-  background: #fff;
-
+  background: var(--color-rosa);
   font-family: var(--font-secundaria);
 }
 
@@ -158,18 +156,16 @@ body {
 
 .quinceaneras-gallery-header h2 {
   margin: 0 0 10px;
-
+  font-size: 3rem;
   color: var(--color-rojo);
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 }
 
 .quinceaneras-gallery-header p {
   margin: 0;
-
   color: #222;
-
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 }
 
 /* =========================================================
@@ -267,8 +263,9 @@ body {
 
   .quinceaneras-descripcion p {
     font-size: 1rem;
-
     line-height: 1.7;
+    font-family: var(--font-4);
+    color: var(--color-beige);
   }
 
   .quinceaneras-gallery-section {
@@ -315,11 +312,13 @@ body {
   margin-top: 40px;
   margin-bottom: 15px;
   padding: 15px;
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
+  background-color: var(--color-rosa);
+  border-radius: 15px;
 }
 .egresadas-process h2 {
   color: #222;
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   font-size: 3rem;
   margin-bottom: 80px;
 }
@@ -334,18 +333,11 @@ body {
   margin-bottom: 40px;
 }
 .egresadas-process-grid article {
+  font-family: var(--font-3);
   position: relative;
   padding: 35px;
 }
-.egresadas-process-grid article::after {
-  content: "";
-  position: absolute;
-  top: 32px;
-  right: -20px;
-  width: 40px;
-  height: 2px;
-  background: #ddd;
-}
+
 .egresadas-process-grid article:last-child::after {
   display: none;
 }
@@ -366,8 +358,10 @@ body {
   font-size: 1.35rem;
   color: #222;
   margin-bottom: 20px;
+  font-family: var(--font-4);
 }
 .egresadas-process-grid p {
+  font-family: var(--font-4);
   margin: 0;
 }
 
@@ -473,10 +467,9 @@ body {
    ========================= */
 
 .egresadas-reviews {
-  background: #f8f8f8;
   padding: 80px 20px;
   text-align: center;
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   overflow: hidden;
 }
 
@@ -487,8 +480,8 @@ body {
 
 .egresadas-reviews h2 {
   color: #222;
-  font-family: var(--font-secundaria);
-  font-size: 3rem;
+  font-family: var(--font-3);
+  font-size: 2.5rem;
   margin: 10px 0 60px;
 }
 
