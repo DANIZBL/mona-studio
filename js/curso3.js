@@ -5,25 +5,25 @@
 const perfeccionamientoGalleryItems = [
   {
     type: "image",
-    src: "../src/img/perf1.webp",
+    src: "../src/img/pieles1.webp",
     alt: "Perfeccionamiento en maquillaje",
   },
 
   {
     type: "image",
-    src: "../src/img/perf2.webp",
+    src: "../src/img/pieles2.webp",
     alt: "Técnica de maquillaje",
   },
 
   {
     type: "image",
-    src: "../src/img/perf3.webp",
+    src: "../src/img/pieles3.webp",
     alt: "Curso de perfeccionamiento",
   },
 
   {
     type: "image",
-    src: "../src/img/perf4.webp",
+    src: "../src/img/pieles4.webp",
     alt: "Perfeccionamiento profesional",
   },
 ];
@@ -137,7 +137,7 @@ perfeccionamientoGalleryItems.forEach((item) => {
 const galeriaNoviasItems = [
   {
     type: "image",
-    src: "../src/img/novias1.webp",
+    src: "../src/img/novias10.webp",
     alt: "Maquillaje para novia",
   },
 
@@ -155,7 +155,7 @@ const galeriaNoviasItems = [
 
   {
     type: "image",
-    src: "../src/img/quince2.webp",
+    src: "../src/img/quince6.webp",
     alt: "Maquillaje profesional para novia",
   },
 ];

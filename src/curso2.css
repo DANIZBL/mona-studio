@@ -42,6 +42,7 @@ li {
 .curso-tag {
   display: inline-block;
   color: var(--color-rojo);
+  font-family: var(--font-3);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 0.9rem;
@@ -49,14 +50,16 @@ li {
 }
 
 .curso-hero h1 {
-  font-family: var(--font-principal);
+  font-family: var(--font-3);
   color: var(--color-rojo);
-  font-size: clamp(4rem, 7vw, 7rem);
+  font-size: 4rem;
   line-height: 0.9;
   margin-bottom: 30px;
 }
 
 .curso-hero-content p {
+  font-family: var(--font-3);
+  color: var(--color-beige);
   font-size: 1.1rem;
   line-height: 1.8;
   max-width: 650px;
@@ -76,7 +79,8 @@ li {
 }
 
 .beneficios div {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
+  color: var(--color-beige);
   font-size: 1rem;
   font-weight: 500;
 }
@@ -89,7 +93,9 @@ li {
 }
 
 .curso-info span {
-  background: var(--color-rosa);
+  font-family: var(--font-3);
+  background: var(--color-rojo);
+  color: var(--color-blanco);
   padding: 12px 20px;
   border-radius: 999px;
   font-size: 0.95rem;
@@ -110,9 +116,7 @@ li {
 
 .curso-bloque {
   background: var(--color-blanco);
-
   padding: 50px;
-
   border-radius: 30px;
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -146,7 +150,7 @@ li {
 
 .curso-bloque h2 {
   color: var(--color-rojo);
-
+  font-family: var(--font-3);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
 
   margin-bottom: 25px;
@@ -157,6 +161,8 @@ li {
 .curso-bloque p {
   line-height: 1.8;
   margin-bottom: 25px;
+  font-family: var(--font-3);
+  color: var(--color-beige);
 }
 
 .curso-bloque ul {
@@ -167,9 +173,9 @@ li {
 
 .curso-bloque li {
   margin-bottom: 14px;
-
+  font-family: var(--font-3);
   line-height: 1.6;
-
+  color: var(--color-rojo);
   position: relative;
 
   padding-left: 28px;
@@ -193,7 +199,7 @@ li {
   align-items: center;
 
   margin-top: 35px;
-
+  font-family: var(--font-3);
   background: var(--color-rosa);
 
   padding: 12px 18px;
@@ -234,7 +240,7 @@ li {
 }
 
 .curso-completo h2 {
-  font-family: var(--font-principal);
+  font-family: var(--font-3);
   text-align: center;
   color: var(--color-rojo);
   font-size: clamp(3rem, 5vw, 5rem);
@@ -242,6 +248,8 @@ li {
 }
 
 .curso-completo > p {
+  font-family: var(--font-3);
+  color: var(--color-beige);
   text-align: center;
   max-width: 700px;
   margin: 0 auto 70px;
@@ -261,6 +269,7 @@ li {
 }
 
 .dia h3 {
+  font-family: var(--font-3);
   color: var(--color-rojo);
   font-size: 2rem;
   margin-bottom: 25px;
@@ -271,6 +280,8 @@ li {
 }
 
 .dia li {
+  font-family: var(--font-3);
+  color: var(--color-rojo);
   margin-bottom: 14px;
   line-height: 1.7;
 }
@@ -286,7 +297,7 @@ li {
 }
 
 .curso-cta h2 {
-  font-family: var(--font-principal);
+  font-family: var(--font-3);
   color: var(--color-rojo);
   font-size: clamp(3rem, 5vw, 5rem);
   line-height: 1;
@@ -297,13 +308,15 @@ li {
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.8;
+  font-family: var(--font-3);
+  color: var(--color-rojo);
 }
 
 .btn-curso {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
+  font-family: var(--font-3);
   margin-top: 45px;
   min-width: 280px;
 
@@ -424,6 +437,18 @@ GALERIA AUTO-MAQUILLAJE
 .automaquillaje-gallery-header {
   text-align: center;
   margin-bottom: 40px;
+}
+
+.automaquillaje-gallery-header h2 {
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.automaquillaje-gallery-header p {
+  font-family: var(--font-3);
+  color: var(--color-beige);
+  font-size: 1.2rem;
 }
 
 /* =========================
