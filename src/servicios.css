@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* =====================================================
    SERVICIO
 ===================================================== */
@@ -647,6 +653,46 @@ body.lightbox-abierto {
   }
 }
 
+.whatsapp-btn {
+  width: 80%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px;
+  background-color: var(--color-rojo);
+  color: white;
+  border-radius: 30px;
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background-color: var(--color-rojo);
+    color: white;
+    border-radius: 30px;
+    font-family: var(--font-4);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+}
+
 /* ==============================================
 ESPECIFICO DE CADA APGINA
     ============================================== */
@@ -654,30 +700,23 @@ ESPECIFICO DE CADA APGINA
 /* ==============================================
 Limpiezas faciales
 ============================================== */
-
-.limpieza_facial {
-  margin-bottom: 25px;
-}
-
-.limpieza_titulo {
-  margin-bottom: 5px;
-  color: var(--color-rojo);
-  margin: 15px 15px;
-  font-family: var(--font-secundaria);
-}
-
-.limpieza_facial p {
-  margin-top: 5px;
-  margin: 15px 15px;
-}
-
 .limpieza_contenedor {
-  border: solid 3px var(--color-rojo);
-  background-color: var(--color-rosa);
+  border: var(--color-rojo) solid 1px;
   border-radius: 15px;
-  margin: 5px;
-  gap: 5px;
-  box-shadow: #333;
+  margin-bottom: 5px;
+  padding: 5px 5px;
+}
+
+.limpieza_contenedor h1 {
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+  margin-bottom: 5px;
+}
+
+.limpieza_contenedor p {
+  font-family: var(--font-4);
+  margin-top: 5px;
+  color: var(--color-beige);
 }
 /* ================================================== */
 
@@ -693,4 +732,56 @@ SOCIAL
   font-size: 1.4rem;
   font-family: var(--font-3);
   color: var(--color-beige);
+}
+
+/*======================================
+Peeling Microneedling y Hidralips
+==========================================*/
+
+.peeling-container a {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px;
+  background-color: var(--color-rojo);
+  color: white;
+  border-radius: 30px;
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 10px 10px;
+}
+.whatsapp-btn-peeling:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.peeling-container {
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .peeling-container a {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background-color: var(--color-rojo);
+    color: white;
+    border-radius: 30px;
+    font-family: var(--font-4);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .peeling-container {
+    margin-bottom: 3rem;
+    display: block;
+  }
 }

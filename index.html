@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./src/header.css" />
     <link rel="stylesheet" href="./src/footer.css" />
     <link rel="stylesheet" href="./src/marcas.css" />
+    <link rel="stylesheet" href="./src/carrito.css" />
   </head>
   <body>
     <!-- ============================HEDER========================== -->
@@ -48,7 +49,7 @@
         <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
         <a class="boton" href="productos.html">TIENDA</a>
 
-        <a class="boton" href="#">INFO Y CONTACTO</a>
+        <a class="boton" href="info.html">INFO Y CONTACTO</a>
 
         <div class="search-container">
           <button class="search-toggle">
@@ -87,6 +88,53 @@
         <p id="bannerDescription"></p>
       </div>
     </section>
+
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+      <div class="cart-drawer-header">
+        <div>
+          <p class="cart-drawer-eyebrow">MONA STUDIO</p>
+          <h2>Tu carrito</h2>
+        </div>
+
+        <button
+          type="button"
+          id="cart-close"
+          class="cart-close"
+          aria-label="Cerrar carrito"
+        >
+          ×
+        </button>
+      </div>
+
+      <div id="cart-drawer-items" class="cart-drawer-items">
+        <!-- Productos generados por JavaScript -->
+      </div>
+
+      <div id="cart-drawer-empty" class="cart-drawer-empty" hidden>
+        <div class="cart-drawer-empty-icon">♡</div>
+
+        <h3>Tu carrito está vacío</h3>
+
+        <p>Todavía no agregaste productos.</p>
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-drawer-total">
+          <span>Total</span>
+          <strong id="cart-drawer-total">$0</strong>
+        </div>
+
+        <a href="carrito.html" class="cart-drawer-button cart-drawer-checkout">
+          Ver carrito
+        </a>
+
+        <a href="carrito.html" class="cart-drawer-continue">
+          Finalizar compra
+        </a>
+      </div>
+    </aside>
 
     <section class="presentacion">
       <p>
@@ -150,7 +198,9 @@
                 </li>
 
                 <li>
-                  <a href="./servicios/peelings.html"> Peelings </a>
+                  <a href="./servicios/peelings.html">
+                    Peelings - Microneedling - Hidralips</a
+                  >
                 </li>
               </ul>
             </div>
@@ -546,6 +596,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/carrito.js" defer></script>
 
     <script src="./js/principal.js"></script>
     <script src="./js/header.js"></script>

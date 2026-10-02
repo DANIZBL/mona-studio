@@ -292,7 +292,7 @@ html {
 .servicio-item h3 {
   color: var(--color-rojo);
 
-  font-family: var(--font-4);
+  font-family: var(--font-3);
 
   font-size: 1.15rem;
 
@@ -327,7 +327,7 @@ html {
   display: inline-block;
 
   font-family: var(--font-4);
-
+  font-weight: 600;
   font-size: 0.9rem;
 
   color: var(--color-rojo);

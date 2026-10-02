@@ -231,3 +231,21 @@ setInterval(() => {
     message.classList.remove("review-changing");
   }, 350);
 }, 5000);
+
+/*===============================
+QUINCEAÑERAS
+=========================== */
+
+const whatsappNumber = "3434403870";
+
+document.querySelectorAll(".whatsapp-btn").forEach((button) => {
+  const message = button.dataset.message;
+
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    message
+  )}`;
+
+  button.href = whatsappUrl;
+  button.target = "_blank";
+  button.rel = "noopener noreferrer";
+});

@@ -8,7 +8,7 @@ body {
 }
 
 *,
-quinceaneras-titulo *::before,
+*::before,
 *::after {
   box-sizing: border-box;
 }
@@ -621,5 +621,52 @@ quinceaneras-titulo *::before,
   .review-message p {
     font-size: 0.95rem;
     line-height: 1.5;
+  }
+}
+
+/*==================================
+
+=========================*/
+.whatsapp-btn {
+  width: 60%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px;
+  background-color: var(--color-rojo);
+  color: white;
+  border-radius: 30px;
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background-color: var(--color-rojo);
+    color: white;
+    border-radius: 30px;
+    font-family: var(--font-4);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .whatsapp-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
   }
 }

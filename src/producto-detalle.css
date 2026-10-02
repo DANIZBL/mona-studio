@@ -40,14 +40,15 @@
 }
 
 .product-title {
-  font-size: 2.5rem;
-  font-family: var(--font-principal);
+  font-size: 3rem;
+  font-family: var(--font-4);
   color: var(--color-rojo);
 }
 
 .product-description {
+  font-family: var(--font-3);
   line-height: 1.8;
-  color: #555;
+  color: var(--color-beige);
 }
 
 .product-price {
@@ -59,12 +60,89 @@
 .current-price {
   font-size: 2rem;
   color: var(--color-rojo);
+  font-family: var(--font-3);
   font-weight: bold;
+}
+
+.quantity-btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--color-rojo);
+  color: var(--color-blanco);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.product-quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quantity-btn {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--color-rojo);
+  color: var(--color-blanco);
+
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.product-quantity span {
+  min-width: 30px;
+
+  text-align: center;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  height: 45px;
+  padding: 0 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50px;
+
+  background-color: var(--color-rojo);
+  color: var(--color-blanco);
+
+  font-family: var(--font-3);
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .old-price {
   text-decoration: line-through;
-  color: #999;
+  color: var(--color-rojo);
+  font-family: var(--font-4);
 }
 
 .discount-badge-detail {
@@ -133,4 +211,318 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
+}
+
+/* =====================================================
+   PRODUCTOS SIMILARES
+===================================================== */
+
+.related-products-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+}
+
+.related-products-section h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 2rem;
+}
+
+.related-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+
+.related-products-grid .product-card {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* IMAGEN */
+
+.related-products-grid .product-image-wrapper {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.related-products-grid .product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* NOMBRE */
+
+.related-products-grid .product-name {
+  margin: 12px 0 8px;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--color-rojo);
+}
+
+/* PRECIO */
+
+.related-products-grid .price-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.related-products-grid .old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.related-products-grid .current-price {
+  font-weight: bold;
+}
+
+/* BOTÓN */
+
+.related-products-grid .product-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  height: 45px;
+  padding: 0 30px;
+  border: none;
+  border-radius: 50px;
+
+  background-color: var(--color-rojo);
+  color: var(--color-blanco);
+
+  font-family: var(--font-3);
+  font-size: 1rem;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  .related-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .related-products-grid .product-card {
+    max-width: 300px;
+  }
+
+  .related-products-grid .product-image-wrapper {
+    height: 240px;
+  }
+}
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 500px) {
+  .related-products-section {
+    margin-top: 40px;
+    padding: 0 15px;
+  }
+
+  .related-products-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .related-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .related-products-grid .product-card {
+    max-width: none;
+  }
+
+  .related-products-grid .product-image-wrapper {
+    height: 180px;
+  }
+
+  .related-products-grid .product-name {
+    font-size: 0.9rem;
+    color: var(--color-rojo);
+  }
+
+  .related-products-grid .product-btn {
+    font-size: 0.85rem;
+    padding: 9px 8px;
+  }
+}
+
+/* =====================================================
+   VISOR DE IMÁGENES
+===================================================== */
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  padding: 30px;
+}
+
+.image-modal.active {
+  display: flex;
+}
+
+/* CONTENEDOR DE LA IMAGEN */
+
+.image-modal-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.image-modal-content img {
+  max-width: 90vw;
+  max-height: 90vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+
+  pointer-events: auto;
+}
+
+/* BOTÓN CERRAR */
+
+.image-modal-close {
+  position: absolute;
+
+  top: 20px;
+  right: 25px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  font-size: 42px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 2;
+}
+
+/* FLECHAS */
+
+.image-modal-arrow {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  color: white;
+
+  font-size: 42px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.2s ease;
+}
+
+.image-modal-arrow:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.image-modal-prev {
+  left: 25px;
+}
+
+.image-modal-next {
+  right: 25px;
+}
+
+/* OCULTAR FLECHAS CUANDO SOLO HAY UNA IMAGEN */
+
+.image-modal.single-image .image-modal-arrow {
+  display: none;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+  .image-modal {
+    padding: 15px;
+  }
+
+  .image-modal-content img {
+    max-width: 94vw;
+    max-height: 80vh;
+  }
+
+  .image-modal-close {
+    top: 10px;
+    right: 15px;
+
+    font-size: 38px;
+  }
+
+  .image-modal-arrow {
+    width: 45px;
+    height: 45px;
+
+    font-size: 34px;
+  }
+
+  .image-modal-prev {
+    left: 10px;
+  }
+
+  .image-modal-next {
+    right: 10px;
+  }
 }

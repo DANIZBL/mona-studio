@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mi carrito | Mona Studio</title>
+
+    <link rel="stylesheet" href="./src/carrito.css" />
+    <link rel="stylesheet" href="./src/variables.css" />
+  </head>
+
+  <body>
+    <!-- PEGÁ ACÁ EL HEADER DE MONA STUDIO -->
+
+    <main class="cart-page">
+      <div class="cart-page-header">
+        <a href="productos.html" class="cart-back-link"> ← Seguir comprando </a>
+
+        <p class="cart-eyebrow">MONA STUDIO</p>
+        <h1>Mi carrito</h1>
+        <p class="cart-subtitle">
+          Revisá tus productos antes de finalizar tu compra.
+        </p>
+      </div>
+
+      <div class="cart-layout">
+        <!-- PRODUCTOS -->
+        <section class="cart-products-section">
+          <div class="cart-section-heading">
+            <h2>Tu selección</h2>
+            <span id="cart-items-count">0 productos</span>
+          </div>
+
+          <div id="cart-items" class="cart-items">
+            <!-- Los productos se cargan con JavaScript -->
+          </div>
+
+          <div id="cart-empty" class="cart-empty" hidden>
+            <div class="cart-empty-icon">♡</div>
+
+            <h2>Tu carrito está vacío</h2>
+
+            <p>
+              Todavía no agregaste productos. Descubrí todo lo que tenemos para
+              vos.
+            </p>
+
+            <a href="productos.html" class="cart-primary-link">
+              Explorar la tienda
+            </a>
+          </div>
+
+          <button
+            type="button"
+            id="clear-cart"
+            class="cart-clear-button"
+            hidden
+          >
+            Vaciar carrito
+          </button>
+        </section>
+
+        <!-- RESUMEN Y CHECKOUT -->
+        <aside class="cart-summary">
+          <h2>Resumen de compra</h2>
+
+          <div class="summary-line">
+            <span>Productos</span>
+            <span id="summary-subtotal">$0</span>
+          </div>
+
+          <div class="summary-line">
+            <span>Entrega</span>
+            <span id="summary-delivery">A coordinar</span>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-line summary-total">
+            <span>Total estimado</span>
+            <span id="summary-total">$0</span>
+          </div>
+
+          <p class="summary-note">
+            El costo de envío, si corresponde, se coordinará según la modalidad
+            de entrega.
+          </p>
+
+          <div class="checkout-divider"></div>
+
+          <h3>Datos para tu pedido</h3>
+
+          <form id="checkout-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="client-name">Nombre *</label>
+                <input
+                  type="text"
+                  id="client-name"
+                  name="client_name"
+                  autocomplete="given-name"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="client-surname">Apellido *</label>
+                <input
+                  type="text"
+                  id="client-surname"
+                  name="client_surname"
+                  autocomplete="family-name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="client-phone">Teléfono *</label>
+              <input
+                type="tel"
+                id="client-phone"
+                name="phone"
+                autocomplete="tel"
+                placeholder="Ej. 3434403870"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="delivery-method">Método de entrega *</label>
+
+              <select id="delivery-method" name="delivered" required>
+                <option value="retiro en local">Retiro en local</option>
+
+                <option value="cadete">Envío por cadete</option>
+              </select>
+            </div>
+
+            <div id="shipping-fields" class="shipping-fields" hidden>
+              <p class="shipping-heading">Dirección de entrega</p>
+
+              <div class="form-field">
+                <label for="shipping-street">Calle *</label>
+                <input
+                  type="text"
+                  id="shipping-street"
+                  name="street"
+                  autocomplete="street-address"
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="shipping-number">Número *</label>
+                  <input
+                    type="number"
+                    id="shipping-number"
+                    name="number"
+                    min="1"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label for="shipping-floor">Piso</label>
+                  <input type="text" id="shipping-floor" name="floor" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="shipping-letter">Departamento</label>
+                <input type="text" id="shipping-letter" name="letter" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="payment-method">Método de pago *</label>
+
+              <select id="payment-method" name="paymentMethod" required>
+                <option value="transfer">Transferencia bancaria</option>
+
+                <option value="mercadopago">Mercado Pago</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="order-comment"> Comentarios (opcional) </label>
+
+              <textarea
+                id="order-comment"
+                name="coment"
+                rows="3"
+                placeholder="¿Querés aclarar algo sobre tu pedido?"
+              ></textarea>
+            </div>
+
+            <p
+              id="checkout-message"
+              class="checkout-message"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+            <button
+              type="submit"
+              id="checkout-button"
+              class="checkout-button"
+              disabled
+            >
+              Finalizar pedido
+            </button>
+
+            <p class="checkout-legal">
+              Revisá tus datos antes de confirmar. El pedido estará sujeto a la
+              validación de stock.
+            </p>
+          </form>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="cart-footer">
+      <p>© Mona Studio · Todos los derechos reservados</p>
+    </footer>
+
+    <script src="./js/carrito.js" defer></script>
+    <script src="./js//header.js" defer></script>
+  </body>
+</html>

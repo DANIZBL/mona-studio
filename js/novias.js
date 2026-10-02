@@ -264,3 +264,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(cambiarTestimonio, 5000);
 });
+
+/*================================================
+WHATSAPP
+======================================*/
+
+const noviasBtn = document.querySelector(".novias-btn");
+
+if (noviasBtn) {
+  const whatsappNumber = "3434403870";
+  const message = noviasBtn.dataset.message;
+
+  noviasBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+  });
+}
+
+/*===========================================*/
