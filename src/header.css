@@ -1345,3 +1345,350 @@ strong {
     padding: 18px;
   }
 }
+
+/* ==========================================
+   CUENTA REGRESIVA
+========================================== */
+
+.cuenta-regresiva {
+  width: 100%;
+  min-height: 700px;
+
+  background-image: url("../src/img/img_curso1.webp");
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.cuenta-regresiva-overlay {
+  width: 100%;
+  min-height: 700px;
+
+  background: rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  align-items: center;
+}
+
+.cuenta-regresiva-contenido {
+  width: 100%;
+  max-width: 1920px;
+
+  margin: 0 auto;
+  padding: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 60px;
+}
+
+/* ==========================================
+   INFORMACIÓN IZQUIERDA
+========================================== */
+
+.cuenta-regresiva-info {
+  max-width: 560px;
+}
+
+.cuenta-regresiva-titulo-pequeno {
+  display: block;
+  font-family: var(--font-4);
+  color: white;
+
+  font-size: 46px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  margin-bottom: 10px;
+}
+
+.cuenta-regresiva-titulo {
+  margin: 0;
+  font-family: var(--font-3);
+  color: #ff0000;
+
+  font-size: clamp(55px, 5vw, 90px);
+
+  font-weight: 900;
+
+  line-height: 0.92;
+
+  letter-spacing: -2px;
+}
+
+.cuenta-regresiva-descripcion {
+  margin: 25px 0 0;
+
+  color: white;
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  line-height: 1.25;
+
+  max-width: 500px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.cuenta-regresiva-card {
+  width: 620px;
+  max-width: 100%;
+
+  padding: 35px 35px 45px;
+
+  background: rgba(255, 0, 0, 0.82);
+
+  border-radius: 22px;
+
+  color: white;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   LISTA
+========================================== */
+
+.cuenta-regresiva-lista {
+  list-style: none;
+
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.cuenta-regresiva-lista li {
+  font-size: 27px;
+
+  font-weight: 700;
+
+  line-height: 1.45;
+
+  margin-bottom: 5px;
+}
+
+.cuenta-regresiva-lista li::before {
+  content: "✓ ";
+
+  font-weight: 900;
+}
+
+/* ==========================================
+   DETALLES
+========================================== */
+
+.cuenta-regresiva-detalles {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+}
+
+.cuenta-regresiva-detalles div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.cuenta-regresiva-detalles span {
+  font-size: 28px;
+}
+
+.cuenta-regresiva-detalles strong {
+  font-size: 28px;
+  font-family: var(--font-4);
+  color: var(--color-blanco);
+  font-weight: 800;
+}
+
+/* ==========================================
+   CONTADOR
+========================================== */
+
+.cuenta-regresiva-contador {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+.cuenta-regresiva-bloque {
+  min-height: 120px;
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.cuenta-regresiva-bloque span {
+  font-size: 38px;
+  font-family: var(--font-4);
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+.cuenta-regresiva-bloque small {
+  margin-top: 8px;
+  font-family: var(--font-4);
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+  .cuenta-regresiva-contenido {
+    padding: 40px;
+    gap: 35px;
+  }
+
+  .cuenta-regresiva-titulo-pequeno {
+    font-size: 38px;
+  }
+
+  .cuenta-regresiva-titulo {
+    font-size: 58px;
+  }
+
+  .cuenta-regresiva-descripcion {
+    font-size: 19px;
+  }
+
+  .cuenta-regresiva-card {
+    width: 500px;
+    padding: 28px;
+  }
+
+  .cuenta-regresiva-lista li {
+    font-size: 21px;
+  }
+
+  .cuenta-regresiva-detalles strong {
+    font-size: 21px;
+  }
+
+  .cuenta-regresiva-contador {
+    gap: 12px;
+  }
+
+  .cuenta-regresiva-bloque {
+    min-height: 100px;
+  }
+
+  .cuenta-regresiva-bloque span {
+    font-size: 30px;
+  }
+
+  .cuenta-regresiva-bloque small {
+    font-size: 17px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .cuenta-regresiva,
+  .cuenta-regresiva-overlay {
+    min-height: auto;
+  }
+
+  .cuenta-regresiva-contenido {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 50px 20px;
+
+    gap: 40px;
+  }
+
+  .cuenta-regresiva-info {
+    max-width: 100%;
+  }
+
+  .cuenta-regresiva-titulo-pequeno {
+    font-size: 32px;
+  }
+
+  .cuenta-regresiva-titulo {
+    font-size: clamp(45px, 13vw, 70px);
+
+    letter-spacing: -1px;
+  }
+
+  .cuenta-regresiva-descripcion {
+    font-size: 17px;
+
+    line-height: 1.25;
+  }
+
+  .cuenta-regresiva-card {
+    width: 100%;
+
+    padding: 25px 20px 30px;
+
+    border-radius: 18px;
+  }
+
+  .cuenta-regresiva-lista li {
+    font-size: 19px;
+
+    line-height: 1.5;
+  }
+
+  .cuenta-regresiva-detalles strong {
+    font-size: 20px;
+  }
+
+  .cuenta-regresiva-contador {
+    gap: 8px;
+  }
+
+  .cuenta-regresiva-bloque {
+    min-height: 85px;
+
+    border-radius: 12px;
+  }
+
+  .cuenta-regresiva-bloque span {
+    font-size: 25px;
+  }
+
+  .cuenta-regresiva-bloque small {
+    font-size: 14px;
+  }
+}

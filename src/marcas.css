@@ -1,7 +1,8 @@
 .marcas {
   width: 100%;
-  padding: 60px 5%;
+  padding: 60px 0;
   margin-bottom: 60px;
+  overflow: hidden;
 }
 
 .marcas h2 {
@@ -11,25 +12,64 @@
   font-family: var(--font-4);
 }
 
-.marcas-container {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 25px;
-  align-items: center;
+/* =========================
+   CONTENEDOR DEL SLIDER
+========================= */
+
+.marcas-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
+/* =========================
+   FILA DE MARCAS
+========================= */
+
+.marcas-container {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 60px;
+
+  animation: moverMarcas 35s linear infinite;
+}
+
+/* =========================
+   MARCA
+========================= */
+
 .marca {
+  flex: 0 0 150px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   height: 100px;
 }
 
 .marca img {
-  max-width: 100%;
-  max-height: 10rem;
+  width: 100%;
+  max-width: 150px;
+  max-height: 80px;
+
   object-fit: contain;
   display: block;
+}
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes moverMarcas {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* =========================
@@ -44,41 +84,21 @@
 
   .marcas h2 {
     padding: 0 20px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   .marcas-container {
-    display: flex;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    gap: 25px;
-
-    padding: 10px 20px 20px;
-
-    scroll-snap-type: x mandatory;
-
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: none;
-  }
-
-  /* Ocultar scrollbar */
-  .marcas-container::-webkit-scrollbar {
-    display: none;
+    gap: 35px;
+    animation-duration: 28s;
   }
 
   .marca {
     flex: 0 0 120px;
-
-    height: 100px;
-
-    scroll-snap-align: center;
+    height: 90px;
   }
 
   .marca img {
-    max-width: 100%;
-    max-height: 9rem;
+    max-width: 120px;
+    max-height: 70px;
   }
 }

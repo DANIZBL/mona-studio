@@ -828,3 +828,58 @@ document.addEventListener("click", (event) => {
     searchBox.classList.remove("active");
   }
 });
+
+// =====================================================
+// CUENTA REGRESIVA
+// =====================================================
+
+const CUENTA_REGRESIVA_FECHA = "2027-01-12T09:00:00-03:00";
+
+const cuentaRegresivaDias = document.getElementById("cuenta-regresiva-dias");
+
+const cuentaRegresivaHoras = document.getElementById("cuenta-regresiva-horas");
+
+const cuentaRegresivaMinutos = document.getElementById(
+  "cuenta-regresiva-minutos"
+);
+
+const cuentaRegresivaSegundos = document.getElementById(
+  "cuenta-regresiva-segundos"
+);
+
+function actualizarCuentaRegresiva() {
+  const ahora = new Date().getTime();
+
+  const fechaObjetivo = new Date(CUENTA_REGRESIVA_FECHA).getTime();
+
+  const diferencia = fechaObjetivo - ahora;
+
+  if (diferencia <= 0) {
+    cuentaRegresivaDias.textContent = "00";
+    cuentaRegresivaHoras.textContent = "00";
+    cuentaRegresivaMinutos.textContent = "00";
+    cuentaRegresivaSegundos.textContent = "00";
+
+    return;
+  }
+
+  const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+  const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+
+  const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+
+  const segundos = Math.floor((diferencia / 1000) % 60);
+
+  cuentaRegresivaDias.textContent = String(dias).padStart(2, "0");
+
+  cuentaRegresivaHoras.textContent = String(horas).padStart(2, "0");
+
+  cuentaRegresivaMinutos.textContent = String(minutos).padStart(2, "0");
+
+  cuentaRegresivaSegundos.textContent = String(segundos).padStart(2, "0");
+}
+
+actualizarCuentaRegresiva();
+
+setInterval(actualizarCuentaRegresiva, 1000);

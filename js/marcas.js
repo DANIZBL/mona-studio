@@ -59,22 +59,44 @@ const marcas = [
     nombre: "Marca 15",
     imagen: "../src/marcas/marca15.webp",
   },
+  {
+    nombre: "Marca 16",
+    imagen: "../src/marcas/marca16.webp",
+  },
+  {
+    nombre: "Marca 17",
+    imagen: "../src/marcas/marca17.webp",
+  },
+  {
+    nombre: "Marca 18",
+    imagen: "../src/marcas/marca18.webp",
+  },
 ];
 
 const marcasContainer = document.getElementById("marcasContainer");
 
-marcas.forEach((marca) => {
+function crearMarca(marca) {
   const marcaElement = document.createElement("div");
 
   marcaElement.classList.add("marca");
 
   marcaElement.innerHTML = `
-        <img
-            src="${marca.imagen}"
-            alt="Logo ${marca.nombre}"
-            loading="lazy"
-        >
-    `;
+    <img 
+      src="${marca.imagen}" 
+      alt="Logo ${marca.nombre}" 
+      loading="lazy"
+    >
+  `;
 
-  marcasContainer.appendChild(marcaElement);
+  return marcaElement;
+}
+
+// Primera vuelta
+marcas.forEach((marca) => {
+  marcasContainer.appendChild(crearMarca(marca));
+});
+
+// Segunda vuelta
+marcas.forEach((marca) => {
+  marcasContainer.appendChild(crearMarca(marca));
 });
