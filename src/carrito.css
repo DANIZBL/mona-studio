@@ -10,14 +10,14 @@ body {
   margin: 0;
   background: var(--cart-bg);
   color: var(--cart-text);
-  font-family: inherit;
+  font-family: var(--font-4);
 }
 
 button,
 input,
 select,
 textarea {
-  font: inherit;
+  font-family: var(--font-4);
 }
 
 button,
@@ -76,6 +76,7 @@ button:disabled {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 500;
   letter-spacing: -0.04em;
+  font-family: var(--font-3);
 }
 
 .cart-subtitle {
@@ -120,6 +121,7 @@ button:disabled {
   margin: 0;
   font-size: 1.15rem;
   font-weight: 600;
+  font-family: var(--font-3);
 }
 
 .cart-section-heading span {
@@ -183,6 +185,7 @@ button:disabled {
   font-size: 1rem;
   font-weight: 600;
   overflow-wrap: anywhere;
+  font-family: var(--font-3);
 }
 
 .cart-item-unit-price {
@@ -227,6 +230,7 @@ button:disabled {
   min-width: 20px;
   text-align: center;
   font-size: 0.88rem;
+  font-family: var(--font-4);
 }
 
 .remove-item {
@@ -289,6 +293,7 @@ button:disabled {
   margin: 0 0 12px;
   font-size: 1.3rem;
   font-weight: 500;
+  font-family: var(--font-3);
 }
 
 .cart-empty p {
@@ -297,6 +302,7 @@ button:disabled {
   color: var(--cart-muted);
   font-size: 0.92rem;
   line-height: 1.7;
+  font-family: var(--font-4);
 }
 
 .cart-primary-link {
@@ -327,6 +333,7 @@ button:disabled {
 
 .cart-summary h2 {
   margin-bottom: 25px;
+  font-family: var(--font-3);
 }
 
 .summary-line {
@@ -378,6 +385,7 @@ button:disabled {
   margin: 0 0 22px;
   font-size: 1rem;
   font-weight: 600;
+  font-family: var(--font-3);
 }
 
 /* Formulario */
@@ -527,6 +535,7 @@ button:disabled {
 
 .cart-footer p {
   margin: 0;
+  font-family: var(--font-4);
 }
 
 /* Accesibilidad */
@@ -610,6 +619,125 @@ button:disabled {
   }
 
   .cart-section-heading h2 {
+    font-size: 1rem;
+  }
+}
+
+/* ==========================================
+   MONA STUDIO — IDENTIDAD VISUAL DEL CARRITO
+========================================== */
+
+body {
+  font-family: var(--font-4);
+  color: var(--color-negro, #242424);
+  background: var(--color-blanco, #fff);
+}
+
+.cart-page-header h1,
+.cart-page-header .cart-eyebrow,
+.cart-section-heading h2,
+.cart-summary h2,
+.cart-summary h3,
+.cart-item-info h3,
+.cart-empty h2,
+.shipping-heading,
+.form-field label {
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+}
+
+.cart-page-header h1 {
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  letter-spacing: -0.035em;
+}
+
+.cart-eyebrow {
+  letter-spacing: 0.18em;
+}
+
+.cart-item-info h3 {
+  font-size: 1.12rem;
+  line-height: 1.35;
+}
+
+.cart-item-unit-price,
+.cart-item-actions,
+.cart-item-total,
+.summary-line,
+.summary-note,
+.checkout-legal,
+.cart-subtitle,
+.cart-back-link,
+.cart-footer {
+  font-family: var(--font-4);
+}
+
+.cart-item-total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.cart-item-total span {
+  color: #777;
+  font-size: 0.75rem;
+}
+
+.cart-item-total strong,
+.summary-total span:last-child {
+  color: var(--color-rojo);
+}
+
+.cart-primary-link,
+.checkout-button {
+  background: var(--color-rojo);
+  border-color: var(--color-rojo);
+  color: var(--color-blanco, #fff);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-primary-link:hover,
+.checkout-button:hover:not(:disabled) {
+  background: #982120;
+  border-color: #982120;
+  transform: translateY(-1px);
+}
+
+.cart-products-section,
+.cart-summary {
+  border-radius: 12px;
+  border-color: #e9e3e3;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 3%);
+}
+
+.quantity-control {
+  border-radius: 8px;
+}
+
+.quantity-control button:hover:not(:disabled) {
+  color: var(--color-rojo);
+}
+
+.remove-cart-item,
+.cart-clear-button {
+  color: var(--color-rojo);
+  font-family: var(--font-4);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--color-rojo);
+  box-shadow: 0 0 0 3px rgb(184 43 42 / 10%);
+}
+
+@media (max-width: 560px) {
+  .cart-item-total {
+    align-items: flex-start;
+  }
+
+  .cart-item-info h3 {
     font-size: 1rem;
   }
 }
