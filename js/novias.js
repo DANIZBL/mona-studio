@@ -211,15 +211,12 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   const testimonios = [
-    "No fue solamente maquillaje y peinado. Fue uno de los momentos más lindos de todo nuestro casamiento.",
-
-    "Me sentí hermosa desde el primer momento. Todo salió exactamente como lo soñaba.",
-
-    "La tranquilidad que me transmitieron hizo que disfrutara cada segundo de mi gran día.",
-
     "El maquillaje quedó impecable durante toda la fiesta. ¡Volvería a elegirlas mil veces!",
 
+    "Hola anto!!! No se me corrio el maquillaje en toda la noche, ni un retoque me hice! Estuvo todo increíble, te quería agradecer por tu trabajo y profesionalismo! La pasamos increíble ayer",
+
     "Más que un servicio, fue una experiencia hermosa. Gracias por hacerme sentir tan especial.",
+    "Gracias chicas por todo. Salio todo muy hermoso y me duro mucho el maquillaje y peinado. A la gente le gusto mucho tambien",
 
     "Nunca imaginé sentirme tan cómoda frente a una cámara. El maquillaje quedó perfecto.",
 
