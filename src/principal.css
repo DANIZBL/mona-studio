@@ -223,7 +223,7 @@ html {
 }
 
 .servicios-info h2 {
-  font-family: var(--font-4);
+  font-family: var(--font-3);
   color: var(--color-rojo);
 
   font-size: clamp(2.8rem, 4vw, 4rem);
@@ -648,7 +648,6 @@ html {
 .instagram-text h2 {
   margin: 0 0 12px 0;
   font-family: var(--font-3);
-  font-size: clamp(2.5rem, 4vw, 5rem);
   font-weight: 300;
   letter-spacing: 3px;
   color: var(--color-rojo);
@@ -657,7 +656,7 @@ html {
 
 .instagram-text p {
   margin: 0;
-  font-family: var(--font-elegante);
+  font-family: var(--font-3);
   color: #666;
   max-width: 700px;
   line-height: 1.6;
@@ -665,8 +664,8 @@ html {
 
 .instagram-header h2 {
   margin: 0;
-  font-family: var(--font-elegante);
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-family: var(--font-3);
+  font-size: 3rem;
   color: var(--color-rojo);
   font-weight: 300;
   letter-spacing: 3px;
@@ -969,7 +968,7 @@ html {
 }
 
 .products-header h2 {
-  font-family: var(--font-elegante);
+  font-family: var(--font-3);
   font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 300;
   color: var(--color-rojo);
@@ -1143,6 +1142,7 @@ html {
 .novias-section {
   width: 100%;
   padding: 90px 20px;
+  background-color: #dea193;
 }
 
 .novias-container {
@@ -1206,9 +1206,9 @@ html {
 }
 
 .novias-content h2 {
-  font-family: var(--font-elegante);
+  font-family: var(--font-3);
   font-size: 4.5rem;
-  color: #bf930d;
+  color: var(--color-blanco);
   margin-bottom: 25px;
   font-weight: 400;
 }
@@ -1217,7 +1217,7 @@ html {
   font-family: var(--font-4);
   font-size: 24px;
   line-height: 1.45;
-  color: #bf930d;
+  color: var(--color-blanco);
   margin-bottom: 30px;
 }
 
@@ -1228,7 +1228,7 @@ html {
 
   line-height: 1.9;
 
-  color: var(--color-beige);
+  color: var(--color-blanco);
 
   margin-bottom: 45px;
 }
@@ -1289,11 +1289,11 @@ html {
 
   text-decoration: none;
 
-  background: #bf930d;
+  background: var(--color-blanco);
 
-  color: var(--color-blanco);
+  color: #dea193;
 
-  font-family: var(--font-principal);
+  font-family: var(--font-4);
 
   font-weight: 600;
 
@@ -1950,7 +1950,7 @@ MAKE UP Y PEINADO
 .studio-section {
   width: 100%;
   padding: 80px 20px;
-  background-color: #333333;
+  background-color: #1a0000;
 }
 
 .studio-container {
