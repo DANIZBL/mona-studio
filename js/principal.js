@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
         "Es un espacio pensado para que te sientas cómoda, cuidada y segura desde el primer momento.",
     },
     {
+      video: "../src/vid/video_header7.mp4",
+      title: "MONA",
+      description:
+        "Es un espacio pensado para que te sientas cómoda, cuidada y segura desde el primer momento.",
+    },
+    {
       video: "../src/vid/video_header5.mp4",
       title: "MONA",
       description:

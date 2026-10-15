@@ -883,3 +883,87 @@ function actualizarCuentaRegresiva() {
 actualizarCuentaRegresiva();
 
 setInterval(actualizarCuentaRegresiva, 1000);
+
+/* ==========================================
+   DESPLEGABLE DE CURSOS
+========================================== */
+
+function initCursosDropdown() {
+  const dropdowns = document.querySelectorAll(".cursos-dropdown");
+
+  dropdowns.forEach((dropdown) => {
+    // Evitar inicializar dos veces el mismo menú
+    if (dropdown.dataset.initialized === "true") return;
+    dropdown.dataset.initialized = "true";
+
+    const toggle = dropdown.querySelector(".cursos-toggle");
+    const menu = dropdown.querySelector(".cursos-menu");
+
+    if (!toggle || !menu) return;
+
+    function abrirMenu() {
+      dropdown.classList.add("is-open");
+      menu.hidden = false;
+      toggle.setAttribute("aria-expanded", "true");
+    }
+
+    function cerrarMenu() {
+      dropdown.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+
+      menu.hidden = true;
+    }
+
+    toggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const estaAbierto = dropdown.classList.contains("is-open");
+
+      // Cerrar otros desplegables de cursos
+      dropdowns.forEach((otroDropdown) => {
+        if (otroDropdown !== dropdown) {
+          otroDropdown.classList.remove("is-open");
+
+          const otroToggle = otroDropdown.querySelector(".cursos-toggle");
+          const otroMenu = otroDropdown.querySelector(".cursos-menu");
+
+          otroToggle?.setAttribute("aria-expanded", "false");
+
+          if (otroMenu) otroMenu.hidden = true;
+        }
+      });
+
+      if (estaAbierto) {
+        cerrarMenu();
+      } else {
+        abrirMenu();
+      }
+    });
+
+    // Cerrar al seleccionar una opción
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", cerrarMenu);
+    });
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener("click", (event) => {
+      if (!dropdown.contains(event.target)) {
+        cerrarMenu();
+      }
+    });
+
+    // Cerrar con Escape
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        cerrarMenu();
+      }
+    });
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initCursosDropdown);
+} else {
+  initCursosDropdown();
+}

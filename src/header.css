@@ -170,6 +170,137 @@ body {
 }
 
 /* ==========================================
+   DESPLEGABLE DE CURSOS
+========================================== */
+
+.cursos-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Botón principal */
+
+.cursos-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Flecha */
+
+.cursos-flecha {
+  display: inline-block;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.cursos-dropdown.is-open .cursos-flecha {
+  transform: rotate(180deg);
+}
+
+/* Menú desplegable */
+
+.cursos-menu {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+
+  min-width: 200px;
+  padding: 8px;
+
+  background: var(--color-rojo, #a52232);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+
+  z-index: 1100;
+}
+
+/* Menú abierto */
+
+.cursos-dropdown.is-open .cursos-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Opciones */
+
+.cursos-menu-link {
+  display: block;
+  padding: 12px 14px;
+
+  font-family: var(--font-4);
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.cursos-menu-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Accesibilidad con teclado */
+
+.cursos-toggle:focus-visible,
+.cursos-menu-link:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   VERSIÓN MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .cursos-dropdown {
+    flex-direction: column;
+  }
+
+  .cursos-toggle {
+    font-size: 20px;
+    font-family: var(--font-secundaria);
+  }
+
+  .cursos-menu {
+    position: static;
+    transform: none;
+    min-width: 220px;
+    margin-top: 12px;
+    box-shadow: none;
+  }
+
+  .cursos-dropdown.is-open .cursos-menu {
+    transform: none;
+  }
+
+  .cursos-menu-link {
+    font-size: 17px;
+  }
+}
+
+/* ==========================================
    HAMBURGUESA
 ========================================== */
 
