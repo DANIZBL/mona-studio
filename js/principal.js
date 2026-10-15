@@ -10,40 +10,31 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       video: "../src/vid/video_header2.mp4",
       title: "MONA",
-      description:
-        "Es un espacio pensado para que te sientas cómoda, cuidada y segura desde el primer momento.",
+      description: "Técnica y calidez en cada detalle",
     },
     {
-      video: "../src/vid/video_header7.mp4",
-      title: "MONA",
-      description:
-        "Es un espacio pensado para que te sientas cómoda, cuidada y segura desde el primer momento.",
+      video: "../src/vid/video_header4.mp4",
+      title: "MAKE UP Y PEINADO",
+      description: "TU PRÓXIMO EVENTO MERECE UN LOOK A LA ALTURA",
     },
     {
       video: "../src/vid/video_header5.mp4",
       title: "MONA",
       description:
-        "Es un espacio pensado para que te sientas cómoda, cuidada y segura desde el primer momento.",
+        "estás en manos de profesionales en constante formación, con vasta experiencia, dedicación y una atención que cuida cada detalle.",
     },
 
     {
-      video: "../src/vid/video_header3.mp4",
-      title: "MAKE UP Y PEINADO",
+      video: "../src/vid/video_header7.mp4",
+      title: "Formación profesional",
       description:
-        "Un día único merece un look que te haga sentir completamente vos.",
+        "aprende a maquillar de manera profesional, desarrolla tu técnica y preparate para salir al mundo laboral en tiempo record. o Converti tu pasion por el maquillaje en una profesión",
     },
 
     {
       video: "../src/vid/video_header1.mp4",
       title: "QUINCEAÑERAS",
-      description:
-        "Maquillaje y peinado pensados para que disfrutes y brilles en cada ocasión.",
-    },
-    {
-      video: "../src/vid/video_header4.mp4",
-      title: "MAKE UP Y PEINADO",
-      description:
-        "Un día único merece un look que te haga sentir completamente vos.",
+      description: "un look único para tu noche especial",
     },
   ];
 
