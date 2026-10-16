@@ -552,3 +552,150 @@ GALERIA AUTO-MAQUILLAJE
     aspect-ratio: 3 / 4;
   }
 }
+
+/* =========================
+   QUINCEAÑERAS - RESEÑAS
+========================= */
+
+.quince-reviews {
+  padding: 80px 20px;
+  text-align: center;
+  font-family: var(--font-3);
+  overflow: hidden;
+}
+
+.quince-reviews-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quince-reviews h2 {
+  color: #222;
+  font-family: var(--font-3);
+  font-size: 2.5rem;
+  margin: 10px 0 60px;
+}
+
+/* =========================
+   GLOBO DE MENSAJE
+========================= */
+
+.quince-review-whatsapp {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.quince-review-message {
+  position: relative;
+  width: min(100%, 600px);
+  background: #e7f9df;
+  padding: 25px 28px 18px;
+  border-radius: 18px;
+  border-bottom-right-radius: 4px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Colita del globo */
+
+.quince-review-message::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 12px solid #e7f9df;
+  border-top: 12px solid transparent;
+}
+
+/* Texto */
+
+.quince-review-message p {
+  margin: 0 0 15px;
+  color: #222;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Nombre y hora */
+
+.quince-review-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.quince-review-info strong {
+  color: #555;
+  font-size: 0.85rem;
+}
+
+.quince-review-info span {
+  color: #777;
+  font-size: 0.75rem;
+}
+
+/* =========================
+   INDICADORES
+========================= */
+
+.quince-review-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 30px;
+}
+
+.quince-review-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: all 0.3s ease;
+}
+
+.quince-review-dot.active {
+  width: 20px;
+  border-radius: 10px;
+  background: var(--color-rojo);
+}
+
+/* Animación de cambio */
+
+.quince-review-message.quince-review-changing {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .quince-reviews {
+    padding: 60px 15px;
+  }
+
+  .quince-reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .quince-review-whatsapp {
+    padding: 0 10px;
+  }
+
+  .quince-review-message {
+    padding: 20px 20px 15px;
+  }
+
+  .quince-review-message p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}

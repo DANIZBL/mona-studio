@@ -230,10 +230,10 @@
     </section>
 
     <!-- ===========================================
-            PRESENTACIÓN
-    ============================================ -->
+          PRESENTACIÓN Y MÓDULOS
+============================================ -->
 
-    <section class="presentation reveal">
+    <section class="presentation reveal" id="programa">
       <div class="presentation-header">
         <span>NUESTRA PROPUESTA</span>
 
@@ -247,278 +247,245 @@
       </div>
 
       <div class="presentation-grid">
-        <article class="presentation-card">
-          <span class="module-number"> #1 </span>
-
-          <h3>THE BASICS</h3>
-
-          <p>
-            Todo lo necesario para dominar la preparación de la piel,
-            colorimetría, herramientas, visagismo y las bases del maquillaje.
-          </p>
-        </article>
-
-        <article class="presentation-card">
-          <span class="module-number"> #2 </span>
-
-          <h3>THE FOUNDATIONS</h3>
-
-          <p>
-            Técnicas profesionales para ojos, esfumados, delineados, smokey
-            eyes, pigmentos y tendencias.
-          </p>
-        </article>
-
-        <article class="presentation-card">
-          <span class="module-number"> #3 </span>
-
-          <h3>LIKE A PRO</h3>
-
-          <p>
-            Novias, quinceañeras, pieles maduras, presupuesto, marketing y
-            examen final.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===========================================
+        <!-- ===========================================
                     MÓDULO 1
     ============================================ -->
 
-    <section class="module reveal">
-      <div class="module-container">
-        <div class="module-header">
-          <div class="module-title">
-            <span>MÓDULO #1</span>
+        <article class="presentation-card">
+          <button
+            class="presentation-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="module-basics"
+          >
+            <span class="module-number">#1</span>
 
-            <h2>THE BASICS</h2>
+            <h3>THE BASICS</h3>
 
             <p>
-              Comenzá construyendo una base sólida en maquillaje profesional,
-              comprendiendo la piel, las herramientas y las técnicas esenciales
-              para lograr resultados impecables.
+              Todo lo necesario para dominar la preparación de la piel,
+              colorimetría, herramientas, visagismo y las bases del maquillaje.
             </p>
+
+            <span class="presentation-icon" aria-hidden="true">+</span>
+          </button>
+
+          <div class="presentation-details" id="module-basics" hidden>
+            <div class="module-intro">
+              <span>MÓDULO #1</span>
+
+              <h4>THE BASICS</h4>
+
+              <p>
+                Comenzá construyendo una base sólida en maquillaje profesional,
+                comprendiendo la piel, las herramientas y las técnicas
+                esenciales para lograr resultados impecables.
+              </p>
+            </div>
+
+            <div class="module-grid">
+              <article class="module-card">
+                <h3>Piel y preparación</h3>
+                <ul>
+                  <li>Preparación según el tipo de piel</li>
+                  <li>Bioseguridad e higiene</li>
+                  <li>Pieles sociales</li>
+                  <li>Acabados Matte, Satin y Glow</li>
+                </ul>
+              </article>
+
+              <article class="module-card">
+                <h3>Color y rostro</h3>
+                <ul>
+                  <li>Colorimetría</li>
+                  <li>Subtonos de piel</li>
+                  <li>Visagismo</li>
+                  <li>Definición del rostro</li>
+                </ul>
+              </article>
+
+              <article class="module-card">
+                <h3>Técnicas básicas</h3>
+                <ul>
+                  <li>Aplicación de bases</li>
+                  <li>Correcciones</li>
+                  <li>Sellado correcto</li>
+                  <li>Productos en crema y polvo</li>
+                </ul>
+              </article>
+
+              <article class="module-card">
+                <h3>Mirada</h3>
+                <ul>
+                  <li>Pestañas postizas</li>
+                  <li>Visagismo de cejas</li>
+                  <li>Corrección de cejas</li>
+                  <li>Herramientas del maquillador</li>
+                </ul>
+              </article>
+            </div>
           </div>
+        </article>
 
-          <div class="module-icon">+</div>
-        </div>
-
-        <div class="module-content">
-          <div class="module-grid">
-            <article class="module-card">
-              <h3>Piel y preparación</h3>
-
-              <ul>
-                <li>Preparación según el tipo de piel</li>
-                <li>Bioseguridad e higiene</li>
-                <li>Pieles sociales</li>
-                <li>Acabados Matte, Satin y Glow</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Color y rostro</h3>
-
-              <ul>
-                <li>Colorimetría</li>
-                <li>Subtonos de piel</li>
-                <li>Visagismo</li>
-                <li>Definición del rostro</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Técnicas básicas</h3>
-
-              <ul>
-                <li>Aplicación de bases</li>
-                <li>Correcciones</li>
-                <li>Sellado correcto</li>
-                <li>Productos en crema y polvo</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Mirada</h3>
-
-              <ul>
-                <li>Pestañas postizas</li>
-                <li>Visagismo de cejas</li>
-                <li>Corrección de cejas</li>
-                <li>Herramientas del maquillador</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===========================================
+        <!-- ===========================================
                     MÓDULO 2
     ============================================ -->
 
-    <section class="module reveal">
-      <div class="module-container">
-        <div class="module-header">
-          <div class="module-title">
-            <span>MÓDULO #2</span>
+        <article class="presentation-card">
+          <button
+            class="presentation-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="module-foundations"
+          >
+            <span class="module-number">#2</span>
 
-            <h2>THE FOUNDATIONS</h2>
+            <h3>THE FOUNDATIONS</h3>
 
             <p>
-              Perfeccioná tus técnicas aprendiendo los maquillajes más
-              solicitados y desarrollando dominio sobre color, ojos y tendencias
-              actuales.
+              Técnicas profesionales para ojos, esfumados, delineados, smokey
+              eyes, pigmentos y tendencias.
             </p>
+
+            <span class="presentation-icon" aria-hidden="true">+</span>
+          </button>
+
+          <div class="presentation-details" id="module-foundations" hidden>
+            <div class="module-intro">
+              <span>MÓDULO #2</span>
+
+              <h4>THE FOUNDATIONS</h4>
+
+              <p>
+                Perfeccioná tus técnicas aprendiendo los maquillajes más
+                solicitados y desarrollando dominio sobre color, ojos y
+                tendencias actuales.
+              </p>
+            </div>
+
+            <div class="module-grid">
+              <article class="module-card">
+                <h3>Teoría del color</h3>
+                <ul>
+                  <li>Introducción al color</li>
+                  <li>Integración de colores</li>
+                  <li>Pigmentos</li>
+                  <li>Armonías</li>
+                </ul>
+              </article>
+
+              <article class="module-card">
+                <h3>Ojos</h3>
+                <ul>
+                  <li>Esfumados profesionales</li>
+                  <li>Delineados</li>
+                  <li>Halo Eyes</li>
+                  <li>Semi Cut Crease</li>
+                </ul>
+              </article>
+
+              <article class="module-card">
+                <h3>Looks</h3>
+                <ul>
+                  <li>Smokey Matte</li>
+                  <li>Smokey Glam</li>
+                  <li>Smokey Colorido</li>
+                  <li>Párpado encapotado</li>
+                </ul>
+              </article>
+
+              <article class="module-card">
+                <h3>Labios</h3>
+                <ul>
+                  <li>Labios Nude</li>
+                  <li>Labios Rojos</li>
+                  <li>Efecto 3D</li>
+                  <li>Correcciones</li>
+                </ul>
+              </article>
+            </div>
           </div>
+        </article>
 
-          <div class="module-icon">+</div>
-        </div>
-
-        <div class="module-content">
-          <div class="module-grid">
-            <article class="module-card">
-              <h3>Teoría del color</h3>
-
-              <ul>
-                <li>Introducción al color</li>
-
-                <li>Integración de colores</li>
-
-                <li>Pigmentos</li>
-
-                <li>Armonías</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Ojos</h3>
-
-              <ul>
-                <li>Esfumados profesionales</li>
-
-                <li>Delineados</li>
-
-                <li>Halo Eyes</li>
-
-                <li>Semi Cut Crease</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Looks</h3>
-
-              <ul>
-                <li>Smokey Matte</li>
-
-                <li>Smokey Glam</li>
-
-                <li>Smokey Colorido</li>
-
-                <li>Párpado encapotado</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Labios</h3>
-
-              <ul>
-                <li>Labios Nude</li>
-
-                <li>Labios Rojos</li>
-
-                <li>Efecto 3D</li>
-
-                <li>Correcciones</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===========================================
+        <!-- ===========================================
                     MÓDULO 3
     ============================================ -->
 
-    <section class="module reveal">
-      <div class="module-container">
-        <div class="module-header">
-          <div class="module-title">
-            <span>MÓDULO #3</span>
+        <article class="presentation-card">
+          <button
+            class="presentation-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="module-pro"
+          >
+            <span class="module-number">#3</span>
 
-            <h2>LIKE A PRO</h2>
+            <h3>LIKE A PRO</h3>
 
             <p>
-              Aplicá todo lo aprendido en situaciones reales, desarrollando
-              criterio profesional y herramientas para comenzar a trabajar de
-              forma independiente.
+              Novias, quinceañeras, pieles maduras, presupuesto, marketing y
+              examen final.
             </p>
+
+            <span class="presentation-icon" aria-hidden="true">+</span>
+          </button>
+
+          <div class="presentation-details" id="module-pro" hidden>
+            <div class="module-intro">
+              <span>MÓDULO #3</span>
+
+              <h4>LIKE A PRO</h4>
+
+              <p>
+                Aplicá todo lo aprendido en situaciones reales, desarrollando
+                criterio profesional y herramientas para comenzar a trabajar de
+                forma independiente.
+              </p>
+            </div>
+
+            <div class="module-grid">
+              <article class="module-card">
+                <h3>Maquillaje Social</h3>
+                <ul>
+                  <li>Novias</li>
+                  <li>Quinceañeras</li>
+                  <li>Madrinas</li>
+                  <li>Pieles maduras</li>
+                </ul>
+              </article>
+
+              <article class="module-card">
+                <h3>Profesionalización</h3>
+                <ul>
+                  <li>Presupuestos</li>
+                  <li>Armado del maletín</li>
+                  <li>Venta del servicio</li>
+                  <li>Organización laboral</li>
+                </ul>
+              </article>
+
+              <article class="module-card">
+                <h3>Marca Personal</h3>
+                <ul>
+                  <li>Redes Sociales</li>
+                  <li>Creación de contenido</li>
+                  <li>Imagen profesional</li>
+                  <li>Clientes</li>
+                </ul>
+              </article>
+
+              <article class="module-card">
+                <h3>Evaluación</h3>
+                <ul>
+                  <li>Examen Final</li>
+                  <li>Práctica Integral</li>
+                  <li>Correcciones</li>
+                  <li>Entrega de Certificado</li>
+                </ul>
+              </article>
+            </div>
           </div>
-
-          <div class="module-icon">+</div>
-        </div>
-
-        <div class="module-content">
-          <div class="module-grid">
-            <article class="module-card">
-              <h3>Maquillaje Social</h3>
-
-              <ul>
-                <li>Novias</li>
-
-                <li>Quinceañeras</li>
-
-                <li>Madrinas</li>
-
-                <li>Pieles maduras</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Profesionalización</h3>
-
-              <ul>
-                <li>Presupuestos</li>
-
-                <li>Armado del maletín</li>
-
-                <li>Venta del servicio</li>
-
-                <li>Organización laboral</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Marca Personal</h3>
-
-              <ul>
-                <li>Redes Sociales</li>
-
-                <li>Creación de contenido</li>
-
-                <li>Imagen profesional</li>
-
-                <li>Clientes</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Evaluación</h3>
-
-              <ul>
-                <li>Examen Final</li>
-
-                <li>Práctica Integral</li>
-
-                <li>Correcciones</li>
-
-                <li>Entrega de Certificado</li>
-              </ul>
-            </article>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -596,31 +563,28 @@
 
         <div class="teachers-content">
           <article class="teacher-info">
-            <h3>Aixa Grinóvero</h3>
-
-            <span>Maquilladora Profesional</span>
+            <h3>Antonella Sangoy</h3>
 
             <p>
-              Maquilladora, peinadora y cosmetóloga con 4 años de experiencia.
-              Vasta trayectoria en capacitación de acompañamiento en formación
-              inicial. Su enfoque en cosmetología aporta un valor fundamental
-              para comprender y trabajar La piel con criterio profesional,
-              abordando el maquillaje desde una base consciente y responsable.
+              MAQUILLADORA PROFESIONAL CON 9 AÑOS DE EXPERIENCIA EN EL RUBRO.
+              ESPECIALIZADA EN MAQUILLAJE SOCIAL Y NOVIAS. SU EXPERIENCIA EN
+              GESTIÓN PROFESIONAL Y DESARROLLO DE MARCA APORTA UNA MIRADA
+              INTEGRAL DEL TRABAJO. COMBINANDO TÉCNICA, CRITERIO LABORAL Y
+              EJERCICIO CONSCIENTE DE LA PROFESIÓN. FUNDADORA DE MONA STUDIO,
+              ESPACIO QUE FUSIONA PRÁCTICA Y ENSEÑANZA.
             </p>
           </article>
 
           <article class="teacher-info">
-            <h3>Antonella Sangoy</h3>
-
-            <span>Cosmetóloga · Maquilladora · Peinadora</span>
+            <h3>Aixa Grinovaero.</h3>
 
             <p>
-              Maquilladora profesional con 9 años de experiencia en el rubro.
-              Especializada en maquillaje social y novias. Su experiencia en
-              gestión profesional y desarrollo de marca aporta una mirada
-              Integral del trabajo. Combinando técnica, criterio laboral y
-              ejercicio consciente de la Profesión. Fundado de MONA STUDIO,
-              espacio que fusiona práctica y enseñanza.
+              MAQUILLADORA, PEINADORA Y COSMETÓLOGA CON 4 AÑOS DE EXPERIENCIA
+              VASTA TRAYECTORIA EN CAPACITACIÓN DE NUEVAS MAQUILLADORAS Y
+              ACOMPAÑAMIENTO EN FORMA INICIAL. SU ENFOQUE EN COSMETOLOGÍA APORTA
+              UN VALOR FUNDAMENTAL PARA COMPRENDER Y TRABAJAR LA PIEL CON
+              CRITERIO PROFESIONAL. ABORDANDO EL MAQUILLAJE DESDE UNA BASE
+              CONSCIENTE Y RESPONSABLE.
             </p>
           </article>
         </div>
