@@ -32,6 +32,11 @@
   src: url("./fonts/the-seasons.ttf") format("opentype");
 }
 
+@font-face {
+  font-family: "cursiva1";
+  src: url("./fonts/cursiva1.otf") format("opentype");
+}
+
 :root {
   /* Fuentes */
   --font-principal: "Upstair Sans", sans-serif;
@@ -41,6 +46,7 @@
   --font-3: "League Spartan", sans-serif;
   --font-4: "Arimo", sans-serif;
   --font-elegante: "the seasons", sans-serif;
+  --font-cursiva1: "cursiva1", sans-serif;
 
   /* Colores */
   --color-rojo: #b82b2a;

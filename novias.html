@@ -161,7 +161,7 @@
 
         <!-- TESTIMONIO -->
         <div class="novias-hero-testimonial">
-          <span>TESTIMONIO DE UNA NOVIA</span>
+          <span>PALABRAS DE NUESTRAS NOVIAS</span>
 
           <blockquote>
             "No fue solamente maquillaje y peinado. Fue uno de los momentos más
@@ -265,6 +265,74 @@
             </div>
           </div>
 
+          <!-- ========================GALLERIA EXPERIENCIA==================================== -->
+          <section class="novias-gallery">
+            <div class="novias-container">
+              <h2>Experiencia Mona</h2>
+
+              <div class="gallery-grid">
+                <img
+                  src="./src/img_servicios/exp_mona1.webp"
+                  alt="Maquillaje de novia"
+                />
+
+                <video
+                  src="./src/img_servicios/exp_mona1.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  preload="metadata"
+                  aria-label="Video de maquillaje de novia"
+                ></video>
+
+                <img
+                  src="./src/img_servicios/exp_mona2.webp"
+                  alt="Look de novia"
+                />
+
+                <video
+                  src="./src/img_servicios/exp_mona2.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  preload="metadata"
+                  aria-label="Video de maquillaje de novia"
+                ></video>
+                <img
+                  src="./src/img_servicios/exp_mona3.webp"
+                  alt="Maquillaje de novia"
+                />
+
+                <video
+                  src="./src/img_servicios/exp_mona3.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  preload="metadata"
+                  aria-label="Video de maquillaje de novia"
+                ></video>
+
+                <img
+                  src="./src/img_servicios/exp_mona4.webp"
+                  alt="Look de novia"
+                />
+
+                <img
+                  src="./src/img_servicios/exp_mona5.webp"
+                  alt="Look de novia"
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- =============================================================== -->
+
           <div class="experience-includes">
             <h3>¿Qué incluye?</h3>
 
@@ -321,8 +389,8 @@
 
             <img src="./src/img/novias9.webp" alt="" />
             <img src="./src/img/novias5.webp" alt="" />
-            <img src="./src/img/novias6.webp" alt="" />
-            <img src="./src/img/novias8.webp" alt="" />
+            <img src="./src/img/novias13.webp" alt="" />
+            <img src="./src/img/novias11.webp" alt="" />
           </div>
         </div>
       </section>
@@ -449,41 +517,26 @@
       </div>
     </footer>
 
-    <!-- ======================================================
-                GALERÍA MODAL
-====================================================== -->
-
-    <div class="gallery-modal" id="galleryModal">
-      <button
-        class="gallery-close"
-        id="galleryClose"
-        aria-label="Cerrar galería"
-      >
-        &times;
+    <!-- MODAL COMPARTIDO POR LAS GALERÍAS -->
+    <div id="galleryModal" class="gallery-modal">
+      <button id="galleryClose" type="button" aria-label="Cerrar galería">
+        ×
+      </button>
+      <button id="galleryPrev" type="button" aria-label="Imagen anterior">
+        ‹
       </button>
 
-      <button
-        class="gallery-arrow gallery-prev"
-        id="galleryPrev"
-        aria-label="Imagen anterior"
-      >
-        &#10094;
-      </button>
-
-      <div class="gallery-modal-content">
-        <img id="galleryModalImage" class="gallery-modal-image" src="" alt="" />
+      <div id="galleryModalContent">
+        <img id="galleryModalImage" src="" alt="" />
+        <video id="galleryModalVideo" controls playsinline></video>
       </div>
 
-      <button
-        class="gallery-arrow gallery-next"
-        id="galleryNext"
-        aria-label="Siguiente imagen"
-      >
-        &#10095;
+      <button id="galleryNext" type="button" aria-label="Imagen siguiente">
+        ›
       </button>
-
-      <div class="gallery-counter" id="galleryCounter"></div>
+      <span id="galleryCounter"></span>
     </div>
+
     <script src="./js/header.js"></script>
     <script src="./js/novias.js"></script>
     <script src="./js/marcas.js"></script>

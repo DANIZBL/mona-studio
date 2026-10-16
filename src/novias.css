@@ -691,7 +691,8 @@
   gap: 24px;
 }
 
-.gallery-grid img {
+.gallery-grid img,
+video {
   width: 300px;
 
   height: 380px;
@@ -1972,4 +1973,27 @@ img {
     font-size: 1rem;
     line-height: 1.7;
   }
+}
+
+#galleryModalContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(85vw, 1000px);
+  height: 80vh;
+  margin: auto;
+}
+
+#galleryModalContent img,
+#galleryModalContent video {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+#galleryModalVideo {
+  display: none;
 }
