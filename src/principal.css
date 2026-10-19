@@ -827,6 +827,7 @@ html {
 
 .instagram-footer {
   text-align: center;
+  margin: 5px 5px;
 }
 
 .instagram-btn {
@@ -856,6 +857,11 @@ html {
 .overlay i {
   font-size: 3rem;
   color: var(--color-rojo);
+}
+
+.insta-boton {
+  display: flex;
+  justify-content: center;
 }
 
 /*====================================
@@ -1950,7 +1956,7 @@ MAKE UP Y PEINADO
 .studio-section {
   width: 100%;
   padding: 80px 20px;
-  background-color: #1a0000;
+  background-color: #3b0e0e;
 }
 
 .studio-container {
@@ -1973,7 +1979,7 @@ MAKE UP Y PEINADO
 .studio-content p {
   margin: 0 0 35px;
   color: var(--color-blanco);
-  font-family: var(--font-3);
+  font-family: var(--font-4);
   font-size: 2rem;
   line-height: 1.7;
 }

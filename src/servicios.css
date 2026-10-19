@@ -160,6 +160,16 @@
   margin-top: 10px;
 }
 
+.profesional-info h3 {
+  margin-bottom: 20px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: 10px;
+}
+
 .profesional-info p {
   color: var(--color-rojo);
   font-family: var(--font-4);
