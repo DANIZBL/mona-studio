@@ -5,18 +5,19 @@
 const egresadasGalleryItems = [
   {
     type: "image",
-    src: "../src/img/egre1.webp",
+    src: "../src/img/egre7.webp",
     alt: "Maquillaje para egresadas",
   },
 
   {
-    type: "video",
-    src: "../src/vid/egresadas3.mp4",
+    type: "image",
+    src: "../src/img/egre8.webp",
+    alt: "Maquillaje para egresadas",
   },
 
   {
     type: "image",
-    src: "../src/img/egre2.webp",
+    src: "../src/img/egre10.webp",
     alt: "Look de egresada",
   },
 
@@ -27,7 +28,7 @@ const egresadasGalleryItems = [
 
   {
     type: "image",
-    src: "../src/img/egre3.webp",
+    src: "../src/img/egre9.webp",
     alt: "Maquillaje y peinado para egresadas",
   },
 
@@ -38,8 +39,9 @@ const egresadasGalleryItems = [
   },
 
   {
-    type: "video",
-    src: "../src/vid/egresadas1.mp4",
+    type: "image",
+    src: "../src/img/egre11.webp",
+    alt: "Look para egresada",
   },
 
   {

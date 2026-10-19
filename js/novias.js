@@ -21,115 +21,155 @@ function changeHeroImage() {
 setInterval(changeHeroImage, 6000);
 
 /*==================================================
-                GALERÍA MONA
+          GALERÍAS MONA STUDIO: FOTOS Y VIDEOS
 ==================================================*/
 
-const galleryImages = document.querySelectorAll(".gallery-grid img");
+const gallerySections = document.querySelectorAll(".novias-gallery");
 
 const galleryModal = document.getElementById("galleryModal");
-
+const galleryModalContent = document.getElementById("galleryModalContent");
 const galleryModalImage = document.getElementById("galleryModalImage");
+const galleryModalVideo = document.getElementById("galleryModalVideo");
 
 const galleryClose = document.getElementById("galleryClose");
-
 const galleryPrev = document.getElementById("galleryPrev");
-
 const galleryNext = document.getElementById("galleryNext");
-
 const galleryCounter = document.getElementById("galleryCounter");
 
+let currentGalleryItems = [];
 let currentImage = 0;
 
 let touchStartX = 0;
-
 let touchEndX = 0;
 
 /*==================================================
-            ABRIR GALERÍA
+                OBTENER ELEMENTOS
 ==================================================*/
 
-function openGallery(index) {
+function getGalleryItems(section) {
+  return Array.from(
+    section.querySelectorAll(".gallery-grid img, .gallery-grid video")
+  );
+}
+
+/*==================================================
+                  ABRIR GALERÍA
+==================================================*/
+
+function openGallery(items, index) {
+  currentGalleryItems = items;
   currentImage = index;
 
   updateGallery();
 
   galleryModal.classList.add("active");
-
   document.body.classList.add("gallery-open");
 }
 
 /*==================================================
-            CERRAR GALERÍA
+                  CERRAR GALERÍA
 ==================================================*/
 
 function closeGallery() {
   galleryModal.classList.remove("active");
-
   document.body.classList.remove("gallery-open");
+
+  galleryModalVideo.pause();
+  galleryModalVideo.removeAttribute("src");
+  galleryModalVideo.load();
 }
 
 /*==================================================
-            ACTUALIZAR IMAGEN
+                ACTUALIZAR VISOR
 ==================================================*/
 
 function updateGallery() {
-  galleryModalImage.src = galleryImages[currentImage].src;
+  if (!currentGalleryItems.length) return;
 
-  galleryModalImage.alt = galleryImages[currentImage].alt;
+  const item = currentGalleryItems[currentImage];
 
-  galleryCounter.textContent = `${currentImage + 1} / ${galleryImages.length}`;
+  // Detener y limpiar el video anterior
+  galleryModalVideo.pause();
+  galleryModalVideo.removeAttribute("src");
+  galleryModalVideo.load();
+
+  if (item.tagName === "VIDEO") {
+    galleryModalImage.style.display = "none";
+    galleryModalVideo.style.display = "block";
+
+    galleryModalVideo.src = item.currentSrc || item.src;
+    galleryModalVideo.poster = item.poster || "";
+    galleryModalVideo.currentTime = 0;
+  } else {
+    galleryModalVideo.style.display = "none";
+    galleryModalImage.style.display = "block";
+
+    galleryModalImage.src = item.src;
+    galleryModalImage.alt = item.alt || "";
+  }
+
+  galleryCounter.textContent = `${currentImage + 1} / ${
+    currentGalleryItems.length
+  }`;
 }
 
 /*==================================================
-            SIGUIENTE
+                    SIGUIENTE
 ==================================================*/
 
 function nextImage() {
-  currentImage++;
+  if (!currentGalleryItems.length) return;
 
-  if (currentImage >= galleryImages.length) {
-    currentImage = 0;
-  }
-
+  currentImage = (currentImage + 1) % currentGalleryItems.length;
   updateGallery();
 }
 
 /*==================================================
-            ANTERIOR
+                    ANTERIOR
 ==================================================*/
 
 function previousImage() {
-  currentImage--;
+  if (!currentGalleryItems.length) return;
 
-  if (currentImage < 0) {
-    currentImage = galleryImages.length - 1;
-  }
+  currentImage =
+    (currentImage - 1 + currentGalleryItems.length) %
+    currentGalleryItems.length;
 
   updateGallery();
 }
 
 /*==================================================
-            CLICK EN LAS IMÁGENES
+          CONFIGURAR TODAS LAS GALERÍAS
 ==================================================*/
 
-galleryImages.forEach((image, index) => {
-  image.addEventListener("click", () => {
-    openGallery(index);
+gallerySections.forEach((section) => {
+  const items = getGalleryItems(section);
+
+  items.forEach((item, index) => {
+    item.setAttribute("draggable", "false");
+
+    if (item.tagName === "VIDEO") {
+      item.muted = true;
+      item.playsInline = true;
+      item.preload = "metadata";
+    }
+
+    item.addEventListener("click", () => {
+      openGallery(items, index);
+    });
   });
 });
 
 /*==================================================
-            BOTONES
+                      BOTONES
 ==================================================*/
 
 galleryClose.addEventListener("click", closeGallery);
-
 galleryNext.addEventListener("click", nextImage);
-
 galleryPrev.addEventListener("click", previousImage);
 
 /*==================================================
-        CERRAR HACIENDO CLICK AFUERA
+                CERRAR AL HACER CLICK AFUERA
 ==================================================*/
 
 galleryModal.addEventListener("click", (e) => {
@@ -139,39 +179,26 @@ galleryModal.addEventListener("click", (e) => {
 });
 
 /*==================================================
-                TECLADO
+                      TECLADO
 ==================================================*/
 
 document.addEventListener("keydown", (e) => {
   if (!galleryModal.classList.contains("active")) return;
 
-  switch (e.key) {
-    case "Escape":
-      closeGallery();
-
-      break;
-
-    case "ArrowRight":
-      nextImage();
-
-      break;
-
-    case "ArrowLeft":
-      previousImage();
-
-      break;
-  }
+  if (e.key === "Escape") closeGallery();
+  if (e.key === "ArrowRight") nextImage();
+  if (e.key === "ArrowLeft") previousImage();
 });
 
 /*==================================================
-            SWIPE CELULAR
+                  SWIPE CELULAR
 ==================================================*/
 
-galleryModal.addEventListener("touchstart", (e) => {
+galleryModalContent.addEventListener("touchstart", (e) => {
   touchStartX = e.changedTouches[0].screenX;
 });
 
-galleryModal.addEventListener("touchend", (e) => {
+galleryModalContent.addEventListener("touchend", (e) => {
   touchEndX = e.changedTouches[0].screenX;
 
   const distance = touchStartX - touchEndX;
@@ -186,14 +213,11 @@ galleryModal.addEventListener("touchend", (e) => {
 });
 
 /*==================================================
-            PREVENIR DRAG
+                  PREVENIR DRAG
 ==================================================*/
 
-galleryImages.forEach((image) => {
-  image.setAttribute("draggable", "false");
-});
-
 galleryModalImage.setAttribute("draggable", "false");
+galleryModalVideo.setAttribute("draggable", "false");
 
 /*==================================================
             PRELOAD

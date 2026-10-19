@@ -926,6 +926,231 @@ body {
   transform: rotate(45deg);
 }
 
+/* ==========================================
+   MÓDULOS DESPLEGABLES
+========================================== */
+
+.presentation-grid {
+  align-items: start;
+}
+
+.presentation-card {
+  padding: 0;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.presentation-toggle {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 55px 40px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.presentation-toggle h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.presentation-toggle p {
+  margin-bottom: 30px;
+}
+
+.presentation-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  margin-top: 25px;
+  border-radius: 50%;
+  background: var(--color-rojo);
+  color: #fff;
+  font-family: var(--font-4);
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.presentation-card.is-open .presentation-icon {
+  transform: rotate(45deg);
+}
+
+.presentation-toggle:focus-visible {
+  outline: 3px solid var(--color-rojo);
+  outline-offset: -6px;
+  border-radius: 25px;
+}
+
+.presentation-card.is-open {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.09);
+}
+
+/* CONTENIDO INTERNO */
+
+.presentation-details {
+  padding: 0 30px 35px;
+  overflow: hidden;
+  animation: moduleReveal 0.35s ease;
+}
+
+.presentation-details[hidden] {
+  display: none;
+}
+
+.module-intro {
+  padding-top: 10px;
+  margin-bottom: 30px;
+  border-top: 1px solid rgba(128, 84, 119, 0.2);
+}
+
+.module-intro > span {
+  display: block;
+  margin-top: 25px;
+  color: var(--color-rojo);
+  font-family: var(--font-secundaria);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.module-intro h4 {
+  margin: 10px 0;
+  color: var(--color-rojo);
+  font-family: var(--font-elegante);
+  font-size: 2rem;
+}
+
+.module-intro p {
+  font-family: var(--font-4);
+  color: var(--color-beige);
+  line-height: 1.8;
+}
+
+/* TARJETAS DE CONTENIDO */
+
+.presentation-details .module-grid {
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.presentation-details .module-card {
+  padding: 25px;
+  border: 1px solid rgba(128, 84, 119, 0.12);
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.presentation-details .module-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.presentation-details .module-card h3 {
+  margin: 0 0 18px;
+  font-family: var(--font-3);
+  font-size: 1.35rem;
+}
+
+.presentation-details .module-card ul {
+  margin: 0;
+}
+
+.presentation-details .module-card li {
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.presentation-details .module-card li:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes moduleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLETS Y CELULARES */
+
+@media (max-width: 1000px) {
+  .presentation {
+    padding: 80px 25px;
+  }
+
+  .presentation-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .presentation-toggle {
+    padding: 40px 30px;
+  }
+
+  .presentation-details {
+    padding: 0 25px 30px;
+  }
+
+  .presentation-details .module-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .presentation {
+    padding: 60px 18px;
+  }
+
+  .presentation-header {
+    margin-bottom: 45px;
+  }
+
+  .presentation-header h2 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .presentation-toggle {
+    padding: 35px 25px;
+  }
+
+  .presentation-toggle h3 {
+    font-size: 1.8rem;
+  }
+
+  .presentation-details {
+    padding: 0 18px 22px;
+  }
+
+  .presentation-details .module-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .presentation-details .module-card {
+    padding: 22px;
+  }
+
+  .module-intro h4 {
+    font-size: 1.8rem;
+  }
+}
+
 /* ==========================================================
    BANNER IMAGE
 ========================================================== */
@@ -961,9 +1186,12 @@ body {
 ========================================================== */
 
 .benefits-section {
+  background-color: var(--color-rosa);
   max-width: 1400px;
   margin: 0 auto;
   padding: 130px 40px;
+  border-radius: 49px;
+  margin-bottom: 30px;
 }
 
 .benefits-section h2 {
@@ -1076,6 +1304,7 @@ body {
 /* INFORMACION */
 
 .teachers-content {
+  background-color: var(--color-rojo);
   padding: 60px 55px;
 
   display: flex;
@@ -1102,9 +1331,9 @@ body {
 .teacher-info h3 {
   margin-bottom: 10px;
 
-  font-family: var(--font-3);
+  font-family: var(--font-4);
 
-  color: var(--color-rojo);
+  color: var(--color-blanco);
 
   font-size: 2rem;
 }
@@ -1122,9 +1351,9 @@ body {
 }
 
 .teacher-info p {
-  font-family: var(--font-4);
+  font-family: var(--font-3);
 
-  color: var(--color-beige);
+  color: var(--color-blanco);
 
   line-height: 1.9;
 }

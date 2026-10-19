@@ -37,7 +37,7 @@ const galleryItems = [
 
   {
     type: "image",
-    src: "../src/img/maquillaje_p5.webp",
+    src: "../src/img/curso1_4.webp",
     alt: "Novias",
   },
 
@@ -48,7 +48,7 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "../src/img/maquillaje_p2.webp",
+    src: "../src/img/curso1_3.webp",
     alt: "Egresadas",
   },
 ];
@@ -134,7 +134,6 @@ const perfeccionamientoVideosGalleryItems = [
     type: "video",
     src: "../src/vid/galeria_perfeccionamiento2.mp4",
   },
-
   {
     type: "video",
     src: "../src/vid/galeria_perfeccionamiento1.mp4",
@@ -234,4 +233,29 @@ perfeccionamientoVideosGalleryItems.forEach((item) => {
   perfeccionamientoVideosGallery.appendChild(
     perfeccionamientoVideosGalleryItem
   );
+});
+
+/* ==========================================
+   DESPLEGABLES DE LOS MÓDULOS
+========================================== */
+
+document.querySelectorAll(".presentation-toggle").forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".presentation-card");
+    const contentId = button.getAttribute("aria-controls");
+    const content = document.getElementById(contentId);
+
+    if (!card || !content) return;
+
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", String(!isOpen));
+    card.classList.toggle("is-open", !isOpen);
+
+    if (isOpen) {
+      content.hidden = true;
+    } else {
+      content.hidden = false;
+    }
+  });
 });

@@ -5,7 +5,7 @@
 const quinceanerasGalleryItems = [
   {
     type: "image",
-    src: "../src/img/quince1.webp",
+    src: "../src/img/quince7.webp",
     alt: "Maquillaje para quinceañera",
   },
 
@@ -27,7 +27,7 @@ const quinceanerasGalleryItems = [
 
   {
     type: "image",
-    src: "../src/img/quince3.webp",
+    src: "../src/img/quince8.webp",
     alt: "Maquillaje y peinado de quinceañera",
   },
 
