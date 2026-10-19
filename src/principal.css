@@ -137,6 +137,86 @@ html {
 
 /* =========== PRESENTACION======== =====*/
 
+/* ==========================================
+   SECCIÓN FRASE MONA STUDIO
+========================================== */
+
+.mona-frase {
+  width: 100%;
+  min-height: 520px;
+
+  /* Imagen de fondo */
+  background-image: url("./img/fondo_blanco.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Centrado del contenido */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  padding: 60px 30px;
+}
+
+.mona-frase-contenedor {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mona-frase-contenedor p {
+  margin: 0;
+
+  font-family: var(--font-4);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  color: #a49d9b;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+/* ==========================================
+   RESPONSIVE - TABLETS
+========================================== */
+
+@media (max-width: 768px) {
+  .mona-frase {
+    min-height: 400px;
+    padding: 50px 25px;
+  }
+
+  .mona-frase-contenedor p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - CELULARES
+========================================== */
+
+@media (max-width: 480px) {
+  .mona-frase {
+    min-height: 320px;
+    padding: 40px 20px;
+  }
+
+  .mona-frase-contenedor p {
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 0;
+  }
+
+  .mona-frase-salto {
+    display: none;
+  }
+}
+
 .presentacion {
   margin: 0;
 }

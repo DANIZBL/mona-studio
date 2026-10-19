@@ -1477,6 +1477,8 @@ strong {
   }
 }
 
+/* --------------------------------------------------*/
+
 /* ==========================================
    CUENTA REGRESIVA
 ========================================== */
@@ -1485,7 +1487,7 @@ strong {
   width: 100%;
   min-height: 700px;
 
-  background-image: url("../src/img/img_curso1.webp");
+  background-image: url("../src/img_servicios/fondo_cuentaregresiva2.webp");
   background-size: cover;
   background-position: center;
 
@@ -1497,9 +1499,7 @@ strong {
 
 .cuenta-regresiva-overlay {
   width: 100%;
-  min-height: 700px;
-
-  background: rgba(0, 0, 0, 0.08);
+  min-height: 580px;
 
   display: flex;
   align-items: center;
@@ -1507,16 +1507,16 @@ strong {
 
 .cuenta-regresiva-contenido {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1600px;
 
   margin: 0 auto;
-  padding: 50px;
+  padding: 35px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  gap: 60px;
+  gap: 40px;
 }
 
 /* ==========================================
@@ -1524,7 +1524,7 @@ strong {
 ========================================== */
 
 .cuenta-regresiva-info {
-  max-width: 560px;
+  max-width: 900px;
 }
 
 .cuenta-regresiva-titulo-pequeno {
@@ -1532,12 +1532,12 @@ strong {
   font-family: var(--font-4);
   color: white;
 
-  font-size: 46px;
+  font-size: 36px;
   font-weight: 800;
 
   line-height: 1;
 
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .cuenta-regresiva-titulo {
@@ -1545,27 +1545,25 @@ strong {
   font-family: var(--font-3);
   color: #ff0000;
 
-  font-size: clamp(55px, 5vw, 90px);
+  font-size: clamp(45px, 4.2vw, 72px);
 
   font-weight: 900;
 
   line-height: 0.92;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 .cuenta-regresiva-descripcion {
-  margin: 25px 0 0;
+  margin: 18px 0 0;
 
   color: white;
 
-  font-size: 24px;
+  font-size: 20px;
 
   font-weight: 800;
 
-  line-height: 1.25;
-
-  max-width: 500px;
+  max-width: 600px;
 }
 
 /* ==========================================
@@ -1573,14 +1571,15 @@ strong {
 ========================================== */
 
 .cuenta-regresiva-card {
-  width: 620px;
+  width: 400px;
   max-width: 100%;
+  height: 350px;
 
-  padding: 35px 35px 45px;
+  padding: 28px 28px 35px;
 
   background: rgba(255, 0, 0, 0.82);
 
-  border-radius: 22px;
+  border-radius: 18px;
 
   color: white;
 
@@ -1595,17 +1594,17 @@ strong {
   list-style: none;
 
   padding: 0;
-  margin: 0 0 25px;
+  margin: 0 0 20px;
 }
 
 .cuenta-regresiva-lista li {
-  font-size: 27px;
+  font-size: 15px;
 
   font-weight: 700;
 
-  line-height: 1.45;
+  line-height: 1.4;
 
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .cuenta-regresiva-lista li::before {
@@ -1623,9 +1622,9 @@ strong {
 
   flex-direction: column;
 
-  gap: 10px;
+  gap: 8px;
 
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .cuenta-regresiva-detalles div {
@@ -1633,15 +1632,15 @@ strong {
 
   align-items: center;
 
-  gap: 12px;
+  gap: 10px;
 }
 
 .cuenta-regresiva-detalles span {
-  font-size: 28px;
+  font-size: 15px;
 }
 
 .cuenta-regresiva-detalles strong {
-  font-size: 28px;
+  font-size: 15px;
   font-family: var(--font-4);
   color: var(--color-blanco);
   font-weight: 800;
@@ -1658,13 +1657,13 @@ strong {
 
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 25px;
+  gap: 16px;
 }
 
 .cuenta-regresiva-bloque {
-  min-height: 120px;
+  min-height: 95px;
 
-  border-radius: 17px;
+  border-radius: 14px;
 
   background: rgba(255, 255, 255, 0.35);
 
@@ -1680,7 +1679,7 @@ strong {
 }
 
 .cuenta-regresiva-bloque span {
-  font-size: 38px;
+  font-size: 20px;
   font-family: var(--font-4);
   font-weight: 900;
 
@@ -1688,9 +1687,9 @@ strong {
 }
 
 .cuenta-regresiva-bloque small {
-  margin-top: 8px;
+  margin-top: 6px;
   font-family: var(--font-4);
-  font-size: 22px;
+  font-size: 17px;
 
   font-weight: 800;
 }
@@ -1700,50 +1699,70 @@ strong {
 ========================================== */
 
 @media (max-width: 1100px) {
+  .cuenta-regresiva {
+    min-height: 500px;
+  }
+
+  .cuenta-regresiva-overlay {
+    min-height: 500px;
+  }
+
   .cuenta-regresiva-contenido {
-    padding: 40px;
-    gap: 35px;
+    padding: 30px;
+    gap: 28px;
+  }
+
+  .cuenta-regresiva-info {
+    max-width: 400px;
   }
 
   .cuenta-regresiva-titulo-pequeno {
-    font-size: 38px;
-  }
-
-  .cuenta-regresiva-titulo {
-    font-size: 58px;
-  }
-
-  .cuenta-regresiva-descripcion {
-    font-size: 19px;
-  }
-
-  .cuenta-regresiva-card {
-    width: 500px;
-    padding: 28px;
-  }
-
-  .cuenta-regresiva-lista li {
-    font-size: 21px;
-  }
-
-  .cuenta-regresiva-detalles strong {
-    font-size: 21px;
-  }
-
-  .cuenta-regresiva-contador {
-    gap: 12px;
-  }
-
-  .cuenta-regresiva-bloque {
-    min-height: 100px;
-  }
-
-  .cuenta-regresiva-bloque span {
     font-size: 30px;
   }
 
+  .cuenta-regresiva-titulo {
+    font-size: 48px;
+  }
+
+  .cuenta-regresiva-descripcion {
+    font-size: 16px;
+  }
+
+  .cuenta-regresiva-card {
+    width: 420px;
+    padding: 23px;
+  }
+
+  .cuenta-regresiva-lista li {
+    font-size: 18px;
+  }
+
+  .cuenta-regresiva-detalles {
+    gap: 7px;
+  }
+
+  .cuenta-regresiva-detalles span {
+    font-size: 20px;
+  }
+
+  .cuenta-regresiva-detalles strong {
+    font-size: 18px;
+  }
+
+  .cuenta-regresiva-contador {
+    gap: 10px;
+  }
+
+  .cuenta-regresiva-bloque {
+    min-height: 80px;
+  }
+
+  .cuenta-regresiva-bloque span {
+    font-size: 25px;
+  }
+
   .cuenta-regresiva-bloque small {
-    font-size: 17px;
+    font-size: 14px;
   }
 }
 
@@ -1762,9 +1781,9 @@ strong {
 
     align-items: stretch;
 
-    padding: 50px 20px;
+    padding: 35px 18px;
 
-    gap: 40px;
+    gap: 28px;
   }
 
   .cuenta-regresiva-info {
@@ -1772,54 +1791,72 @@ strong {
   }
 
   .cuenta-regresiva-titulo-pequeno {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .cuenta-regresiva-titulo {
-    font-size: clamp(45px, 13vw, 70px);
+    font-size: clamp(36px, 11vw, 56px);
 
     letter-spacing: -1px;
   }
 
   .cuenta-regresiva-descripcion {
-    font-size: 17px;
+    font-size: 15px;
 
-    line-height: 1.25;
+    line-height: 1.3;
   }
 
   .cuenta-regresiva-card {
     width: 100%;
 
-    padding: 25px 20px 30px;
+    padding: 20px 16px 24px;
 
-    border-radius: 18px;
+    border-radius: 15px;
+  }
+
+  .cuenta-regresiva-lista {
+    margin-bottom: 16px;
   }
 
   .cuenta-regresiva-lista li {
-    font-size: 19px;
+    font-size: 16px;
 
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
-  .cuenta-regresiva-detalles strong {
-    font-size: 20px;
+  .cuenta-regresiva-detalles {
+    gap: 7px;
+    margin-bottom: 16px;
   }
 
-  .cuenta-regresiva-contador {
+  .cuenta-regresiva-detalles div {
     gap: 8px;
   }
 
-  .cuenta-regresiva-bloque {
-    min-height: 85px;
+  .cuenta-regresiva-detalles span {
+    font-size: 18px;
+  }
 
-    border-radius: 12px;
+  .cuenta-regresiva-detalles strong {
+    font-size: 17px;
+  }
+
+  .cuenta-regresiva-contador {
+    gap: 6px;
+  }
+
+  .cuenta-regresiva-bloque {
+    min-height: 70px;
+
+    border-radius: 10px;
   }
 
   .cuenta-regresiva-bloque span {
-    font-size: 25px;
+    font-size: 21px;
   }
 
   .cuenta-regresiva-bloque small {
-    font-size: 14px;
+    margin-top: 5px;
+    font-size: 12px;
   }
 }
