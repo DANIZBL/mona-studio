@@ -41,7 +41,75 @@
 
       <nav class="nav">
         <a class="boton" href="../index.html">INICIO</a>
-        <a class="boton" href="#servicios">SERVICIOS</a>
+
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
         <!-- ----MENU CURSOS---- -->
         <div class="cursos-dropdown">
           <button
@@ -198,12 +266,56 @@
               </p>
             </div>
 
-            <div class="novias-intro-image">
+            <d iv class="novias-intro-image">
               <img src="./src/img/novias2.webp" alt="Novia" />
             </div>
           </div>
         </div>
       </section>
+
+      
+<!-- ==========================================
+     SECCIÓN: CADA NOVIA ELIGE SU EXPERIENCIA
+========================================== -->
+
+<section class="novias-video-section">
+  <div class="novias-video-container">
+
+    
+<div class="novias-video-wrapper">
+  <video
+    class="novias-video"
+    src="./src/videos_social/video_social3.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    aria-label="Video de las experiencias para novias de MONA"
+  ></video>
+</div>
+
+<!-- Modal del video de novias -->
+<dialog class="novias-video-modal" aria-label="Video de las experiencias para novias">
+  <video
+    class="novias-video-grande"
+    src="./src/videos_social/video_social3.mp4"
+    loop
+    playsinline
+    controls
+    preload="metadata"
+    aria-label="Video ampliado de las experiencias para novias de MONA"
+  ></video>
+</dialog>
+
+
+    <div class="novias-video-content">
+      <h1>CADA NOVIA ELIGE SU EXPERIENCIA</h1>
+    </div>
+
+  </div>
+</section>
+
 
       <!-- ======================================================
               NOS ADAPTAMOS
@@ -233,7 +345,17 @@
         <div class="novias-container">
           <div class="experience-grid">
             <div class="experience-image">
-              <img src="./src/img/novias3.webp" alt="Experiencia Mona" />
+              <img
+                src="./src/img_servicios/exp_mona6.webp"
+                alt="Experiencia Mona"
+                class="experience-slide active"
+              />
+
+              <img
+                src="./src/img/novias3.webp"
+                alt="Preparación de novias en MONA"
+                class="experience-slide"
+              />
             </div>
 
             <div class="experience-content">
@@ -319,7 +441,7 @@
                 ></video>
 
                 <img
-                  src="./src/img_servicios/exp_mona4.webp"
+                  src="./src/img_servicios/exp_mona8.webp"
                   alt="Look de novia"
                 />
 

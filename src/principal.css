@@ -22,7 +22,7 @@ h2,
 h3,
 p {
   color: #424040;
-  font-family: var(--font-3);
+  font-family: var(--font-4);
 }
 
 html {
@@ -77,18 +77,19 @@ html {
   font-family: var(--font-3);
   color: var(--color-blanco);
   margin: 0 0 25px;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
   line-height: 1.1;
   transition: opacity 0.5s ease;
 }
 
 .banner-content p {
-  max-width: 80%;
+  max-width: 100%;
   font-family: var(--font-4);
   color: var(--color-blanco);
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   line-height: 1.5;
   transition: opacity 0.5s ease;
 }
@@ -129,7 +130,7 @@ html {
   }
 
   .banner-content p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     max-width: 100%;
     line-height: 1.6;
   }
@@ -171,7 +172,7 @@ html {
   margin: 0;
 
   font-family: var(--font-4);
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.4;
 
@@ -191,7 +192,7 @@ html {
   }
 
   .mona-frase-contenedor p {
-    font-size: 16px;
+    font-size: 1.5rem;
     line-height: 1.6;
   }
 }
@@ -207,7 +208,7 @@ html {
   }
 
   .mona-frase-contenedor p {
-    font-size: 13px;
+    font-size: 1.5rem;
     line-height: 1.8;
     letter-spacing: 0;
   }
@@ -229,7 +230,7 @@ html {
   color: var(--color-beige);
   font-family: var(--font-4);
   text-align: center;
-  font-size: 15px;
+  font-size: 1.5rem;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -237,7 +238,7 @@ html {
 @media (max-width: 768px) {
   .presentacion p {
     text-align: center;
-    font-size: 15px;
+    font-size: 1.5rem;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -603,7 +604,7 @@ html {
   margin-top: 15px;
 
   color: white;
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 1.5;
   text-align: left;
 
@@ -728,7 +729,7 @@ html {
 .instagram-text h2 {
   margin: 0 0 12px 0;
   font-family: var(--font-3);
-  font-weight: 300;
+  font-weight: 600;
   letter-spacing: 3px;
   color: var(--color-rojo);
   line-height: 1;
@@ -736,7 +737,9 @@ html {
 
 .instagram-text p {
   margin: 0;
-  font-family: var(--font-3);
+  font-size: 1.5rem;
+  font-family: var(--font-4);
+  font-weight: 600;
   color: #666;
   max-width: 700px;
   line-height: 1.6;
@@ -753,8 +756,10 @@ html {
 }
 
 .instagram-header p {
-  font-family: var(--font-3);
+  font-family: var(--font-4);
   color: var(--color-rojo);
+  font-size: 1.5rem;
+  font-weight: 600;
   max-width: 700px;
   margin: 0 auto 60px;
   line-height: 1.8;
@@ -974,7 +979,7 @@ html {
   }
 
   .instagram-text p {
-    font-size: 16px;
+    font-size: 1.5rem;
     line-height: 1.6;
     max-width: 320px;
     margin: auto;
@@ -1056,7 +1061,7 @@ html {
 .products-header h2 {
   font-family: var(--font-3);
   font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: 300;
+  font-weight: 600;
   color: var(--color-rojo);
   letter-spacing: 3px;
   margin-bottom: 20px;
@@ -1066,6 +1071,7 @@ html {
   max-width: 700px;
   margin: 0 auto;
   font-size: 1.5rem;
+  font-weight: 600;
   color: #666;
   line-height: 1.8;
 
@@ -1309,10 +1315,9 @@ html {
 
 .novias-content p {
   font-family: var(--font-4);
-
-  font-size: 18px;
-
+  font-size: 1.5rem;
   line-height: 1.9;
+  font-weight: 600;
 
   color: var(--color-blanco);
 
@@ -1464,7 +1469,7 @@ html {
   }
 
   .novias-content p {
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 1.75;
     margin-bottom: 30px;
   }
@@ -1579,8 +1584,9 @@ html {
 
 .quince-content p {
   font-family: var(--font-4);
-  color: #252525;
-  font-size: 1.7rem;
+  color: var(--color-beige);
+  font-size: 1.5rem;
+  font-weight: 600;
   line-height: 1.8;
   margin-bottom: 40px;
   max-width: 600px;
@@ -1640,7 +1646,7 @@ html {
     width: 100%;
     max-width: 500px;
     margin: 0 auto 22px;
-    font-size: 1.05rem;
+    font-size: 1.5rem;
     line-height: 1.8;
   }
 
@@ -1741,8 +1747,8 @@ EGRESADAS
   margin: 0 0 30px;
 
   font-family: var(--font-4);
-  font-size: 1.45rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 600;
   line-height: 1.6;
 
   color: #555;
@@ -1752,7 +1758,7 @@ EGRESADAS
   margin: 0 0 40px;
 
   font-family: var(--font-secundaria);
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.9;
 
@@ -1817,7 +1823,7 @@ EGRESADAS
   }
 
   .egresadas-content p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.7;
   }
 }
@@ -1863,6 +1869,7 @@ TESTIMONIOS
 
 .testimonios-header p {
   margin-top: 3rem;
+  font-size: 1.5rem;
   margin-bottom: 0;
   color: var(--color-rojo);
   font-family: var(--font-3);
@@ -1977,7 +1984,7 @@ TESTIMONIOS
 
   color: #222;
 
-  font-size: 16px;
+  font-size: 1.5rem;
 
   line-height: 1.5;
 
@@ -2026,7 +2033,7 @@ TESTIMONIOS
   }
 
   .testimonio-burbuja p {
-    font-size: 15px;
+    font-size: 1.5rem;
   }
 }
 
@@ -2060,7 +2067,8 @@ MAKE UP Y PEINADO
   margin: 0 0 35px;
   color: var(--color-blanco);
   font-family: var(--font-4);
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   line-height: 1.7;
 }
 
@@ -2074,9 +2082,7 @@ MAKE UP Y PEINADO
   color: #fff;
   border-radius: 15px;
   text-decoration: none;
-  font-size: 17px;
-  font-weight: 600;
-
+  font-size: 1rem;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -2131,7 +2137,7 @@ MAKE UP Y PEINADO
   }
 
   .studio-content p {
-    font-size: 18px;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 30px;
   }

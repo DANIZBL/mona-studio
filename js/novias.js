@@ -20,6 +20,26 @@ function changeHeroImage() {
 
 setInterval(changeHeroImage, 6000);
 
+document.addEventListener("DOMContentLoaded", () => {
+  const contenedor = document.querySelector(".experience-image");
+
+  if (!contenedor) return;
+
+  const imagenes = contenedor.querySelectorAll(".experience-slide");
+
+  if (imagenes.length <= 1) return;
+
+  let indiceActual = 0;
+
+  setInterval(() => {
+    imagenes[indiceActual].classList.remove("active");
+
+    indiceActual = (indiceActual + 1) % imagenes.length;
+
+    imagenes[indiceActual].classList.add("active");
+  }, 4000);
+});
+
 /*==================================================
           GALERÍAS MONA STUDIO: FOTOS Y VIDEOS
 ==================================================*/
@@ -219,13 +239,16 @@ galleryModalContent.addEventListener("touchend", (e) => {
 galleryModalImage.setAttribute("draggable", "false");
 galleryModalVideo.setAttribute("draggable", "false");
 
-/*==================================================
-            PRELOAD
-==================================================*/
+/*================================================
+  PRELOAD DE IMÁGENES DE EXPERIENCIA MONA
+================================================*/
+
+const galleryImages = document.querySelectorAll(
+  ".experience-image .experience-slide"
+);
 
 galleryImages.forEach((image) => {
   const preload = new Image();
-
   preload.src = image.src;
 });
 
@@ -308,3 +331,57 @@ if (noviasBtn) {
 }
 
 /*===========================================*/
+
+const videoNovias = document.querySelector(".novias-video");
+const modalNovias = document.querySelector(".novias-video-modal");
+const videoNoviasGrande = document.querySelector(".novias-video-grande");
+
+// Abrir video ampliado
+videoNovias.addEventListener("click", async () => {
+  if (modalNovias.open) return;
+
+  const tiempo = videoNovias.currentTime;
+  const sonidoActivado = !videoNovias.muted;
+
+  // Evitar reproducir ambos videos al mismo tiempo
+  videoNovias.pause();
+
+  videoNoviasGrande.muted = !sonidoActivado;
+  modalNovias.showModal();
+
+  try {
+    if (videoNoviasGrande.readyState < 1) {
+      await new Promise((resolve) => {
+        videoNoviasGrande.addEventListener("loadedmetadata", resolve, {
+          once: true,
+        });
+      });
+    }
+
+    videoNoviasGrande.currentTime = tiempo;
+    await videoNoviasGrande.play();
+  } catch (error) {
+    console.warn("No se pudo reproducir el video de novias:", error);
+  }
+});
+
+// Cerrar al hacer clic en el fondo oscuro
+modalNovias.addEventListener("click", (event) => {
+  if (event.target === modalNovias) {
+    modalNovias.close();
+  }
+});
+
+// Sincronizar y reanudar al cerrar
+// También se ejecuta al cerrar con Escape
+modalNovias.addEventListener("close", () => {
+  const tiempo = videoNoviasGrande.currentTime;
+  const sonidoActivado = !videoNoviasGrande.muted;
+
+  videoNoviasGrande.pause();
+
+  videoNovias.currentTime = tiempo;
+  videoNovias.muted = !sonidoActivado;
+
+  videoNovias.play().catch(() => {});
+});
