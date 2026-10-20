@@ -170,18 +170,20 @@ body {
 }
 
 /* ==========================================
-   DESPLEGABLE DE CURSOS
+   DESPLEGABLES DE CURSOS Y SERVICIOS
 ========================================== */
 
-.cursos-dropdown {
+.cursos-dropdown,
+.servicios-dropdown {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-/* Botón principal */
+/* Botones principales */
 
-.cursos-toggle {
+.cursos-toggle,
+.servicios-toggle {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -191,21 +193,24 @@ body {
   cursor: pointer;
 }
 
-/* Flecha */
+/* Flechas */
 
-.cursos-flecha {
+.cursos-flecha,
+.servicios-flecha {
   display: inline-block;
   font-size: 18px;
   transition: transform 0.3s ease;
 }
 
-.cursos-dropdown.is-open .cursos-flecha {
+.cursos-dropdown.is-open .cursos-flecha,
+.servicios-dropdown.is-open .servicios-flecha {
   transform: rotate(180deg);
 }
 
-/* Menú desplegable */
+/* Menús desplegables */
 
-.cursos-menu {
+.cursos-menu,
+.servicios-menu {
   position: absolute;
   top: calc(100% + 18px);
   left: 50%;
@@ -232,9 +237,10 @@ body {
   z-index: 1100;
 }
 
-/* Menú abierto */
+/* Menús abiertos */
 
-.cursos-dropdown.is-open .cursos-menu {
+.cursos-dropdown.is-open .cursos-menu,
+.servicios-dropdown.is-open .servicios-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -243,7 +249,8 @@ body {
 
 /* Opciones */
 
-.cursos-menu-link {
+.cursos-menu-link,
+.servicios-menu-link {
   display: block;
   padding: 12px 14px;
 
@@ -257,14 +264,17 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.cursos-menu-link:hover {
+.cursos-menu-link:hover,
+.servicios-menu-link:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Accesibilidad con teclado */
 
 .cursos-toggle:focus-visible,
-.cursos-menu-link:focus-visible {
+.servicios-toggle:focus-visible,
+.cursos-menu-link:focus-visible,
+.servicios-menu-link:focus-visible {
   outline: 2px solid white;
   outline-offset: 4px;
 }
@@ -274,16 +284,19 @@ body {
 ========================================== */
 
 @media (max-width: 768px) {
-  .cursos-dropdown {
+  .cursos-dropdown,
+  .servicios-dropdown {
     flex-direction: column;
   }
 
-  .cursos-toggle {
+  .cursos-toggle,
+  .servicios-toggle {
     font-size: 20px;
     font-family: var(--font-secundaria);
   }
 
-  .cursos-menu {
+  .cursos-menu,
+  .servicios-menu {
     position: static;
     transform: none;
     min-width: 220px;
@@ -291,11 +304,13 @@ body {
     box-shadow: none;
   }
 
-  .cursos-dropdown.is-open .cursos-menu {
+  .cursos-dropdown.is-open .cursos-menu,
+  .servicios-dropdown.is-open .servicios-menu {
     transform: none;
   }
 
-  .cursos-menu-link {
+  .cursos-menu-link,
+  .servicios-menu-link {
     font-size: 17px;
   }
 }
@@ -1574,15 +1589,13 @@ strong {
   width: 400px;
   max-width: 100%;
   height: 350px;
-
+  position: relative;
+  bottom: -2rem;
+  left: 4rem;
   padding: 28px 28px 35px;
-
   background: rgba(255, 0, 0, 0.82);
-
   border-radius: 18px;
-
   color: white;
-
   box-sizing: border-box;
 }
 
@@ -1807,13 +1820,18 @@ strong {
   }
 
   .cuenta-regresiva-card {
-    width: 100%;
-
-    padding: 20px 16px 24px;
-
-    border-radius: 15px;
+    width: 400px;
+    max-width: 100%;
+    height: 350px;
+    position: relative;
+    bottom: -1rem;
+    left: 0rem;
+    padding: 28px 28px 35px;
+    background: rgba(255, 0, 0, 0.82);
+    border-radius: 18px;
+    color: white;
+    box-sizing: border-box;
   }
-
   .cuenta-regresiva-lista {
     margin-bottom: 16px;
   }
@@ -1858,5 +1876,23 @@ strong {
   .cuenta-regresiva-bloque small {
     margin-top: 5px;
     font-size: 12px;
+  }
+}
+
+/*========== NOTEBOOK=====================*/
+
+@media (max-width: 1366px) {
+  .cuenta-regresiva-card {
+    width: 400px;
+    max-width: 100%;
+    height: 350px;
+    position: relative;
+    bottom: -4.5rem;
+    left: 1rem;
+    padding: 28px 28px 35px;
+    background: rgba(255, 0, 0, 0.82);
+    border-radius: 18px;
+    color: white;
+    box-sizing: border-box;
   }
 }

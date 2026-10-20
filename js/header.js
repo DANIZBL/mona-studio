@@ -87,6 +87,96 @@ if (document.readyState === "loading") {
 }
 
 // =====================================================
+// DESPLEGABLE DE SERVICIOS - MONA STUDIO
+// =====================================================
+
+function initServiciosDropdown() {
+  const dropdowns = document.querySelectorAll(".servicios-dropdown");
+
+  dropdowns.forEach((dropdown) => {
+    // Evitar inicializar dos veces el mismo menú
+    if (dropdown.dataset.initialized === "true") return;
+    dropdown.dataset.initialized = "true";
+
+    const toggle = dropdown.querySelector(".servicios-toggle");
+    const menu = dropdown.querySelector(".servicios-menu");
+
+    if (!toggle || !menu) return;
+
+    function abrirMenuServicios() {
+      dropdown.classList.add("is-open");
+      menu.hidden = false;
+      toggle.setAttribute("aria-expanded", "true");
+    }
+
+    function cerrarMenuServicios() {
+      dropdown.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      menu.hidden = true;
+    }
+
+    toggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const estaAbierto = dropdown.classList.contains("is-open");
+
+      // Cerrar los otros menús desplegables del header
+      document
+        .querySelectorAll(".cursos-dropdown, .servicios-dropdown")
+        .forEach((otroDropdown) => {
+          if (otroDropdown === dropdown) return;
+
+          otroDropdown.classList.remove("is-open");
+
+          const otroToggle = otroDropdown.querySelector(
+            ".cursos-toggle, .servicios-toggle"
+          );
+
+          const otroMenu = otroDropdown.querySelector(
+            ".cursos-menu, .servicios-menu"
+          );
+
+          otroToggle?.setAttribute("aria-expanded", "false");
+
+          if (otroMenu) otroMenu.hidden = true;
+        });
+
+      if (estaAbierto) {
+        cerrarMenuServicios();
+      } else {
+        abrirMenuServicios();
+      }
+    });
+
+    // Cerrar al seleccionar una opción
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", cerrarMenuServicios);
+    });
+
+    // Cerrar al hacer clic fuera del menú
+    document.addEventListener("click", (event) => {
+      if (!dropdown.contains(event.target)) {
+        cerrarMenuServicios();
+      }
+    });
+
+    // Cerrar con Escape
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        cerrarMenuServicios();
+      }
+    });
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initServiciosDropdown);
+} else {
+  initServiciosDropdown();
+}
+
+// =====================================================
 // CARRITO
 // =====================================================
 

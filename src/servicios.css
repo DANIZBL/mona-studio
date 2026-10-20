@@ -1102,20 +1102,6 @@ Limpiezas faciales
 }
 /* ================================================== */
 
-/* ==============================================
-SOCIAL
-============================================== */
-.servicios-makeup h1 {
-  font-size: 6rem;
-  font-family: var(--font-elegante);
-}
-
-.servicios-makeup p {
-  font-size: 1.4rem;
-  font-family: var(--font-3);
-  color: var(--color-beige);
-}
-
 /*======================================
 Peeling Microneedling y Hidralips
 ==========================================*/
@@ -2463,5 +2449,301 @@ MANICURIA Y PEDICURIA
     font-family: var(--font-cursiva1);
     color: var(--color-rojo);
     font-size: 2rem;
+  }
+}
+
+/*================MAKE UP==========================*/
+
+.servicios-makeup h1 {
+  font-size: 6rem;
+  font-family: var(--font-3);
+}
+
+.servicios-makeup p {
+  font-size: 1.5rem;
+  font-family: var(--font-4);
+  color: var(--color-rojo);
+  font-weight: 600;
+}
+
+/* ==========================================
+   SECCIÓN PROFESIONALES MAKE-UP
+========================================== */
+
+.makeup-profesionales-section {
+  width: 100%;
+  padding: 100px 0;
+  background: var(--color-blanco);
+}
+
+.makeup-profesionales-container {
+  width: min(90%, 1400px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 50px;
+}
+
+/* ==========================================
+   BLOQUE ANTO
+========================================== */
+
+.makeup-profesional-card {
+  min-width: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--color-rojo, #a52232);
+  color: var(--color-blanco, #fff);
+
+  border-radius: 20px;
+}
+
+/* FOTO */
+
+.makeup-profesional-foto {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.makeup-profesional-foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.makeup-profesional-card:hover .makeup-profesional-foto img {
+  transform: scale(1.025);
+}
+
+/* INFORMACIÓN */
+
+.makeup-profesional-info {
+  padding: 36px;
+}
+
+.makeup-profesional-label {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  font-family: var(--font-elegante);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--color-blanco, #fff);
+  opacity: 0.85;
+}
+
+.makeup-profesional-nombre {
+  margin: 0 0 12px;
+
+  font-family: var(--font-3);
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+
+  color: var(--color-blanco, #fff);
+}
+
+.makeup-profesional-cargo {
+  margin: 0 0 28px;
+
+  font-family: var(--font-4);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+
+  color: var(--color-blanco, #fff);
+}
+
+.makeup-profesional-descripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.makeup-profesional-descripcion p {
+  margin: 0;
+
+  font-family: var(--font-4);
+  font-size: 0.98rem;
+  font-weight: 400;
+  line-height: 1.85;
+
+  color: var(--color-blanco, #fff);
+}
+
+/* ==========================================
+   BLOQUE STAFF
+========================================== */
+
+.makeup-staff-card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  background: transparent;
+}
+
+/* VIDEO DE VISTA PREVIA */
+
+.makeup-staff-video-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+  border-radius: 20px;
+  background: #111;
+}
+
+.makeup-staff-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* TÍTULO STAFF */
+
+.makeup-staff-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px;
+}
+
+.makeup-staff-titulo {
+  margin: 0;
+
+  font-family: var(--font-3);
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: center;
+
+  color: var(--color-rojo, #a52232);
+}
+
+/* ==========================================
+   MODAL VIDEO STAFF
+========================================== */
+
+.makeup-staff-modal {
+  position: fixed;
+  inset: 0;
+
+  width: min(90vw, 900px);
+  max-width: none;
+  max-height: 90dvh;
+
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+
+  background: #111;
+  overflow: hidden;
+}
+
+.makeup-staff-modal[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.makeup-staff-modal::backdrop {
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(5px);
+}
+
+.makeup-staff-video-grande {
+  display: block;
+  width: 100%;
+  max-height: 90dvh;
+
+  object-fit: contain;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+  .makeup-profesionales-container {
+    gap: 28px;
+    width: 92%;
+  }
+
+  .makeup-profesional-info {
+    padding: 26px;
+  }
+
+  .makeup-profesional-descripcion p {
+    font-size: 0.94rem;
+    line-height: 1.75;
+  }
+
+  .makeup-staff-card {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .makeup-profesionales-section {
+    padding: 60px 0;
+  }
+
+  .makeup-profesionales-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    width: 88%;
+  }
+
+  .makeup-profesional-foto,
+  .makeup-staff-video-wrapper {
+    aspect-ratio: 4 / 5;
+  }
+
+  .makeup-profesional-info {
+    padding: 28px 24px;
+  }
+
+  .makeup-profesional-nombre {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .makeup-profesional-cargo {
+    font-size: 0.95rem;
+  }
+
+  .makeup-profesional-descripcion p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .makeup-staff-card {
+    gap: 20px;
+  }
+
+  .makeup-staff-titulo {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .makeup-staff-modal {
+    width: 92vw;
   }
 }

@@ -263,3 +263,59 @@ document.querySelectorAll(".whatsapp-btn").forEach((button) => {
   button.target = "_blank";
   button.rel = "noopener noreferrer";
 });
+
+const videoStaff = document.querySelector(".makeup-staff-video");
+const modalStaff = document.querySelector(".makeup-staff-modal");
+const videoStaffGrande = document.querySelector(".makeup-staff-video-grande");
+
+// Abrir el video ampliado
+videoStaff.addEventListener("click", async () => {
+  if (modalStaff.open) return;
+
+  const tiempo = videoStaff.currentTime;
+  const sonidoActivado = !videoStaff.muted;
+
+  // Pausar la vista previa para evitar audio duplicado
+  videoStaff.pause();
+
+  videoStaffGrande.muted = !sonidoActivado;
+
+  modalStaff.showModal();
+
+  try {
+    if (videoStaffGrande.readyState < 1) {
+      await new Promise((resolve) => {
+        videoStaffGrande.addEventListener("loadedmetadata", resolve, {
+          once: true,
+        });
+      });
+    }
+
+    videoStaffGrande.currentTime = tiempo;
+
+    await videoStaffGrande.play();
+  } catch (error) {
+    console.warn("No se pudo reproducir el video del staff:", error);
+  }
+});
+
+// Cerrar al tocar el fondo oscuro
+modalStaff.addEventListener("click", (event) => {
+  if (event.target === modalStaff) {
+    modalStaff.close();
+  }
+});
+
+// Sincronizar y reanudar al cerrar
+// También funciona al pulsar Escape
+modalStaff.addEventListener("close", () => {
+  const tiempo = videoStaffGrande.currentTime;
+  const sonidoActivado = !videoStaffGrande.muted;
+
+  videoStaffGrande.pause();
+
+  videoStaff.currentTime = tiempo;
+  videoStaff.muted = !sonidoActivado;
+
+  videoStaff.play().catch(() => {});
+});

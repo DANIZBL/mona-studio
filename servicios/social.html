@@ -42,7 +42,75 @@
 
       <nav class="nav">
         <a class="boton" href="../index.html">INICIO</a>
-        <a class="boton" href="#servicios">SERVICIOS</a>
+        
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
         <!-- ----MENU CURSOS---- -->
         <div class="cursos-dropdown">
           <button
@@ -115,8 +183,6 @@
         <section class="servicio-presentacion servicios-makeup">
             <!-- TEXTO -->
             <div class="servicio-presentacion-info">
-                <h1 id="servicioTitulo">MAKE UP﹠PEINADO </h1>
-
                 <p id="servicioDescripcion"> Nuestro studio se originó hace muchos años en una habitación pequeña
                 donde solo importaba descubrir el mundo a través de colores y
                 formas. Hoy, el maquillaje y su complemento perfecto nos identifica
@@ -128,77 +194,124 @@
             <div class="servicio-presentacion-imagen">
                 <img  id="servicioPortada" src="../src/img/makeupypeinado.webp" alt="">
             </div>
-                        <a
-              href="#"
-              class="whatsapp-btn"
-              data-message="Hola,buenas! Quiero consultar por el servicio de Maquillaje y peinado"
-            >LO QUIERO! </a>
         </section>
 
         <!-- =================================================
              PROFESIONAL
         ================================================== -->
 
-        <section class="servicio-profesional">
-            <div class="profesional-contenido">
-                <!-- FOTO PROFESIONAL -->
-                <div class="profesional-foto">
-                    <img
-                        id="profesionalFoto"
-                        src="../src/img_servicios/profesional_anto.webp"
-                        alt="">
-                </div>
-                <!-- INFORMACIÓN -->
-                <div class="profesional-info">
-                    <span class="profesional-label">
-                        Profesional
-                    </span>
-                    <h2 id="profesionalNombre">
-                      Hola! Soy Anto
-                    </h2>
-                    <h3 id="profesionalNombre">
-                      Fundadora de MONA Studio · Maquilladora profesional y formadora
-                    </h3>
-                    <p>
-                      Hace diez años comencé a maquillar por curiosidad, como un hobby y por el simple gusto de descubrir algo que siempre me había atraído. Nunca imaginé que aquello que empezó en una pequeña habitación de la casa de mis papás se convertiría en mi profesión, en un proyecto propio y, con el tiempo, en MONA.
-                      Siempre busqué construir mi propio camino. Lo que comenzó como un trabajo individual fue creciendo hasta convertirse en un estudio que hoy comparto con un equipo de profesionales que admiro y quiero, con quienes disfruto trabajar y seguir creando.
-                      Disfruto profundamente de mi profesión y del vínculo que construyo con cada clienta. Me siento honrada cada vez que alguien nos elige para acompañarla en un momento importante de su vida, y ese sigue siendo uno de los aspectos más valiosos de mi trabajo.
-                      Hoy, además, elijo compartir lo que aprendí a través de la formación profesional. Quise crear el curso que me hubiera gustado recibir cuando comencé a estudiar: una propuesta pensada desde mi propia experiencia y desde todo lo que fui descubriendo a lo largo de estos años.
-                      Hoy, todo ese recorrido convive con una idea que atraviesa cada rincón de MONA: crear una experiencia que va más allá de lo estético. Un espacio donde cada detalle tiene un propósito y donde la belleza es una forma de expresión, de disfrute y de encuentro con una misma.
-                    </p>
-                    <p id="profesionalDescripcion"></p>
-                </div>
-            </div>
-        </section>
+<section class="makeup-profesionales-section">
 
-            <section class="servicio-profesional">
-            <div class="profesional-contenido">
-                <!-- FOTO PROFESIONAL -->
-                <div class="profesional-foto">
-                    <img
-                        id="profesionalFoto"
-                        src="../src/img_servicios/profesional_aixa.webp"
-                        alt="">
-                </div>
-                <!-- INFORMACIÓN -->
-                <div class="profesional-info">
-                    <span class="profesional-label">
-                        Profesional
-                    </span>
-                    <h2 id="profesionalNombre">
-                      Hola! Soy Aixa
-                    </h2>
-                    <p>Maquilladora, peinadora y cosmetóloga con 4 años de experiencia vasta trayectoria en 
-                    Capacitación de nuevas maquilladoras y acompañamiento en forma inicial. Su enfoque en 
-                    Cosmetología aporta un valor fundamental para comprender y trabajar la piel con criterio profesional.
-                    Abordando el maquillaje desde una base consciente y responsable.
-                    </p>
-                    <p id="profesionalDescripcion"></p>
-                </div>
-            </div>
-        </section>
+  <div class="makeup-profesionales-container">
 
-        
+    <!-- BLOQUE 1: ANTO -->
+    <article class="makeup-profesional-card">
+
+      <!-- FOTO -->
+      <div class="makeup-profesional-foto">
+        <img
+          src="../src/img_servicios/profesional_anto.webp"
+          alt="Anto, fundadora de MONA Studio y maquilladora profesional"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- INFORMACIÓN -->
+      <div class="makeup-profesional-info">
+
+        <h2 class="makeup-profesional-nombre">
+          ¡Hola! Soy Anto
+        </h2>
+
+        <h3 class="makeup-profesional-cargo">
+          Fundadora de MONA Studio · Maquilladora profesional y formadora
+        </h3>
+
+        <div class="makeup-profesional-descripcion">
+          <p>
+           Hace diez años comencé a maquillar por curiosidad, como un hobby y por el simple gusto de descubrir algo que siempre me había atraído. Nunca imaginé que aquello que empezó en una pequeña habitación de la casa de mis papás se convertiría en mi profesión, en un proyecto propio y, con el tiempo, en MONA.
+          </p>
+
+          <p>
+            Siempre busqué construir mi propio camino. Lo que comenzó como un trabajo individual fue creciendo hasta convertirse en un estudio que hoy comparto con un equipo de profesionales que admiro y quiero, con quienes disfruto trabajar y seguir creando.
+          </p>
+
+          <p>
+            Disfruto profundamente de mi profesión y del vínculo que construyo con cada clienta. Me siento honrada cada vez que alguien nos elige para acompañarla en un momento importante de su vida, y ese sigue siendo uno de los aspectos más valiosos de mi trabajo.
+          </p>
+
+          <p>
+            Hoy, además, elijo compartir lo que aprendí a través de la formación profesional. Quise crear el curso que me hubiera gustado recibir cuando comencé a estudiar: una propuesta pensada desde mi propia experiencia y desde todo lo que fui descubriendo a lo largo de estos años.
+          </p>
+
+          <p>
+            Hoy, todo ese recorrido convive con una idea que atraviesa cada rincón de MONA: crear una experiencia que va más allá de lo estético. Un espacio donde cada detalle tiene un propósito y donde la belleza es una forma de expresión, de disfrute y de encuentro con una misma.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- BLOQUE 2: STAFF -->
+    <article class="makeup-staff-card">
+
+      <!-- VIDEO -->
+      <div class="makeup-staff-video-wrapper">
+
+        <video
+          class="makeup-staff-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Conocé al equipo profesional de MONA Studio"
+        >
+          <source
+            src="../src/videos_social/video_social2.mp4"
+            type="video/mp4"
+          >
+          Tu navegador no admite la reproducción de video.
+        </video>
+
+      </div>
+
+      <!-- TÍTULO -->
+      <div class="makeup-staff-contenido">
+        <h2 class="makeup-staff-titulo">
+          CONOCÉ A NUESTRO STAFF
+        </h2>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- MODAL DEL VIDEO DEL STAFF -->
+<dialog
+  class="makeup-staff-modal"
+  aria-label="Video ampliado del staff de MONA Studio"
+>
+  <video
+    class="makeup-staff-video-grande"
+    loop
+    playsinline
+    controls
+    preload="metadata"
+    aria-label="Video del equipo profesional de MONA Studio"
+  >
+    <source
+      src="../src/videos_social/video_social2.mp4"
+      type="video/mp4"
+    >
+  </video>
+</dialog>
+
     <!-- ========================MARCAS======================================== -->
 
     <section class="marcas">
@@ -219,14 +332,10 @@
             <div class="servicio-galeria">
                 <!-- VIDEO-->
                 <div class="galeria-item">
-                    <video
-                        src="../src/videos_social/video_social2.mp4"
-                        muted
-                        loop
-                        autoplay
-                        playsinline
-                        preload="metadata"
-                    ></video>
+                    <img
+                        src="../src/img_servicios/social5.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
                 </div>
 
                 <div class="galeria-item">
@@ -278,14 +387,10 @@
                 </div>
 
                    <div class="galeria-item">
-                    <video
-                        src="../src/videos_social/video_social5.mp4"
-                        muted
-                        loop
-                        autoplay
-                        playsinline
-                        preload="metadata"
-                    ></video>
+                    <img
+                        src="../src/img_servicios/social6.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
                 </div>
 
                  <div class="galeria-item">

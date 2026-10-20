@@ -1351,10 +1351,8 @@ body {
 }
 
 .teacher-info p {
-  font-family: var(--font-3);
-
+  font-family: var(--font-4);
   color: var(--color-blanco);
-
   line-height: 1.9;
 }
 
