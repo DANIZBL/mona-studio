@@ -1,0 +1,105 @@
+.marcas {
+  width: 100%;
+  padding: 60px 0;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+  overflow: hidden;
+}
+
+.marcas h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 6rem;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+}
+
+/* =========================
+   CONTENEDOR DEL SLIDER
+========================= */
+
+.marcas-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* =========================
+   FILA DE MARCAS
+========================= */
+
+.marcas-container {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 60px;
+
+  animation: moverMarcas 35s linear infinite;
+}
+
+/* =========================
+   MARCA
+========================= */
+
+.marca {
+  flex: 0 0 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100px;
+}
+
+.marca img {
+  width: 100%;
+  max-width: 20rem;
+
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes moverMarcas {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .marcas {
+    padding: 45px 0;
+    margin-bottom: 20px;
+  }
+
+  .marcas h2 {
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+
+  .marcas-container {
+    gap: 35px;
+    animation-duration: 28s;
+  }
+
+  .marca {
+    flex: 0 0 120px;
+    height: 90px;
+  }
+
+  .marca img {
+    max-width: 120px;
+    max-height: 70px;
+  }
+}

@@ -11,68 +11,165 @@
   </head>
   <body>
     <body>
-      <!-- ============================HEDER========================== -->
-      <header class="main-header">
-        <div class="mobile-header">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <a href="index.html">
-            <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
-          </a>
-
-          <div class="mobile-actions">
-            <button class="mobile-search-toggle">
-              <img src="./src/img/lupa.svg" alt="Buscar" />
-            </button>
-
-            <div class="cart">
-              <button class="cart-icon">
-                <img src="./src/img/carrito.svg" alt="" />
-              </button>
-
-              <span class="cart-count">0</span>
-            </div>
-          </div>
+    <!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
-        <nav class="nav">
-          <a class="boton" href="../index.html">INICIO</a>
-          <a class="boton" href="#servicios">SERVICIOS</a>
-          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
-          <a class="boton" href="productos.html">TIENDA</a>
+        <a href="index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
 
-          <a class="boton" href="#">INFO Y CONTACTO</a>
-
-          <div class="search-container">
-            <button class="search-toggle">
-              <img src="../src/img/lupa.svg" alt="Buscar" />
-            </button>
-
-            <div class="search-box">
-              <input
-                type="text"
-                id="header-search"
-                placeholder="Buscar productos..."
-                autocomplete="off"
-              />
-
-              <div id="search-results"></div>
-            </div>
-          </div>
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
 
           <div class="cart">
             <button class="cart-icon">
-              <img src="../src/img/carrito.svg" alt="" />
+              <img src="./src/img/carrito.svg" alt="" />
             </button>
+
             <span class="cart-count">0</span>
           </div>
-        </nav>
-      </header>
-      <div class="overlay"></div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="boton" href="../index.html">INICIO</a>
+        
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="/index.html">
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
+        <a class="boton" href="productos.html">TIENDA</a>
+
+        <a class="boton" href="#">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="../src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="../src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->
 
     <!-- =================================================
          CONTENIDO PRINCIPAL
@@ -84,48 +181,180 @@
 
         <section class="servicio-presentacion">
             <!-- TEXTO -->
-            <div class="servicio-presentacion-info">
-                <h1 id="servicioTitulo">LIMPIEZAS FACIALES</h1>
-
-                <p id="servicioDescripcion">Cada tratamiento se adapta a las
-                    necesidades de tu piel y es realizado por profesionales de 
-                    la cosmetología y la dermocosmiatría.
-                </p>
+            <div class="servicio-presentacion-info-peeling">
+                <h1 id="servicioTitulo">TRATAMIENTOS FACIALES</h1>
+                <h2>Cuidar tu piel es cuidar tu salud</h2>
 
             </div>
             <!-- FOTO 1080 x 1080 -->
             <div class="servicio-presentacion-imagen">
-                <img  id="servicioPortada" src="../src/img_servicios/img_limpieza1.webp" alt="">
+                <img  id="servicioPortada" src="../src/img_servicios/peeling_portada.webp" alt="">
             </div>
         </section>
 
-        <section class="limpieza_facial">
-          <div class="limpieza_contenedor">
-            <h1 class="limpieza_titulo">Limpieza básica:</h1>
-            <p>Tratamiento suave que limpia, hidrata y revitaliza la piel,
-            utilizando activos y máscaras acordes a la necesidad de cada piel.</p>
-          </div>
-             <div class="limpieza_contenedor">
-            <h1 class="limpieza_titulo">Limpieza profunda:</h1>
-            <p>ratamiento que limpia en profundidad, eliminando impurezas y células muertas.
-            Incluye exfoliación, extracciones cuidadas y activos específicos para mejorar la 
-            textura y aspecto de la piel.</p>
-          </div>
-             <div class="limpieza_contenedor">
-            <h1 class="limpieza_titulo">Dermaplaning:</h1>
-            <p>Tratamiento completo que combina limpieza profunda, 
-              extracciónes y dermaplaning. Ayuda a remover células muertas 
-              y vello superficial, dejando la piel más lisa, luminosa y 
-              preparada para absorver mejor los activos.</p>
-          </div>
 
-        </section>
+<section class="tratamientos_piel_seccion">
+
+  <div class="tratamientos_piel_grilla">
+
+    <!-- PEELING QUÍMICO -->
+    <article class="tratamientos_piel_tarjeta">
+
+      <div class="tratamientos_piel_icono" aria-hidden="true">🧪</div>
+
+      <h3 class="tratamientos_piel_nombre">Peeling químico</h3>
+
+      <p class="tratamientos_piel_subtitulo">
+        Renovación y mejora de la textura cutánea
+      </p>
+
+      <div class="tratamientos_piel_descripcion">
+        <p class="tratamientos_piel_texto">
+          Consiste en aplicar sustancias exfoliantes que favorecen la
+          renovación de la piel. Ayuda a mejorar la textura, la luminosidad,
+          las manchas superficiales y algunas imperfecciones, según el activo
+          y su concentración.
+        </p>
+      </div>
+
+      <div class="tratamientos_piel_bloque">
+        <h4 class="tratamientos_piel_rotulo">¿Para quién está indicado?</h4>
+        <p class="tratamientos_piel_texto">
+          Pieles opacas, con textura irregular, manchas superficiales,
+          fotoenvejecimiento leve o tendencia comedogénica, según el tipo
+          de peeling.
+        </p>
+      </div>
+
+      <div class="tratamientos_piel_bloque tratamientos_piel_precaucion">
+        <h4 class="tratamientos_piel_rotulo">Precauciones</h4>
+        <p class="tratamientos_piel_texto">
+          En pieles sensibles, deshidratadas, con la barrera alterada,
+          dermatitis activa o irritación, conviene adaptar o evitar el
+          tratamiento. La elección del ácido, su concentración y el tiempo
+          de exposición deben individualizarse.
+        </p>
+      </div>
+
+      <a
+        href="#"
+        class="tratamientos_piel_boton whatsapp-btn"
+        data-message="Hola, buenas! Quiero consultar por el tratamiento de Peeling químico."
+      >
+        Consultar tratamiento
+      </a>
+
+    </article>
+
+
+    <!-- MICRONEEDLING -->
+    <article class="tratamientos_piel_tarjeta">
+
+      <div class="tratamientos_piel_icono" aria-hidden="true">✨</div>
+
+      <h3 class="tratamientos_piel_nombre">Microneedling</h3>
+
+      <p class="tratamientos_piel_subtitulo">
+        Estimulación de la renovación cutánea
+      </p>
+
+      <div class="tratamientos_piel_descripcion">
+        <p class="tratamientos_piel_texto">
+          Es un procedimiento que utiliza microagujas para generar
+          microlesiones controladas, estimulando los procesos de reparación
+          de la piel. Puede ayudar a mejorar determinadas cicatrices, la
+          textura y las líneas finas, según la técnica y la profundidad
+          utilizada.
+        </p>
+      </div>
+
+      <div class="tratamientos_piel_bloque">
+        <h4 class="tratamientos_piel_rotulo">¿Para quién está indicado?</h4>
+        <p class="tratamientos_piel_texto">
+          Algunas pieles con textura irregular, cicatrices atróficas de acné
+          y signos de fotoenvejecimiento, previa evaluación profesional.
+        </p>
+      </div>
+
+      <div class="tratamientos_piel_bloque tratamientos_piel_precaucion">
+        <h4 class="tratamientos_piel_rotulo">Precauciones</h4>
+        <p class="tratamientos_piel_texto">
+          Evitar ante acné inflamatorio activo, infecciones, herpes activo,
+          dermatitis, irritación o alteraciones de la cicatrización.
+          Requiere formación específica, material estéril y protocolos de
+          seguridad adecuados; no es un procedimiento para realizar sobre
+          piel comprometida.
+        </p>
+      </div>
+
+      <a
+        href="#"
+        class="tratamientos_piel_boton whatsapp-btn"
+        data-message="Hola, buenas! Quiero consultar por el tratamiento de Microneedling."
+      >
+        Consultar tratamiento
+      </a>
+
+    </article>
+
+
+    <!-- HIDRALIPS -->
+    <article class="tratamientos_piel_tarjeta">
+
+      <div class="tratamientos_piel_icono" aria-hidden="true">💋</div>
+
+      <h3 class="tratamientos_piel_nombre">HidraLips</h3>
+
+      <p class="tratamientos_piel_subtitulo">
+        Hidratación y cuidado labial
+      </p>
+
+      <div class="tratamientos_piel_descripcion">
+        <p class="tratamientos_piel_texto">
+          Es un tratamiento estético enfocado en mejorar la hidratación,
+          la suavidad y el aspecto de los labios mediante productos y
+          técnicas específicas. Puede ayudar a disminuir la apariencia de
+          resequedad y pequeñas líneas asociadas a la deshidratación.
+        </p>
+      </div>
+
+      <div class="tratamientos_piel_bloque">
+        <h4 class="tratamientos_piel_rotulo">¿Para quién está indicado?</h4>
+        <p class="tratamientos_piel_texto">
+          Labios secos, deshidratados, con textura áspera o que necesitan
+          recuperar suavidad y luminosidad.
+        </p>
+      </div>
+
+      <div class="tratamientos_piel_bloque tratamientos_piel_precaucion">
+        <h4 class="tratamientos_piel_rotulo">Precauciones</h4>
+        <p class="tratamientos_piel_texto">
+          Si hay herpes activo, heridas, fisuras importantes, inflamación
+          o irritación, conviene adaptar o evitar el tratamiento. Los
+          productos y las técnicas deben elegirse según el estado de los
+          labios y las características del protocolo.
+        </p>
+      </div>
+
+      <a
+        href="#"
+        class="tratamientos_piel_boton whatsapp-btn"
+        data-message="Hola, buenas! Quiero consultar por el tratamiento de HidraLips."
+      >
+        Consultar tratamiento
+      </a>
+
+    </article>
+
+  </div>
+</section>
+
 
         <!-- =================================================
              PROFESIONAL
         ================================================== -->
 
-        <section class="servicio-profesional">
+                <section class="servicio-profesional">
             <div class="profesional-contenido">
                 <!-- FOTO PROFESIONAL -->
                 <div class="profesional-foto">
@@ -140,10 +369,12 @@
                         Profesional
                     </span>
                     <h2 id="profesionalNombre">
-                      Regina
+                      Hola! Soy Regi
                     </h2>
                     <p>
-                     ...
+                     Soy dermocosmiatra y esteticista, y me dedico a la estética desde 2017. Me formé en la Universidad de Morón, en Buenos Aires, y a lo largo de estos años continué capacitándome en distintas técnicas.
+                      Actualmente trabajo especialmente con pestañas y cejas, realizando depilación con hilo, laminado de cejas y lifting de pestañas, con técnica parcializada y técnica coreana. Tanto en el lifting como en el laminado priorizo el cuidado y la salud de las pestañas y cejas, buscando realzar su belleza natural y lograr un resultado duradero.
+                      Me gusta trabajar cada servicio de manera personalizada y prestar atención a los detalles, buscando que el resultado se adapte a las características de cada persona.
                     </p>
                     <p id="profesionalDescripcion"></p>
                 </div>
@@ -156,7 +387,7 @@
                 <div class="profesional-foto">
                     <img
                         id="profesionalFoto"
-                        src="../src/img_servicios/profesional_aixa.webp"
+                        src="../src/img_servicios/profesional_aixa_cosmetologa.webp"
                         alt="">
                 </div>
                 <!-- INFORMACIÓN -->
@@ -165,10 +396,13 @@
                         Profesional
                     </span>
                     <h2 id="profesionalNombre">
-                      Aixa
+                      Hola! Soy Aixa
                     </h2>
                     <p>
-                     ...
+                    Cosmetóloga y cosmiatra, y me dedico al cuidado integral de la piel a través de tratamientos faciales personalizados.
+                    Me gusta entender qué necesita cada piel, conocer su historia y acompañar sus cambios. Por eso, mi forma de trabajar parte de escuchar, observar y adaptar cada tratamiento a las necesidades de cada persona, siempre respetando los tiempos de la piel y priorizando su salud.
+                    Creo que cuidar la piel va mucho más allá de un tratamiento puntual. Se trata de aprender a conocerla, entender qué le hace bien y construir, de a poco y con constancia, una rutina que la ayude a mantenerse saludable.
+                    En MONA quiero que te sientas en confianza, que puedas hacer tus consultas y que encuentres un espacio donde cuidarte, desconectar un ratito y recibir una atención pensada especialmente para vos y tu piel.
                     </p>
                     <p id="profesionalDescripcion"></p>
                 </div>
@@ -186,10 +420,19 @@
             </div>
             <div class="servicio-galeria">
             
-                <!-- VIDEO-->
+              
+                   <!-- FOTO 1 -->
+                <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/img_peeling2.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
+                </div>
+
+                 <!-- VIDEO-->
                 <div class="galeria-item">
                     <video
-                        src="../src/img_servicios/video_limpieza1.mp4"
+                        src="../src/img_servicios/peeling1.mp4"
                         muted
                         loop
                         autoplay
@@ -197,25 +440,54 @@
                         preload="metadata"
                     ></video>
                 </div>
-                   <!-- FOTO 1 -->
-                <div class="galeria-item">
-                    <img
-                        src="../src/img_servicios/img_limpieza2.webp"
-                        alt="Maquillaje de novia"
-                        loading="lazy">
-                </div>
 
                 <!-- FOTO 3-->
               <div class="galeria-item">
                     <img
-                        src="../src/img_servicios/img_limpieza3.webp"
+                        src="../src/img_servicios/img_peeling1.webp"
                         alt="Maquillaje de novia"
                         loading="lazy">
                 </div>
 
                 <div class="galeria-item">
                     <video
-                        src="../src/img_servicios/video_limpieza2.mp4"
+                        src="../src/img_servicios/video_peeling2.mp4"
+                        muted
+                        loop
+                        autoplay
+                        playsinline
+                        preload="metadata"
+                    ></video>
+                </div>
+                 <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/peeling3.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
+                </div>
+
+  
+                <div class="galeria-item">
+                    <video
+                        src="../src/img_servicios/video_peeling1.mp4"
+                        muted
+                        loop
+                        autoplay
+                        playsinline
+                        preload="metadata"
+                    ></video>
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/peeling4.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
+                </div>
+
+                 <div class="galeria-item">
+                    <video
+                        src="../src/img_servicios/peeling2.mp4"
                         muted
                         loop
                         autoplay

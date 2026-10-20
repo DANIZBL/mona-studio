@@ -47,24 +47,11 @@ body {
 
 .hero-image img {
   width: 100%;
-  height: 850px;
 
   object-fit: cover;
   object-position: center;
 
   display: block;
-
-  border-radius: 35px;
-
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-
-  transition: transform 0.7s ease, box-shadow 0.7s ease;
-}
-
-.hero-image:hover img {
-  transform: scale(1.02);
-
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
 }
 
 /* ==========================================================
@@ -90,11 +77,9 @@ body {
 
   border-radius: 999px;
 
-  background: var(--color-rosa);
-
   color: var(--color-rojo);
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 
   font-size: 0.85rem;
 
@@ -108,31 +93,27 @@ body {
 }
 
 .hero-content h1 {
-  font-family: var(--font-secundaria);
-
+  font-family: var(--font-3);
   color: var(--color-rojo);
-
-  font-size: clamp(4rem, 7vw, 7rem);
-
+  font-size: 4rem;
   line-height: 0.88;
-
   margin: 0;
-
   text-transform: uppercase;
 }
 
 .hero-description {
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 
   max-width: 620px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 
   font-size: 1.15rem;
 
   line-height: 1.9;
 
-  color: #4d4d4d;
+  color: var(--color-beige);
 }
 
 .hero-description strong {
@@ -149,7 +130,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
-  margin-top: 45px;
+  margin-top: 15px;
 }
 
 .benefit-card {
@@ -157,28 +138,10 @@ body {
   align-items: center;
   gap: 12px;
 
-  padding: 18px 22px;
-
-  background: #fff;
-
-  border-radius: 18px;
-
-  border: 1px solid rgba(146, 37, 31, 0.08);
-
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-
-  font-family: var(--font-secundaria);
+  color: var(--color-rojo);
+  font-family: var(--font-3);
   font-weight: 500;
-
   transition: all 0.35s ease;
-}
-
-.benefit-card:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(146, 37, 31, 0.18);
-
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.08);
 }
 
 .benefit-icon {
@@ -210,6 +173,11 @@ body {
   gap: 18px;
 
   margin-top: 40px;
+}
+
+.hero-info span {
+  font-family: var(--font-3);
+  color: var(--color-rojo);
 }
 
 .info-pill {
@@ -295,7 +263,7 @@ body {
 
   color: var(--color-rojo);
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 
   letter-spacing: 3px;
 
@@ -309,7 +277,7 @@ body {
 .section-header h2 {
   margin: 0;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-elegante);
 
   color: var(--color-rojo);
 
@@ -323,7 +291,7 @@ body {
 
   line-height: 1.8;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 
   color: #555;
 }
@@ -411,36 +379,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
-  margin-top: 45px;
-}
-
-.benefit-card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  padding: 18px 22px;
-
-  background: #fff;
-
-  border-radius: 18px;
-
-  border: 1px solid rgba(146, 37, 31, 0.08);
-
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-
-  font-family: var(--font-secundaria);
-  font-weight: 500;
-
-  transition: all 0.35s ease;
-}
-
-.benefit-card:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(146, 37, 31, 0.18);
-
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.08);
+  margin-top: 15px;
 }
 
 .benefit-icon {
@@ -598,58 +537,6 @@ body {
 }
 
 /* ==========================================================
-   TITULOS GENERALES
-========================================================== */
-
-.section-header {
-  max-width: 760px;
-
-  margin: 0 auto 70px;
-
-  text-align: center;
-}
-
-.section-header span {
-  display: inline-block;
-
-  margin-bottom: 15px;
-
-  color: var(--color-rojo);
-
-  font-family: var(--font-secundaria);
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-
-  font-size: 0.9rem;
-
-  font-weight: 600;
-}
-
-.section-header h2 {
-  margin: 0;
-
-  font-family: var(--font-secundaria);
-
-  color: var(--color-rojo);
-
-  font-size: clamp(2.8rem, 5vw, 5rem);
-
-  line-height: 1;
-}
-
-.section-header p {
-  margin-top: 30px;
-
-  line-height: 1.8;
-
-  font-family: var(--font-secundaria);
-
-  color: #555;
-}
-
-/* ==========================================================
    COURSE INFO
 ========================================================== */
 
@@ -717,9 +604,9 @@ body {
 }
 
 .info-card p {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
-  color: #555;
+  color: var(--color-beige);
 
   font-size: 1rem;
 }
@@ -744,13 +631,13 @@ body {
   display: inline-block;
   margin-bottom: 18px;
 
-  color: var(--color-rojo);
+  color: var(--color-beige);
 
   text-transform: uppercase;
 
   letter-spacing: 3px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 
   font-size: 0.9rem;
 
@@ -760,11 +647,11 @@ body {
 .presentation-header h2 {
   margin: 0;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-elegante);
 
   color: var(--color-rojo);
 
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: 3.5rem;
 
   line-height: 1;
 }
@@ -772,11 +659,11 @@ body {
 .presentation-header p {
   margin-top: 30px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 
   line-height: 1.9;
 
-  color: #555;
+  color: var(--color-beige);
 }
 
 .presentation-grid {
@@ -844,7 +731,7 @@ body {
 .presentation-card h3 {
   margin-bottom: 20px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-elegante);
 
   color: var(--color-rojo);
 
@@ -852,11 +739,11 @@ body {
 }
 
 .presentation-card p {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
   line-height: 1.8;
 
-  color: #555;
+  color: var(--color-beige);
 }
 
 /* ==========================================================
@@ -909,17 +796,17 @@ body {
 
   color: var(--color-rojo);
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-elegante);
 
   font-size: 5rem;
 }
 
 .module-title p {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
   line-height: 1.9;
 
-  color: #555;
+  color: var(--color-beige);
 }
 
 .module-grid {
@@ -953,7 +840,7 @@ body {
 
   color: var(--color-rojo);
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 
   font-size: 2rem;
 }
@@ -971,7 +858,8 @@ body {
 
   margin-bottom: 16px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
+  color: var(--color-beige);
 
   line-height: 1.7;
 }
@@ -1038,6 +926,231 @@ body {
   transform: rotate(45deg);
 }
 
+/* ==========================================
+   MÓDULOS DESPLEGABLES
+========================================== */
+
+.presentation-grid {
+  align-items: start;
+}
+
+.presentation-card {
+  padding: 0;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.presentation-toggle {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 55px 40px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.presentation-toggle h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.presentation-toggle p {
+  margin-bottom: 30px;
+}
+
+.presentation-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  margin-top: 25px;
+  border-radius: 50%;
+  background: var(--color-rojo);
+  color: #fff;
+  font-family: var(--font-4);
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.presentation-card.is-open .presentation-icon {
+  transform: rotate(45deg);
+}
+
+.presentation-toggle:focus-visible {
+  outline: 3px solid var(--color-rojo);
+  outline-offset: -6px;
+  border-radius: 25px;
+}
+
+.presentation-card.is-open {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.09);
+}
+
+/* CONTENIDO INTERNO */
+
+.presentation-details {
+  padding: 0 30px 35px;
+  overflow: hidden;
+  animation: moduleReveal 0.35s ease;
+}
+
+.presentation-details[hidden] {
+  display: none;
+}
+
+.module-intro {
+  padding-top: 10px;
+  margin-bottom: 30px;
+  border-top: 1px solid rgba(128, 84, 119, 0.2);
+}
+
+.module-intro > span {
+  display: block;
+  margin-top: 25px;
+  color: var(--color-rojo);
+  font-family: var(--font-secundaria);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.module-intro h4 {
+  margin: 10px 0;
+  color: var(--color-rojo);
+  font-family: var(--font-elegante);
+  font-size: 2rem;
+}
+
+.module-intro p {
+  font-family: var(--font-4);
+  color: var(--color-beige);
+  line-height: 1.8;
+}
+
+/* TARJETAS DE CONTENIDO */
+
+.presentation-details .module-grid {
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.presentation-details .module-card {
+  padding: 25px;
+  border: 1px solid rgba(128, 84, 119, 0.12);
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.presentation-details .module-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.presentation-details .module-card h3 {
+  margin: 0 0 18px;
+  font-family: var(--font-3);
+  font-size: 1.35rem;
+}
+
+.presentation-details .module-card ul {
+  margin: 0;
+}
+
+.presentation-details .module-card li {
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.presentation-details .module-card li:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes moduleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLETS Y CELULARES */
+
+@media (max-width: 1000px) {
+  .presentation {
+    padding: 80px 25px;
+  }
+
+  .presentation-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .presentation-toggle {
+    padding: 40px 30px;
+  }
+
+  .presentation-details {
+    padding: 0 25px 30px;
+  }
+
+  .presentation-details .module-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .presentation {
+    padding: 60px 18px;
+  }
+
+  .presentation-header {
+    margin-bottom: 45px;
+  }
+
+  .presentation-header h2 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .presentation-toggle {
+    padding: 35px 25px;
+  }
+
+  .presentation-toggle h3 {
+    font-size: 1.8rem;
+  }
+
+  .presentation-details {
+    padding: 0 18px 22px;
+  }
+
+  .presentation-details .module-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .presentation-details .module-card {
+    padding: 22px;
+  }
+
+  .module-intro h4 {
+    font-size: 1.8rem;
+  }
+}
+
 /* ==========================================================
    BANNER IMAGE
 ========================================================== */
@@ -1073,9 +1186,17 @@ body {
 ========================================================== */
 
 .benefits-section {
+  background-color: var(--color-rosa);
   max-width: 1400px;
   margin: 0 auto;
   padding: 130px 40px;
+  border-radius: 49px;
+  margin-bottom: 30px;
+}
+
+.benefits-section h2 {
+  font-family: var(--font-elegante);
+  font-size: 4rem;
 }
 
 .benefits-grid {
@@ -1100,13 +1221,13 @@ body {
 .benefits-card h3 {
   margin-bottom: 30px;
   color: var(--color-rojo);
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   font-size: 2rem;
 }
 
 .benefits-card p {
-  font-family: var(--font-secundaria);
-  color: #555;
+  font-family: var(--font-4);
+  color: var(--color-beige);
   line-height: 1.9;
 }
 
@@ -1121,7 +1242,8 @@ body {
   padding-left: 32px;
   margin-bottom: 18px;
   line-height: 1.8;
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
+  color: var(--color-beige);
 }
 
 .benefits-card li::before {
@@ -1182,6 +1304,7 @@ body {
 /* INFORMACION */
 
 .teachers-content {
+  background-color: var(--color-rojo);
   padding: 60px 55px;
 
   display: flex;
@@ -1208,9 +1331,9 @@ body {
 .teacher-info h3 {
   margin-bottom: 10px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
-  color: var(--color-rojo);
+  color: var(--color-blanco);
 
   font-size: 2rem;
 }
@@ -1228,10 +1351,8 @@ body {
 }
 
 .teacher-info p {
-  font-family: var(--font-secundaria);
-
-  color: #555;
-
+  font-family: var(--font-4);
+  color: var(--color-blanco);
   line-height: 1.9;
 }
 
@@ -1245,6 +1366,10 @@ body {
   padding: 130px 40px;
 }
 
+.payments h2 {
+  font-size: 2rem;
+}
+
 .promo-banner {
   margin-bottom: 60px;
   padding: 45px;
@@ -1256,12 +1381,13 @@ body {
 
 .promo-banner h3 {
   margin-bottom: 12px;
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   font-size: 2.3rem;
 }
 
 .promo-banner p {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
+  color: var(--color-beige);
   font-size: 1.1rem;
 }
 
@@ -1287,7 +1413,7 @@ body {
 .payment-card h3 {
   margin-bottom: 35px;
   color: var(--color-rojo);
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   font-size: 2rem;
 }
 
@@ -1301,7 +1427,8 @@ body {
   padding-left: 30px;
   margin-bottom: 18px;
   line-height: 1.8;
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
+  color: var(--color-beige);
 }
 
 .payment-card li::before {
@@ -1353,7 +1480,7 @@ body {
 .materials-card h3 {
   margin-bottom: 30px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 
   color: var(--color-rojo);
 
@@ -1377,9 +1504,9 @@ body {
 
   padding-left: 28px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
-  color: #555;
+  color: var(--color-beige);
 
   line-height: 1.6;
 }
@@ -1399,9 +1526,9 @@ body {
 }
 
 .materials-card p {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
-  color: #555;
+  color: var(--color-beige);
 
   line-height: 1.9;
 
@@ -1449,9 +1576,9 @@ body {
 
   padding-left: 35px;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
-  color: #555;
+  color: var(--color-beige);
 
   line-height: 1.7;
 }
@@ -1522,49 +1649,7 @@ body {
   gap: 40px;
 }
 
-.payment-card {
-  background: #fff;
-
-  border-radius: 35px;
-
-  padding: 55px 45px;
-
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
-}
-
-.payment-card h3 {
-  margin-bottom: 30px;
-
-  color: var(--color-rojo);
-
-  font-family: var(--font-secundaria);
-
-  font-size: 2rem;
-}
-
-.payment-card ul {
-  padding: 0;
-
-  margin: 0;
-
-  list-style: none;
-}
-
-.payment-card li {
-  padding: 18px 0;
-
-  border-bottom: 1px solid #eee;
-
-  font-family: var(--font-secundaria);
-
-  color: #555;
-}
-
-.payment-card li:last-child {
-  border-bottom: none;
-}
-
-/* ==========================================================
+s/* ==========================================================
    TEACHERS
 ========================================================== */
 
@@ -1661,7 +1746,7 @@ body {
 
   color: #fff;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
   letter-spacing: 4px;
 }
@@ -1671,9 +1756,9 @@ body {
 
   color: #fff;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
 
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: 3.2rem;
 
   line-height: 1;
 }
@@ -1683,9 +1768,9 @@ body {
 
   max-width: 700px;
 
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-blanco);
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 
   line-height: 1.8;
 }
@@ -1694,6 +1779,7 @@ body {
   background: #fff;
 
   color: var(--color-rojo);
+  font-family: var(--font-4);
 }
 
 .final-cta .hero-button:hover {
@@ -2030,24 +2116,6 @@ body {
   }
 
   /* ==========================================================
-   MATERIALS
-========================================================== */
-
-  .materials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .materials-card {
-    padding: 35px 25px;
-
-    border-radius: 25px;
-  }
-
-  .materials-card h3 {
-    font-size: 1.6rem;
-  }
-
-  /* ==========================================================
    RULES
 ========================================================== */
 
@@ -2105,6 +2173,12 @@ galeria
 .media-gallery-header {
   text-align: center;
   margin-bottom: 40px;
+}
+
+.media-gallery-header h2 {
+  font-family: var(--font-elegante);
+  color: var(--color-rojo);
+  font-size: 3rem;
 }
 
 /* =========================
@@ -2247,10 +2321,9 @@ GALERÍA VIDEOS PERFECCIONAMIENTO
 
 .perfeccionamiento-videos-gallery-header h2 {
   margin: 0 0 10px;
-
+  font-size: 3rem;
   color: var(--color-rojo);
-
-  font-family: var(--font-secundaria);
+  font-family: var(--font-elegante);
 }
 
 /* =========================

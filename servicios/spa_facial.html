@@ -11,69 +11,165 @@
   </head>
   <body>
     <body>
-      <!-- ============================HEDER========================== -->
-      <header class="main-header">
-        <div class="mobile-header">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <a href="index.html">
-            <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
-          </a>
-
-          <div class="mobile-actions">
-            <button class="mobile-search-toggle">
-              <img src="./src/img/lupa.svg" alt="Buscar" />
-            </button>
-
-            <div class="cart">
-              <button class="cart-icon">
-                <img src="./src/img/carrito.svg" alt="" />
-              </button>
-
-              <span class="cart-count">0</span>
-            </div>
-          </div>
+    <!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
-        <nav class="nav">
-          <a class="boton" href="../index.html">INICIO</a>
-          <a class="boton" href="#servicios">SERVICIOS</a>
-          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
-          <a class="boton" href="productos.html">TIENDA</a>
+        <a href="index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
 
-          <a class="boton" href="#">INFO Y CONTACTO</a>
-
-          <div class="search-container">
-            <button class="search-toggle">
-              <img src="../src/img/lupa.svg" alt="Buscar" />
-            </button>
-
-            <div class="search-box">
-              <input
-                type="text"
-                id="header-search"
-                placeholder="Buscar productos..."
-                autocomplete="off"
-              />
-
-              <div id="search-results"></div>
-            </div>
-          </div>
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
 
           <div class="cart">
             <button class="cart-icon">
-              <img src="../src/img/carrito.svg" alt="" />
+              <img src="./src/img/carrito.svg" alt="" />
             </button>
+
             <span class="cart-count">0</span>
           </div>
-        </nav>
-      </header>
-      <div class="overlay"></div>
+        </div>
+      </div>
 
+      <nav class="nav">
+        <a class="boton" href="../index.html">INICIO</a>
+        
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="/index.html">
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
+        <a class="boton" href="productos.html">TIENDA</a>
+
+        <a class="boton" href="#">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="../src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="../src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->
     <!-- =================================================
          CONTENIDO PRINCIPAL
     ================================================== -->
@@ -92,16 +188,131 @@
                     la cosmetología y la dermocosmiatría.
                 </p>
 
+
+                <a
+                  href="#"
+                  class=" whatsapp-btn"
+                  data-message="Hola, buenas! Quiero consultar por el servicio de Spa Facial."
+                >
+                  LO QUIERO!
+                </a>
+
             </div>
             <!-- FOTO 1080 x 1080 -->
             <div class="servicio-presentacion-imagen">
-                <img  id="servicioPortada" src="../src/img_servicios/img_limpieza1.webp" alt="">
+                <img  id="servicioPortada" src="../src/img_servicios/lim_facial_portada.webp" alt="">
             </div>
+
         </section>
+
+        <section class="combo_relax_seccion">
+  <article class="combo_relax_tarjeta">
+
+    <span class="combo_relax_etiqueta">EXPERIENCIA DE BIENESTAR</span>
+
+    <div class="combo_relax_icono" aria-hidden="true">✨</div>
+
+    <h2 class="combo_relax_titulo">COMBO RELAX</h2>
+
+    <p class="combo_relax_intro">
+      Un momento para bajar un cambio, desconectar y regalar o regalarte
+      tiempo para vos. 💆‍♀️🌿
+    </p>
+
+    <div class="combo_relax_contenido">
+
+      <p class="combo_relax_presentacion">
+        La experiencia comienza con:
+      </p>
+
+      <div class="combo_relax_servicio">
+        <h3 class="combo_relax_subtitulo">
+          ✨ Spa Facial · 1 h
+        </h3>
+
+        <p class="combo_relax_texto">
+          Limpieza y exfoliación, activos seleccionados según tu piel y
+          masajes en rostro, cuello, mandíbula y cabeza. Para terminar con
+          la piel limpia, hidratada y luminosa.
+        </p>
+      </div>
+
+      <div class="combo_relax_separador">
+        <span>Y, a continuación</span>
+      </div>
+
+      <div class="combo_relax_servicio">
+        <h3 class="combo_relax_subtitulo">
+          💆‍♀️ Masaje cuerpo completo descontracturante · 80 min
+        </h3>
+
+        <p class="combo_relax_texto">
+          Un masaje pensado para aliviar tensiones y contracturas, liberar
+          el cuerpo y favorecer una relajación profunda.
+        </p>
+      </div>
+
+      <div class="combo_relax_destacado">
+        <span class="combo_relax_destacado_icono">🤍</span>
+
+        <p class="combo_relax_destacado_texto">
+          Ambos servicios se realizan de manera continuada, uno después
+          del otro, para disfrutar de una experiencia de relax completa.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="combo_relax_precio">
+      <span class="combo_relax_precio_rotulo">VALOR COMBO</span>
+      <p class="combo_relax_precio_valor">$69.500</p>
+      <span class="combo_relax_precio_nota">
+        Un momento para vos, de principio a fin.
+      </span>
+    </div>
+
+    <a
+      href="#"
+      class="combo_relax_boton whatsapp-btn"
+      data-message="Hola, buenas! Quiero consultar por el Combo Relax de Spa Facial."
+    >
+      Quiero mi Combo Relax
+    </a>
+
+  </article>
+</section>
 
         <!-- =================================================
              PROFESIONAL
         ================================================== -->
+
+                    <section class="servicio-profesional">
+            <div class="profesional-contenido">
+                <!-- FOTO PROFESIONAL -->
+                <div class="profesional-foto">
+                    <img
+                        id="profesionalFoto"
+                        src="../src/img_servicios/profesional_aixa_cosmetologa.webp"
+                        alt="">
+                </div>
+                <!-- INFORMACIÓN -->
+                <div class="profesional-info">
+                    <span class="profesional-label">
+                        Profesional
+                    </span>
+                    <h2 id="profesionalNombre">
+                      Hola! Soy Aixa
+                    </h2>
+                    <p>
+                    Cosmetóloga y cosmiatra, y me dedico al cuidado integral de la piel a través de tratamientos faciales personalizados.
+                      Me gusta entender qué necesita cada piel, conocer su historia y acompañar sus cambios. Por eso, mi forma de trabajar parte de escuchar, observar y adaptar cada tratamiento a las necesidades de cada persona, siempre respetando los tiempos de la piel y priorizando su salud.
+                      Creo que cuidar la piel va mucho más allá de un tratamiento puntual. Se trata de aprender a conocerla, entender qué le hace bien y construir, de a poco y con constancia, una rutina que la ayude a mantenerse saludable.
+                      En MONA quiero que te sientas en confianza, que puedas hacer tus consultas y que encuentres un espacio donde cuidarte, desconectar un ratito y recibir una atención pensada especialmente para vos y tu piel.
+                    </p>
+                    <p id="profesionalDescripcion"></p>
+                </div>
+            </div>
+        </section>
 
         <section class="servicio-profesional">
             <div class="profesional-contenido">
@@ -130,31 +341,6 @@
             </div>
         </section>
 
-            <section class="servicio-profesional">
-            <div class="profesional-contenido">
-                <!-- FOTO PROFESIONAL -->
-                <div class="profesional-foto">
-                    <img
-                        id="profesionalFoto"
-                        src="../src/img_servicios/profesional_aixa.webp"
-                        alt="">
-                </div>
-                <!-- INFORMACIÓN -->
-                <div class="profesional-info">
-                    <span class="profesional-label">
-                        Profesional
-                    </span>
-                    <h2 id="profesionalNombre">
-                      Hola! Soy Aixa
-                    </h2>
-                    <p>
-                     ...
-                    </p>
-                    <p id="profesionalDescripcion"></p>
-                </div>
-            </div>
-        </section>
-
        <!-- ================================================
              GALERÍA
         =================================================== -->
@@ -167,7 +353,20 @@
             <div class="servicio-galeria">
             
                 <!-- VIDEO-->
-                <div class="galeria-item">
+              
+                   <!-- FOTO 1 -->
+                    <div class="galeria-item">
+                    <video
+                        src="../src/img_servicios/video_spa1.mp4"
+                        muted
+                        loop
+                        autoplay
+                        playsinline
+                        preload="metadata"
+                    ></video>
+                </div>
+
+                 <div class="galeria-item">
                     <video
                         src="../src/img_servicios/video_limpieza1.mp4"
                         muted
@@ -177,18 +376,12 @@
                         preload="metadata"
                     ></video>
                 </div>
-                   <!-- FOTO 1 -->
-                <div class="galeria-item">
-                    <img
-                        src="../src/img_servicios/img_limpieza2.webp"
-                        alt="Maquillaje de novia"
-                        loading="lazy">
-                </div>
+       
 
                 <!-- FOTO 3-->
               <div class="galeria-item">
                     <img
-                        src="../src/img_servicios/img_limpieza3.webp"
+                        src="../src/img_servicios/img_spa4.webp"
                         alt="Maquillaje de novia"
                         loading="lazy">
                 </div>

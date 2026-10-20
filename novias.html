@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/header.css" />
     <link rel="stylesheet" href="./src/footer.css" />
     <link rel="stylesheet" href="./src/novias.css" />
+    <link rel="stylesheet" href="./src/marcas.css" />
   </head>
   <body>
     <!-- ============================HEDER========================== -->
@@ -39,16 +40,112 @@
       </div>
 
       <nav class="nav">
-        <a class="boton" href="index.html">INICIO</a>
-        <a class="boton" href="#servicios">SERVICIOS</a>
-        <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        <a class="boton" href="../index.html">INICIO</a>
+
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="index.html">
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
         <a class="boton" href="productos.html">TIENDA</a>
 
         <a class="boton" href="#">INFO Y CONTACTO</a>
 
         <div class="search-container">
           <button class="search-toggle">
-            <img src="./src/img/lupa.svg" alt="Buscar" />
+            <img src="../src/img/lupa.svg" alt="Buscar" />
           </button>
 
           <div class="search-box">
@@ -65,7 +162,7 @@
 
         <div class="cart">
           <button class="cart-icon">
-            <img src="./src/img/carrito.svg" alt="" />
+            <img src="../src/img/carrito.svg" alt="" />
           </button>
           <span class="cart-count">0</span>
         </div>
@@ -109,9 +206,9 @@
             <span class="novias-subtitle"> MONA STUDIO </span>
 
             <h1>
-              Tu día.<br />
-              Tu momento.<br />
-              Tu experiencia.
+              TU DÍA.<br />
+              TU MOMENTO.<br />
+              TU EXPERIENCIA.
             </h1>
 
             <p>
@@ -120,13 +217,19 @@
               vida.
             </p>
 
-            <a href="#experiencia-mona" class="novias-btn"> LO QUIERO! </a>
+            <a
+              href="#experiencia-mona"
+              class="novias-btn"
+              data-message="Hola! Estoy interesada en la experiencia para novias y quiero más información."
+            >
+              ¡LO QUIERO!
+            </a>
           </div>
         </div>
 
         <!-- TESTIMONIO -->
         <div class="novias-hero-testimonial">
-          <span>TESTIMONIO DE UNA NOVIA</span>
+          <span>PALABRAS DE NUESTRAS NOVIAS</span>
 
           <blockquote>
             "No fue solamente maquillaje y peinado. Fue uno de los momentos más
@@ -163,12 +266,56 @@
               </p>
             </div>
 
-            <div class="novias-intro-image">
+            <d iv class="novias-intro-image">
               <img src="./src/img/novias2.webp" alt="Novia" />
             </div>
           </div>
         </div>
       </section>
+
+      
+<!-- ==========================================
+     SECCIÓN: CADA NOVIA ELIGE SU EXPERIENCIA
+========================================== -->
+
+<section class="novias-video-section">
+  <div class="novias-video-container">
+
+    
+<div class="novias-video-wrapper">
+  <video
+    class="novias-video"
+    src="./src/videos_social/video_social3.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    aria-label="Video de las experiencias para novias de MONA"
+  ></video>
+</div>
+
+<!-- Modal del video de novias -->
+<dialog class="novias-video-modal" aria-label="Video de las experiencias para novias">
+  <video
+    class="novias-video-grande"
+    src="./src/videos_social/video_social3.mp4"
+    loop
+    playsinline
+    controls
+    preload="metadata"
+    aria-label="Video ampliado de las experiencias para novias de MONA"
+  ></video>
+</dialog>
+
+
+    <div class="novias-video-content">
+      <h1>CADA NOVIA ELIGE SU EXPERIENCIA</h1>
+    </div>
+
+  </div>
+</section>
+
 
       <!-- ======================================================
               NOS ADAPTAMOS
@@ -198,7 +345,17 @@
         <div class="novias-container">
           <div class="experience-grid">
             <div class="experience-image">
-              <img src="./src/img/novias3.webp" alt="Experiencia Mona" />
+              <img
+                src="./src/img_servicios/exp_mona6.webp"
+                alt="Experiencia Mona"
+                class="experience-slide active"
+              />
+
+              <img
+                src="./src/img/novias3.webp"
+                alt="Preparación de novias en MONA"
+                class="experience-slide"
+              />
             </div>
 
             <div class="experience-content">
@@ -230,6 +387,74 @@
             </div>
           </div>
 
+          <!-- ========================GALLERIA EXPERIENCIA==================================== -->
+          <section class="novias-gallery">
+            <div class="novias-container">
+              <h2>Experiencia Mona</h2>
+
+              <div class="gallery-grid">
+                <img
+                  src="./src/img_servicios/exp_mona1.webp"
+                  alt="Maquillaje de novia"
+                />
+
+                <video
+                  src="./src/img_servicios/exp_mona1.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  preload="metadata"
+                  aria-label="Video de maquillaje de novia"
+                ></video>
+
+                <img
+                  src="./src/img_servicios/exp_mona2.webp"
+                  alt="Look de novia"
+                />
+
+                <video
+                  src="./src/img_servicios/exp_mona2.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  preload="metadata"
+                  aria-label="Video de maquillaje de novia"
+                ></video>
+                <img
+                  src="./src/img_servicios/exp_mona3.webp"
+                  alt="Maquillaje de novia"
+                />
+
+                <video
+                  src="./src/img_servicios/exp_mona3.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  preload="metadata"
+                  aria-label="Video de maquillaje de novia"
+                ></video>
+
+                <img
+                  src="./src/img_servicios/exp_mona8.webp"
+                  alt="Look de novia"
+                />
+
+                <img
+                  src="./src/img_servicios/exp_mona5.webp"
+                  alt="Look de novia"
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- =============================================================== -->
+
           <div class="experience-includes">
             <h3>¿Qué incluye?</h3>
 
@@ -260,6 +485,14 @@
         </div>
       </section>
 
+      <!-- ========================MARCAS======================================== -->
+
+      <section class="marcas">
+        <h2>TRABAJAMOS CON LAS MEJORES MARCAS</h2>
+
+        <div class="marcas-container" id="marcasContainer"></div>
+      </section>
+
       <!-- ======================================================
                         GALERÍA
     ======================================================= -->
@@ -278,8 +511,8 @@
 
             <img src="./src/img/novias9.webp" alt="" />
             <img src="./src/img/novias5.webp" alt="" />
-            <img src="./src/img/novias6.webp" alt="" />
-            <img src="./src/img/novias8.webp" alt="" />
+            <img src="./src/img/novias13.webp" alt="" />
+            <img src="./src/img/novias11.webp" alt="" />
           </div>
         </div>
       </section>
@@ -406,42 +639,28 @@
       </div>
     </footer>
 
-    <!-- ======================================================
-                GALERÍA MODAL
-====================================================== -->
-
-    <div class="gallery-modal" id="galleryModal">
-      <button
-        class="gallery-close"
-        id="galleryClose"
-        aria-label="Cerrar galería"
-      >
-        &times;
+    <!-- MODAL COMPARTIDO POR LAS GALERÍAS -->
+    <div id="galleryModal" class="gallery-modal">
+      <button id="galleryClose" type="button" aria-label="Cerrar galería">
+        ×
+      </button>
+      <button id="galleryPrev" type="button" aria-label="Imagen anterior">
+        ‹
       </button>
 
-      <button
-        class="gallery-arrow gallery-prev"
-        id="galleryPrev"
-        aria-label="Imagen anterior"
-      >
-        &#10094;
-      </button>
-
-      <div class="gallery-modal-content">
-        <img id="galleryModalImage" class="gallery-modal-image" src="" alt="" />
+      <div id="galleryModalContent">
+        <img id="galleryModalImage" src="" alt="" />
+        <video id="galleryModalVideo" controls playsinline></video>
       </div>
 
-      <button
-        class="gallery-arrow gallery-next"
-        id="galleryNext"
-        aria-label="Siguiente imagen"
-      >
-        &#10095;
+      <button id="galleryNext" type="button" aria-label="Imagen siguiente">
+        ›
       </button>
-
-      <div class="gallery-counter" id="galleryCounter"></div>
+      <span id="galleryCounter"></span>
     </div>
+
     <script src="./js/header.js"></script>
     <script src="./js/novias.js"></script>
+    <script src="./js/marcas.js"></script>
   </body>
 </html>

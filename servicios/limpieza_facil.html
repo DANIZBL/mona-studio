@@ -11,69 +11,165 @@
   </head>
   <body>
     <body>
-      <!-- ============================HEDER========================== -->
-      <header class="main-header">
-        <div class="mobile-header">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <a href="index.html">
-            <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
-          </a>
-
-          <div class="mobile-actions">
-            <button class="mobile-search-toggle">
-              <img src="./src/img/lupa.svg" alt="Buscar" />
-            </button>
-
-            <div class="cart">
-              <button class="cart-icon">
-                <img src="./src/img/carrito.svg" alt="" />
-              </button>
-
-              <span class="cart-count">0</span>
-            </div>
-          </div>
+          <!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
-        <nav class="nav">
-          <a class="boton" href="../index.html">INICIO</a>
-          <a class="boton" href="#servicios">SERVICIOS</a>
-          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
-          <a class="boton" href="productos.html">TIENDA</a>
+        <a href="index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
 
-          <a class="boton" href="#">INFO Y CONTACTO</a>
-
-          <div class="search-container">
-            <button class="search-toggle">
-              <img src="../src/img/lupa.svg" alt="Buscar" />
-            </button>
-
-            <div class="search-box">
-              <input
-                type="text"
-                id="header-search"
-                placeholder="Buscar productos..."
-                autocomplete="off"
-              />
-
-              <div id="search-results"></div>
-            </div>
-          </div>
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
 
           <div class="cart">
             <button class="cart-icon">
-              <img src="../src/img/carrito.svg" alt="" />
+              <img src="./src/img/carrito.svg" alt="" />
             </button>
+
             <span class="cart-count">0</span>
           </div>
-        </nav>
-      </header>
-      <div class="overlay"></div>
+        </div>
+      </div>
 
+      <nav class="nav">
+        <a class="boton" href="../index.html">INICIO</a>
+        
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+             Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="/index.html">
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
+        <a class="boton" href="productos.html">TIENDA</a>
+
+        <a class="boton" href="#">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="../src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="../src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->
     <!-- =================================================
          CONTENIDO PRINCIPAL
     ================================================== -->
@@ -86,46 +182,202 @@
             <!-- TEXTO -->
             <div class="servicio-presentacion-info">
                 <h1 id="servicioTitulo">LIMPIEZAS FACIALES</h1>
+                <h2>Una piel saludable empieza con un cuidado consciente</h2>
 
-                <p id="servicioDescripcion">Cada tratamiento se adapta a las
+
+                <h3 id="servicioDescripcion">Cada tratamiento se adapta a las
                     necesidades de tu piel y es realizado por profesionales de 
                     la cosmetología y la dermocosmiatría.
-                </p>
+                </h3>
 
             </div>
             <!-- FOTO 1080 x 1080 -->
             <div class="servicio-presentacion-imagen">
-                <img  id="servicioPortada" src="../src/img_servicios/img_limpieza1.webp" alt="">
+                <img  id="servicioPortada" src="../src/img_servicios/limpieza_facial_portada.webp" alt="">
             </div>
+            
         </section>
 
-        <section class="limpieza_facial">
-          <div class="limpieza_contenedor">
-            <h1 class="limpieza_titulo">Limpieza básica:</h1>
-            <p>Tratamiento suave que limpia, hidrata y revitaliza la piel,
-            utilizando activos y máscaras acordes a la necesidad de cada piel.</p>
-          </div>
-             <div class="limpieza_contenedor">
-            <h1 class="limpieza_titulo">Limpieza profunda:</h1>
-            <p>ratamiento que limpia en profundidad, eliminando impurezas y células muertas.
-            Incluye exfoliación, extracciones cuidadas y activos específicos para mejorar la 
-            textura y aspecto de la piel.</p>
-          </div>
-             <div class="limpieza_contenedor">
-            <h1 class="limpieza_titulo">Dermaplaning:</h1>
-            <p>Tratamiento completo que combina limpieza profunda, 
-              extracciónes y dermaplaning. Ayuda a remover células muertas 
-              y vello superficial, dejando la piel más lisa, luminosa y 
-              preparada para absorver mejor los activos.</p>
-          </div>
+<section class="limpieza_facial">
 
-        </section>
+  <!-- LIMPIEZA FACIAL BÁSICA -->
+  <div class="limpieza_contenedor">
+
+    <span class="limpieza_icono">🥣</span>
+
+    <h2 class="limpieza_titulo">Limpieza facial básica</h2>
+
+    <div class="limpieza_descripcion">
+
+      <div class="limpieza_bloque">
+        <span class="limpieza_subtitulo">
+          Higiene y renovación superficial
+        </span>
+
+        <p class="limpieza_texto">
+          Tratamiento orientado a eliminar impurezas y células acumuladas en la superficie de la piel. Incluye limpieza, pulido exfoliante suave y productos adaptados a cada necesidad. Ayuda a mantener la piel limpia, suave y luminosa, sin realizar extracciones.
+        </p>
+      </div>
+
+      <div class="limpieza_bloque limpieza_indicacion">
+
+
+        <p class="limpieza_texto">
+          · pieles normales, mixtas o grasas con pocas obstrucciones y pieles que necesitan mantenimiento. También puede adaptarse a pieles deshidratadas
+        </p>
+      </div>
+
+      <div class="limpieza_bloque limpieza_precaucion">
+        <span class="limpieza_subtitulo">Precauciones</span>
+
+        <p class="limpieza_texto">
+          · No se recomienda para pieles muy sensibles, irritadas, con dermatitis activa o con la barrera cutánea alterada.
+        </p>
+      </div>
+    </div>
+
+    <p class="limpieza_aviso">
+    La elección del tratamiento se define mediante una evaluación presencial, teniendo en cuenta las necesidades, el estado y la tolerancia de cada piel.
+    </p>
+    <a
+      href="#"
+      class="whatsapp-btn"
+      data-message="Hola,buenas! Quiero consultar por el servicio de Limpieza Basica."
+    >Te ayudamos a elegir la mejor opción para vos</a>
+
+  </div>
+
+
+  <!-- LIMPIEZA FACIAL CON EXTRACCIONES -->
+  <div class="limpieza_contenedor">
+
+    <span class="limpieza_icono">✨</span>
+
+    <h2 class="limpieza_titulo">Limpieza facial con extracciones</h2>
+
+    <div class="limpieza_descripcion">
+
+      <div class="limpieza_bloque">
+        <span class="limpieza_subtitulo">
+          Higiene profunda y desobstrucción de poros
+        </span>
+
+        <p class="limpieza_texto">
+          Tratamiento que combina higiene y exfoliación con extracciones selectivas de comedones, ayudando a disminuir la acumulación de sebo y queratina en los poros y a mejorar el aspecto de la piel.
+        </p>
+      </div>
+
+      <div class="limpieza_bloque limpieza_indicacion">
+
+
+        <p class="limpieza_texto">
+          · Indicada para: pieles mixtas, grasas o normales que presentan puntos negros y poros obstruidos.
+        </p>
+      </div>
+
+      <div class="limpieza_bloque limpieza_precaucion">
+        <span class="limpieza_subtitulo">Precauciones</span>
+
+        <p class="limpieza_texto">
+          · No se recomienda en pieles irritadas, con rosácea activa, dermatitis o barrera cutánea comprometida. En presencia de acné inflamatorio importante, se requiere especial precaución.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="limpieza_aviso">
+    La elección del tratamiento se define mediante una evaluación presencial, teniendo en cuenta las necesidades, el estado y la tolerancia de cada piel.
+    </p>
+
+    <a
+      href="#"
+      class="whatsapp-btn"
+      data-message="Hola,buenas! Quiero consultar por el servicio de Limpieza facial con extracciones"
+    >Te ayudamos a elegir la mejor opción para vos </a>
+
+  </div>
+
+
+  <!-- DERMAPLANING — SERVICIO PREMIUM -->
+  <div class="limpieza_contenedor">
+
+    <span class="limpieza_icono">🌸</span>
+
+    <h2 class="limpieza_titulo">Dermaplaning</h2>
+
+    <div class="limpieza_descripcion">
+
+      <div class="limpieza_bloque">
+        <span class="limpieza_subtitulo">
+          Exfoliación y suavidad
+        </span>
+
+        <p class="limpieza_texto">
+          Técnica de exfoliación mecánica superficial que elimina células acumuladas y vello fino facial, ayudando a mejorar la suavidad, luminosidad y uniformidad de la textura cutánea.
+        </p>
+      </div>
+
+      <div class="limpieza_bloque limpieza_indicacion">
+
+
+        <p class="limpieza_texto">
+          · Indicado para: pieles normales, secas o maduras que buscan mayor suavidad y luminosidad, siempre que estén en buenas condiciones.
+        </p>
+      </div>
+      <div class="limpieza_bloque limpieza_precaucion">
+        <span class="limpieza_subtitulo">Precauciones</span>
+        <p class="limpieza_texto">
+          · No se recomienda en pieles con acné inflamatorio activo, heridas, infecciones, dermatitis, irritación o sensibilidad marcada.
+        </p>
+      </div>
+    </div>
+
+    <p class="limpieza_aviso">
+    La elección del tratamiento se define mediante una evaluación presencial, teniendo en cuenta las necesidades, el estado y la tolerancia de cada piel.
+    </p>
+
+    <a
+      href="#"
+      class="whatsapp-btn"
+      data-message="Hola,buenas! Quiero consultar por el servicio de Dermaplaning."
+    >Te ayudamos a elegir la mejor opción para vos</a>
+  </div>
+
+</section>
 
         <!-- =================================================
              PROFESIONAL
         ================================================== -->
 
-        <section class="servicio-profesional">
+            <section class="servicio-profesional">
+            <div class="profesional-contenido">
+                <!-- FOTO PROFESIONAL -->
+                <div class="profesional-foto">
+                    <img
+                        id="profesionalFoto"
+                        src="../src/img_servicios/profesional_aixa_cosmetologa.webp"
+                        alt="">
+                </div>
+                <!-- INFORMACIÓN -->
+                <div class="profesional-info">
+                    <span class="profesional-label">
+                        Profesional
+                    </span>
+                    <h2 id="profesionalNombre">
+                      Hola! Soy Aixa
+                    </h2>
+                    <p>
+                      Cosmetóloga y cosmiatra, y me dedico al cuidado integral de la piel a través de tratamientos faciales personalizados.
+                      Me gusta entender qué necesita cada piel, conocer su historia y acompañar sus cambios. Por eso, mi forma de trabajar parte de escuchar, observar y adaptar cada tratamiento a las necesidades de cada persona, siempre respetando los tiempos de la piel y priorizando su salud.
+                      Creo que cuidar la piel va mucho más allá de un tratamiento puntual. Se trata de aprender a conocerla, entender qué le hace bien y construir, de a poco y con constancia, una rutina que la ayude a mantenerse saludable.
+                      En MONA quiero que te sientas en confianza, que puedas hacer tus consultas y que encuentres un espacio donde cuidarte, desconectar un ratito y recibir una atención pensada especialmente para vos y tu piel.
+                    </p>
+                    <p id="profesionalDescripcion"></p>
+                </div>
+            </div>
+        </section>
+
+                <section class="servicio-profesional">
             <div class="profesional-contenido">
                 <!-- FOTO PROFESIONAL -->
                 <div class="profesional-foto">
@@ -152,31 +404,6 @@
             </div>
         </section>
 
-            <section class="servicio-profesional">
-            <div class="profesional-contenido">
-                <!-- FOTO PROFESIONAL -->
-                <div class="profesional-foto">
-                    <img
-                        id="profesionalFoto"
-                        src="../src/img_servicios/profesional_aixa.webp"
-                        alt="">
-                </div>
-                <!-- INFORMACIÓN -->
-                <div class="profesional-info">
-                    <span class="profesional-label">
-                        Profesional
-                    </span>
-                    <h2 id="profesionalNombre">
-                      Hola! Soy Aixa
-                    </h2>
-                    <p>
-                     ...
-                    </p>
-                    <p id="profesionalDescripcion"></p>
-                </div>
-            </div>
-        </section>
-
        <!-- ================================================
              GALERÍA
         =================================================== -->
@@ -189,9 +416,11 @@
             <div class="servicio-galeria">
             
                 <!-- VIDEO-->
+       
+                                
                 <div class="galeria-item">
                     <video
-                        src="../src/img_servicios/video_limpieza1.mp4"
+                        src="../src/img_servicios/video_limpieza5.mp4"
                         muted
                         loop
                         autoplay
@@ -199,6 +428,7 @@
                         preload="metadata"
                     ></video>
                 </div>
+
                    <!-- FOTO 1 -->
                 <div class="galeria-item">
                     <img
@@ -207,23 +437,60 @@
                         loading="lazy">
                 </div>
 
-                <!-- FOTO 3-->
-              <div class="galeria-item">
-                    <img
-                        src="../src/img_servicios/img_limpieza3.webp"
-                        alt="Maquillaje de novia"
-                        loading="lazy">
-                </div>
-
-                <div class="galeria-item">
+                    <div class="galeria-item">
                     <video
-                        src="../src/img_servicios/video_limpieza2.mp4"
+                        src="../src/img_servicios/video_limpieza4.mp4"
                         muted
                         loop
                         autoplay
                         playsinline
                         preload="metadata"
                     ></video>
+                </div>
+
+                       <!-- FOTO 1 -->
+                <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/img_limpieza1.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
+                </div>
+
+                <div class="galeria-item">
+                    <video
+                        src="../src/img_servicios/video_limpieza3.mp4"
+                        muted
+                        loop
+                        autoplay
+                        playsinline
+                        preload="metadata"
+                    ></video>
+                </div>
+
+                       <!-- FOTO 1 -->
+                <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/img_lim4.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
+                </div>
+
+                 <div class="galeria-item">
+                    <video
+                        src="../src/img_servicios/video_limpieza6.mp4"
+                        muted
+                        loop
+                        autoplay
+                        playsinline
+                        preload="metadata"
+                    ></video>
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/img_spa1.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
                 </div>
             </div>
         </section>

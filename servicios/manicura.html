@@ -11,68 +11,165 @@
   </head>
   <body>
     <body>
-      <!-- ============================HEDER========================== -->
-      <header class="main-header">
-        <div class="mobile-header">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <a href="index.html">
-            <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
-          </a>
-
-          <div class="mobile-actions">
-            <button class="mobile-search-toggle">
-              <img src="./src/img/lupa.svg" alt="Buscar" />
-            </button>
-
-            <div class="cart">
-              <button class="cart-icon">
-                <img src="./src/img/carrito.svg" alt="" />
-              </button>
-
-              <span class="cart-count">0</span>
-            </div>
-          </div>
+    <!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
-        <nav class="nav">
-          <a class="boton" href="../index.html">INICIO</a>
-          <a class="boton" href="#servicios">SERVICIOS</a>
-          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
-          <a class="boton" href="productos.html">TIENDA</a>
+        <a href="index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
 
-          <a class="boton" href="#">INFO Y CONTACTO</a>
-
-          <div class="search-container">
-            <button class="search-toggle">
-              <img src="../src/img/lupa.svg" alt="Buscar" />
-            </button>
-
-            <div class="search-box">
-              <input
-                type="text"
-                id="header-search"
-                placeholder="Buscar productos..."
-                autocomplete="off"
-              />
-
-              <div id="search-results"></div>
-            </div>
-          </div>
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
 
           <div class="cart">
             <button class="cart-icon">
-              <img src="../src/img/carrito.svg" alt="" />
+              <img src="./src/img/carrito.svg" alt="" />
             </button>
+
             <span class="cart-count">0</span>
           </div>
-        </nav>
-      </header>
-      <div class="overlay"></div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="boton" href="../index.html">INICIO</a>
+        
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+             Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="/index.html">
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
+        <a class="boton" href="productos.html">TIENDA</a>
+
+        <a class="boton" href="#">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="../src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="../src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->
 
     <!-- =================================================
          CONTENIDO PRINCIPAL
@@ -84,39 +181,135 @@
 
         <section class="servicio-presentacion">
             <!-- TEXTO -->
-            <div class="servicio-presentacion-info">
+            <div class="servicio-presentacion-info_manicuria">
 
-                <h1 id="servicioTitulo">MANICURÍA</h1>
+                <h1 id="servicioTitulo">MANICURÍA Y PEDICURIA</h1>
                 <p id="servicioDescripcion">en manos de profesionales con criterio y vasta experiencia en el rubro</p>
             </div>
             <!-- FOTO 1080 x 1080 -->
             <div class="servicio-presentacion-imagen">
-                <img  id="servicioPortada" src="../src/img_servicios/img_manicura1.webp" alt="">
+                <img  id="servicioPortada" src="../src/img_servicios/manicura_portada.webp" alt="">
             </div>
-        </section>
-
-                <section class="limpieza_facial">
-          <div class="limpieza_contenedor">
-            <h1 class="limpieza_titulo">Semipermanente:</h1>
-            <p>Esmaltado de larga duración sobre la uña natural.
-            Ideal para quienes buscan prolijidad y brillo sin
-            agregar estructura ni largo. </p>
-          </div>
-             <div class="limpieza_contenedor">
-            <h1 class="limpieza_titulo">Esculpidas:</h1>
-            <p>Extension de las uñas mediante gel o acrílico, creando
-            largo y forma desde cero. Ideal para quienes quieren 
-            alargar sus uñas o lograr un resultado mas impactante.</p>
-          </div>
-             <div class="limpieza_contenedor">
-            <h1 class="limpieza_titulo">Capping:</h1>
-            <p>Refuerzo sobre uña natural con gel o acrilico para darle
-            mayor resistencia y evitar quiebres. No alarga la uńa, pero
-            la protege y mantiene prolija por mas tiempo. Recomendado
-            para uńas debiles o que se rompen con facilidad.</p>
-          </div>
 
         </section>
+
+
+<section class="tratamientos_piel_seccion">
+
+  <div class="tratamientos_piel_encabezado">
+
+    <h2 class="tratamientos_piel_titulo">
+      Servicios de uñas
+    </h2>
+  </div>
+
+  <div class="tratamientos_piel_grilla">
+
+    <!-- SEMIPERMANENTE -->
+    <article class="tratamientos_piel_tarjeta">
+
+      <div class="tratamientos_piel_icono" aria-hidden="true">💅</div>
+
+      <h3 class="tratamientos_piel_nombre">
+        Semipermanente
+      </h3>
+
+      <p class="tratamientos_piel_subtitulo">
+        Color, brillo y duración
+      </p>
+
+      <div class="tratamientos_piel_descripcion">
+        <p class="tratamientos_piel_texto">
+          Esmaltado de larga duración sobre la uña natural.
+          Ideal para quienes buscan prolijidad y brillo sin
+          agregar estructura ni largo.
+        </p>
+      </div>
+
+      <a
+        href="#"
+        class="tratamientos_piel_boton whatsapp-btn"
+        data-message="Hola, buenas! Quiero consultar por el servicio de uñas Semipermanente."
+      >
+        Consultar servicio
+      </a>
+
+    </article>
+
+
+    <!-- ESCULPIDAS -->
+    <article class="tratamientos_piel_tarjeta">
+
+      <div class="tratamientos_piel_icono" aria-hidden="true">✨</div>
+
+      <h3 class="tratamientos_piel_nombre">
+        Esculpidas
+      </h3>
+
+      <p class="tratamientos_piel_subtitulo">
+        Largo y forma a tu gusto
+      </p>
+
+      <div class="tratamientos_piel_descripcion">
+        <p class="tratamientos_piel_texto">
+          Extensión de uñas realizada con gel, acrílico o polygel
+          sobre moldes estructurales, que permite crear el largo y
+          la forma que más te gusten desde cero. Ideales para quienes
+          buscan alargar sus uñas, lograr una forma definida y lucir
+          un resultado más protagonista. También son una opción para
+          personas con onicofagia, según las características de sus uñas.
+        </p>
+      </div>
+
+      <a
+        href="#"
+        class="tratamientos_piel_boton whatsapp-btn"
+        data-message="Hola, buenas! Quiero consultar por el servicio de uñas Esculpidas."
+      >
+        Consultar servicio
+      </a>
+
+    </article>
+
+
+    <!-- CAPPING -->
+    <article class="tratamientos_piel_tarjeta">
+
+      <div class="tratamientos_piel_icono" aria-hidden="true">🤍</div>
+
+      <h3 class="tratamientos_piel_nombre">
+        Capping
+      </h3>
+
+      <p class="tratamientos_piel_subtitulo">
+        Refuerzo y protección de la uña natural
+      </p>
+
+      <div class="tratamientos_piel_descripcion">
+        <p class="tratamientos_piel_texto">
+          Refuerzo de la uña natural con gel, acrílico o polygel para
+          aportar mayor resistencia, prevenir quiebres y mantener las
+          uñas prolijas por más tiempo. No agrega longitud, sino que
+          acompaña el crecimiento de la uña natural, ayudando a protegerla
+          y conservar su forma. Ideal para uñas débiles o frágiles y para
+          quienes desean dejar crecer sus uñas naturales, incluso en casos
+          de onicofagia.
+        </p>
+      </div>
+
+      <a
+        href="#"
+        class="tratamientos_piel_boton whatsapp-btn"
+        data-message="Hola, buenas! Quiero consultar por el servicio de uñas Capping."
+      >
+        Consultar servicio
+      </a>
+
+    </article>
+
+  </div>
+</section>
+
 
         <!-- =================================================
              PROFESIONAL
@@ -131,7 +324,7 @@
 
                     <img
                         id="profesionalFoto"
-                        src="../src/img_servicios/"
+                        src="../src/img_servicios/profesional_tania.webp"
                         alt="">
                 </div>
 
@@ -141,10 +334,12 @@
                         Profesional
                     </span>
                     <h2 id="profesionalNombre">
-                      #
+                      Hola, Soy TANIA! 💅
                     </h2>
                     <p>
-                        ...
+                      Soy manicurista y especialista en uñas desde 2020. Desde entonces, me capacito constantemente junto a profesionales nacionales e internacionales para perfeccionar mis técnicas y mantenerme actualizada en las últimas tendencias, como la manicuría rusa y la técnica de limado brasilera.
+                      Me especializo en uñas esculpidas con moldes estructurales, capping y esmaltado semipermanente, siempre priorizando la salud y el cuidado de la uña natural para lograr resultados prolijos, estéticos y duraderos.
+                      Me caracterizo por ser detallista y perfeccionista. Por eso, cada turno está pensado como un espacio personalizado, dedicado exclusivamente a vos, donde podemos elegir y diseñar juntas cada detalle para conseguir un resultado que te encante y con el que te sientas plenamente conforme.
                     </p>
 
                     <p id="profesionalDescripcion"></p>
@@ -165,7 +360,7 @@
                 <!-- FOTO 1 -->
                 <div class="galeria-item">
                     <img
-                        src="../src/img_servicios/img_manicura2.webp"
+                        src="../src/img_servicios/manicuria5.webp"
                         alt="Maquillaje de novia"
                         loading="lazy">
                 </div>
@@ -180,6 +375,13 @@
                     ></video>
                 </div>
 
+                 <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/manicuria1.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
+                </div>
+
                 <!-- VIDEO-->
                 <div class="galeria-item">
                     <video
@@ -191,10 +393,34 @@
                         preload="metadata"
                     ></video>
                 </div>
+                <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/manicuria6.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
+                </div>
 
                 <div class="galeria-item">
                     <video
-                        src="../src/img_servicios/video_manicura3.mp4"
+                        src="../src/img_servicios/video_pies1.mp4"
+                        muted
+                        loop
+                        autoplay
+                        playsinline
+                        preload="metadata"
+                    ></video>
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="../src/img_servicios/manicuria4.webp"
+                        alt="Maquillaje de novia"
+                        loading="lazy">
+                </div>
+
+                 <div class="galeria-item">
+                    <video
+                        src="../src/img_servicios/video_pies2.mp4"
                         muted
                         loop
                         autoplay

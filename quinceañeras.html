@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/quinceañeras.css" />
     <link rel="stylesheet" href="./src/header.css" />
     <link rel="stylesheet" href="./src/footer.css" />
+    <link rel="stylesheet" href="./src/marcas.css" />
   </head>
   <body>
     <!-- ============================HEDER========================== -->
@@ -39,16 +40,112 @@
       </div>
 
       <nav class="nav">
-        <a class="boton" href="index.html">INICIO</a>
-        <a class="boton" href="#servicios">SERVICIOS</a>
-        <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        <a class="boton" href="../index.html">INICIO</a>
+
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="index.html">
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
         <a class="boton" href="productos.html">TIENDA</a>
 
         <a class="boton" href="#">INFO Y CONTACTO</a>
 
         <div class="search-container">
           <button class="search-toggle">
-            <img src="./src/img/lupa.svg" alt="Buscar" />
+            <img src="../src/img/lupa.svg" alt="Buscar" />
           </button>
 
           <div class="search-box">
@@ -65,7 +162,7 @@
 
         <div class="cart">
           <button class="cart-icon">
-            <img src="./src/img/carrito.svg" alt="" />
+            <img src="../src/img/carrito.svg" alt="" />
           </button>
           <span class="cart-count">0</span>
         </div>
@@ -84,21 +181,31 @@
 
       <div class="quinceaneras-presentacion">
         <!-- IMAGEN -->
+
         <div class="quinceaneras-imagen">
-          <img
-            src="./src/img/quincieañeras1.webp"
-            alt="Maquillaje y peinado para quinceañeras"
-          />
+          <video
+            id="video-quinceaneras"
+            muted
+            loop
+            autoplay
+            playsinline
+            preload="metadata"
+            aria-label="Maquillaje y peinado para quinceañeras"
+          >
+            <source src="./src/vid/quince3.mp4" type="video/mp4" />
+          </video>
         </div>
+
+        <!-- Modal del video -->
+        <dialog class="quinceaneras-modal" aria-label="Video de quinceañeras">
+          <video class="quinceaneras-video-grande" loop playsinline controls>
+            <source src="./src/vid/quince3.mp4" type="video/mp4" />
+          </video>
+        </dialog>
 
         <!-- TÍTULO + FRASE -->
         <div class="quinceaneras-titulo">
-          <h1>QUINCEAÑERAS</h1>
-
-          <p class="quinceaneras-frase">
-            Un look pensado para acompañarte en cada emoción.<br />
-            Belleza que se siente, se disfruta y se recuerda.
-          </p>
+          <h1>QUINCEAÑERAS✨</h1>
 
           <div class="quinceaneras-descripcion">
             <p>
@@ -115,6 +222,13 @@
               retoques constantes.
             </p>
           </div>
+          <a
+            href="#"
+            class="whatsapp-btn"
+            data-message="Hola! Quiero consultar por la experiencia de quinceañeras."
+          >
+            LO QUIERO!
+          </a>
         </div>
       </div>
     </section>
@@ -150,6 +264,16 @@
         </div>
       </div>
     </section>
+
+    <!-- ========================MARCAS======================================== -->
+
+    <section class="marcas">
+      <h2>TRABAJAMOS CON LAS MEJORES MARCAS</h2>
+
+      <div class="marcas-container" id="marcasContainer"></div>
+    </section>
+
+    <!-- =====================RESEÑAS================================== -->
 
     <section class="egresadas-reviews">
       <div class="egresadas-reviews-container">
@@ -234,5 +358,6 @@
 
     <script src="./js/header.js"></script>
     <script src="./js/quinceañeras.js"></script>
+    <script src="./js/marcas.js"></script>
   </body>
 </html>

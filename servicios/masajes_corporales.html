@@ -11,127 +11,279 @@
   </head>
   <body>
     <body>
-      <!-- ============================HEDER========================== -->
-      <header class="main-header">
-        <div class="mobile-header">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <a href="index.html">
-            <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
-          </a>
-
-          <div class="mobile-actions">
-            <button class="mobile-search-toggle">
-              <img src="./src/img/lupa.svg" alt="Buscar" />
-            </button>
-
-            <div class="cart">
-              <button class="cart-icon">
-                <img src="./src/img/carrito.svg" alt="" />
-              </button>
-
-              <span class="cart-count">0</span>
-            </div>
-          </div>
+          <!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
-        <nav class="nav">
-          <a class="boton" href="../index.html">INICIO</a>
-          <a class="boton" href="#servicios">SERVICIOS</a>
-          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
-          <a class="boton" href="productos.html">TIENDA</a>
+        <a href="index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
 
-          <a class="boton" href="#">INFO Y CONTACTO</a>
-
-          <div class="search-container">
-            <button class="search-toggle">
-              <img src="../src/img/lupa.svg" alt="Buscar" />
-            </button>
-
-            <div class="search-box">
-              <input
-                type="text"
-                id="header-search"
-                placeholder="Buscar productos..."
-                autocomplete="off"
-              />
-
-              <div id="search-results"></div>
-            </div>
-          </div>
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
 
           <div class="cart">
             <button class="cart-icon">
-              <img src="../src/img/carrito.svg" alt="" />
+              <img src="./src/img/carrito.svg" alt="" />
             </button>
+
             <span class="cart-count">0</span>
           </div>
-        </nav>
-      </header>
-      <div class="overlay"></div>
+        </div>
+      </div>
 
-    <!-- =================================================
-         CONTENIDO PRINCIPAL
-    ================================================== -->
+      <nav class="nav">
+        <a class="boton" href="../index.html">INICIO</a>
+        
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="/index.html">
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
+        <a class="boton" href="productos.html">TIENDA</a>
+
+        <a class="boton" href="#">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="../src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="../src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->
+
     <main class="servicio">
-        <!-- ================================================
-             PRESENTACIÓN DEL SERVICIO
-        ================================================== -->
-
         <section class="servicio-presentacion">
-            <!-- TEXTO -->
-            <div class="servicio-presentacion-info">
 
+            <div class="servicio-presentacion-info-masajes">
                 <h1 id="servicioTitulo">MASAJES CORPORALES</h1>
-                <p id="servicioDescripcion">No se trata de mimarte, sino de cuidarte</p>
+                <h2 id="servicioDescripcion">No se trata de mimarte, sino de cuidarte</h2>
             </div>
-            <!-- FOTO 1080 x 1080 -->
             <div class="servicio-presentacion-imagen">
-                <img  id="servicioPortada" src="../src/img_servicios/img_masajes2.webp" alt="">
+                <img  id="servicioPortada" src="../src/img_servicios/masajes_corporales_portada.webp" alt="">
             </div>
         </section>
 
-        <!-- =================================================
-             PROFESIONAL
-        ================================================== -->
 
-        <section class="servicio-profesional">
-            <div class="profesional-contenido">
+        <section class="masajes_seccion">
 
-                <!-- FOTO PROFESIONAL -->
+  <!-- MASAJE DE ESPALDA Y CUELLO -->
+  <div class="masajes_tarjeta">
 
-                <div class="profesional-foto">
+    <span class="masajes_icono">💆‍♀️</span>
 
-                    <img
-                        id="profesionalFoto"
-                        src="../src/img_servicios/"
-                        alt="">
-                </div>
+    <h2 class="masajes_titulo">
+      Masaje de espalda y cuello
+    </h2>
 
-                <!-- INFORMACIÓN -->
-                <div class="profesional-info">
-                    <span class="profesional-label">
-                        Profesional
-                    </span>
-                    <h2 id="profesionalNombre">
-                      #
-                    </h2>
-                    <p>
-                        ...
-                    </p>
+    <div class="masajes_descripcion">
 
-                    <p id="profesionalDescripcion"></p>
-                </div>
-            </div>
-        </section>
+      <div class="masajes_bloque">
+        <span class="masajes_subtitulo">
+          Alivio de tensiones y relajación
+        </span>
 
-       <!-- ================================================
-             GALERÍA
-        =================================================== -->
+        <p class="masajes_texto">
+          Combina técnicas descontracturantes y relajantes para trabajar las zonas de mayor tensión, incluyendo espalda, cuello y brazos. Ayuda a aliviar las molestias musculares, liberar tensiones acumuladas y brindar una profunda sensación de relajación y bienestar.
+        </p>
+      </div>
+
+    </div>
+
+    <a
+      href="#"
+      class="masajes_boton whatsapp-btn"
+      data-message="Hola, buenas! Quiero consultar por el servicio de Masaje de espalda y cuello."
+    >LO QUIERO!</a>
+
+  </div>
+
+
+  <!-- MASAJE INTEGRAL -->
+  <div class="masajes_tarjeta">
+
+    <span class="masajes_icono">✨</span>
+
+    <h2 class="masajes_titulo">
+      Masaje integral de cuerpo completo
+    </h2>
+
+    <div class="masajes_descripcion">
+
+      <div class="masajes_bloque">
+        <span class="masajes_subtitulo">
+          Bienestar y relajación de pies a cabeza
+        </span>
+
+        <p class="masajes_texto">
+          Un masaje que combina técnicas descontracturantes y relajantes para trabajar todo el cuerpo, incluyendo piernas, pies, espalda, cuello y brazos. Ideal para aliviar las tensiones musculares, reducir la sensación de cansancio y disfrutar de un momento de desconexión, descanso y bienestar integral.
+        </p>
+      </div>
+
+    </div>
+
+    <a
+      href="#"
+      class="masajes_boton whatsapp-btn"
+      data-message="Hola, buenas! Quiero consultar por el servicio de Masaje integral de cuerpo completo."
+    >LO QUIERO!</a>
+
+  </div>
+
+
+  <!-- MASAJES FACIALES -->
+  <div class="masajes_tarjeta">
+
+    <span class="masajes_icono">🌸</span>
+
+    <h2 class="masajes_titulo">
+      Masajes faciales
+    </h2>
+
+    <div class="masajes_descripcion">
+
+      <div class="masajes_bloque">
+        <span class="masajes_subtitulo">
+          Relajación, bienestar y cuidado facial
+        </span>
+
+        <p class="masajes_texto">
+          A través de maniobras manuales suaves y específicas, los masajes faciales estimulan la circulación y relajan la musculatura del rostro. Ayudan a aliviar las tensiones acumuladas en zonas como la mandíbula, las sienes y el cuero cabelludo, además de favorecer el drenaje de líquidos y aportar una apariencia más descansada y revitalizada a la piel.
+        </p>
+      </div>
+
+    </div>
+
+    <a
+      href="#"
+      class="masajes_boton whatsapp-btn"
+      data-message="Hola, buenas! Quiero consultar por el servicio de Masajes faciales."
+    >LO QUIERO!</a>
+
+  </div>
+
+</section>
+
+
 
         <section class="servicio-galeria-section">
             <div class="galeria-titulo">
@@ -151,13 +303,13 @@
                     ></video>
                 </div>
 
-                <!-- FOTO 1 -->
                 <div class="galeria-item">
                     <img
                         src="../src/img_servicios/img_masajes2.webp"
                         alt="Maquillaje de novia"
                         loading="lazy">
                 </div>
+
                 <div class="galeria-item">
                     <img
                         src="../src/img_servicios/img_masajes1.webp"
@@ -165,7 +317,7 @@
                         loading="lazy">
                 </div>
 
-                                <div class="galeria-item">
+                <div class="galeria-item">
                     <video
                         src="../src/img_servicios/video_masajes2.mp4"
                         muted
@@ -175,12 +327,127 @@
                         preload="metadata"
                     ></video>
                 </div>
-
-
-
-
             </div>
         </section>
+
+<section class="tratamientos_corporales">
+
+  <!-- DRENAJE LINFÁTICO MANUAL -->
+  <div class="tratamientos_corporales_tarjeta">
+
+    <span class="tratamientos_corporales_icono">💧</span>
+
+    <h2 class="tratamientos_corporales_titulo">
+      Drenaje linfático manual
+    </h2>
+
+    <div class="tratamientos_corporales_descripcion">
+
+      <div class="tratamientos_corporales_bloque">
+
+        <span class="tratamientos_corporales_subtitulo">
+          Suavidad, bienestar y liviandad
+        </span>
+
+        <p class="tratamientos_corporales_texto">
+          El drenaje linfático manual es una técnica terapéutica y estética que consiste en realizar maniobras suaves, rítmicas y específicas, orientadas a favorecer el flujo de la linfa y estimular el sistema linfático.
+        </p>
+
+      </div>
+
+      <div class="tratamientos_corporales_bloque">
+
+        <span class="tratamientos_corporales_subtitulo">
+          Beneficios del tratamiento
+        </span>
+
+        <p class="tratamientos_corporales_texto">
+          Contribuye a disminuir la sensación de pesadez y la retención de líquidos, favoreciendo una mejor circulación linfática y proporcionando una sensación de bienestar y liviandad.
+        </p>
+
+      </div>
+
+      <div class="tratamientos_corporales_destacado">
+
+        <span class="tratamientos_corporales_subtitulo">
+          ¿Para qué está indicado?
+        </span>
+
+        <p class="tratamientos_corporales_texto">
+          Es un tratamiento especialmente indicado para acompañar procesos de desinflamación y mejorar el aspecto general de los tejidos.
+        </p>
+
+      </div>
+
+    </div>
+
+    <a
+      href="#"
+      class="tratamientos_corporales_boton whatsapp-btn"
+      data-message="Hola, buenas! Quiero consultar por el servicio de Drenaje Linfático Manual."
+    >LO QUIERO!</a>
+
+  </div>
+
+
+  <!-- MASAJES MOLDEADORES -->
+  <div class="tratamientos_corporales_tarjeta">
+
+    <span class="tratamientos_corporales_icono">✨</span>
+
+    <h2 class="tratamientos_corporales_titulo">
+      Masajes moldeadores
+    </h2>
+
+    <div class="tratamientos_corporales_descripcion">
+
+      <div class="tratamientos_corporales_bloque">
+
+        <span class="tratamientos_corporales_subtitulo">
+          Trabajo corporal específico
+        </span>
+
+        <p class="tratamientos_corporales_texto">
+          Los tratamientos moldeadores se realizan mediante maniobras manuales más profundas, dinámicas y específicas, adaptadas a las características y necesidades de cada zona corporal, como abdomen, piernas y glúteos.
+        </p>
+
+      </div>
+
+      <div class="tratamientos_corporales_bloque">
+
+        <span class="tratamientos_corporales_subtitulo">
+          Objetivo del tratamiento
+        </span>
+
+        <p class="tratamientos_corporales_texto">
+          Su objetivo es favorecer la movilización de los tejidos, estimular la circulación y contribuir a mejorar visualmente la apariencia y definición del contorno corporal, logrando un aspecto más uniforme.
+        </p>
+
+      </div>
+
+      <div class="tratamientos_corporales_destacado">
+
+        <span class="tratamientos_corporales_subtitulo">
+          Para potenciar los resultados
+        </span>
+
+        <p class="tratamientos_corporales_texto">
+          Para potenciar y mantener los resultados, es fundamental acompañar el tratamiento con una alimentación equilibrada, adecuada hidratación y actividad física regular.
+        </p>
+
+      </div>
+
+    </div>
+
+    <a
+      href="#"
+      class="tratamientos_corporales_boton whatsapp-btn"
+      data-message="Hola, buenas! Quiero consultar por el servicio de Masajes Moldeadores."
+    >LO QUIERO!</a>
+
+  </div>
+
+</section>
     </main>
 
     <!-- =================================================

@@ -39,16 +39,112 @@
       </div>
 
       <nav class="nav">
-        <a class="boton" href="index.html">INICIO</a>
-        <a class="boton" href="#servicios">SERVICIOS</a>
-        <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        <a class="boton" href="../index.html">INICIO</a>
+
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="index.html">
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
         <a class="boton" href="productos.html">TIENDA</a>
 
         <a class="boton" href="#">INFO Y CONTACTO</a>
 
         <div class="search-container">
           <button class="search-toggle">
-            <img src="./src/img/lupa.svg" alt="Buscar" />
+            <img src="../src/img/lupa.svg" alt="Buscar" />
           </button>
 
           <div class="search-box">
@@ -65,7 +161,7 @@
 
         <div class="cart">
           <button class="cart-icon">
-            <img src="./src/img/carrito.svg" alt="" />
+            <img src="../src/img/carrito.svg" alt="" />
           </button>
           <span class="cart-count">0</span>
         </div>
@@ -73,6 +169,85 @@
     </header>
     <div class="overlay"></div>
     <!-- ====================================================== -->
+    <!-- ==========================================
+     CUENTA REGRESIVA - CURSO MAQUILLAJE
+     Para activar: quitar los comentarios
+========================================== -->
+
+    <section class="cuenta-regresiva">
+      <div class="cuenta-regresiva-overlay">
+        <div class="cuenta-regresiva-contenido">
+          <!-- PARTE IZQUIERDA -->
+
+          <div class="cuenta-regresiva-info">
+            <span class="cuenta-regresiva-titulo-pequeno"> CURSO: </span>
+
+            <h1 class="cuenta-regresiva-titulo">
+              MAQUILLAJE<br />
+              PROFESIONAL<br />
+              INICIAL
+            </h1>
+
+            <p class="cuenta-regresiva-descripcion">
+              UNA INSERCIÓN INTEGRAL AL MUNDO DEL MAQUILLAJE PROFESIONAL QUE
+              COMBINA TEORÍA, PRÁCTICA Y EL TEMARIO MÁS COMPLETO DE LA CIUDAD.
+            </p>
+          </div>
+
+          <!-- PARTE DERECHA -->
+
+          <div class="cuenta-regresiva-card">
+            <ul class="cuenta-regresiva-lista">
+              <li>4 Meses</li>
+              <li>100% Práctico</li>
+              <li>Certificación profesional</li>
+              <li>16 clases presenciales</li>
+              <li>Materiales incluidos</li>
+            </ul>
+
+            <div class="cuenta-regresiva-detalles">
+              <div>
+                <span>🕘</span>
+                <strong>Sábados · 9 a 13 hs</strong>
+              </div>
+
+              <div>
+                <span>📍</span>
+                <strong>Mona Studio</strong>
+              </div>
+            </div>
+
+            <!-- CUENTA REGRESIVA -->
+
+            <div class="cuenta-regresiva-contador">
+              <div class="cuenta-regresiva-bloque">
+                <span id="cuenta-regresiva-dias">00</span>
+                <small>Días</small>
+              </div>
+
+              <div class="cuenta-regresiva-bloque">
+                <span id="cuenta-regresiva-horas">00</span>
+                <small>Horas</small>
+              </div>
+
+              <div class="cuenta-regresiva-bloque">
+                <span id="cuenta-regresiva-minutos">00</span>
+                <small>Min</small>
+              </div>
+
+              <div class="cuenta-regresiva-bloque">
+                <span id="cuenta-regresiva-segundos">00</span>
+                <small>Seg</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     FIN CUENTA REGRESIVA
+========================================== -->
 
     <main class="cursos">
       <!-- ENCABEZADO -->
@@ -87,24 +262,38 @@
         <!-- CURSO 1 -->
         <article class="curso">
           <div class="curso-imagen">
-            <img src="./src/img/curso1_1.webp" alt="Imagen del curso" />
+            <img src="./src/img/curso1_portada.webp" alt="Imagen del curso" />
           </div>
           <div class="curso-info">
-            <h2>MAQUILLAJE PROFESIONAL INICIAL</h2>
+            <h2>MAQUILLAJE PROFESIONAL INICIAL INTENSIVO✨</h2>
             <p>
-              UNA INSERCCIÓN INTEGRAL AL MUNDO DEL MAQUILLAJE PROFESIONAL QUE
-              COMBINA TEORÍA, PRÁCTICA Y EL TEMARIO MÁS COMPLETO DE LA CIUDAD.
+              UNA INSERCIÓN INTEGRAL AL MUNDO DEL MAQUILLAJE PROFESIONAL QUE
+              COMBINA TEORÍA, PRÁCTICA Y EL TEMARIO MÁS COMPLETO DE LA CIUDAD,
+              AHORA EN SU VERSIÓN INTENSIVA.
             </p>
             <a href="curso1.html" class="btn-curso"> IR AL CURSO </a>
           </div>
         </article>
+
         <!-- CURSO 2 -->
         <article class="curso">
           <div class="curso-imagen">
-            <img src="./src/img/curso1_1.webp" alt="Imagen del curso" />
+            <img src="./src/img/curso5_portada.webp" alt="Imagen del curso" />
           </div>
           <div class="curso-info">
             <h2>MAQUILLAJE PROFESIONAL AVANZADO</h2>
+            <p>PROXIMAMENTE MAS INFORMACIÓN</p>
+            <a href="#" class="btn-curso"> IR AL CURSO </a>
+          </div>
+        </article>
+
+        <!-- CURSO 3 -->
+        <article class="curso">
+          <div class="curso-imagen">
+            <img src="./src/img/curso4_portada.webp" alt="Imagen del curso" />
+          </div>
+          <div class="curso-info">
+            <h2>PEINADO PROFESIONAL</h2>
             <p>PROXIMAMENTE MAS INFORMACIÓN</p>
             <a href="#" class="btn-curso"> IR AL CURSO </a>
           </div>

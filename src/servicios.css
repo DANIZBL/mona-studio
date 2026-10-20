@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* =====================================================
    SERVICIO
 ===================================================== */
@@ -52,26 +58,17 @@
 
 .servicio-presentacion-info h1 {
   margin-bottom: 25px;
-
   color: var(--color-rojo);
-
-  font-family: var(--font-secundaria);
-
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-
-  font-weight: 600;
-
+  font-family: var(--font-3);
+  font-size: 5rem;
   line-height: 1.05;
 }
 
 .servicio-presentacion-info p {
   max-width: 500px;
-
-  color: #333;
-
-  font-family: var(--font-secundaria);
-
-  font-size: 1.05rem;
+  color: var(--color-beige);
+  font-family: var(--font-3);
+  font-size: 1.5rem;
 
   line-height: 1.8;
 }
@@ -156,8 +153,18 @@
 .profesional-info h2 {
   margin-bottom: 20px;
   color: var(--color-rojo);
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: 10px;
+}
+
+.profesional-info h3 {
+  margin-bottom: 20px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.1;
   margin-top: 10px;
@@ -165,7 +172,7 @@
 
 .profesional-info p {
   color: var(--color-rojo);
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
   font-size: 1rem;
   line-height: 1.2;
 }
@@ -184,28 +191,19 @@
 
 .galeria-titulo span {
   display: block;
-
-  margin-bottom: 8px;
-
+  margin-top: 2rem;
   color: var(--color-rojo);
-
-  font-family: var(--font-secundaria);
-
+  font-family: var(--font-4);
   font-size: 0.8rem;
-
   font-weight: 600;
-
   letter-spacing: 2px;
 }
 
 .galeria-titulo h2 {
   color: var(--color-rojo);
-
-  font-family: var(--font-secundaria);
-
-  font-size: clamp(2rem, 4vw, 3rem);
-
-  font-weight: 600;
+  font-family: var(--font-3);
+  font-size: 3rem;
+  margin-top: 1rem;
 }
 
 /* =====================================================
@@ -665,6 +663,46 @@ body.lightbox-abierto {
   }
 }
 
+.whatsapp-btn {
+  width: 80%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px;
+  background-color: var(--color-rojo);
+  color: white;
+  border-radius: 30px;
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background-color: var(--color-rojo);
+    color: white;
+    border-radius: 30px;
+    font-family: var(--font-4);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+}
+
 /* ==============================================
 ESPECIFICO DE CADA APGINA
     ============================================== */
@@ -672,29 +710,2040 @@ ESPECIFICO DE CADA APGINA
 /* ==============================================
 Limpiezas faciales
 ============================================== */
+/* ==========================================
+   PRESENTACIÓN DE SERVICIOS
+========================================== */
+
+.servicio-presentacion-info h2 {
+  font-family: var(--font-cursiva1);
+  color: var(--color-rojo);
+  font-size: 30px;
+  text-align: center;
+}
+
+.servicio-presentacion-info h3 {
+  font-family: var(--font-4);
+  color: var(--color-beige);
+  font-size: 25px;
+  text-align: center;
+}
+
+/* ==========================================
+   CONTENEDOR GENERAL
+========================================== */
 
 .limpieza_facial {
+  display: grid;
+  width: 100%;
+  max-width: 1400px;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  justify-items: stretch;
+  gap: 30px;
+  padding: 35px 25px;
+  margin: 0 auto 4rem;
+}
+
+/* ==========================================
+   TARJETAS DE SERVICIO
+========================================== */
+
+.limpieza_contenedor {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  background: var(--color-rosa);
+  border: 2px solid var(--color-rojo);
+  border-radius: 22px;
+
+  padding: 30px 25px;
+  text-align: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.limpieza_contenedor:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   ÍCONOS
+========================================== */
+
+.limpieza_icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 55px;
+
+  font-size: 2.8rem;
+  line-height: 1;
+
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+   TÍTULOS
+========================================== */
+
+.limpieza_titulo {
+  width: 100%;
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.3;
+  text-align: center;
+
+  margin: 0;
+}
+
+/* Línea decorativa */
+
+.limpieza_titulo::after {
+  content: "";
+  display: block;
+
+  width: 45px;
+  height: 2px;
+
+  background: var(--color-rojo);
+  opacity: 0.65;
+
+  margin: 14px auto 20px;
+}
+
+/* ==========================================
+   DESCRIPCIONES
+========================================== */
+
+.limpieza_contenedor p {
+  width: 100%;
+  flex-grow: 1;
+
+  font-family: var(--font-3);
+  color: var(--color-beige);
+  font-size: 15px;
+  line-height: 1.7;
+
+  text-align: left;
+  overflow-wrap: anywhere;
+
+  margin: 0 0 25px;
+}
+
+/* ==========================================
+   TEXTO ORGANIZADO DE LIMPIEZA FACIAL
+========================================== */
+
+.limpieza_descripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  flex-grow: 1;
   margin-bottom: 25px;
 }
 
-.limpieza_titulo {
-  margin-bottom: 5px;
+/* Cada bloque de información */
+
+.limpieza_bloque {
+  text-align: left;
+}
+
+/* Subtítulos de cada sección */
+
+.limpieza_subtitulo {
+  display: block;
+  font-family: var(--font-3);
   color: var(--color-rojo);
-  margin: 15px 15px;
-  font-family: var(--font-secundaria);
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin-bottom: 6px;
 }
 
-.limpieza_facial p {
-  margin-top: 5px;
-  margin: 15px 15px;
+/* Descripción general */
+
+.limpieza_texto {
+  font-family: var(--font-4);
+  color: var(--color-negro);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin: 0;
 }
 
-.limpieza_contenedor {
-  border: solid 3px var(--color-rojo);
-  background-color: var(--color-rosa);
-  border-radius: 15px;
-  margin: 5px;
-  gap: 5px;
-  box-shadow: #333;
+/* Etiquetas de indicaciones y precauciones */
+
+.limpieza_indicacion .limpieza_subtitulo,
+.limpieza_precaucion .limpieza_subtitulo {
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* Palabras importantes */
+
+.limpieza_texto strong {
+  color: var(--color-rojo);
+  font-weight: 600;
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+  .limpieza_descripcion {
+    gap: 13px;
+  }
+
+  .limpieza_texto {
+    font-size: 0.95rem;
+  }
+
+  .limpieza_indicacion,
+  .limpieza_precaucion {
+    padding: 11px 12px;
+  }
+}
+
+/* ==========================================
+   BOTÓN DE WHATSAPP
+========================================== */
+
+.limpieza_contenedor .whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: auto;
+  align-self: center;
+
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 13px 28px;
+
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ==========================================
+   SERVICIO PREMIUM
+========================================== */
+
+.limpieza_contenedor:last-child {
+  position: relative;
+
+  border: 2px solid var(--color-rojo);
+  background: var(--color-rosa);
+
+  box-shadow: 0 8px 24px rgba(150, 35, 50, 0.12);
+
+  transform: translateY(-6px);
+  padding-top: 38px;
+}
+
+/* Distintivo superior */
+
+.limpieza_contenedor:last-child::before {
+  content: "✦ SERVICIO PREMIUM ✦";
+
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: var(--color-rojo);
+  color: #fff;
+
+  font-family: var(--font-4);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  white-space: nowrap;
+
+  padding: 7px 18px;
+  border-radius: 20px;
+}
+
+/* Ícono destacado */
+
+.limpieza_contenedor:last-child .limpieza_icono {
+  font-size: 3.1rem;
+}
+
+/* Título destacado */
+
+.limpieza_contenedor:last-child .limpieza_titulo {
+  font-size: 1.55rem;
+}
+
+/* Hover premium */
+
+.limpieza_contenedor:last-child:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 30px rgba(150, 35, 50, 0.18);
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 1000px) {
+  .limpieza_facial {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    padding: 30px 20px;
+  }
+
+  /* La tarjeta premium ocupa toda la fila inferior */
+
+  .limpieza_contenedor:last-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 600px;
+    justify-self: center;
+  }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+  .limpieza_facial {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    padding: 25px 16px;
+  }
+
+  .limpieza_contenedor {
+    width: 100%;
+    height: auto;
+    padding: 28px 22px;
+  }
+
+  .limpieza_icono {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+
+  .limpieza_titulo {
+    font-size: 1.3rem;
+  }
+
+  .limpieza_contenedor p {
+    font-size: 0.97rem;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .limpieza_contenedor .whatsapp-btn {
+    padding: 12px 25px;
+  }
+
+  .limpieza_contenedor:last-child {
+    grid-column: auto;
+    max-width: none;
+    margin-top: 12px;
+    padding-top: 38px;
+    transform: none;
+  }
+
+  .limpieza_contenedor:last-child .limpieza_titulo {
+    font-size: 1.4rem;
+  }
+
+  .limpieza_contenedor:last-child:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* AVISO PROFESIONAL */
+
+.limpieza_contenedor p.limpieza_aviso {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  box-sizing: border-box;
+
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+
+  margin: auto 0 20px;
+  padding: 0;
+}
+
+/* BOTÓN DEBAJO DEL AVISO */
+
+.limpieza_contenedor .whatsapp-btn {
+  align-self: center;
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .limpieza_contenedor p.limpieza_aviso {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
 }
 /* ================================================== */
+
+/*======================================
+Peeling Microneedling y Hidralips
+==========================================*/
+
+.peeling-container a {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px;
+  background-color: var(--color-rojo);
+  color: white;
+  border-radius: 30px;
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 10px 10px;
+}
+.whatsapp-btn-peeling:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.peeling-container {
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .peeling-container a {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background-color: var(--color-rojo);
+    color: white;
+    border-radius: 30px;
+    font-family: var(--font-4);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .peeling-container {
+    margin-bottom: 3rem;
+    display: block;
+  }
+}
+
+/* ==============================================
+MASAJES
+============================================== */
+.servicio-presentacion-info-masajes h1 {
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 5.5rem;
+}
+
+.servicio-presentacion-info-masajes h2 {
+  color: var(--color-rojo);
+  font-family: var(--font-cursiva1);
+  font-size: 3rem;
+}
+
+@media (max-width: 600px) {
+  .servicio-presentacion-info-masajes h1 {
+    color: var(--color-rojo);
+    font-family: var(--font-3);
+    font-size: 2.5rem;
+  }
+
+  .servicio-presentacion-info-masajes h2 {
+    color: var(--color-rojo);
+    font-family: var(--font-cursiva1);
+    font-size: 1.5rem;
+  }
+}
+
+/* ==========================================
+   SECCIÓN DE MASAJES
+========================================== */
+
+.masajes_seccion {
+  display: grid;
+  width: 100%;
+  max-width: 1400px;
+  box-sizing: border-box;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 30px;
+
+  padding: 35px 25px;
+  margin: 0 auto 4rem;
+}
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.masajes_tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  background: var(--color-rosa);
+  border: 2px solid var(--color-rojo);
+  border-radius: 22px;
+
+  padding: 30px 25px;
+  text-align: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.masajes_tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   ÍCONOS
+========================================== */
+
+.masajes_icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 55px;
+
+  font-size: 2.8rem;
+  line-height: 1;
+
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+   TÍTULOS
+========================================== */
+
+.masajes_titulo {
+  width: 100%;
+
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.3;
+  text-align: center;
+
+  margin: 0;
+}
+
+.masajes_titulo::after {
+  content: "";
+  display: block;
+
+  width: 45px;
+  height: 2px;
+
+  background: var(--color-rojo);
+  opacity: 0.65;
+
+  margin: 14px auto 20px;
+}
+
+/* ==========================================
+   DESCRIPCIONES
+========================================== */
+
+.masajes_descripcion {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 100%;
+  flex-grow: 1;
+
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.masajes_descripcion p {
+  color: var(--color-beige);
+  font-family: var(--font-3);
+}
+
+.masajes_bloque {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Subtítulos */
+
+.masajes_subtitulo {
+  display: block;
+
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+  font-size: 1.05rem;
+  line-height: 1.4;
+
+  margin-bottom: 7px;
+}
+
+/* Texto principal */
+
+.masajes_texto {
+  font-family: var(--font-4);
+  color: var(--color-negro);
+  font-size: 0.98rem;
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+/* ==========================================
+   AVISO ANTES DEL BOTÓN
+========================================== */
+
+.masajes_tarjeta p.masajes_aviso {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  box-sizing: border-box;
+
+  font-family: var(--font-4);
+  color: var(--color-rojo);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+
+  margin: auto 0 20px;
+  padding: 0;
+}
+
+/* ==========================================
+   BOTÓN
+========================================== */
+
+.masajes_boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  box-sizing: border-box;
+  max-width: 100%;
+
+  margin-top: 0;
+  padding: 13px 28px;
+
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 1000px) {
+  .masajes_seccion {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    padding: 30px 20px;
+  }
+
+  /* Tercera tarjeta centrada */
+
+  .masajes_tarjeta:last-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    max-width: 600px;
+
+    justify-self: center;
+  }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+  .masajes_seccion {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    padding: 25px 16px;
+  }
+
+  .masajes_tarjeta {
+    height: auto;
+    padding: 28px 22px;
+  }
+
+  .masajes_icono {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+
+  .masajes_titulo {
+    font-size: 1.3rem;
+  }
+
+  .masajes_descripcion {
+    gap: 15px;
+  }
+
+  .masajes_texto {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .masajes_tarjeta p.masajes_aviso {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .masajes_boton {
+    padding: 12px 25px;
+  }
+
+  .masajes_tarjeta:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+}
+
+/* ==========================================
+   TRATAMIENTOS CORPORALES
+========================================== */
+
+.tratamientos_corporales {
+  display: grid;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  justify-items: center;
+  gap: 30px;
+
+  padding: 35px 25px;
+  margin: 0 auto 4rem;
+  margin-top: 5rem;
+}
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.tratamientos_corporales_tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+
+  background: var(--color-rosa);
+  border: 2px solid var(--color-rojo);
+  border-radius: 22px;
+
+  padding: 32px 28px;
+  text-align: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tratamientos_corporales_tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   ÍCONOS
+========================================== */
+
+.tratamientos_corporales_icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 55px;
+
+  font-size: 2.8rem;
+  line-height: 1;
+
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+   TÍTULOS
+========================================== */
+
+.tratamientos_corporales_titulo {
+  width: 100%;
+
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.3;
+  text-align: center;
+
+  margin: 0;
+}
+
+.tratamientos_corporales_titulo::after {
+  content: "";
+  display: block;
+
+  width: 45px;
+  height: 2px;
+
+  background: var(--color-rojo);
+  opacity: 0.65;
+
+  margin: 14px auto 22px;
+}
+
+/* ==========================================
+   DESCRIPCIONES
+========================================== */
+
+.tratamientos_corporales_descripcion {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 100%;
+  flex-grow: 1;
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.tratamientos_corporales_bloque {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Subtítulos */
+
+.tratamientos_corporales_subtitulo {
+  display: block;
+
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+  font-size: 1.08rem;
+  line-height: 1.4;
+
+  margin-bottom: 8px;
+}
+
+/* Texto */
+
+.tratamientos_corporales_texto {
+  font-family: var(--font-4);
+  color: var(--color-negro);
+  font-size: 0.98rem;
+  line-height: 1.75;
+
+  margin: 0;
+}
+
+/* ==========================================
+   BLOQUE DESTACADO
+========================================== */
+
+.tratamientos_corporales_destacado {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.35);
+  border-left: 3px solid var(--color-rojo);
+  border-radius: 0 10px 10px 0;
+
+  padding: 15px 16px;
+  text-align: left;
+}
+
+/* ==========================================
+   AVISO PROFESIONAL
+========================================== */
+
+.tratamientos_corporales_tarjeta p.tratamientos_corporales_aviso {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  box-sizing: border-box;
+
+  font-family: var(--font-4);
+  color: var(--color-rojo);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+
+  margin: auto 0 20px;
+  padding: 0;
+}
+
+/* ==========================================
+   BOTÓN
+========================================== */
+
+.tratamientos_corporales_boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  box-sizing: border-box;
+  max-width: 100%;
+
+  margin-top: 0;
+  padding: 13px 28px;
+
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 800px) {
+  .tratamientos_corporales {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    gap: 25px;
+
+    padding: 30px 20px;
+  }
+
+  .tratamientos_corporales_tarjeta {
+    height: auto;
+  }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+  .tratamientos_corporales {
+    padding: 25px 16px;
+    gap: 22px;
+  }
+
+  .tratamientos_corporales_tarjeta {
+    padding: 28px 22px;
+  }
+
+  .tratamientos_corporales_icono {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+
+  .tratamientos_corporales_titulo {
+    font-size: 1.35rem;
+  }
+
+  .tratamientos_corporales_descripcion {
+    gap: 16px;
+  }
+
+  .tratamientos_corporales_subtitulo {
+    font-size: 1rem;
+  }
+
+  .tratamientos_corporales_texto {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .tratamientos_corporales_destacado {
+    padding: 13px;
+  }
+
+  .tratamientos_corporales_tarjeta p.tratamientos_corporales_aviso {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .tratamientos_corporales_boton {
+    padding: 12px 25px;
+  }
+}
+/* ===================================== */
+
+/* ==========================================
+   SPA FACIAL
+========================================== */
+/* ==========================================
+   COMBO RELAX - SPA FACIAL
+========================================== */
+
+.combo_relax_seccion {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 45px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.combo_relax_seccion p {
+  color: var(--color-beige);
+  font-family: var(--font-3);
+}
+
+/* TARJETA PRINCIPAL */
+
+.combo_relax_tarjeta {
+  width: 100%;
+  max-width: 780px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 38px 42px;
+  background: var(--color-rosa);
+  border: 2px solid var(--color-rojo);
+  border-radius: 26px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.combo_relax_tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.11);
+}
+
+/* ETIQUETA SUPERIOR */
+
+.combo_relax_etiqueta {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 15px;
+  border: 1px solid var(--color-rojo);
+  border-radius: 50px;
+  color: var(--color-rojo);
+  font-family: var(--font-4);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* ICONO Y TÍTULO */
+
+.combo_relax_icono {
+  margin-bottom: 8px;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.combo_relax_titulo {
+  margin: 0 0 16px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  letter-spacing: 1px;
+}
+
+/* INTRODUCCIÓN */
+
+.combo_relax_intro {
+  max-width: 590px;
+  margin: 0 0 28px;
+  color: var(--color-negro);
+  font-family: var(--font-4);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+/* CONTENIDO DE LOS SERVICIOS */
+
+.combo_relax_contenido {
+  width: 100%;
+  text-align: left;
+}
+
+.combo_relax_presentacion {
+  margin: 0 0 15px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.combo_relax_servicio {
+  padding: 22px 24px;
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 16px;
+}
+
+.combo_relax_subtitulo {
+  margin: 0 0 12px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.combo_relax_texto {
+  margin: 0;
+  color: var(--color-negro);
+  font-family: var(--font-4);
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* SEPARADOR ENTRE SERVICIOS */
+
+.combo_relax_separador {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 22px 0;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.combo_relax_separador::before,
+.combo_relax_separador::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-rojo);
+  opacity: 0.45;
+}
+
+/* BLOQUE DESTACADO */
+
+.combo_relax_destacado {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.58);
+  border-left: 4px solid var(--color-rojo);
+  border-radius: 0 14px 14px 0;
+}
+
+.combo_relax_destacado_icono {
+  flex-shrink: 0;
+  font-size: 1.4rem;
+}
+
+.combo_relax_destacado_texto {
+  margin: 0;
+  color: var(--color-negro);
+  font-family: var(--font-4);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* PRECIO */
+
+.combo_relax_precio {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 28px;
+  padding: 22px 15px;
+  border-top: 1px solid rgba(182, 49, 42, 0.35);
+  border-bottom: 1px solid rgba(182, 49, 42, 0.35);
+  text-align: center;
+}
+
+.combo_relax_precio_rotulo {
+  display: block;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.combo_relax_precio_valor {
+  margin: 8px 0;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: clamp(2.2rem, 6vw, 3rem);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.combo_relax_precio_nota {
+  display: block;
+  color: var(--color-negro);
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* BOTÓN DE WHATSAPP */
+
+.combo_relax_boton {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 26px;
+  padding: 15px 30px;
+  background: var(--color-rojo);
+  border: 2px solid var(--color-rojo);
+  border-radius: 50px;
+  color: #fff;
+  font-family: var(--font-4);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.combo_relax_boton:hover {
+  background: transparent;
+  color: var(--color-rojo);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+  .combo_relax_seccion {
+    padding: 25px 15px;
+  }
+
+  .combo_relax_tarjeta {
+    padding: 28px 18px;
+    border-radius: 20px;
+  }
+
+  .combo_relax_etiqueta {
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+  }
+
+  .combo_relax_intro {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .combo_relax_servicio {
+    padding: 18px 14px;
+  }
+
+  .combo_relax_subtitulo {
+    font-size: 1.1rem;
+  }
+
+  .combo_relax_texto {
+    font-size: 0.95rem;
+  }
+
+  .combo_relax_destacado {
+    padding: 15px 13px;
+  }
+
+  .combo_relax_destacado_texto {
+    font-size: 0.92rem;
+  }
+
+  .combo_relax_boton {
+    width: 100%;
+    padding: 14px 18px;
+  }
+}
+
+/* ==========================================
+   COMBO RELAX - DISEÑO COMPACTO
+========================================== */
+
+.combo_relax_seccion {
+  padding: 25px 20px;
+}
+
+.combo_relax_tarjeta {
+  max-width: 620px;
+  padding: 25px 28px;
+  border-radius: 22px;
+}
+
+/* ENCABEZADO */
+
+.combo_relax_etiqueta {
+  margin-bottom: 7px;
+  padding: 5px 12px;
+  font-size: 0.68rem;
+}
+
+.combo_relax_icono {
+  margin-bottom: 4px;
+  font-size: 1.9rem;
+}
+
+.combo_relax_titulo {
+  margin-bottom: 10px;
+  font-size: 2.1rem;
+}
+
+.combo_relax_intro {
+  max-width: 490px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* SERVICIOS */
+
+.combo_relax_presentacion {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.combo_relax_servicio {
+  padding: 15px 18px;
+  border-radius: 13px;
+}
+
+.combo_relax_subtitulo {
+  margin-bottom: 7px;
+  font-size: 1.08rem;
+  line-height: 1.4;
+}
+
+.combo_relax_texto {
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* SEPARADOR */
+
+.combo_relax_separador {
+  gap: 12px;
+  margin: 14px 0;
+  font-size: 0.9rem;
+}
+
+/* MENSAJE DESTACADO */
+
+.combo_relax_destacado {
+  gap: 9px;
+  margin-top: 15px;
+  padding: 12px 14px;
+}
+
+.combo_relax_destacado_icono {
+  font-size: 1.15rem;
+}
+
+.combo_relax_destacado_texto {
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+/* PRECIO */
+
+.combo_relax_precio {
+  margin-top: 18px;
+  padding: 14px 10px;
+}
+
+.combo_relax_precio_rotulo {
+  font-size: 0.85rem;
+}
+
+.combo_relax_precio_valor {
+  margin: 5px 0;
+  font-size: 2.3rem;
+}
+
+.combo_relax_precio_nota {
+  font-size: 0.82rem;
+}
+
+/* BOTÓN */
+
+.combo_relax_boton {
+  margin-top: 17px;
+  padding: 12px 25px;
+  font-size: 0.92rem;
+}
+
+/* MÓVILES */
+
+@media (max-width: 600px) {
+  .combo_relax_seccion {
+    padding: 18px 12px;
+  }
+
+  .combo_relax_tarjeta {
+    padding: 22px 15px;
+    border-radius: 18px;
+  }
+
+  .combo_relax_titulo {
+    font-size: 1.85rem;
+  }
+
+  .combo_relax_intro {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+  }
+
+  .combo_relax_servicio {
+    padding: 13px 12px;
+  }
+
+  .combo_relax_subtitulo {
+    font-size: 1rem;
+  }
+
+  .combo_relax_texto {
+    font-size: 0.88rem;
+  }
+
+  .combo_relax_destacado {
+    padding: 11px 10px;
+  }
+
+  .combo_relax_destacado_texto {
+    font-size: 0.84rem;
+  }
+
+  .combo_relax_precio_valor {
+    font-size: 2.1rem;
+  }
+
+  .combo_relax_boton {
+    width: 100%;
+    padding: 12px 15px;
+  }
+}
+
+/* ===================================== */
+
+/* ==================================================
+PEELINGS
+============================================= */
+
+/* ==========================================
+   TRATAMIENTOS FACIALES - PIEL
+========================================== */
+
+.servicio-presentacion-info-peeling h1 {
+  font-size: 4rem;
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+}
+
+.servicio-presentacion-info-peeling h2 {
+  font-size: 3rem;
+  font-family: var(--font-cursiva1);
+  color: var(--color-rojo);
+}
+
+.tratamientos_piel_seccion {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 25px;
+}
+
+/* ENCABEZADO */
+
+.tratamientos_piel_encabezado {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.tratamientos_piel_etiqueta {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 5px 13px;
+  border: 1px solid var(--color-rojo);
+  border-radius: 50px;
+  color: var(--color-rojo);
+  font-family: var(--font-4);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+}
+
+.tratamientos_piel_titulo {
+  margin: 0 0 10px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.tratamientos_piel_intro {
+  margin: 0;
+  color: var(--color-negro);
+  font-family: var(--font-4);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* GRILLA */
+
+.tratamientos_piel_grilla {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+/* TARJETAS */
+
+.tratamientos_piel_tarjeta {
+  min-width: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 20px;
+  background: var(--color-rosa);
+  border: 2px solid var(--color-rojo);
+  border-radius: 22px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tratamientos_piel_tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 23px rgba(0, 0, 0, 0.1);
+}
+
+/* ICONO Y TÍTULOS */
+
+.tratamientos_piel_icono {
+  margin-bottom: 8px;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.tratamientos_piel_nombre {
+  margin: 0 0 7px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 1.55rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.tratamientos_piel_subtitulo {
+  margin: 0 0 18px;
+  color: var(--color-rojo);
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* DESCRIPCIÓN */
+
+.tratamientos_piel_descripcion {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.tratamientos_piel_texto {
+  margin: 0;
+  color: var(--color-negro);
+  font-family: var(--font-4);
+  font-size: 0.91rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* BLOQUES DE INFORMACIÓN */
+
+.tratamientos_piel_bloque {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 12px;
+}
+
+.tratamientos_piel_rotulo {
+  margin: 0 0 7px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* BLOQUE DE PRECAUCIONES */
+
+.tratamientos_piel_bloque.tratamientos_piel_precaucion {
+  background: rgba(255, 255, 255, 0.58);
+  border-left: 3px solid var(--color-rojo);
+  border-radius: 0 12px 12px 0;
+}
+
+/* BOTÓN */
+
+.tratamientos_piel_boton {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  padding: 12px 15px;
+  background: var(--color-rojo);
+  border: 2px solid var(--color-rojo);
+  border-radius: 50px;
+  color: #fff;
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tratamientos_piel_boton:hover {
+  background: transparent;
+  color: var(--color-rojo);
+}
+
+/* TABLETS */
+
+@media (max-width: 1050px) {
+  .tratamientos_piel_grilla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .tratamientos_piel_tarjeta:last-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 600px;
+    justify-self: center;
+  }
+}
+
+/* CELULARES */
+
+@media (max-width: 650px) {
+  .servicio-presentacion-info-peeling h1 {
+    font-size: 2.5rem;
+  }
+
+  .servicio-presentacion-info-peeling h2 {
+    font-size: 2rem;
+  }
+
+  .tratamientos_piel_seccion {
+    padding: 22px 14px;
+  }
+
+  .tratamientos_piel_encabezado {
+    margin-bottom: 22px;
+  }
+
+  .tratamientos_piel_intro {
+    font-size: 0.92rem;
+  }
+
+  .tratamientos_piel_grilla {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .tratamientos_piel_tarjeta,
+  .tratamientos_piel_tarjeta:last-child {
+    grid-column: auto;
+    width: 100%;
+    max-width: 480px;
+    justify-self: center;
+    padding: 22px 18px;
+  }
+
+  .tratamientos_piel_nombre {
+    font-size: 1.45rem;
+  }
+
+  .tratamientos_piel_texto {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===================================== */
+
+/* ===============================================
+MANICURIA Y PEDICURIA
+=============================================== */
+.servicio-presentacion-info_manicuria h1 {
+  font-family: var(--font-3);
+  color: var(--color-rojo);
+  font-size: 5rem;
+}
+
+.servicio-presentacion-info_manicuria p {
+  font-family: var(--font-cursiva1);
+  color: var(--color-rojo);
+  font-size: 3rem;
+}
+
+@media (max-width: 650px) {
+  .servicio-presentacion-info_manicuria h1 {
+    font-family: var(--font-3);
+    color: var(--color-rojo);
+    font-size: 3rem;
+  }
+
+  .servicio-presentacion-info_manicuria p {
+    font-family: var(--font-cursiva1);
+    color: var(--color-rojo);
+    font-size: 2rem;
+  }
+}
+
+/*================MAKE UP==========================*/
+
+.servicios-makeup h1 {
+  font-size: 6rem;
+  font-family: var(--font-3);
+}
+
+.servicios-makeup p {
+  font-size: 1.5rem;
+  font-family: var(--font-4);
+  color: var(--color-rojo);
+  font-weight: 600;
+}
+
+/* ==========================================
+   SECCIÓN PROFESIONALES MAKE-UP
+========================================== */
+
+.makeup-profesionales-section {
+  width: 100%;
+  padding: 100px 0;
+  background: var(--color-blanco);
+}
+
+.makeup-profesionales-container {
+  width: min(90%, 1400px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 50px;
+}
+
+/* ==========================================
+   BLOQUE ANTO
+========================================== */
+
+.makeup-profesional-card {
+  min-width: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--color-rojo, #a52232);
+  color: var(--color-blanco, #fff);
+
+  border-radius: 20px;
+}
+
+/* FOTO */
+
+.makeup-profesional-foto {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.makeup-profesional-foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.makeup-profesional-card:hover .makeup-profesional-foto img {
+  transform: scale(1.025);
+}
+
+/* INFORMACIÓN */
+
+.makeup-profesional-info {
+  padding: 36px;
+}
+
+.makeup-profesional-label {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  font-family: var(--font-elegante);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--color-blanco, #fff);
+  opacity: 0.85;
+}
+
+.makeup-profesional-nombre {
+  margin: 0 0 12px;
+
+  font-family: var(--font-3);
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+
+  color: var(--color-blanco, #fff);
+}
+
+.makeup-profesional-cargo {
+  margin: 0 0 28px;
+
+  font-family: var(--font-4);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+
+  color: var(--color-blanco, #fff);
+}
+
+.makeup-profesional-descripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.makeup-profesional-descripcion p {
+  margin: 0;
+
+  font-family: var(--font-4);
+  font-size: 0.98rem;
+  font-weight: 400;
+  line-height: 1.85;
+
+  color: var(--color-blanco, #fff);
+}
+
+/* ==========================================
+   BLOQUE STAFF
+========================================== */
+
+.makeup-staff-card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  background: transparent;
+}
+
+/* VIDEO DE VISTA PREVIA */
+
+.makeup-staff-video-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+  border-radius: 20px;
+  background: #111;
+}
+
+.makeup-staff-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* TÍTULO STAFF */
+
+.makeup-staff-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px;
+}
+
+.makeup-staff-titulo {
+  margin: 0;
+
+  font-family: var(--font-3);
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: center;
+
+  color: var(--color-rojo, #a52232);
+}
+
+/* ==========================================
+   MODAL VIDEO STAFF
+========================================== */
+
+.makeup-staff-modal {
+  position: fixed;
+  inset: 0;
+
+  width: min(90vw, 900px);
+  max-width: none;
+  max-height: 90dvh;
+
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+
+  background: #111;
+  overflow: hidden;
+}
+
+.makeup-staff-modal[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.makeup-staff-modal::backdrop {
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(5px);
+}
+
+.makeup-staff-video-grande {
+  display: block;
+  width: 100%;
+  max-height: 90dvh;
+
+  object-fit: contain;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+  .makeup-profesionales-container {
+    gap: 28px;
+    width: 92%;
+  }
+
+  .makeup-profesional-info {
+    padding: 26px;
+  }
+
+  .makeup-profesional-descripcion p {
+    font-size: 0.94rem;
+    line-height: 1.75;
+  }
+
+  .makeup-staff-card {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .makeup-profesionales-section {
+    padding: 60px 0;
+  }
+
+  .makeup-profesionales-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    width: 88%;
+  }
+
+  .makeup-profesional-foto,
+  .makeup-staff-video-wrapper {
+    aspect-ratio: 4 / 5;
+  }
+
+  .makeup-profesional-info {
+    padding: 28px 24px;
+  }
+
+  .makeup-profesional-nombre {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .makeup-profesional-cargo {
+    font-size: 0.95rem;
+  }
+
+  .makeup-profesional-descripcion p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .makeup-staff-card {
+    gap: 20px;
+  }
+
+  .makeup-staff-titulo {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .makeup-staff-modal {
+    width: 92vw;
+  }
+}

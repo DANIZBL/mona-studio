@@ -18,7 +18,7 @@
 
 body {
   background: var(--color-blanco);
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
 }
 
 .products-hero {
@@ -27,7 +27,7 @@ body {
 }
 
 .products-hero h1 {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-elegante);
   color: var(--color-rojo);
   font-size: clamp(2rem, 4vw, 4rem);
   letter-spacing: 3px;
@@ -37,8 +37,9 @@ body {
 .products-hero p {
   max-width: 650px;
   margin: auto;
-  color: #666;
+  color: var(--color-beige);
   line-height: 1.8;
+  font-family: var(--font-3);
 }
 
 .products-container {
@@ -62,6 +63,7 @@ body {
 .sidebar h3 {
   color: var(--color-rojo);
   margin-bottom: 25px;
+  font-family: var(--font-3);
 }
 
 .category-btn {
@@ -78,7 +80,8 @@ body {
 
   transition: 0.3s;
 
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
+  color: var(--color-beige);
 }
 
 .category-btn:hover {
@@ -136,7 +139,7 @@ body {
 }
 
 .product-name {
-  font-family: var(--font-secundaria);
+  font-family: var(--font-4);
   margin-top: 15px;
 
   color: var(--color-rojo);
@@ -173,7 +176,7 @@ body {
 
 .current-price {
   color: var(--color-rojo);
-  font-family: var(--font-secundaria);
+  font-family: var(--font-3);
   font-size: 1.1rem;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -183,7 +186,7 @@ body {
   margin-top: 20px;
 
   border: none;
-
+  font-family: var(--font-3);
   background: var(--color-rojo);
   color: white;
 

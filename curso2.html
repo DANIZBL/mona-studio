@@ -39,16 +39,112 @@
       </div>
 
       <nav class="nav">
-        <a class="boton" href="index.html">INICIO</a>
-        <a class="boton" href="#servicios">SERVICIOS</a>
-        <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        <a class="boton" href="../index.html">INICIO</a>
+
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="index.html">
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
         <a class="boton" href="productos.html">TIENDA</a>
 
         <a class="boton" href="#">INFO Y CONTACTO</a>
 
         <div class="search-container">
           <button class="search-toggle">
-            <img src="./src/img/lupa.svg" alt="Buscar" />
+            <img src="../src/img/lupa.svg" alt="Buscar" />
           </button>
 
           <div class="search-box">
@@ -65,7 +161,7 @@
 
         <div class="cart">
           <button class="cart-icon">
-            <img src="./src/img/carrito.svg" alt="" />
+            <img src="../src/img/carrito.svg" alt="" />
           </button>
           <span class="cart-count">0</span>
         </div>
@@ -76,7 +172,10 @@
 
     <section class="curso-hero reveal">
       <div class="curso-hero-img">
-        <img src="./src/img/img_curso2_1.png" alt="Curso de automaquillaje" />
+        <img
+          src="./src/img/auto_maq_oportada.webp"
+          alt="Curso de automaquillaje"
+        />
       </div>
 
       <div class="curso-hero-content">
@@ -146,7 +245,7 @@
           <li>Materiales incluidos</li>
         </ul>
 
-        <span class="duracion">⏰ 1 clase · 2.5 a 3 horas</span>
+        <span class="duracion">⏰ 1 clase · 2 a 3 horas</span>
       </div>
     </section>
 
@@ -160,7 +259,7 @@
 
       <div class="dias">
         <div class="dia">
-          <h3>DÍA DOS</h3>
+          <h3>DÍA UNO</h3>
 
           <ul>
             <li>Preparación de la piel</li>
@@ -173,7 +272,7 @@
         </div>
 
         <div class="dia">
-          <h3>DÍA UNO</h3>
+          <h3>DÍA DOS</h3>
 
           <ul>
             <li>Todo sobre delineado</li>
@@ -183,6 +282,27 @@
             <li>Uso adecuado de brochas</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="quince-reviews">
+      <div class="quince-reviews-container">
+        <span class="quince-section-subtitle"> LO QUE DICEN DE NOSOTRAS </span>
+
+        <h2>Ellas ya vivieron la experiencia</h2>
+
+        <div class="quince-review-whatsapp">
+          <div class="quince-review-message">
+            <p id="quince-review-text"></p>
+
+            <div class="quince-review-info">
+              <strong id="quince-review-name"></strong>
+              <span id="quince-review-time"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quince-review-dots" id="quince-review-dots"></div>
       </div>
     </section>
 

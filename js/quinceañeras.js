@@ -5,7 +5,7 @@
 const quinceanerasGalleryItems = [
   {
     type: "image",
-    src: "../src/img/quince1.webp",
+    src: "../src/img/quince7.webp",
     alt: "Maquillaje para quinceañera",
   },
 
@@ -27,7 +27,7 @@ const quinceanerasGalleryItems = [
 
   {
     type: "image",
-    src: "../src/img/quince3.webp",
+    src: "../src/img/quince8.webp",
     alt: "Maquillaje y peinado de quinceañera",
   },
 
@@ -36,10 +36,10 @@ const quinceanerasGalleryItems = [
     src: "../src/img/quince4.webp",
     alt: "Look para quinceañera",
   },
-
   {
-    type: "video",
-    src: "../src/vid/quince3.mp4",
+    type: "image",
+    src: "../src/img/quince1.webp",
+    alt: "Look para quinceañera",
   },
 
   {
@@ -231,3 +231,72 @@ setInterval(() => {
     message.classList.remove("review-changing");
   }, 350);
 }, 5000);
+
+/*===============================
+QUINCEAÑERAS
+=========================== */
+
+const whatsappNumber = "3434403870";
+
+document.querySelectorAll(".whatsapp-btn").forEach((button) => {
+  const message = button.dataset.message;
+
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    message
+  )}`;
+
+  button.href = whatsappUrl;
+  button.target = "_blank";
+  button.rel = "noopener noreferrer";
+});
+
+const videoPreview = document.querySelector("#video-quinceaneras");
+const modal = document.querySelector(".quinceaneras-modal");
+const videoGrande = document.querySelector(".quinceaneras-video-grande");
+
+videoPreview.addEventListener("click", async () => {
+  if (modal.open) return;
+
+  const tiempo = videoPreview.currentTime;
+  const sonidoActivado = !videoPreview.muted;
+
+  videoPreview.pause();
+
+  videoGrande.muted = !sonidoActivado;
+  modal.showModal();
+
+  try {
+    if (videoGrande.readyState < 1) {
+      await new Promise((resolve) => {
+        videoGrande.addEventListener("loadedmetadata", resolve, {
+          once: true,
+        });
+      });
+    }
+
+    videoGrande.currentTime = tiempo;
+    await videoGrande.play();
+  } catch (error) {
+    console.warn("No se pudo reproducir el video:", error);
+  }
+});
+
+// Cerrar al tocar el fondo oscuro
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.close();
+  }
+});
+
+// Sincronizar al cerrar, también con Escape
+modal.addEventListener("close", () => {
+  const tiempo = videoGrande.currentTime;
+  const sonidoActivado = !videoGrande.muted;
+
+  videoGrande.pause();
+
+  videoPreview.currentTime = tiempo;
+  videoPreview.muted = !sonidoActivado;
+
+  videoPreview.play().catch(() => {});
+});

@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mona</title>
+    <title>MonaStudio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./src/variables.css" />
     <link rel="stylesheet" href="./src/header.css" />
     <link rel="stylesheet" href="./src/footer.css" />
+    <link rel="stylesheet" href="./src/marcas.css" />
+    <link rel="stylesheet" href="./src/carrito.css" />
   </head>
   <body>
     <!-- ============================HEDER========================== -->
@@ -42,16 +44,113 @@
       </div>
 
       <nav class="nav">
-        <a class="boton" href="index.html">INICIO</a>
-        <a class="boton" href="#servicios">SERVICIOS</a>
-        <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        <a class="boton" href="../index.html">INICIO</a>
+
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/servicios/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/servicios/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/servicios/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/servicios/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/servicios/peelings.html" class="servicios-menu-link">
+              Peelings - Microneedling - Hidralips
+            </a>
+
+            <a
+              href="/servicios/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/servicios/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              Quienes somos?
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="index.html">
+          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
         <a class="boton" href="productos.html">TIENDA</a>
 
-        <a class="boton" href="#">INFO Y CONTACTO</a>
+        <a class="boton" href="info.html">INFO Y CONTACTO</a>
 
         <div class="search-container">
           <button class="search-toggle">
-            <img src="./src/img/lupa.svg" alt="Buscar" />
+            <img src="../src/img/lupa.svg" alt="Buscar" />
           </button>
 
           <div class="search-box">
@@ -68,7 +167,7 @@
 
         <div class="cart">
           <button class="cart-icon">
-            <img src="./src/img/carrito.svg" alt="" />
+            <img src="../src/img/carrito.svg" alt="" />
           </button>
           <span class="cart-count">0</span>
         </div>
@@ -87,28 +186,111 @@
       </div>
     </section>
 
-    <section class="presentacion">
-      <p>
-        DONDE LA BELLEZA, LA FORMACIÓN Y EL ESTILO SE ENCUENTRAN. SERVICIOS
-        PROFESIONALES, FORMACIÓN ESPECIALIZADA Y PRODUCTOS CUIDADOSAMENTE
-        SELECCIONADOS
-      </p>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <section class="mona-frase">
+      <div class="mona-frase-contenedor">
+        <p>
+          DONDE LA BELLEZA, LA FORMACIÓN Y EL ESTILO SE ENCUENTRAN · DESAFÍOS
+          PROFESIONALES<br class="mona-frase-salto" />
+          FORMACIÓN ESPECIALIZADA · PRODUCTOS CUIDADOSAMENTE SELECCIONADOS
+        </p>
+      </div>
     </section>
+
+    <!-- ==========================================
+     CUENTA REGRESIVA - CURSO MAQUILLAJE
+     Para activar: quitar los comentarios
+========================================== -->
+
+    <section class="cuenta-regresiva">
+      <div class="cuenta-regresiva-overlay">
+        <div class="cuenta-regresiva-contenido">
+          <!-- PARTE IZQUIERDA -->
+
+          <div class="cuenta-regresiva-info">
+            <span class="cuenta-regresiva-titulo-pequeno"> CURSO: </span>
+
+            <h1 class="cuenta-regresiva-titulo">
+              MAQUILLAJE<br />
+              PROFESIONAL<br />
+            </h1>
+
+            <p class="cuenta-regresiva-descripcion">
+              UNA INSERCIÓN INTEGRAL AL MUNDO DEL MAQUILLAJE PROFESIONAL QUE
+              COMBINA TEORÍA, PRÁCTICA Y EL TEMARIO MÁS COMPLETO DE LA CIUDAD.
+            </p>
+          </div>
+
+          <!-- PARTE DERECHA -->
+
+          <div class="cuenta-regresiva-card">
+            <ul class="cuenta-regresiva-lista">
+              <li>4 Meses</li>
+              <li>100% Práctico</li>
+              <li>Certificación profesional</li>
+              <li>16 clases presenciales</li>
+              <li>Materiales incluidos</li>
+            </ul>
+
+            <div class="cuenta-regresiva-detalles">
+              <div>
+                <span>🕘</span>
+                <strong>Sábados · 9 a 13 hs</strong>
+              </div>
+
+              <div>
+                <span>📍</span>
+                <strong>Mona Studio</strong>
+              </div>
+            </div>
+
+            <!-- CUENTA REGRESIVA -->
+
+            <div class="cuenta-regresiva-contador">
+              <div class="cuenta-regresiva-bloque">
+                <span id="cuenta-regresiva-dias">00</span>
+                <small>Días</small>
+              </div>
+
+              <div class="cuenta-regresiva-bloque">
+                <span id="cuenta-regresiva-horas">00</span>
+                <small>Horas</small>
+              </div>
+
+              <div class="cuenta-regresiva-bloque">
+                <span id="cuenta-regresiva-minutos">00</span>
+                <small>Min</small>
+              </div>
+
+              <div class="cuenta-regresiva-bloque">
+                <span id="cuenta-regresiva-segundos">00</span>
+                <small>Seg</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     FIN CUENTA REGRESIVA
+========================================== -->
+
+    <!-- =======================SERVICIOS======================================= -->
 
     <section id="servicios" class="servicios-home">
       <div class="servicios-container">
         <div class="servicios-imagen">
-          <img src="./src/img/imagen_servicio.png" alt="Nuestros servicios" />
+          <img
+            src="./src/img/servicios_portada.webp"
+            alt="Nuestros servicios"
+            loading="lazy"
+          />
         </div>
 
         <div class="servicios-info">
           <h2>NUESTROS SERVICIOS</h2>
-
-          <p class="servicios-descripcion">
-            Descubrí todos nuestros tratamientos diseñados para realzar tu
-            belleza, cuidar tu piel y brindarte un momento de bienestar.
-          </p>
-
           <div class="servicios-grid">
             <!-- BELLEZA FACIAL -->
             <div class="servicio-item">
@@ -147,7 +329,9 @@
                 </li>
 
                 <li>
-                  <a href="./servicios/peelings.html"> Peelings </a>
+                  <a href="./servicios/peelings.html">
+                    Peelings - Microneedling - Hidralips</a
+                  >
                 </li>
               </ul>
             </div>
@@ -160,11 +344,9 @@
 
               <ul>
                 <li>
-                  <a href="./servicios/manicura.html"> Manicuría </a>
-                </li>
-
-                <li>
-                  <a href="./servicios/pedicura.html"> Pedicuría </a>
+                  <a href="./servicios/manicura.html">
+                    Manicuría y Pedicuria
+                  </a>
                 </li>
               </ul>
             </div>
@@ -213,65 +395,83 @@
       </div>
     </section>
 
+    <!-- ========================MARCAS======================================== -->
+
+    <section class="marcas">
+      <h2>SOLO TRABAJAMOS CON LAS MEJORES MARCAS</h2>
+
+      <div class="marcas-container" id="marcasContainer"></div>
+    </section>
+
+    <!-- ========================NOVIAS======================================== -->
+
     <section class="novias-section">
       <div class="novias-container">
         <!-- Información -->
         <div class="novias-content">
-          <h2>Novias</h2>
+          <h2>NOVIAS💍💐</h2>
 
-          <h3>
-            Un look pensado para acompañarte en cada emoción.<br />
-            Belleza que se siente, se disfruta y se recuerda.
-          </h3>
+          <h3>Una mirada integral. Un look único</h3>
 
           <p>
-            En MONA entendemos que el maquillaje y el peinado de novia no son
-            solo un servicio, sino una experiencia pensada en cada detalle.
-            Nuestra propuesta es completamente personalizada, diseñada a partir
-            de tu estilo, tu vestido, el tipo de ceremonia y la esencia que
-            querés transmitir en uno de los días más importantes de tu vida.
+            Maquillaje y peinado personalizados, en armonía con tu estilo y cada
+            detalle de tu celebración
           </p>
-          <a href="novias.html" class="btn-novias"> MÁS INFORMACIÓN </a>
+          <a href="novias.html" class="btn-novias"> DESCUBRÍ MAS </a>
         </div>
         <!-- Slider -->
         <div class="slider-novias">
           <div class="slide-novias active">
-            <img src="./src/img/novias1.webp" alt="Novias Mona" />
+            <img
+              src="./src/img/novias1.webp"
+              alt="Novias Mona"
+              loading="lazy"
+            />
           </div>
 
           <div class="slide-novias">
-            <img src="./src/img/novias2.webp" alt="Novias Mona" />
+            <img
+              src="./src/img/novias2.webp"
+              alt="Novias Mona"
+              loading="lazy"
+            />
           </div>
 
           <div class="slide-novias">
-            <img src="./src/img/novias3.webp" alt="Novias Mona" />
+            <img
+              src="./src/img/novias3.webp"
+              alt="Novias Mona"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
     </section>
 
+    <!-- =======================CURSOS======================================= -->
+
     <section class="seccion_curso">
       <div class="titulocurso">
-        <img class="imagen_beuty" src="./src/img/beauty_acedemy.webp" alt="" />
-        <h2>
-          El lugar para aprender, perfeccionarte y potenciar tu maquillaje
-        </h2>
+        <img
+          class="imagen_beuty"
+          src="./src/img/beauty_acedemy.webp"
+          alt=""
+          loading="lazy"
+        />
+        <h2>el lugar para aprender, perfeccionarte y potenciar tu técnica</h2>
       </div>
 
       <section id="cursos" class="cursos-section">
         <a href="cursos_profesionales.html" class="curso-card">
-          <img src="./src/img/img_curso1.webp" alt="Curso 1" />
+          <img src="./src/img/img_curso1.webp" alt="Curso 1" loading="lazy" />
           <div class="curso-overlay">
             <h3>CURSOS PROFESIONALES</h3>
-            <p>
-              CONOCE NUESTROS CURSOS PARA ENTRAR AL MUNDO DEL MAQUILLAJE
-              PROFESIONA
-            </p>
+            <p>CONVERTÍ TU PASIÓN POR EL MAQUILLAJE EN TU PROFESIÓN</p>
           </div>
         </a>
 
         <a href="curso2.html" class="curso-card">
-          <img src="./src/img/img_curso2.webp" alt="Curso 2" />
+          <img src="./src/img/img_curso2.webp" alt="Curso 2" loading="lazy" />
           <div class="curso-overlay">
             <h3>CURSOS DE AUTO-MAQUILLAJE</h3>
             <p>
@@ -282,7 +482,11 @@
         </a>
 
         <a href="curso3.html" class="curso-card">
-          <img src="./src/img/img_curso3.webp" alt="Curso 3" />
+          <img
+            src="./src/img/perfecionamiento_1.webp"
+            alt="Curso 3"
+            loading="lazy"
+          />
           <div class="curso-overlay">
             <h3>PERFECCIONAMIENTOS EN MAQUILLAJE</h3>
             <p>
@@ -307,15 +511,18 @@
       </section>
     </section>
 
+    <!-- =====================EGRESADAS====================================== -->
+
     <section class="egresadas-section">
       <div class="egresadas-container">
         <!-- Contenido -->
         <div class="egresadas-content">
-          <h2>Egresadas</h2>
+          <h2>EGRESADAS🎓</h2>
 
           <h3>
-            Un look pensado para acompañarte en cada emoción.<br />
-            Belleza que se siente, se disfruta y se recuerda.
+            Tu estilo, tu idea, tu noche. Creamos un look que te haga sentir
+            auténtica, para que te veas como siempre soñaste en una noche tan
+            especial
           </h3>
 
           <a href="egresadas.html" class="egresadas-button">
@@ -328,10 +535,13 @@
           <img
             src="./src/img/egre5.webp"
             alt="Maquillaje y peinado para egresadas"
+            loading="lazy"
           />
         </div>
       </div>
     </section>
+
+    <!-- ========================15====================================== -->
 
     <section class="quince-section">
       <div class="quince-container">
@@ -340,27 +550,32 @@
             src="./src/img/quincieañeras1.webp"
             alt="Maquillaje para quinceañeras"
             class="quince-img img-1"
+            loading="lazy"
           />
 
           <img
             src="./src/img/quincieañeras2.webp"
             alt="Belleza para quinceañeras"
             class="quince-img img-2"
+            loading="lazy"
           />
         </div>
 
         <div class="quince-content">
-          <h1>Quinceañeras</h1>
+          <h1>QUINCEAÑERAS✨</h1>
 
           <p>
-            Un look pensado para acompañarte en cada emoción. Belleza que se
-            siente, se disfruta y se recuerda.
+            Un día que soñaste, un look para recordar. Creamos cada detalle para
+            acompañarte en una celebración única y hacer de tu gran noche un
+            momento inolvidable
           </p>
 
           <a href="quinceañeras.html" class="quince-btn"> Más información </a>
         </div>
       </div>
     </section>
+
+    <!-- ========================MAKE UP======================================= -->
 
     <section class="studio-section">
       <div class="studio-container">
@@ -373,16 +588,22 @@
           </p>
 
           <a href="./servicios/social.html" class="studio-button">
-            Más información
+            conocé quienes crean el mundo MONA
           </a>
         </div>
 
         <div class="studio-image">
           <!-- Colocá tu imagen 1:1 acá -->
-          <img src="./src/img/makeupypeinado.webp" alt="Nuestro studio" />
+          <img
+            src="./src/img/makeupypeinado.webp"
+            alt="Nuestro studio"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
+
+    <!-- =======================PRODUCTOS======================================== -->
 
     <section class="featured-products">
       <div class="products-header">
@@ -399,11 +620,17 @@
       </div>
     </section>
 
+    <!-- =======================INSTAGRAM======================================= -->
+
     <section class="instagram-section">
       <div class="instagram-header">
         <div class="instagram-title-row">
           <div class="story-ring">
-            <img src="./src/img/logo_ig.webp" alt="Mona Beauty" />
+            <img
+              src="./src/img/logo_ig.webp"
+              alt="Mona Beauty"
+              loading="lazy"
+            />
           </div>
 
           <div class="instagram-text">
@@ -420,54 +647,83 @@
       <div class="instagram-grid">
         <!-- Publicación 1 -->
         <a href="https://instagram.com/monastudio._" class="insta-card">
-          <img src="./src/img/insta1.webp" alt="Trabajo realizado" />
+          <img
+            src="./src/img/insta1.webp"
+            alt="Trabajo realizado"
+            loading="lazy"
+          />
 
           <div class="instagram-overlay">
             <img
               src="./src/img/ig.webp"
               alt="Instagram"
               class="instagram-overlay-icon"
+              loading="lazy"
             />
           </div>
         </a>
 
         <!-- Publicación 2 -->
         <a href="https://instagram.com/monastudio._" class="insta-card">
-          <img src="./src/img/insta2.webp" alt="Trabajo realizado" />
+          <img
+            src="./src/img/insta2.webp"
+            alt="Trabajo realizado"
+            loading="lazy"
+          />
 
           <div class="instagram-overlay">
             <img
               src="./src/img/ig.webp"
               alt="Instagram"
               class="instagram-overlay-icon"
+              loading="lazy"
             />
           </div>
         </a>
 
         <!-- Publicación 3 -->
         <a href="https://instagram.com/monastudio._" class="insta-card">
-          <img src="./src/img/insta3.webp" alt="Trabajo realizado" />
+          <img
+            src="./src/img/insta3.webp"
+            alt="Trabajo realizado"
+            loading="lazy"
+          />
 
           <div class="instagram-overlay">
             <img
               src="./src/img/ig.webp"
               alt="Instagram"
               class="instagram-overlay-icon"
+              loading="lazy"
             />
           </div>
         </a>
       </div>
 
-      <div class="instagram-footer">
-        <a
-          href="https://instagram.com/monastudio._"
-          target="_blank"
-          class="instagram-btn"
-        >
-          @monastudio._
-        </a>
+      <div class="insta-boton">
+        <div class="instagram-footer">
+          <a
+            href="https://instagram.com/monastudio._"
+            target="_blank"
+            class="instagram-btn"
+          >
+            @monastudio._
+          </a>
+        </div>
+
+        <div class="instagram-footer">
+          <a
+            href="https://instagram.com/antosangoy_makeup "
+            target="_blank"
+            class="instagram-btn"
+          >
+            @antosangoy_makeup
+          </a>
+        </div>
       </div>
     </section>
+
+    <!-- ============================================================== -->
 
     <!-- INDICADORES -->
     <div class="cursos-dots">
@@ -475,6 +731,8 @@
       <span class="dot"></span>
       <span class="dot"></span>
     </div>
+
+    <!-- ========================FOOTER======================================== -->
 
     <footer class="footer">
       <div class="footer-container">
@@ -487,6 +745,7 @@
                 src="./src/img/redes1.png"
                 alt="Instagram"
                 class="social-icon"
+                loading="lazy"
               />
             </div>
           </div>
@@ -518,8 +777,10 @@
       </div>
     </footer>
 
+    <script src="./js/carrito.js" defer></script>
     <script src="./js/principal.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/curso1.js"></script>
+    <script src="./js/marcas.js"></script>
   </body>
 </html>
