@@ -10,14 +10,13 @@ const egresadasGalleryItems = [
   },
 
   {
-    type: "image",
-    src: "../src/img/egre8.webp",
-    alt: "Maquillaje para egresadas",
+    type: "video",
+    src: "../src/vid/egresadas4.mp4",
   },
 
   {
     type: "image",
-    src: "../src/img/egre10.webp",
+    src: "../src/img/egre4.webp",
     alt: "Look de egresada",
   },
 
@@ -34,13 +33,13 @@ const egresadasGalleryItems = [
 
   {
     type: "image",
-    src: "../src/img/egre4.webp",
+    src: "../src/img/egre12.webp",
     alt: "Look para egresada",
   },
 
   {
     type: "image",
-    src: "../src/img/egre11.webp",
+    src: "../src/img/egre8.webp",
     alt: "Look para egresada",
   },
 
@@ -150,3 +149,86 @@ egresadasGalleryItems.forEach((item) => {
 
   egresadasGallery.appendChild(egresadasGalleryItem);
 });
+
+/* =========================
+   VIDEOS
+========================= */
+
+const momentosEnFamiliaItems = [
+  {
+    type: "image",
+    src: "../src/img/egre11.webp",
+  },
+  {
+    type: "image",
+    src: "../src/img/egre10.webp",
+  },
+];
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+const momentosEnFamiliaGallery = document.getElementById(
+  "momentosEnFamiliaGallery"
+);
+
+/* =========================
+   VALIDAR CONTENEDOR
+========================= */
+
+if (momentosEnFamiliaGallery) {
+  /* =========================
+     CREAR GALERÍA
+  ========================= */
+
+  momentosEnFamiliaItems.forEach((item) => {
+    const galleryItem = document.createElement("div");
+
+    galleryItem.classList.add("momentos-en-familia-item");
+
+    /* =========================
+       CREAR VIDEO
+    ========================= */
+
+    if (item.type === "video") {
+      const video = document.createElement("video");
+
+      video.src = item.src;
+      video.muted = true;
+      video.loop = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.controls = true;
+      video.preload = "auto";
+
+      video.setAttribute("muted", "");
+      video.setAttribute("autoplay", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+
+      video.play().catch((error) => {
+        console.log("Autoplay bloqueado:", error);
+      });
+
+      galleryItem.appendChild(video);
+    } else if (item.type === "image") {
+      /* =========================
+   CREAR IMAGEN
+========================= */
+      const img = document.createElement("img");
+
+      img.src = item.src;
+      img.alt = "Momentos en familia";
+      img.loading = "lazy";
+
+      galleryItem.appendChild(img);
+    }
+
+    /* =========================
+       AGREGAR A LA GALERÍA
+    ========================= */
+
+    momentosEnFamiliaGallery.appendChild(galleryItem);
+  });
+}

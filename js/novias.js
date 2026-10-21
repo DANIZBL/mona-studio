@@ -336,12 +336,100 @@ const videoNovias = document.querySelector(".novias-video");
 const modalNovias = document.querySelector(".novias-video-modal");
 const videoNoviasGrande = document.querySelector(".novias-video-grande");
 
-// Abrir video ampliado
+const videoNoviasPlay = document.querySelector(".novias-video-play");
+const videoNoviasSound = document.querySelector(".novias-video-sound");
+
+// =====================================================
+// ACTUALIZAR ICONO PLAY / PAUSA
+// =====================================================
+
+function actualizarIconoPlay() {
+  if (!videoNoviasPlay) return;
+
+  const pausado = videoNovias.paused;
+
+  videoNoviasPlay.classList.toggle("is-paused", pausado);
+
+  videoNoviasPlay.setAttribute(
+    "aria-label",
+    pausado ? "Reproducir video" : "Pausar video"
+  );
+}
+
+// =====================================================
+// ACTUALIZAR ICONO DE SONIDO
+// =====================================================
+
+function actualizarIconoSonido() {
+  if (!videoNoviasSound) return;
+
+  const sonidoActivado = !videoNovias.muted;
+
+  videoNoviasSound.classList.toggle("is-unmuted", sonidoActivado);
+
+  videoNoviasSound.setAttribute(
+    "aria-label",
+    sonidoActivado ? "Silenciar video" : "Activar sonido"
+  );
+}
+
+// =====================================================
+// PLAY / PAUSA EN LA VISTA PREVIA
+// =====================================================
+
+videoNoviasPlay?.addEventListener("click", async (event) => {
+  event.stopPropagation();
+
+  if (videoNovias.paused) {
+    try {
+      await videoNovias.play();
+    } catch (error) {
+      console.warn("No se pudo reproducir el video:", error);
+    }
+  } else {
+    videoNovias.pause();
+  }
+
+  actualizarIconoPlay();
+});
+
+// =====================================================
+// ACTIVAR / DESACTIVAR SONIDO EN LA VISTA PREVIA
+// =====================================================
+
+videoNoviasSound?.addEventListener("click", (event) => {
+  event.stopPropagation();
+
+  videoNovias.muted = !videoNovias.muted;
+
+  // Si se activa el sonido, intentar iniciar la reproducción
+  if (!videoNovias.muted && videoNovias.paused) {
+    videoNovias.play().catch(() => {});
+  }
+
+  actualizarIconoSonido();
+  actualizarIconoPlay();
+});
+
+// Mantener los iconos sincronizados con el video
+videoNovias.addEventListener("play", actualizarIconoPlay);
+videoNovias.addEventListener("pause", actualizarIconoPlay);
+videoNovias.addEventListener("volumechange", actualizarIconoSonido);
+
+// Estado inicial
+actualizarIconoPlay();
+actualizarIconoSonido();
+
+// =====================================================
+// ABRIR VIDEO AMPLIADO
+// =====================================================
+
 videoNovias.addEventListener("click", async () => {
   if (modalNovias.open) return;
 
   const tiempo = videoNovias.currentTime;
   const sonidoActivado = !videoNovias.muted;
+  const estabaPausado = videoNovias.paused;
 
   // Evitar reproducir ambos videos al mismo tiempo
   videoNovias.pause();
@@ -359,29 +447,235 @@ videoNovias.addEventListener("click", async () => {
     }
 
     videoNoviasGrande.currentTime = tiempo;
-    await videoNoviasGrande.play();
+
+    if (!estabaPausado) {
+      await videoNoviasGrande.play();
+    }
   } catch (error) {
-    console.warn("No se pudo reproducir el video de novias:", error);
+    console.warn("No se pudo reproducir el video ampliado:", error);
   }
 });
 
-// Cerrar al hacer clic en el fondo oscuro
+// =====================================================
+// CERRAR AL HACER CLIC EN EL FONDO OSCURO
+// =====================================================
+
 modalNovias.addEventListener("click", (event) => {
   if (event.target === modalNovias) {
     modalNovias.close();
   }
 });
 
-// Sincronizar y reanudar al cerrar
-// También se ejecuta al cerrar con Escape
+// =====================================================
+// SINCRONIZAR Y REANUDAR AL CERRAR
+// =====================================================
+
 modalNovias.addEventListener("close", () => {
   const tiempo = videoNoviasGrande.currentTime;
   const sonidoActivado = !videoNoviasGrande.muted;
+  const estabaPausado = videoNoviasGrande.paused;
 
   videoNoviasGrande.pause();
 
   videoNovias.currentTime = tiempo;
   videoNovias.muted = !sonidoActivado;
 
-  videoNovias.play().catch(() => {});
+  if (!estabaPausado) {
+    videoNovias.play().catch(() => {});
+  }
+
+  actualizarIconoPlay();
+  actualizarIconoSonido();
 });
+
+/* =====================================================
+   GALERÍA DE VIDEOS 3
+===================================================== */
+
+/* =========================
+   VIDEOS
+========================= */
+
+const galleria3VideosItems = [
+  {
+    type: "video",
+    src: "../src/img_servicios/exp_mona6.mp4",
+  },
+  {
+    type: "video",
+    src: "../src/img_servicios/exp_mona7.mp4",
+  },
+  {
+    type: "video",
+    src: "../src/img_servicios/exp_mona8.mp4",
+  },
+];
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+const galleria3VideosGallery = document.getElementById(
+  "galleria3VideosGallery"
+);
+
+/* =========================
+   VALIDAR CONTENEDOR
+========================= */
+
+if (galleria3VideosGallery) {
+  /* =========================
+     CREAR GALERÍA
+  ========================= */
+
+  galleria3VideosItems.forEach((item) => {
+    const galleryItem = document.createElement("div");
+
+    galleryItem.classList.add("galleria-3-item");
+
+    /* =========================
+       CREAR VIDEO
+    ========================= */
+
+    if (item.type === "video") {
+      const video = document.createElement("video");
+
+      video.src = item.src;
+      video.muted = true;
+      video.loop = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.controls = true;
+      video.preload = "auto";
+
+      video.setAttribute("muted", "");
+      video.setAttribute("autoplay", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+
+      video.play().catch((error) => {
+        console.log("Autoplay bloqueado:", error);
+      });
+
+      galleryItem.appendChild(video);
+    } else if (item.type === "image") {
+      /* =========================
+   CREAR IMAGEN
+========================= */
+      const img = document.createElement("img");
+
+      img.src = item.src;
+      img.alt = "Momentos en familia";
+      img.loading = "lazy";
+
+      galleryItem.appendChild(img);
+    }
+
+    /* =========================
+       AGREGAR A LA GALERÍA
+    ========================= */
+
+    galleria3VideosGallery.appendChild(galleryItem);
+  });
+}
+
+/* ============================================== */
+
+/* =========================
+   VIDEOS
+========================= */
+
+const momentosEnFamiliaItems = [
+  {
+    type: "video",
+    src: "../src/img_servicios/exp_mona2.mp4",
+  },
+  {
+    type: "image",
+    src: "../src/img/novias_familia1.webp",
+  },
+  {
+    type: "video",
+    src: "../src/img_servicios/exp_mona8.mp4",
+  },
+  {
+    type: "image",
+    src: "../src/img/novias_familia2.webp",
+  },
+  {
+    type: "video",
+    src: "../src/img_servicios/exp_mona10.mp4",
+  },
+  {
+    type: "image",
+    src: "../src/img/novias_familia3.webp",
+  },
+];
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+const momentosEnFamiliaGallery = document.getElementById(
+  "momentosEnFamiliaGallery"
+);
+
+/* =========================
+   VALIDAR CONTENEDOR
+========================= */
+
+if (momentosEnFamiliaGallery) {
+  /* =========================
+     CREAR GALERÍA
+  ========================= */
+
+  momentosEnFamiliaItems.forEach((item) => {
+    const galleryItem = document.createElement("div");
+
+    galleryItem.classList.add("momentos-en-familia-item");
+
+    /* =========================
+       CREAR VIDEO
+    ========================= */
+
+    if (item.type === "video") {
+      const video = document.createElement("video");
+
+      video.src = item.src;
+      video.muted = true;
+      video.loop = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.controls = true;
+      video.preload = "auto";
+
+      video.setAttribute("muted", "");
+      video.setAttribute("autoplay", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+
+      video.play().catch((error) => {
+        console.log("Autoplay bloqueado:", error);
+      });
+
+      galleryItem.appendChild(video);
+    } else if (item.type === "image") {
+      /* =========================
+   CREAR IMAGEN
+========================= */
+      const img = document.createElement("img");
+
+      img.src = item.src;
+      img.alt = "Momentos en familia";
+      img.loading = "lazy";
+
+      galleryItem.appendChild(img);
+    }
+
+    /* =========================
+       AGREGAR A LA GALERÍA
+    ========================= */
+
+    momentosEnFamiliaGallery.appendChild(galleryItem);
+  });
+}

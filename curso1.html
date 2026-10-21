@@ -219,7 +219,13 @@
             <span> 📍 Mona Studio </span>
           </div>
 
-          <a href="#contacto" class="hero-button"> QUIERO INSCRIBIRME </a>
+          <button
+            type="button"
+            class="hero-button js-abrir-inscripcion"
+            data-curso="Maquillaje Profesional"
+          >
+            QUIERO INSCRIBIRME
+          </button>
         </div>
       </div>
     </section>
@@ -335,7 +341,9 @@
               colorimetría, herramientas, visagismo y las bases del maquillaje.
             </p>
 
-            <span class="presentation-icon" aria-hidden="true">+</span>
+            <span class="presentation-icon" aria-hidden="true"
+              >ver contenidos</span
+            >
           </button>
 
           <div class="presentation-details" id="module-basics" hidden>
@@ -415,7 +423,9 @@
               eyes, pigmentos y tendencias.
             </p>
 
-            <span class="presentation-icon" aria-hidden="true">+</span>
+            <span class="presentation-icon" aria-hidden="true"
+              >ver contenidos</span
+            >
           </button>
 
           <div class="presentation-details" id="module-foundations" hidden>
@@ -495,7 +505,9 @@
               examen final.
             </p>
 
-            <span class="presentation-icon" aria-hidden="true">+</span>
+            <span class="presentation-icon" aria-hidden="true"
+              >ver contenidos</span
+            >
           </button>
 
           <div class="presentation-details" id="module-pro" hidden>
@@ -572,13 +584,13 @@
         <!-- Objetivos -->
 
         <div class="benefits-card">
-          <h3>Objetivos</h3>
+          <h3>Nuestro objetivo?</h3>
 
           <p>
-            Desarrollar habilidades prácticas y teóricas que te permitan
-            realizar maquillajes completos y personalizados, sentando las bases
-            para destacarte en el mundo del maquillaje profesional de manera
-            segura e inmediata.
+            Ayudarte a desarrollar habilidades prácticas y teóricas que te
+            permitan realizar maquillajes completos y personalizados, sentando
+            las bases para destacarte en el mundo del maquillaje profesional de
+            manera segura e inmediata.
           </p>
         </div>
 
@@ -644,7 +656,7 @@
           </article>
 
           <article class="teacher-info">
-            <h3>Aixa Grinovaero.</h3>
+            <h3>Aixa Grinóvero</h3>
 
             <p>
               MAQUILLADORA, PEINADORA Y COSMETÓLOGA CON 4 AÑOS DE EXPERIENCIA
@@ -781,7 +793,10 @@
         <ul>
           <li>Asistir con materiales y anotador.</li>
 
-          <li>Algunas clases requieren modelo.</li>
+          <li>
+            en la mayoria de las clases se requiere que la alumna lleve modelo
+            para la práctica
+          </li>
 
           <li>No repetir la misma modelo más de dos veces.</li>
 
@@ -866,6 +881,116 @@
         </div>
       </div>
     </footer>
+
+    <!-- ==========================================
+     MODAL DE INSCRIPCIÓN
+========================================== -->
+
+    <div
+      class="inscripcion-modal"
+      id="modalInscripcion"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="inscripcionTitulo"
+    >
+      <div class="inscripcion-contenedor">
+        <!-- BOTÓN CERRAR -->
+        <button
+          type="button"
+          class="inscripcion-cerrar"
+          id="cerrarInscripcion"
+          aria-label="Cerrar formulario"
+        >
+          &times;
+        </button>
+
+        <!-- ENCABEZADO -->
+        <div class="inscripcion-encabezado">
+          <span class="inscripcion-etiqueta"> INSCRIPCIONES </span>
+
+          <h2 id="inscripcionTitulo">Reservá tu lugar</h2>
+
+          <p>Completá tus datos para continuar por WhatsApp.</p>
+
+          <div class="inscripcion-curso">
+            Curso seleccionado:
+            <strong id="nombreCursoSeleccionado"></strong>
+          </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <form id="formularioInscripcion">
+          <div class="inscripcion-campo">
+            <label for="inscripcionNombre"> Nombre completo </label>
+
+            <input
+              type="text"
+              id="inscripcionNombre"
+              name="nombre"
+              placeholder="Ingresá tu nombre y apellido"
+              autocomplete="name"
+              required
+              minlength="3"
+              maxlength="100"
+            />
+          </div>
+
+          <!-- EDAD -->
+          <div class="inscripcion-campo">
+            <label for="inscripcionEdad"> Edad </label>
+
+            <input
+              type="number"
+              id="inscripcionEdad"
+              name="edad"
+              placeholder="Ingresá tu edad"
+              min="1"
+              max="120"
+              step="1"
+              required
+            />
+          </div>
+
+          <div class="inscripcion-campo">
+            <label for="inscripcionTelefono"> Teléfono </label>
+
+            <input
+              type="tel"
+              id="inscripcionTelefono"
+              name="telefono"
+              placeholder="Ej.: 11 2345 6789"
+              autocomplete="tel"
+              required
+              minlength="6"
+              maxlength="25"
+            />
+          </div>
+
+          <div class="inscripcion-campo">
+            <label for="inscripcionCorreo"> Correo electrónico </label>
+
+            <input
+              type="email"
+              id="inscripcionCorreo"
+              name="correo"
+              placeholder="tuemail@ejemplo.com"
+              autocomplete="email"
+              required
+              maxlength="254"
+            />
+          </div>
+
+          <button type="submit" class="inscripcion-enviar">
+            CONTINUAR POR WHATSAPP
+          </button>
+
+          <p class="inscripcion-nota">
+            Tus datos se utilizarán para gestionar tu inscripción.
+          </p>
+        </form>
+      </div>
+    </div>
 
     <script src="./js/header.js" defer></script>
     <script src="./js/curso1.js" defer></script>

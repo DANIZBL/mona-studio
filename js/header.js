@@ -799,19 +799,81 @@ overlay?.addEventListener("click", () => {
 // =====================================================
 
 const searchToggle = document.querySelector(".search-toggle");
-
 const mobileSearchToggle = document.querySelector(".mobile-search-toggle");
-
 const searchBox = document.querySelector(".search-box");
-
 const searchInput = document.getElementById("header-search");
-
 const searchResults = document.getElementById("search-results");
 
 const SEARCH_PRODUCTS_URL =
   "https://monastudiobackend-production.up.railway.app/api/v1/products?limit=500";
 
 let headerProducts = [];
+
+// =====================================================
+// SERVICIOS DISPONIBLES EN EL BUSCADOR
+// Agregá acá todos tus servicios
+// =====================================================
+
+const headerServices = [
+  {
+    nombre: "Lifting",
+    url: "./servicios/lifting.html",
+  },
+
+  {
+    nombre: "Perfilado de cejas",
+    url: "./servicios/perfilado.html",
+  },
+  {
+    nombre: "Laminado de cejas",
+    url: "./servicios/laminado_cejas.html",
+  },
+  {
+    nombre: "Spa facial",
+    url: "./servicios/spa_facial.html",
+  },
+  {
+    nombre: "Limpiezas faciales",
+    url: "/servicios/limpieza_facil.html",
+  },
+  {
+    nombre: "Peelings - Microneedling - Hidralips",
+    url: "/servicios/peelings.html",
+  },
+  {
+    nombre: "Manicura y pedicura",
+    url: "/servicios/manicura.html",
+  },
+  {
+    nombre: "Masajes corporales",
+    url: "/servicios/masajes_corporales.html",
+  },
+  {
+    nombre: "Novias",
+    url: "/novias.html",
+  },
+  {
+    nombre: "Egresadas",
+    url: "/egresadas.html",
+  },
+  {
+    nombre: "Quinceañeras",
+    url: "/quinceañeras.html",
+  },
+];
+
+// =====================================================
+// NORMALIZAR TEXTO PARA BUSCAR
+// Permite buscar sin importar mayúsculas ni tildes
+// =====================================================
+
+function normalizeText(text) {
+  return String(text || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
 
 // =====================================================
 // CARGAR PRODUCTOS
@@ -864,11 +926,11 @@ mobileSearchToggle?.addEventListener("click", (event) => {
 });
 
 // =====================================================
-// BUSCAR MIENTRAS ESCRIBE
+// BUSCAR PRODUCTOS Y SERVICIOS MIENTRAS ESCRIBE
 // =====================================================
 
 searchInput?.addEventListener("input", () => {
-  const value = searchInput.value.trim().toLowerCase();
+  const value = normalizeText(searchInput.value);
 
   if (!value) {
     if (searchResults) {
@@ -878,15 +940,22 @@ searchInput?.addEventListener("input", () => {
     return;
   }
 
-  const results = headerProducts
-    .filter((product) => product.nombre.toLowerCase().includes(value))
+  // Buscar servicios
+  const matchingServices = headerServices
+    .filter((service) => normalizeText(service.nombre).includes(value))
     .slice(0, 6);
 
-  renderSearchResults(results);
+  // Buscar productos
+  const matchingProducts = headerProducts
+    .filter((product) => normalizeText(product.nombre).includes(value))
+    .slice(0, 6);
+
+  // Mostrar primero servicios y después productos
+  renderSearchResults(matchingServices, matchingProducts);
 });
 
 // =====================================================
-// ENTER → IR A PRODUCTOS
+// ENTER → SERVICIO O PRODUCTOS
 // =====================================================
 
 searchInput?.addEventListener("keydown", (event) => {
@@ -894,39 +963,78 @@ searchInput?.addEventListener("keydown", (event) => {
     return;
   }
 
-  const value = searchInput.value.trim();
+  event.preventDefault();
+
+  const value = normalizeText(searchInput.value);
 
   if (!value) {
     return;
   }
 
-  window.location.href = `productos.html?search=${encodeURIComponent(value)}`;
+  // Priorizar coincidencia exacta de un servicio
+  const exactService = headerServices.find(
+    (service) => normalizeText(service.nombre) === value
+  );
+
+  if (exactService) {
+    window.location.href = exactService.url;
+    return;
+  }
+
+  // Si no hay coincidencia exacta, buscar un servicio
+  // cuyo nombre comience con el texto ingresado
+  const matchingService = headerServices.find((service) =>
+    normalizeText(service.nombre).startsWith(value)
+  );
+
+  if (matchingService) {
+    window.location.href = matchingService.url;
+    return;
+  }
+
+  // Si no coincide con un servicio, mantener
+  // el comportamiento original de productos
+  window.location.href = `productos.html?search=${encodeURIComponent(
+    searchInput.value.trim()
+  )}`;
 });
 
 // =====================================================
-// RENDER RESULTADOS
+// RENDERIZAR RESULTADOS
 // =====================================================
 
-function renderSearchResults(results) {
+function renderSearchResults(services, products) {
   if (!searchResults) {
     return;
   }
 
-  if (!results.length) {
+  if (!services.length && !products.length) {
     searchResults.innerHTML = `
-
       <div class="search-item">
-
-        No encontramos productos.
-
+        No encontramos resultados.
       </div>
-
     `;
 
     return;
   }
 
-  searchResults.innerHTML = results
+  // Resultados de servicios: solo el nombre
+  const servicesHTML = services
+    .map(
+      (service) => `
+      <div
+        class="search-item search-service"
+        data-type="service"
+        data-url="${service.url}"
+      >
+        ${service.nombre}
+      </div>
+    `
+    )
+    .join("");
+
+  // Resultados de productos: imagen, nombre y precio
+  const productsHTML = products
     .map((product) => {
       const image =
         product.images?.[0]?.url ||
@@ -938,41 +1046,38 @@ function renderSearchResults(results) {
       ).toLocaleString("es-AR");
 
       return `
-
-          <div
-            class="search-item"
-            data-id="${product.id}"
+        <div
+          class="search-item search-product"
+          data-type="product"
+          data-id="${product.id}"
+        >
+          <img
+            src="${image}"
+            alt="${product.nombre}"
           >
 
-            <img
-              src="${image}"
-              alt="${product.nombre}"
-            >
-
-
-            <div class="search-info">
-
-              <h4>
-                ${product.nombre}
-              </h4>
-
-              <p>
-                $${price}
-              </p>
-
-            </div>
-
+          <div class="search-info">
+            <h4>${product.nombre}</h4>
+            <p>$${price}</p>
           </div>
-
-        `;
+        </div>
+      `;
     })
     .join("");
 
-  document.querySelectorAll(".search-item").forEach((item) => {
-    item.addEventListener("click", () => {
-      const id = item.dataset.id;
+  searchResults.innerHTML = servicesHTML + productsHTML;
 
-      goToProduct(id);
+  // Asignar navegación a cada resultado
+  searchResults.querySelectorAll(".search-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      if (item.dataset.type === "service") {
+        window.location.href = item.dataset.url;
+        return;
+      }
+
+      if (item.dataset.type === "product") {
+        goToProduct(item.dataset.id);
+      }
     });
   });
 }
@@ -991,7 +1096,6 @@ function goToProduct(id) {
 
 document.addEventListener("click", (event) => {
   const insideSearch = event.target.closest(".search-container");
-
   const mobileButton = event.target.closest(".mobile-search-toggle");
 
   if (

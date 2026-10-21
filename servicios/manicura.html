@@ -310,42 +310,102 @@
   </div>
 </section>
 
+<!-- =================================================
+          PROFESIONAL
+================================================== -->
 
-        <!-- =================================================
-             PROFESIONAL
-        ================================================== -->
+<section class="makeup-profesionales-section">
 
-        <section class="servicio-profesional">
-            <div class="profesional-contenido">
+  <div class="makeup-profesionales-container">
 
-                <!-- FOTO PROFESIONAL -->
+    <!-- BLOQUE 1: ANTO -->
+    <article class="makeup-profesional-card">
 
-                <div class="profesional-foto">
+      <!-- FOTO -->
+      <div class="makeup-profesional-foto">
+        <img
+          src="../src/img_servicios/profesional_tania.webp"
+          alt="Anto, fundadora de MONA Studio y maquilladora profesional"
+          loading="lazy"
+        >
+      </div>
 
-                    <img
-                        id="profesionalFoto"
-                        src="../src/img_servicios/profesional_tania.webp"
-                        alt="">
-                </div>
+      <!-- INFORMACIÓN -->
+      <div class="makeup-profesional-info">
 
-                <!-- INFORMACIÓN -->
-                <div class="profesional-info">
-                    <span class="profesional-label">
-                        Profesional
-                    </span>
-                    <h2 id="profesionalNombre">
-                      Hola, Soy TANIA! 💅
-                    </h2>
-                    <p>
-                      Soy manicurista y especialista en uñas desde 2020. Desde entonces, me capacito constantemente junto a profesionales nacionales e internacionales para perfeccionar mis técnicas y mantenerme actualizada en las últimas tendencias, como la manicuría rusa y la técnica de limado brasilera.
-                      Me especializo en uñas esculpidas con moldes estructurales, capping y esmaltado semipermanente, siempre priorizando la salud y el cuidado de la uña natural para lograr resultados prolijos, estéticos y duraderos.
-                      Me caracterizo por ser detallista y perfeccionista. Por eso, cada turno está pensado como un espacio personalizado, dedicado exclusivamente a vos, donde podemos elegir y diseñar juntas cada detalle para conseguir un resultado que te encante y con el que te sientas plenamente conforme.
-                    </p>
+        <h2 class="makeup-profesional-nombre">
+          Hola, Soy TANIA! 💅
+        </h2>
 
-                    <p id="profesionalDescripcion"></p>
-                </div>
-            </div>
-        </section>
+        <div class="makeup-profesional-descripcion">
+          <p>Soy manicurista y especialista en uñas desde 2020. Desde entonces, me capacito constantemente junto a profesionales nacionales e internacionales para perfeccionar mis técnicas y mantenerme actualizada en las últimas tendencias, como la manicuría rusa y la técnica de limado brasilera.
+            Me especializo en uñas esculpidas con moldes estructurales, capping y esmaltado semipermanente, siempre priorizando la salud y el cuidado de la uña natural para lograr resultados prolijos, estéticos y duraderos.
+            Me caracterizo por ser detallista y perfeccionista. Por eso, cada turno está pensado como un espacio personalizado, dedicado exclusivamente a vos, donde podemos elegir y diseñar juntas cada detalle para conseguir un resultado que te encante y con el que te sientas plenamente conforme.</p>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- BLOQUE 2: STAFF -->
+    <article class="makeup-staff-card">
+
+      <!-- VIDEO -->
+      <div class="makeup-staff-video-wrapper">
+
+        <video
+          class="makeup-staff-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Conocé al equipo profesional de MONA Studio"
+        >
+          <source
+            src="../src/img_servicios/video_manicura1.mp4"
+            type="video/mp4"
+          >
+          Tu navegador no admite la reproducción de video.
+        </video>
+
+      </div>
+
+      <!-- TÍTULO -->
+      <div class="makeup-staff-contenido">
+        <h2 class="makeup-staff-titulo">
+
+        </h2>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- MODAL DEL VIDEO DEL STAFF -->
+<dialog
+  class="makeup-staff-modal"
+  aria-label="Video ampliado del staff de MONA Studio"
+>
+  <video
+    class="makeup-staff-video-grande"
+    loop
+    playsinline
+    controls
+    preload="metadata"
+    aria-label="Video del equipo profesional de MONA Studio"
+  >
+    <source
+      src="../src/img_servicios/video_manicura1.mp4"
+      type="video/mp4"
+    >
+  </video>
+</dialog>
+
+<!-- ========================================================================== -->
+
 
        <!-- ================================================
              GALERÍA
@@ -395,7 +455,7 @@
                 </div>
                 <div class="galeria-item">
                     <img
-                        src="../src/img_servicios/manicuria6.webp"
+                        src="../src/img_servicios/img_manicura3.webp"
                         alt="Maquillaje de novia"
                         loading="lazy">
                 </div>

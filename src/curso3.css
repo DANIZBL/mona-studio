@@ -1997,3 +1997,307 @@ GALERÍA NOVIAS
     aspect-ratio: 3 / 4;
   }
 }
+
+/* ==========================================
+   MODAL DE INSCRIPCIÓN
+========================================== */
+
+/* Fondo oscurecido */
+
+.inscripcion-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Modal abierto */
+
+.inscripcion-modal.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Ventana */
+
+.inscripcion-contenedor {
+  position: relative;
+
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+
+  padding: 42px 36px 30px;
+
+  background: #fffdf9;
+  color: #292323;
+
+  border: 1px solid rgba(165, 34, 50, 0.2);
+  border-radius: 14px;
+
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+
+  transform: translateY(20px) scale(0.98);
+
+  transition: transform 0.3s ease;
+}
+
+.inscripcion-modal.is-visible .inscripcion-contenedor {
+  transform: translateY(0) scale(1);
+}
+
+/* Botón cerrar */
+
+.inscripcion-cerrar {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #6d6262;
+  font-size: 30px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.inscripcion-cerrar:hover {
+  color: var(--color-rojo, #a52232);
+  transform: rotate(90deg);
+}
+
+/* Encabezado */
+
+.inscripcion-encabezado {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.inscripcion-etiqueta {
+  display: block;
+  margin-bottom: 10px;
+
+  color: var(--color-rojo, #a52232);
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.inscripcion-encabezado h2 {
+  margin: 0 0 12px;
+
+  color: var(--color-rojo, #a52232);
+
+  font-family: var(--font-3);
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.inscripcion-encabezado > p {
+  margin: 0;
+  font-family: var(--font-4);
+  color: #706767;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Curso seleccionado */
+
+.inscripcion-curso {
+  margin-top: 20px;
+  padding: 12px;
+
+  background: rgba(165, 34, 50, 0.06);
+  border-radius: 6px;
+
+  color: #706767;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.inscripcion-curso strong {
+  display: block;
+  margin-top: 4px;
+
+  color: var(--color-rojo, #a52232);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Formulario */
+
+#formularioInscripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.inscripcion-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inscripcion-campo label {
+  color: var(--color-rojo);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-4);
+}
+
+.inscripcion-campo input {
+  width: 100%;
+  min-height: 48px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ded5d1;
+  border-radius: 6px;
+
+  background: #fff;
+  color: #292323;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+.inscripcion-campo input::placeholder {
+  color: #a69c98;
+}
+
+.inscripcion-campo input:focus {
+  border-color: var(--color-dorado, #b89a58);
+
+  box-shadow: 0 0 0 3px rgba(184, 154, 88, 0.15);
+}
+
+/* Botón enviar */
+
+.inscripcion-enviar {
+  width: 100%;
+  min-height: 52px;
+
+  margin-top: 4px;
+  padding: 15px 18px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: var(--color-rojo, #a52232);
+  color: #fff;
+
+  font-family: var(--font-4);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.inscripcion-enviar:hover {
+  background: #821a27;
+  transform: translateY(-2px);
+}
+
+.inscripcion-enviar:focus-visible,
+.inscripcion-cerrar:focus-visible {
+  outline: 2px solid var(--color-dorado, #b89a58);
+  outline-offset: 4px;
+}
+
+/* Nota inferior */
+
+.inscripcion-nota {
+  margin: -7px 0 0;
+
+  color: #8a807c;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Evitar scroll del fondo */
+
+body.inscripcion-modal-abierto {
+  overflow: hidden;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 480px) {
+  .inscripcion-modal {
+    padding: 14px;
+  }
+
+  .inscripcion-contenedor {
+    max-height: calc(100vh - 28px);
+    padding: 38px 22px 24px;
+    border-radius: 10px;
+  }
+
+  .inscripcion-encabezado {
+    margin-bottom: 24px;
+  }
+
+  #formularioInscripcion {
+    gap: 16px;
+  }
+
+  .inscripcion-campo input {
+    min-height: 46px;
+    font-size: 16px;
+  }
+}
+
+/* Respetar preferencias de movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+  .inscripcion-modal,
+  .inscripcion-contenedor,
+  .inscripcion-cerrar,
+  .inscripcion-enviar {
+    transition: none;
+  }
+}

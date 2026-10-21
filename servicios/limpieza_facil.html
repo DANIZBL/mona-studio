@@ -347,62 +347,185 @@
 
         <!-- =================================================
              PROFESIONAL
-        ================================================== -->
+================================================== -->
 
-            <section class="servicio-profesional">
-            <div class="profesional-contenido">
-                <!-- FOTO PROFESIONAL -->
-                <div class="profesional-foto">
-                    <img
-                        id="profesionalFoto"
-                        src="../src/img_servicios/profesional_aixa_cosmetologa.webp"
-                        alt="">
-                </div>
-                <!-- INFORMACIÓN -->
-                <div class="profesional-info">
-                    <span class="profesional-label">
-                        Profesional
-                    </span>
-                    <h2 id="profesionalNombre">
-                      Hola! Soy Aixa
-                    </h2>
-                    <p>
-                      Cosmetóloga y cosmiatra, y me dedico al cuidado integral de la piel a través de tratamientos faciales personalizados.
-                      Me gusta entender qué necesita cada piel, conocer su historia y acompañar sus cambios. Por eso, mi forma de trabajar parte de escuchar, observar y adaptar cada tratamiento a las necesidades de cada persona, siempre respetando los tiempos de la piel y priorizando su salud.
-                      Creo que cuidar la piel va mucho más allá de un tratamiento puntual. Se trata de aprender a conocerla, entender qué le hace bien y construir, de a poco y con constancia, una rutina que la ayude a mantenerse saludable.
-                      En MONA quiero que te sientas en confianza, que puedas hacer tus consultas y que encuentres un espacio donde cuidarte, desconectar un ratito y recibir una atención pensada especialmente para vos y tu piel.
-                    </p>
-                    <p id="profesionalDescripcion"></p>
-                </div>
-            </div>
-        </section>
+<section class="makeup-profesionales-section">
 
-                <section class="servicio-profesional">
-            <div class="profesional-contenido">
-                <!-- FOTO PROFESIONAL -->
-                <div class="profesional-foto">
-                    <img
-                        id="profesionalFoto"
-                        src="../src/img_servicios/profesional_regi.webp"
-                        alt="">
-                </div>
-                <!-- INFORMACIÓN -->
-                <div class="profesional-info">
-                    <span class="profesional-label">
-                        Profesional
-                    </span>
-                    <h2 id="profesionalNombre">
-                      Hola! Soy Regi
-                    </h2>
-                    <p>
-                     Soy dermocosmiatra y esteticista, y me dedico a la estética desde 2017. Me formé en la Universidad de Morón, en Buenos Aires, y a lo largo de estos años continué capacitándome en distintas técnicas.
-                      Actualmente trabajo especialmente con pestañas y cejas, realizando depilación con hilo, laminado de cejas y lifting de pestañas, con técnica parcializada y técnica coreana. Tanto en el lifting como en el laminado priorizo el cuidado y la salud de las pestañas y cejas, buscando realzar su belleza natural y lograr un resultado duradero.
-                      Me gusta trabajar cada servicio de manera personalizada y prestar atención a los detalles, buscando que el resultado se adapte a las características de cada persona.
-                    </p>
-                    <p id="profesionalDescripcion"></p>
-                </div>
-            </div>
-        </section>
+  <div class="makeup-profesionales-container">
+    <article class="makeup-profesional-card">
+      <div class="makeup-profesional-foto">
+        <img
+          src="../src/img_servicios/profesional_aixa_cosmetologa.webp"
+          alt="Anto, fundadora de MONA Studio y maquilladora profesional"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- INFORMACIÓN -->
+      <div class="makeup-profesional-info">
+
+        <h2 class="makeup-profesional-nombre">
+          Hola! Soy Aixa
+        </h2>
+
+        <div class="makeup-profesional-descripcion">
+          <p>Cosmetóloga y cosmiatra, y me dedico al cuidado integral de la piel a través de tratamientos faciales personalizados.
+            Me gusta entender qué necesita cada piel, conocer su historia y acompañar sus cambios. Por eso, mi forma de trabajar
+            parte de escuchar, observar y adaptar cada tratamiento a las necesidades de cada persona, siempre respetando los 
+            tiempos de la piel y priorizando su salud. Creo que cuidar la piel va mucho más allá de un tratamiento puntual.
+            Se trata de aprender a conocerla, entender qué le hace bien y construir, de a poco y con constancia, una rutina 
+            que la ayude a mantenerse saludable. En MONA quiero que te sientas en confianza, que puedas hacer tus consultas
+            y que encuentres un espacio donde cuidarte, desconectar un ratito y recibir una atención pensada especialmente
+            para vos y tu piel.</p>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- BLOQUE 2: STAFF -->
+    <article class="makeup-staff-card">
+
+      <!-- VIDEO -->
+      <div class="makeup-staff-video-wrapper">
+
+        <video
+          class="makeup-staff-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Conocé al equipo profesional de MONA Studio"
+        >
+          <source
+            src="../src/img_servicios/video_limpieza5.mp4"
+            type="video/mp4"
+          >
+          Tu navegador no admite la reproducción de video.
+        </video>
+
+      </div>
+
+      <!-- TÍTULO -->
+      <div class="makeup-staff-contenido">
+        <h2 class="makeup-staff-titulo">
+          
+        </h2>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- MODAL DEL VIDEO DEL STAFF -->
+<dialog
+  class="makeup-staff-modal"
+  aria-label="Video ampliado del staff de MONA Studio"
+>
+  <video
+    class="makeup-staff-video-grande"
+    loop
+    playsinline
+    controls
+    preload="metadata"
+    aria-label="Video del equipo profesional de MONA Studio"
+  >
+    <source
+      src="../src/img_servicios/video_limpieza5.mp4"
+      type="video/mp4"
+    >
+  </video>
+</dialog>
+
+
+        <!-- =================================================
+             PROFESIONAL
+================================================== -->
+
+<section class="makeup-profesionales-section">
+
+  <div class="makeup-profesionales-container">
+
+        <article class="makeup-staff-card">
+      <div class="makeup-staff-video-wrapper">
+        <video
+          class="makeup-staff-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Conocé al equipo profesional de MONA Studio"
+        >
+          <source
+            src="../src/img_servicios/video_limpieza3.mp4"
+            type="video/mp4"
+          >
+          Tu navegador no admite la reproducción de video.
+        </video>
+
+      </div>
+      <!-- TÍTULO -->
+      <div class="makeup-staff-contenido">
+        <h2 class="makeup-staff-titulo">
+          
+        </h2>
+      </div>
+
+    </article>
+
+
+    <article class="makeup-profesional-card">
+      <div class="makeup-profesional-foto">
+        <img
+          src="../src/img_servicios/profesional_regi.webp"
+          alt="Anto, fundadora de MONA Studio y maquilladora profesional"
+          loading="lazy"
+        >
+      </div>
+      <div class="makeup-profesional-info">
+        <h2 class="makeup-profesional-nombre">
+          Hola! Soy Regi
+        </h2>
+
+        <div class="makeup-profesional-descripcion">
+          <p>Soy dermocosmiatra y esteticista, y me dedico a la estética desde 2017. Me formé en la Universidad de Morón, 
+            en Buenos Aires, y a lo largo de estos años continué capacitándome en distintas técnicas. Actualmente trabajo 
+            specialmente con pestañas y cejas, realizando depilación con hilo, laminado de cejas y lifting de pestañas, 
+            con técnica parcializada y técnica coreana. Tanto en el lifting como en el laminado priorizo el cuidado y 
+            la salud de las pestañas y cejas, buscando realzar su belleza natural y lograr un resultado duradero. 
+            Me gusta trabajar cada servicio de manera personalizada y prestar atención a los detalles, buscando que 
+            el resultado se adapte a las características de cada persona.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+</section>
+
+
+<!-- MODAL DEL VIDEO DEL STAFF -->
+<dialog
+  class="makeup-staff-modal"
+  aria-label="Video ampliado del staff de MONA Studio"
+>
+  <video
+    class="makeup-staff-video-grande"
+    loop
+    playsinline
+    controls
+    preload="metadata"
+    aria-label="Video del equipo profesional de MONA Studio"
+  >
+    <source
+      src="../src/img_servicios/video_limpieza3.mp4"
+      type="video/mp4"
+    >
+  </video>
+</dialog>
 
        <!-- ================================================
              GALERÍA

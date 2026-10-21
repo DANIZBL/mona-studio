@@ -282,7 +282,9 @@
   <div class="novias-video-container">
 
     
+
 <div class="novias-video-wrapper">
+
   <video
     class="novias-video"
     src="./src/videos_social/video_social3.mp4"
@@ -293,7 +295,46 @@
     preload="metadata"
     aria-label="Video de las experiencias para novias de MONA"
   ></video>
+
+  <!-- CONTROLES DEL VIDEO -->
+  <div class="novias-video-controls">
+
+    <!-- PLAY / PAUSA -->
+    <button
+      type="button"
+      class="novias-video-play"
+      aria-label="Pausar video"
+    >
+      <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8 5v14M16 5v14" />
+      </svg>
+
+      <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m8 5 12 7-12 7z" />
+      </svg>
+    </button>
+
+    <!-- SONIDO -->
+    <button
+      type="button"
+      class="novias-video-sound"
+      aria-label="Activar sonido"
+    >
+      <svg class="icon-muted" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M11 5 6 9H3v6h3l5 4z" />
+        <path d="m16 9 5 6m0-6-5 6" />
+      </svg>
+
+      <svg class="icon-sound" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M11 5 6 9H3v6h3l5 4z" />
+        <path d="M15.5 8.5a5 5 0 0 1 0 7m3-10a9 9 0 0 1 0 13" />
+      </svg>
+    </button>
+
+  </div>
+
 </div>
+
 
 <!-- Modal del video de novias -->
 <dialog class="novias-video-modal" aria-label="Video de las experiencias para novias">
@@ -387,7 +428,24 @@
             </div>
           </div>
 
-          <!-- ========================GALLERIA EXPERIENCIA==================================== -->
+
+<!-- =========================================================
+     GALERÍA DE VIDEOS 3
+========================================================= -->
+
+<section class="galleria-3item-section">
+
+  <div class="galleria-3-header">
+    <h2>Ellas ya vivieron la experiencia</h2>
+  </div>
+
+  <div
+    id="galleria3VideosGallery"
+    class="galleria-3-gallery"
+  ></div>
+
+
+<!-- ========================GALLERIA EXPERIENCIA==================================== -->
           <section class="novias-gallery">
             <div class="novias-container">
               <h2>Experiencia Mona</h2>
@@ -484,6 +542,23 @@
           </div>
         </div>
       </section>
+
+      <!-- =========================================================
+     GALERÍA MOMENTOS EN FAMILIA
+========================================================= -->
+
+<section class="momentos-en-familia-section">
+
+  <div class="momentos-en-familia-header">
+    <h2>VIVILO CON LAS PERSONAS QUE AMAS</h2>
+  </div>
+
+  <div
+    id="momentosEnFamiliaGallery"
+    class="momentos-en-familia-gallery"
+  ></div>
+
+</section>
 
       <!-- ========================MARCAS======================================== -->
 

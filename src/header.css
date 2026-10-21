@@ -563,6 +563,24 @@ body {
 }
 
 /* ==========================================
+   RESULTADOS DE SERVICIOS EN EL BUSCADOR
+========================================== */
+
+.search-item.search-service {
+  display: block;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.search-item.search-service:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================
    MOBILE
 ========================================== */
 
@@ -1581,6 +1599,18 @@ strong {
   max-width: 600px;
 }
 
+.cuenta-regresiva-info a {
+  background-color: var(--color-rojo);
+  color: var(--color-blanco);
+  font-family: var(--font-4);
+  border-radius: 15px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  padding: 15px 15px;
+  bottom: -2rem;
+}
+
 /* ==========================================
    CARD
 ========================================== */
@@ -1819,13 +1849,24 @@ strong {
     line-height: 1.3;
   }
 
+  .cuenta-regresiva-info a {
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    font-family: var(--font-4);
+    border-radius: 15px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    position: relative;
+    padding: 15px 15px;
+    bottom: -2rem;
+  }
+
   .cuenta-regresiva-card {
     width: 400px;
     max-width: 100%;
     height: 350px;
     position: relative;
-    bottom: -1rem;
-    left: 0rem;
+    top: 2rem;
     padding: 28px 28px 35px;
     background: rgba(255, 0, 0, 0.82);
     border-radius: 18px;
