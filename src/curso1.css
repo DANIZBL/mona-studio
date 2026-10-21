@@ -967,20 +967,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 42px;
+  width: 100px;
+  padding: 10px 10px;
   height: 42px;
+  border-radius: 10px;
   margin-top: 25px;
-  border-radius: 50%;
   background: var(--color-rojo);
   color: #fff;
   font-family: var(--font-4);
-  font-size: 1.8rem;
+  font-weight: 600;
+  font-size: 1rem;
   line-height: 1;
   transition: transform 0.3s ease;
-}
-
-.presentation-card.is-open .presentation-icon {
-  transform: rotate(45deg);
 }
 
 .presentation-toggle:focus-visible {
@@ -1206,6 +1204,7 @@ body {
 }
 
 .benefits-card {
+  text-align: center;
   background: #fff;
   border-radius: 30px;
   padding: 50px;
@@ -1238,9 +1237,7 @@ body {
 }
 
 .benefits-card li {
-  position: relative;
   padding-left: 32px;
-  margin-bottom: 18px;
   line-height: 1.8;
   font-family: var(--font-4);
   color: var(--color-beige);
@@ -1590,7 +1587,7 @@ body {
 
   left: 10px;
 
-  top: -2px;
+  top: -0.7rem;
 
   color: var(--color-rojo);
 

@@ -300,3 +300,102 @@ modal.addEventListener("close", () => {
 
   videoPreview.play().catch(() => {});
 });
+
+/* =========================
+   VIDEOS
+========================= */
+
+const momentosEnFamiliaItems = [
+  {
+    type: "video",
+    src: "../src/vid/quince4.mp4",
+  },
+  {
+    type: "image",
+    src: "../src/img/quince9.webp",
+  },
+  {
+    type: "video",
+    src: "../src/vid/quince5.mp4",
+  },
+  {
+    type: "image",
+    src: "../src/img/quince10.webp",
+  },
+  {
+    type: "video",
+    src: "../src/vid/quince6.mp4",
+  },
+  {
+    type: "image",
+    src: "../src/img/quince11.webp",
+  },
+];
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+const momentosEnFamiliaGallery = document.getElementById(
+  "momentosEnFamiliaGallery"
+);
+
+/* =========================
+   VALIDAR CONTENEDOR
+========================= */
+
+if (momentosEnFamiliaGallery) {
+  /* =========================
+     CREAR GALERÍA
+  ========================= */
+
+  momentosEnFamiliaItems.forEach((item) => {
+    const galleryItem = document.createElement("div");
+
+    galleryItem.classList.add("momentos-en-familia-item");
+
+    /* =========================
+       CREAR VIDEO
+    ========================= */
+
+    if (item.type === "video") {
+      const video = document.createElement("video");
+
+      video.src = item.src;
+      video.muted = true;
+      video.loop = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.controls = true;
+      video.preload = "auto";
+
+      video.setAttribute("muted", "");
+      video.setAttribute("autoplay", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+
+      video.play().catch((error) => {
+        console.log("Autoplay bloqueado:", error);
+      });
+
+      galleryItem.appendChild(video);
+    } else if (item.type === "image") {
+      /* =========================
+   CREAR IMAGEN
+========================= */
+      const img = document.createElement("img");
+
+      img.src = item.src;
+      img.alt = "Momentos en familia";
+      img.loading = "lazy";
+
+      galleryItem.appendChild(img);
+    }
+
+    /* =========================
+       AGREGAR A LA GALERÍA
+    ========================= */
+
+    momentosEnFamiliaGallery.appendChild(galleryItem);
+  });
+}

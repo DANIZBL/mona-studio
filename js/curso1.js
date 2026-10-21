@@ -8,8 +8,8 @@ document.querySelectorAll(".module").forEach((module) => {
 
 const galleryItems = [
   {
-    type: "image",
-    src: "../src/img/maquillaje_p1.webp",
+    type: "video",
+    src: "../src/videos_social/video_social5.mp4",
     alt: "Maquillaje social",
   },
 
@@ -19,9 +19,8 @@ const galleryItems = [
   },
 
   {
-    type: "image",
-    src: "../src/img/maquillaje_p3.webp",
-    alt: "Makeup",
+    type: "video",
+    src: "../src/vid/galeria_perfeccionamiento2.mp4",
   },
 
   {
@@ -43,7 +42,7 @@ const galleryItems = [
 
   {
     type: "video",
-    src: "../src/vid/maquillaje_p6.mp4",
+    src: "../src/vid/galeria_perfeccionamiento3.mp4",
     alt: "Egresadas",
   },
   {
