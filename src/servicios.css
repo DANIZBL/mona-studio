@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f8f7f2;
+}
+
 /* =====================================================
    SERVICIO
 ===================================================== */
@@ -2621,11 +2625,17 @@ MANICURIA Y PEDICURIA
 /* TÍTULO STAFF */
 
 .makeup-staff-contenido {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
 
   padding: 10px 20px;
+}
+
+.makeup-staff-contenido p {
+  color: var(--color-rojo);
+  font-family: var(--font-4);
+  font-weight: 600;
 }
 
 .makeup-staff-titulo {

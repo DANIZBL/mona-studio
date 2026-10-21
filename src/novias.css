@@ -2139,3 +2139,219 @@ img {
 #galleryModalVideo {
   display: none;
 }
+
+/* ==========================================
+   CONTROLES DEL VIDEO DE NOVIAS
+========================================== */
+
+.novias-video-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.novias-video-controls {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.novias-video-controls button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.novias-video-controls button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.06);
+}
+
+.novias-video-controls svg {
+  width: 22px;
+  height: 22px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Icono play */
+
+.novias-video-play .icon-play {
+  display: none;
+}
+
+.novias-video-play.is-paused .icon-pause {
+  display: none;
+}
+
+.novias-video-play.is-paused .icon-play {
+  display: block;
+}
+
+/* Iconos de sonido */
+
+.novias-video-sound .icon-sound {
+  display: none;
+}
+
+.novias-video-sound.is-unmuted .icon-muted {
+  display: none;
+}
+
+.novias-video-sound.is-unmuted .icon-sound {
+  display: block;
+}
+
+/* Ajustes para móviles */
+
+@media (max-width: 768px) {
+  .novias-video-controls {
+    right: 10px;
+    bottom: 10px;
+    gap: 8px;
+  }
+
+  .novias-video-controls button {
+    width: 38px;
+    height: 38px;
+    padding: 9px;
+  }
+}
+
+/* =====================================================
+   GALERÍA DE VIDEOS 3
+===================================================== */
+
+/* =========================
+   SECCIÓN
+========================= */
+
+.galleria-3-section {
+  width: 100%;
+  padding: 15px 5% 80px;
+  background: #fff;
+  font-family: var(--font-secundaria);
+  margin-top: 5rem;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.galleria-3-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.galleria-3-header h2 {
+  font-size: 4rem;
+  color: var(--color-oro);
+  font-family: var(--font-elegante);
+}
+
+/* =========================
+   GALERÍA PC
+========================= */
+
+.galleria-3-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* =========================
+   CADA VIDEO
+========================= */
+
+.galleria-3item-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #eee;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.galleria-3-item video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.galleria-3-item:hover video {
+  transform: scale(1.04);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .galleria-3-section {
+    padding: 15px 0 60px;
+  }
+
+  .galleria-3-header {
+    padding: 0 20px;
+    margin-bottom: 25px;
+  }
+
+  .galleria-3-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .galleria-3-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 0 20px 15px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .galleria-3-gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .galleria-3-item {
+    flex: 0 0 75%;
+    scroll-snap-align: start;
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* =============================================== */

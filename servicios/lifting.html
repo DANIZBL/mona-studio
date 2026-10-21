@@ -205,45 +205,110 @@
             >LO QUIERO! </a>
         </section>
 
-        <!-- =================================================
+<!-- =================================================
              PROFESIONAL
-        ================================================== -->
+================================================== -->
 
-        <section class="servicio-profesional">
-            <div class="profesional-contenido">
+<section class="makeup-profesionales-section">
 
-                <!-- FOTO PROFESIONAL -->
+  <div class="makeup-profesionales-container">
 
-                <div class="profesional-foto">
+    <!-- BLOQUE 1: ANTO -->
+    <article class="makeup-profesional-card">
 
-                    <img
-                        id="profesionalFoto"
-                        src="../src/img_servicios/profesional_regi.webp"
-                        alt="">
-                </div>
+      <!-- FOTO -->
+      <div class="makeup-profesional-foto">
+        <img
+          src="../src/img_servicios/profesional_regi.webp"
+          alt="Anto, fundadora de MONA Studio y maquilladora profesional"
+          loading="lazy"
+        >
+      </div>
 
-                <!-- INFORMACIÓN -->
-                <div class="profesional-info">
-                    <span class="profesional-label">
-                        Profesional
-                    </span>
-                    <h2 id="profesionalNombre">
-                      Hola! Soy Regi
-                    </h2>
-                    <p>
-                      Soy dermocosmiatra y esteticista, y me dedico a la estética desde 2017. Me formé en la Universidad de Morón, en Buenos Aires, y a lo largo de estos años continué capacitándome en distintas técnicas.
-                      Actualmente trabajo especialmente con pestañas y cejas, realizando depilación con hilo, laminado de cejas y lifting de pestañas, con técnica parcializada y técnica coreana. Tanto en el lifting como en el laminado priorizo el cuidado y la salud de las pestañas y cejas, buscando realzar su belleza natural y lograr un resultado duradero.
-                      Me gusta trabajar cada servicio de manera personalizada y prestar atención a los detalles, buscando que el resultado se adapte a las características de cada persona.
-                    </p>
+      <!-- INFORMACIÓN -->
+      <div class="makeup-profesional-info">
 
-                    <p id="profesionalDescripcion"></p>
-                </div>
-            </div>
-        </section>
+        <h2 class="makeup-profesional-nombre">
+          Hola! Soy Regi
+        </h2>
 
-       <!-- ================================================
+        <div class="makeup-profesional-descripcion">
+          <p>Soy dermocosmiatra y esteticista, y me dedico a la estética desde 2017. Me formé en la Universidad de Morón, 
+            en Buenos Aires, y a lo largo de estos años continué capacitándome en distintas técnicas. Actualmente trabajo 
+            specialmente con pestañas y cejas, realizando depilación con hilo, laminado de cejas y lifting de pestañas, 
+            con técnica parcializada y técnica coreana. Tanto en el lifting como en el laminado priorizo el cuidado y 
+            la salud de las pestañas y cejas, buscando realzar su belleza natural y lograr un resultado duradero. 
+            Me gusta trabajar cada servicio de manera personalizada y prestar atención a los detalles, buscando que 
+            el resultado se adapte a las características de cada persona.</p>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- BLOQUE 2: STAFF -->
+    <article class="makeup-staff-card">
+
+      <!-- VIDEO -->
+      <div class="makeup-staff-video-wrapper">
+
+        <video
+          class="makeup-staff-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Conocé al equipo profesional de MONA Studio"
+        >
+          <source
+            src="../src/vid/lifting_presentacion.mp4"
+            type="video/mp4"
+          >
+          Tu navegador no admite la reproducción de video.
+        </video>
+
+      </div>
+
+      <!-- TÍTULO -->
+      <div class="makeup-staff-contenido">
+        <h2 class="makeup-staff-titulo">
+          Que es el lifting?
+        </h2>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- MODAL DEL VIDEO DEL STAFF -->
+<dialog
+  class="makeup-staff-modal"
+  aria-label="Video ampliado del staff de MONA Studio"
+>
+  <video
+    class="makeup-staff-video-grande"
+    loop
+    playsinline
+    controls
+    preload="metadata"
+    aria-label="Video del equipo profesional de MONA Studio"
+  >
+    <source
+      src="../src/vid/lifting_presentacion.mp4"
+      type="video/mp4"
+    >
+  </video>
+</dialog>
+
+<!-- ========================================================================== -->
+
+
+<!-- ================================================
              GALERÍA
-        =================================================== -->
+=================================================== -->
 
         <section class="servicio-galeria-section">
             <div class="galeria-titulo">
@@ -416,7 +481,7 @@
       </div>
     </footer>
 
-    <script src="../js/seervicios.js"></script>
-        <script src="../js/header.js"></script>
+    <script src="../js/seervicios.js" defer></script>
+    <script src="../js/header.js" de></script>
   </body>
 </html>
