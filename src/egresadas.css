@@ -414,6 +414,21 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.combo-card a {
+  background-color: var(--color-rojo);
+  font-family: var(--font-4);
+  color: var(--color-blanco);
+  border-radius: 15px;
+  font-size: 1.5rem;
+  margin-top: auto; /* Empuja el botón al final */
+  text-decoration: none;
+  text-align: center;
+}
+
+.combo-card h5 {
+  margin: 0;
+}
+
 /* Efecto al pasar el mouse */
 
 .combo-card:hover {
@@ -720,5 +735,195 @@
     flex: 0 0 75%;
     scroll-snap-align: start;
     aspect-ratio: 3 / 4;
+  }
+}
+
+/*========================================*/
+
+/* =========================================================
+   GALERÍA EGRESADAS AYD
+========================================================= */
+
+.egresadas-ayd-section {
+  width: 100%;
+  padding: 60px 5%;
+  box-sizing: border-box;
+  background: var(--color-blanco, #fff);
+}
+
+/* ENCABEZADO */
+
+.egresadas-ayd-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.egresadas-ayd-header h2 {
+  margin: 0 0 10px;
+  font-family: var(--font-elegante);
+  color: var(--color-rojo);
+  font-size: 3rem;
+}
+
+.egresadas-ayd-header p {
+  margin: 0;
+  font-family: var(--font-4);
+  color: var(--color-rojo);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* GRILLA DE VIDEOS */
+
+.egresadas-ayd-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  width: 100%;
+}
+
+/* TARJETA */
+
+.egresadas-ayd-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
+  background: #171717;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+/* VIDEO DE VISTA PREVIA */
+
+.egresadas-ayd-card video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CAPA DE CONTROLES */
+
+.egresadas-ayd-controls {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Los controles aparecen al pasar el cursor */
+
+.egresadas-ayd-card:hover .egresadas-ayd-controls,
+.egresadas-ayd-card:focus-within .egresadas-ayd-controls {
+  opacity: 1;
+}
+
+/* BOTONES */
+
+.egresadas-ayd-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.egresadas-ayd-control:hover {
+  background: rgba(165, 34, 50, 0.95);
+  transform: scale(1.08);
+}
+
+.egresadas-ayd-control:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* MODAL */
+
+.egresadas-ayd-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.egresadas-ayd-modal.is-open {
+  display: flex;
+}
+
+.egresadas-ayd-modal-content {
+  width: min(900px, 100%);
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+.egresadas-ayd-modal-content video {
+  display: block;
+  width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .egresadas-ayd-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+/* CELULAR */
+
+@media (max-width: 550px) {
+  .egresadas-ayd-section {
+    padding: 35px 15px;
+  }
+
+  .egresadas-ayd-header {
+    margin-bottom: 25px;
+  }
+
+  .egresadas-ayd-gallery {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .egresadas-ayd-card {
+    border-radius: 12px;
+  }
+
+  /* En pantallas táctiles, los controles quedan visibles */
+  .egresadas-ayd-controls {
+    opacity: 1;
+  }
+
+  .egresadas-ayd-control {
+    width: 46px;
+    height: 46px;
   }
 }

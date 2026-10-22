@@ -310,25 +310,15 @@ const momentosEnFamiliaItems = [
     type: "video",
     src: "../src/vid/quince4.mp4",
   },
-  {
-    type: "image",
-    src: "../src/img/quince9.webp",
-  },
+
   {
     type: "video",
     src: "../src/vid/quince5.mp4",
   },
-  {
-    type: "image",
-    src: "../src/img/quince10.webp",
-  },
+
   {
     type: "video",
     src: "../src/vid/quince6.mp4",
-  },
-  {
-    type: "image",
-    src: "../src/img/quince11.webp",
   },
 ];
 
