@@ -751,6 +751,7 @@ Limpiezas faciales
   color: var(--color-rojo);
   font-size: 2.5rem;
   text-align: center;
+  line-height: 1.1;
 }
 
 .servicio-presentacion-info h3 {
@@ -1206,6 +1207,7 @@ MASAJES
   color: var(--color-rojo);
   font-family: var(--font-cursiva1);
   font-size: 3rem;
+  line-height: 1.2;
 }
 
 @media (max-width: 600px) {
@@ -2228,6 +2230,7 @@ PEELINGS
   font-size: 3rem;
   font-family: var(--font-cursiva1);
   color: var(--color-rojo);
+  line-height: 1.5;
 }
 
 .tratamientos_piel_seccion {
@@ -2472,9 +2475,9 @@ MANICURIA Y PEDICURIA
 }
 
 .servicio-presentacion-info_manicuria p {
-  font-family: var(--font-cursiva1);
+  font-family: var(--font-4);
   color: var(--color-rojo);
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 650px) {
@@ -2489,6 +2492,28 @@ MANICURIA Y PEDICURIA
     color: var(--color-rojo);
     font-size: 2rem;
   }
+}
+
+/* ==========================================
+   PRECIOS SOBRE LOS BOTONES
+========================================== */
+
+.tratamientos_piel_precio {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  margin-bottom: 10px;
+
+  color: var(--color-rojo);
+  font-family: var(--font-4);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* El botón conserva su estilo original */
+.tratamientos_piel_boton {
+  margin-top: 0;
 }
 
 /*================MAKE UP==========================*/
@@ -2683,6 +2708,13 @@ MANICURIA Y PEDICURIA
   font-weight: 600;
 }
 
+.makeup-staff-contenido h4 {
+  color: var(--color-rojo);
+  font-size: 1.5rem;
+  font-family: var(--font-4);
+  font-weight: 600;
+}
+
 .makeup-staff-titulo {
   margin: 0;
 
@@ -2814,6 +2846,213 @@ MANICURIA Y PEDICURIA
 
   .makeup-staff-modal {
     width: 92vw;
+  }
+}
+
+/* ==========================================
+   SEGUNDO VIDEO STAFF
+   ESTILOS EXCLUSIVOS
+========================================== */
+
+.makeup-staff-video-extra-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+  border-radius: 20px;
+  background: #111;
+}
+
+.makeup-staff-video-extra {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   RESPONSIVE - SEGUNDO VIDEO
+========================================== */
+
+@media (max-width: 768px) {
+  .makeup-staff-video-extra-wrapper {
+    aspect-ratio: 4 / 5;
+    border-radius: 20px;
+  }
+
+  .makeup-staff-video-extra {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ==========================================
+   TESTIMONIOS DE REGI
+========================================== */
+
+.regi-testimonios {
+  width: 100%;
+  padding: 28px 0 10px;
+  overflow: hidden;
+}
+
+.regi-testimonios-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.regi-testimonios-etiqueta {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-family: var(--font-4);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-rojo, #a52232);
+}
+
+.regi-testimonios-header h3 {
+  margin: 0 0 5px;
+  font-family: var(--font-3);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-rojo, #a52232);
+}
+
+.regi-testimonios-header p {
+  max-width: 360px;
+  margin: 0 auto;
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Área fija para todos los mensajes */
+
+.regi-testimonios-chat {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+
+  width: 100%;
+  min-height: 190px;
+  padding: 10px 0;
+}
+
+/* Todos los globos tienen el mismo diseño */
+
+.regi-mensaje {
+  grid-area: 1 / 1;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 18px;
+
+  background: #c38fdb;
+  color: var(--color-blanco);
+  font-family: var(--font-4);
+  font-weight: 400;
+
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+/* Mismo color y forma, sin importar el mensaje */
+
+.regi-mensaje.izquierda,
+.regi-mensaje.derecha {
+  align-self: center;
+  justify-self: stretch;
+  border-radius: 18px;
+  background: #fce8ec;
+  color: #352326;
+}
+
+/* Mensaje visible */
+
+.regi-mensaje.regi-mensaje-visible {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+/* Mensaje saliente */
+
+.regi-mensaje.regi-mensaje-saliendo {
+  opacity: 0;
+  transform: translateY(-12px);
+  z-index: 0;
+}
+
+/* Texto */
+
+.regi-mensaje-texto {
+  margin: 0;
+  font-family: var(--font-4);
+  font-size: 0.93rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+/* Pie */
+
+.regi-mensaje-pie {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  font-family: var(--font-4);
+  font-size: 0.68rem;
+  color: #fcfbfb;
+}
+
+.regi-mensaje-check {
+  color: var(--color-blanco);
+  font-size: 0.8rem;
+  letter-spacing: -3px;
+  padding-right: 3px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .regi-testimonios {
+    padding-top: 20px;
+  }
+
+  .regi-testimonios-chat {
+    min-height: 220px;
+  }
+
+  .regi-mensaje {
+    padding: 17px;
+  }
+
+  .regi-mensaje-texto {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+}
+
+/* Accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+  .regi-mensaje {
+    transition: none;
+    transform: none;
   }
 }
 
@@ -3105,4 +3344,425 @@ LIFTING
   }
 }
 
-/*====================================*/
+/* ==========================================
+   COMBO BEAUTY + VIDEO
+========================================== */
+
+.combo-beauty-seccion {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 35px 5%;
+  display: block;
+}
+
+/* DISTRIBUCIÓN EN DOS COLUMNAS */
+
+.combo-beauty-layout {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 35px;
+  align-items: stretch;
+}
+
+/* TARJETA */
+
+.combo-beauty-tarjeta {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* VIDEO */
+
+.combo-beauty-video-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: 650px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #f5e9eb;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.combo-beauty-video {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+/* TABLETS Y NOTEBOOKS PEQUEÑAS */
+
+@media (max-width: 950px) {
+  .combo-beauty-seccion {
+    padding: 30px 4%;
+  }
+
+  .combo-beauty-layout {
+    gap: 22px;
+  }
+
+  .combo-beauty-tarjeta {
+    padding: 25px 18px;
+  }
+
+  .combo-beauty-video-wrapper {
+    min-height: 600px;
+  }
+
+  .combo-beauty-titulo {
+    font-size: 1.8rem;
+  }
+}
+
+/* MÓVILES: TARJETA ARRIBA, VIDEO ABAJO */
+
+@media (max-width: 700px) {
+  .combo-beauty-seccion {
+    padding: 20px 12px;
+  }
+
+  .combo-beauty-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .combo-beauty-tarjeta {
+    height: auto;
+    padding: 22px 15px;
+  }
+
+  .combo-beauty-video-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    border-radius: 18px;
+  }
+
+  .combo-beauty-video {
+    object-fit: cover;
+  }
+}
+
+/*==================================*/
+
+/* ==========================================
+   TESTIMONIOS DE PERFILADO
+========================================== */
+
+.perfilado-testimonios {
+  width: 100%;
+  padding: 28px 0 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ENCABEZADO */
+
+.perfilado-testimonios-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.perfilado-testimonios-etiqueta {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-family: var(--font-4);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-rojo, #a52232);
+}
+
+.perfilado-testimonios-header h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-3);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-rojo, #a52232);
+}
+
+.perfilado-testimonios-header p {
+  max-width: 360px;
+  margin: 0 auto;
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* CONTENEDOR DE MENSAJES */
+
+.perfilado-testimonios-chat {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+/* BURBUJA */
+
+.perfilado-mensaje {
+  position: absolute;
+  inset: 10px 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--color-rojo);
+  color: #fcf9fa;
+
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+/* MENSAJE VISIBLE */
+
+.perfilado-mensaje.perfilado-mensaje-visible {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+/* MENSAJE QUE DESAPARECE */
+
+.perfilado-mensaje.perfilado-mensaje-saliendo {
+  opacity: 0;
+  transform: translateY(-12px);
+  z-index: 0;
+}
+
+/* TEXTO */
+
+.perfilado-mensaje-texto {
+  margin: 0;
+  font-family: var(--font-4);
+  font-size: 0.93rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+/* PIE DEL MENSAJE */
+
+.perfilado-mensaje-pie {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  font-family: var(--font-4);
+  font-size: 0.68rem;
+  color: #fcfbfb;
+}
+
+.perfilado-mensaje-check {
+  padding-right: 3px;
+  color: var(--color-rojo, #fffdfe);
+  font-size: 0.8rem;
+  letter-spacing: -3px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .perfilado-testimonios {
+    padding-top: 20px;
+  }
+
+  .perfilado-testimonios-chat {
+    height: 250px;
+  }
+
+  .perfilado-mensaje {
+    padding: 17px;
+  }
+
+  .perfilado-mensaje-texto {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+  .perfilado-mensaje {
+    transition: none;
+    transform: none;
+  }
+}
+
+/*==================================*/
+
+/* ==========================================
+   TESTIMONIOS DE LIMPIEZA FACIAL
+========================================== */
+
+.limpieza-facial-testimonios {
+  width: 100%;
+  padding: 28px 0 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ENCABEZADO */
+
+.limpieza-facial-testimonios-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.limpieza-facial-testimonios-etiqueta {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-family: var(--font-4);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-rojo, #a52232);
+}
+
+.limpieza-facial-testimonios-header h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-3);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-rojo, #a52232);
+}
+
+.limpieza-facial-testimonios-header p {
+  max-width: 360px;
+  margin: 0 auto;
+  font-family: var(--font-4);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* CONTENEDOR DE TESTIMONIOS */
+
+.limpieza-facial-testimonios-chat {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+/* BURBUJA */
+
+.limpieza-facial-mensaje {
+  position: absolute;
+  inset: 10px 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--color-rojo);
+  color: #fcfafa;
+
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+/* MENSAJE VISIBLE */
+
+.limpieza-facial-mensaje.limpieza-facial-mensaje-visible {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+/* MENSAJE QUE DESAPARECE */
+
+.limpieza-facial-mensaje.limpieza-facial-mensaje-saliendo {
+  opacity: 0;
+  transform: translateY(-12px);
+  z-index: 0;
+}
+
+/* TEXTO */
+
+.limpieza-facial-mensaje-texto {
+  margin: 0;
+  font-family: var(--font-4);
+  font-size: 0.93rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+/* PIE DEL MENSAJE */
+
+.limpieza-facial-mensaje-pie {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  font-family: var(--font-4);
+  font-size: 0.68rem;
+  color: #fdfcfc;
+}
+
+.limpieza-facial-mensaje-check {
+  padding-right: 3px;
+  color: var(--color-rojo, #fdfdfd);
+  font-size: 0.8rem;
+  letter-spacing: -3px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .limpieza-facial-testimonios {
+    padding-top: 20px;
+  }
+
+  .limpieza-facial-testimonios-chat {
+    height: 250px;
+  }
+
+  .limpieza-facial-mensaje {
+    padding: 17px;
+  }
+
+  .limpieza-facial-mensaje-texto {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+  .limpieza-facial-mensaje {
+    transition: none;
+    transform: none;
+  }
+}

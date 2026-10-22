@@ -251,12 +251,18 @@
   }
 }
 
+/* ==========================================
+   TESTIMONIO HERO - GLOBO DE CHAT
+========================================== */
+
 .novias-hero-testimonial {
   position: absolute;
   right: 50px;
   bottom: 55px;
   width: 360px;
+  box-sizing: border-box;
   padding: 25px 28px;
+
   color: white;
   background: rgba(241, 207, 185, 0.26);
   border: 1px solid rgba(255, 142, 142, 0.25);
@@ -267,39 +273,49 @@
   border-radius: 20px;
 }
 
-.novias-hero-testimonial-label {
-  display: block;
-
-  margin-bottom: 12px;
-
-  font-size: 0.65rem;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-
-  opacity: 0.75;
-}
+/* ETIQUETA */
 
 .novias-hero-testimonial span {
+  display: block;
+  margin: 0 0 18px 8px;
+
   font-family: var(--font-3);
   font-size: 0.8rem;
-  margin-left: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.85;
 }
+
+/* GLOBO DE CONVERSACIÓN */
 
 .novias-hero-testimonial blockquote {
-  margin: 15px;
+  position: relative;
+  margin: 0;
+  padding: 20px 22px;
+
   font-family: var(--font-4);
   font-size: 1rem;
-  line-height: 1.5;
+  font-style: italic;
+  line-height: 1.6;
+
+  color: #fff;
+  background: var(--color-rosaoro);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 20px 20px 20px 5px;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
 }
 
+/* NOMBRE DE LA NOVIA, SI LO UTILIZÁS */
+
 .novias-hero-testimonial-name {
+  display: block;
+  margin: 18px 0 0 22px;
+
+  font-family: var(--font-4);
   font-size: 0.75rem;
-
   letter-spacing: 1px;
-
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
