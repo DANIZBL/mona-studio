@@ -20,7 +20,7 @@ const galleryItems = [
 
   {
     type: "video",
-    src: "../src/vid/galeria_perfeccionamiento2.mp4",
+    src: "../src/vid/maquillaje7.mp4",
   },
 
   {
@@ -42,7 +42,7 @@ const galleryItems = [
 
   {
     type: "video",
-    src: "../src/vid/galeria_perfeccionamiento3.mp4",
+    src: "../src/vid/maquillaje8.mp4",
     alt: "Egresadas",
   },
   {

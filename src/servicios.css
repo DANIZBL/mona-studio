@@ -20,6 +20,34 @@ body {
   padding: 70px 0 100px;
 }
 
+.servicio-presentacion-info h5 {
+  color: var(--color-rojo);
+  font-family: var(--font-4);
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.tratamientos_piel_tarjeta h5 {
+  color: var(--color-blanco);
+  font-family: var(--font-4);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.tratamientos_piel_tarjeta:hover h5 {
+  color: var(--color-rojo);
+}
+
+.masajes_tarjeta h5 {
+  color: var(--color-blanco);
+  font-family: var(--font-4);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
 /* =====================================================
    PRESENTACIÓN
 ===================================================== */
@@ -721,7 +749,7 @@ Limpiezas faciales
 .servicio-presentacion-info h2 {
   font-family: var(--font-cursiva1);
   color: var(--color-rojo);
-  font-size: 30px;
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -771,6 +799,13 @@ Limpiezas faciales
   text-align: center;
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.limpieza_contenedor h5 {
+  color: var(--color-rojo);
+  font-size: 2rem;
+  font-family: var(--font-4);
+  font-weight: 600;
 }
 
 .limpieza_contenedor:hover {
@@ -1361,7 +1396,7 @@ MASAJES
 ========================================== */
 
 .masajes_boton {
-  display: inline-flex;
+  display: block;
   align-items: center;
   justify-content: center;
   align-self: center;
@@ -2470,6 +2505,16 @@ MANICURIA Y PEDICURIA
   font-weight: 600;
 }
 
+.servicio-presentacion-mundomona img {
+  width: 800px;
+}
+
+@media (max-width: 650px) {
+  .servicio-presentacion-mundomona img {
+    width: 350px;
+  }
+}
+
 /* ==========================================
    SECCIÓN PROFESIONALES MAKE-UP
 ========================================== */
@@ -2649,6 +2694,20 @@ MANICURIA Y PEDICURIA
   color: var(--color-rojo, #a52232);
 }
 
+.makeup-staff-contenido img {
+  width: 100%;
+  height: 600px;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .makeup-staff-contenido img {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+  }
+}
+
 /* ==========================================
    MODAL VIDEO STAFF
 ========================================== */
@@ -2757,3 +2816,293 @@ MANICURIA Y PEDICURIA
     width: 92vw;
   }
 }
+
+/*=========================================
+LIFTING
+=================================*/
+
+/* ==========================================
+   COMBO BEAUTY
+========================================== */
+
+.combo-beauty-seccion {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* TARJETA PRINCIPAL */
+
+.combo-beauty-tarjeta {
+  width: 100%;
+  max-width: 620px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 28px;
+  background: var(--color-rosa);
+  border: 2px solid var(--color-rojo);
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.combo-beauty-tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.11);
+}
+
+/* ETIQUETA SUPERIOR */
+
+.combo-beauty-etiqueta {
+  display: inline-block;
+  margin-bottom: 7px;
+  padding: 5px 12px;
+  border: 1px solid var(--color-rojo);
+  border-radius: 50px;
+  color: var(--color-rojo);
+  font-family: var(--font-4);
+  font-size: 0.68rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+/* ICONO Y TÍTULO */
+
+.combo-beauty-icono {
+  margin-bottom: 4px;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.combo-beauty-titulo {
+  margin: 0 0 10px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+}
+
+/* INTRODUCCIÓN */
+
+.combo-beauty-intro {
+  max-width: 490px;
+  margin: 0 0 18px;
+  color: var(--color-negro);
+  font-family: var(--font-4);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CONTENIDO DE LOS SERVICIOS */
+
+.combo-beauty-contenido {
+  width: 100%;
+  text-align: left;
+}
+
+.combo-beauty-presentacion {
+  margin: 0 0 10px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* TARJETAS DE SERVICIOS */
+
+.combo-beauty-servicio {
+  padding: 15px 18px;
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 13px;
+}
+
+.combo-beauty-subtitulo {
+  margin: 0 0 7px;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 1.08rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.combo-beauty-texto {
+  margin: 0;
+  color: var(--color-negro);
+  font-family: var(--font-4);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* SEPARADOR ENTRE SERVICIOS */
+
+.combo-beauty-separador {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.combo-beauty-separador::before,
+.combo-beauty-separador::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-rojo);
+  opacity: 0.45;
+}
+
+/* MENSAJE DESTACADO */
+
+.combo-beauty-destacado {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 15px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.58);
+  border-left: 4px solid var(--color-rojo);
+  border-radius: 0 14px 14px 0;
+}
+
+.combo-beauty-destacado-icono {
+  flex-shrink: 0;
+  font-size: 1.15rem;
+}
+
+.combo-beauty-destacado-texto {
+  margin: 0;
+  color: var(--color-negro);
+  font-family: var(--font-4);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+/* PRECIO */
+
+.combo-beauty-precio {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 18px;
+  padding: 14px 10px;
+  border-top: 1px solid rgba(182, 49, 42, 0.35);
+  border-bottom: 1px solid rgba(182, 49, 42, 0.35);
+  text-align: center;
+}
+
+.combo-beauty-precio-rotulo {
+  display: block;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.combo-beauty-precio-valor {
+  margin: 5px 0;
+  color: var(--color-rojo);
+  font-family: var(--font-3);
+  font-size: 2.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.combo-beauty-precio-nota {
+  display: block;
+  color: var(--color-negro);
+  font-family: var(--font-4);
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+/* BOTÓN DE WHATSAPP
+   Se conservan las clases originales */
+
+.combo_relax_boton {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 17px;
+  padding: 12px 25px;
+  background: var(--color-rojo);
+  border: 2px solid var(--color-rojo);
+  border-radius: 50px;
+  color: #fff;
+  font-family: var(--font-4);
+  font-size: 0.92rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.combo_relax_boton:hover {
+  background: transparent;
+  color: var(--color-rojo);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE - MÓVILES
+========================================== */
+
+@media (max-width: 600px) {
+  .combo-beauty-seccion {
+    padding: 18px 12px;
+  }
+
+  .combo-beauty-tarjeta {
+    padding: 22px 15px;
+    border-radius: 18px;
+  }
+
+  .combo-beauty-titulo {
+    font-size: 1.85rem;
+  }
+
+  .combo-beauty-intro {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .combo-beauty-servicio {
+    padding: 13px 12px;
+  }
+
+  .combo-beauty-subtitulo {
+    font-size: 1rem;
+  }
+
+  .combo-beauty-texto {
+    font-size: 0.88rem;
+  }
+
+  .combo-beauty-destacado {
+    padding: 11px 10px;
+  }
+
+  .combo-beauty-destacado-texto {
+    font-size: 0.84rem;
+  }
+
+  .combo-beauty-precio-valor {
+    font-size: 2.1rem;
+  }
+
+  .combo_relax_boton {
+    width: 100%;
+    padding: 12px 15px;
+  }
+}
+
+/*====================================*/

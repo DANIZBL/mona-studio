@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     {
       video: "../src/vid/video_header7.mp4",
-      title: "FORMACIÓN PROFESIONAL",
+      title: "Convertí tu pasión por el maquillaje en una profesión",
       description:
         "aprende a maquillar de manera profesional, desarrolla tu técnica y preparate para salir al mundo laboral en tiempo record.",
     },

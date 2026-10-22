@@ -503,11 +503,23 @@ const galleria3VideosItems = [
   },
   {
     type: "video",
+    src: "../src/img_servicios/exp_mona8.mp4",
+  },
+  {
+    type: "video",
     src: "../src/img_servicios/exp_mona7.mp4",
   },
   {
     type: "video",
-    src: "../src/img_servicios/exp_mona8.mp4",
+    src: "../src/img_servicios/exp_mona11.mp4",
+  },
+  {
+    type: "video",
+    src: "../src/img_servicios/exp_mona12.mp4",
+  },
+  {
+    type: "video",
+    src: "../src/img_servicios/exp_mona13.mp4",
   },
 ];
 
@@ -611,71 +623,3 @@ const momentosEnFamiliaItems = [
     src: "../src/img/novias_familia3.webp",
   },
 ];
-
-/* =========================
-   CONTENEDOR
-========================= */
-
-const momentosEnFamiliaGallery = document.getElementById(
-  "momentosEnFamiliaGallery"
-);
-
-/* =========================
-   VALIDAR CONTENEDOR
-========================= */
-
-if (momentosEnFamiliaGallery) {
-  /* =========================
-     CREAR GALERÍA
-  ========================= */
-
-  momentosEnFamiliaItems.forEach((item) => {
-    const galleryItem = document.createElement("div");
-
-    galleryItem.classList.add("momentos-en-familia-item");
-
-    /* =========================
-       CREAR VIDEO
-    ========================= */
-
-    if (item.type === "video") {
-      const video = document.createElement("video");
-
-      video.src = item.src;
-      video.muted = true;
-      video.loop = true;
-      video.autoplay = true;
-      video.playsInline = true;
-      video.controls = true;
-      video.preload = "auto";
-
-      video.setAttribute("muted", "");
-      video.setAttribute("autoplay", "");
-      video.setAttribute("playsinline", "");
-      video.setAttribute("webkit-playsinline", "");
-
-      video.play().catch((error) => {
-        console.log("Autoplay bloqueado:", error);
-      });
-
-      galleryItem.appendChild(video);
-    } else if (item.type === "image") {
-      /* =========================
-   CREAR IMAGEN
-========================= */
-      const img = document.createElement("img");
-
-      img.src = item.src;
-      img.alt = "Momentos en familia";
-      img.loading = "lazy";
-
-      galleryItem.appendChild(img);
-    }
-
-    /* =========================
-       AGREGAR A LA GALERÍA
-    ========================= */
-
-    momentosEnFamiliaGallery.appendChild(galleryItem);
-  });
-}
