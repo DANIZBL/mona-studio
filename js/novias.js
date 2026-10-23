@@ -263,13 +263,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "Hola anto!!! No se me corrio el maquillaje en toda la noche, ni un retoque me hice! Estuvo todo increíble, te quería agradecer por tu trabajo y profesionalismo! La pasamos increíble ayer",
 
     "Más que un servicio, fue una experiencia hermosa. Gracias por hacerme sentir tan especial.",
+
+    "Todas, absolutamente todas son un sueño perfecto en su atención ❤️",
+
     "Gracias chicas por todo. Salio todo muy hermoso y me duro mucho el maquillaje y peinado. A la gente le gusto mucho tambien",
 
     "Nunca imaginé sentirme tan cómoda frente a una cámara. El maquillaje quedó perfecto.",
 
     "Mi mamá, mis hermanas y yo disfrutamos muchísimo de la preparación. Fue un momento inolvidable.",
-
-    "Lloré de emoción cuando me vi al espejo. Gracias por hacer realidad el look que siempre soñé.",
 
     "Recibí elogios toda la noche. El peinado y el maquillaje duraron impecables hasta el final.",
 

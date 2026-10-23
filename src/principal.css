@@ -68,7 +68,7 @@ p {
 .banner-content h1 {
   font-family: var(--font-elegante);
   color: var(--color-blanco);
-  margin: 0 0 25px;
+  margin: 0 0 5px;
   font-size: 4rem;
   font-weight: bold;
   line-height: 1.1;
@@ -78,7 +78,7 @@ p {
 .banner-content p {
   max-width: 100%;
   font-family: var(--font-4);
-  color: var(--color-blanco);
+  color: var(--color-rosaoro);
   margin: 0;
   font-size: 1.5rem;
   font-weight: 600;

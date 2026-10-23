@@ -246,7 +246,7 @@ const egresadasAydVideos = [
   "../src/vid/egresadas_ayd3.mp4",
   "../src/vid/egresadas_ayd4.mp4",
   "../src/vid/egresadas_ayd5.mp4",
-  "../src/vid/egresadas_ayd6.mp4",
+  "../src/img_servicios/Egresada6.MP4",
 ];
 
 // 2. ELEMENTOS DEL HTML

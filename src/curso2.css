@@ -312,29 +312,6 @@ li {
   color: var(--color-rojo);
 }
 
-.btn-curso {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-3);
-  margin-top: 45px;
-  min-width: 280px;
-
-  padding: 18px 40px;
-
-  background: var(--color-rojo);
-  color: var(--color-blanco);
-
-  text-decoration: none;
-  border-radius: 999px;
-
-  transition: all 0.3s ease;
-}
-
-.btn-curso:hover {
-  transform: translateY(-4px);
-}
-
 /* ================================================= */
 /* SCROLL REVEAL */
 /* ================================================= */
@@ -1002,4 +979,27 @@ body.inscripcion-modal-abierto {
   .inscripcion-enviar {
     transition: none;
   }
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-3);
+  margin-top: 45px;
+  min-width: 280px;
+
+  padding: 18px 40px;
+
+  background: var(--color-rojo);
+  color: var(--color-blanco);
+
+  text-decoration: none;
+  border-radius: 999px;
+
+  transition: all 0.3s ease;
+}
+
+.hero-button.hero-button:hover {
+  transform: translateY(-4px);
 }

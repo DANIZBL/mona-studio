@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       video: "../src/vid/video_header7.mp4",
-      title: "MAKE UP Y PEINADO",
-      description: "TU PRÓXIMO EVENTO MERECE UN LOOK A LA ALTURA",
+      title: "MAKE UP & PEINADO",
+      description: "Tu próximo evento merece un look a la altura",
     },
 
     {
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
       video: "../src/vid/video_header5.mp4",
       title: "En MONA",
       description:
-        "estás en manos de profesionales en constante formación, con vasta experiencia, dedicación y una atención que cuida cada detalle.",
+        "Estás en manos de profesionales en constante formación, con vasta experiencia, dedicación y una atención que cuida cada detalle.",
     },
 
     {
       video: "../src/vid/video_header7.mp4",
       title: "Convertí tu pasión por el maquillaje en una profesión",
       description:
-        "aprende a maquillar de manera profesional, desarrolla tu técnica y preparate para salir al mundo laboral en tiempo record.",
+        "Aprende a maquillar de manera profesional, desarrolla tu técnica y preparate para salir al mundo laboral en tiempo record.",
     },
   ];
 

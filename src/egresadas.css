@@ -438,6 +438,35 @@
 }
 
 /* =========================================
+   PRECIO FUERA DEL BOTÓN - COMBOS
+========================================= */
+
+.combo-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* PRECIO */
+
+.combo-precio {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  margin-bottom: 10px;
+
+  color: var(--color-rojo);
+  font-family: var(--font-4);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* BOTÓN */
+
+.combo-card a {
+  margin-top: 0;
+}
+/* =========================================
    ICONO
 ========================================= */
 
