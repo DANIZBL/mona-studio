@@ -250,7 +250,7 @@ document.addEventListener("keydown", (event) => {
    WHATSAPP
 ===================================================== */
 
-const whatsappNumber = "3434403870";
+const whatsappNumber = "3434578448";
 
 document.querySelectorAll(".whatsapp-btn").forEach((button) => {
   const message = button.dataset.message;

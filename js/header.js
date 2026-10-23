@@ -1,4 +1,179 @@
 // =====================================================
+// HEADER - MONA STUDIO (HTML CENTRALIZADO)
+// Este archivo se carga en cada página y genera el header
+// antes de inicializar sus menús, buscador y carrito.
+// =====================================================
+
+(function renderSharedHeader() {
+  const headerContainer = document.getElementById("header-container");
+
+  // Si la página no incluye el contenedor, no insertamos el header.
+  if (!headerContainer || headerContainer.dataset.rendered === "true") return;
+
+  headerContainer.innerHTML = `<!-- ============================HEDER========================== -->
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <a href="/index.html">
+          <img src="/src/img/logomona.webp" alt="Logo" class="mobile-logo" />
+        </a>
+
+        <div class="mobile-actions">
+          <button class="mobile-search-toggle">
+            <img src="/src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="cart">
+            <button class="cart-icon">
+              <img src="/src/img/carrito.svg" alt="" />
+            </button>
+
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="boton" href="/index.html">INICIO</a>
+
+        <!-- ---- MENU SERVICIOS ---- -->
+        <div class="servicios-dropdown">
+          <button
+            type="button"
+            class="boton servicios-toggle"
+            aria-expanded="false"
+            aria-controls="servicios-menu"
+          >
+            SERVICIOS
+            <span class="servicios-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="servicios-menu" id="servicios-menu" hidden>
+            <a href="/lifting.html" class="servicios-menu-link">
+              Lifting
+            </a>
+
+            <a href="/perfilado.html" class="servicios-menu-link">
+              Perfilado de cejas
+            </a>
+
+            <a
+              href="/laminado_cejas.html"
+              class="servicios-menu-link"
+            >
+              Laminado de cejas
+            </a>
+
+            <a
+              href="/limpieza_facil.html"
+              class="servicios-menu-link"
+            >
+              Limpiezas faciales
+            </a>
+
+            <a href="/peelings.html" class="servicios-menu-link">
+              Tratamientos faciales
+            </a>
+
+            <a
+              href="/masajes_corporales.html"
+              class="servicios-menu-link"
+            >
+              Masajes corporales
+            </a>
+
+            <a href="/spa_facial.html" class="servicios-menu-link">
+              Spa facial
+            </a>
+
+            <a href="/manicura.html" class="servicios-menu-link">
+              Manicura - Pedicura
+            </a>
+
+            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
+
+            <a href="/egresadas.html" class="servicios-menu-link"> Egresadas </a>
+
+            <a href="/quinceañeras.html" class="servicios-menu-link">
+              Quinceañeras
+            </a>
+
+            <a href="/servicios/social.html" class="servicios-menu-link">
+              MUNDO MONA
+            </a>
+          </div>
+        </div>
+        <!-- ---- FIN MENU SERVICIOS ---- -->
+
+        <!-- ----MENU CURSOS---- -->
+        <div class="cursos-dropdown">
+          <button
+            type="button"
+            class="boton cursos-toggle"
+            aria-expanded="false"
+            aria-controls="cursos-menu"
+          >
+            CURSOS
+            <span class="cursos-flecha" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="cursos-menu" id="cursos-menu" hidden>
+            <a href="/curso1.html" class="cursos-menu-link"
+              >MAQUILLAJE PROFESIONAL INICIAL</a
+            >
+            <a href="/curso2.html" class="cursos-menu-link"
+              >CURSO DE AUTO MAQUILLAJE</a
+            >
+            <a href="/curso3.html" class="cursos-menu-link"
+              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
+            >
+          </div>
+        </div>
+        <!------------------------------->
+        <a href="/index.html">
+          <img src="./src/img/logomona.webp" alt="Logo" class="logo" />
+        </a>
+
+        <a class="boton" href="/productos.html">TIENDA</a>
+
+        <a class="boton" href="/info.html">INFO Y CONTACTO</a>
+
+        <div class="search-container">
+          <button class="search-toggle">
+            <img src="./src/img/lupa.svg" alt="Buscar" />
+          </button>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <button class="cart-icon">
+            <img src="./src/img/carrito.svg" alt="" />
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- ====================================================== -->`;
+  headerContainer.dataset.rendered = "true";
+})();
+
+// =====================================================
 // HEADER - MONA STUDIO
 // =====================================================
 
@@ -193,7 +368,6 @@ function getHeaderCart() {
     return Array.isArray(cart) ? cart : [];
   } catch (error) {
     console.error("Error leyendo carrito:", error);
-
     return [];
   }
 }
@@ -220,26 +394,10 @@ function updateHeaderCartCount() {
 // =====================================================
 
 function createCartDrawer() {
-  // Evitamos crearlo dos veces
-  if (document.getElementById("cart-drawer")) {
-    return;
-  }
+  if (document.getElementById("cart-drawer")) return;
 
   const cartHTML = `
-
-    <!-- ========================================= -->
-    <!-- OVERLAY -->
-    <!-- ========================================= -->
-
-    <div
-      id="cart-overlay"
-      class="cart-overlay"
-    ></div>
-
-
-    <!-- ========================================= -->
-    <!-- CARRITO LATERAL -->
-    <!-- ========================================= -->
+    <div id="cart-overlay" class="cart-overlay"></div>
 
     <aside
       id="cart-drawer"
@@ -247,23 +405,11 @@ function createCartDrawer() {
       aria-hidden="true"
       aria-label="Carrito de compras"
     >
-
-      <!-- HEADER -->
-
       <div class="cart-drawer-header">
-
         <div>
-
-          <p class="cart-drawer-eyebrow">
-            MONA STUDIO
-          </p>
-
-          <h2>
-            Tu carrito
-          </h2>
-
+          <p class="cart-drawer-eyebrow">MONA STUDIO</p>
+          <h2>Tu carrito</h2>
         </div>
-
 
         <button
           type="button"
@@ -273,76 +419,43 @@ function createCartDrawer() {
         >
           ×
         </button>
-
       </div>
-
-
-      <!-- PRODUCTOS -->
 
       <div
         id="cart-drawer-items"
         class="cart-drawer-items"
-      >
-      </div>
-
-
-      <!-- CARRITO VACÍO -->
+      ></div>
 
       <div
         id="cart-drawer-empty"
         class="cart-drawer-empty"
         hidden
       >
-
-        <div class="cart-drawer-empty-icon">
-          ♡
-        </div>
-
-        <h3>
-          Tu carrito está vacío
-        </h3>
-
-        <p>
-          Todavía no agregaste productos.
-        </p>
-
+        <div class="cart-drawer-empty-icon">♡</div>
+        <h3>Tu carrito está vacío</h3>
+        <p>Todavía no agregaste productos.</p>
       </div>
 
-
-      <!-- FOOTER -->
-
       <div class="cart-drawer-footer">
-
         <div class="cart-drawer-total">
-
-          <span>
-            Total
-          </span>
-
-          <strong id="cart-drawer-total">
-            $0
-          </strong>
-
+          <span>Total</span>
+          <strong id="cart-drawer-total">$0</strong>
         </div>
 
-
         <a
-          href="carrito.html"
+          href="/carrito.html"
           class="cart-drawer-button cart-drawer-checkout"
         >
           Ver carrito
         </a>
 
-
         <a
-          href="carrito.html"
+          href="/carrito.html"
           class="cart-drawer-continue"
         >
           Finalizar compra
         </a>
-
       </div>
-
     </aside>
   `;
 
@@ -355,21 +468,16 @@ function createCartDrawer() {
 
 function openCartDrawer() {
   const drawer = document.getElementById("cart-drawer");
-
   const overlay = document.getElementById("cart-overlay");
 
-  if (!drawer || !overlay) {
-    return;
-  }
+  if (!drawer || !overlay) return;
 
   renderHeaderCart();
 
   drawer.classList.add("is-open");
-
   overlay.classList.add("is-open");
 
   drawer.setAttribute("aria-hidden", "false");
-
   document.body.style.overflow = "hidden";
 }
 
@@ -379,88 +487,58 @@ function openCartDrawer() {
 
 function closeCartDrawer() {
   const drawer = document.getElementById("cart-drawer");
-
   const overlay = document.getElementById("cart-overlay");
 
-  if (!drawer || !overlay) {
-    return;
-  }
+  if (!drawer || !overlay) return;
 
   drawer.classList.remove("is-open");
-
   overlay.classList.remove("is-open");
 
   drawer.setAttribute("aria-hidden", "true");
-
   document.body.style.overflow = "";
 }
 
 // =====================================================
-// RENDER CARRITO LATERAL
+// RENDERIZAR CARRITO LATERAL
 // =====================================================
 
 function renderHeaderCart() {
   const itemsContainer = document.getElementById("cart-drawer-items");
-
   const emptyContainer = document.getElementById("cart-drawer-empty");
-
   const totalElement = document.getElementById("cart-drawer-total");
 
-  if (!itemsContainer) {
-    return;
-  }
+  if (!itemsContainer) return;
 
   const cart = getHeaderCart();
 
-  // ---------------------------------------------------
   // CARRITO VACÍO
-  // ---------------------------------------------------
-
   if (!cart.length) {
     itemsContainer.innerHTML = "";
-
     itemsContainer.hidden = true;
 
-    if (emptyContainer) {
-      emptyContainer.hidden = false;
-    }
-
-    if (totalElement) {
-      totalElement.textContent = "$0";
-    }
+    if (emptyContainer) emptyContainer.hidden = false;
+    if (totalElement) totalElement.textContent = "$0";
 
     return;
   }
 
-  // ---------------------------------------------------
   // CARRITO CON PRODUCTOS
-  // ---------------------------------------------------
-
   itemsContainer.hidden = false;
 
-  if (emptyContainer) {
-    emptyContainer.hidden = true;
-  }
+  if (emptyContainer) emptyContainer.hidden = true;
 
   itemsContainer.innerHTML = cart
     .map((product) => {
       const quantity = Number(product.quantity) || 1;
-
       const price = Number(product.price) || 0;
-
       const subtotal = price * quantity;
 
       return `
-
         <article
           class="cart-drawer-item"
           data-id="${product.id}"
         >
-
-          <!-- IMAGEN -->
-
           <div class="cart-drawer-item-image">
-
             ${
               product.image
                 ? `
@@ -475,28 +553,17 @@ function renderHeaderCart() {
                   </div>
                 `
             }
-
           </div>
 
-
-          <!-- INFORMACIÓN -->
-
           <div class="cart-drawer-item-info">
-
-            <h3>
-              ${product.nombre || "Producto"}
-            </h3>
-
+            <h3>${product.nombre || "Producto"}</h3>
 
             <p class="cart-drawer-item-price">
               $${price.toLocaleString("es-AR")}
             </p>
 
-
             <div class="cart-drawer-item-actions">
-
               <div class="cart-drawer-quantity">
-
                 <button
                   type="button"
                   class="drawer-minus"
@@ -506,11 +573,7 @@ function renderHeaderCart() {
                   −
                 </button>
 
-
-                <span>
-                  ${quantity}
-                </span>
-
+                <span>${quantity}</span>
 
                 <button
                   type="button"
@@ -520,9 +583,7 @@ function renderHeaderCart() {
                 >
                   +
                 </button>
-
               </div>
-
 
               <button
                 type="button"
@@ -531,30 +592,18 @@ function renderHeaderCart() {
               >
                 Eliminar
               </button>
-
             </div>
-
           </div>
-
-
-          <!-- SUBTOTAL -->
 
           <div class="cart-drawer-item-total">
-
             $${subtotal.toLocaleString("es-AR")}
-
           </div>
-
         </article>
-
       `;
     })
     .join("");
 
-  // ---------------------------------------------------
   // TOTAL
-  // ---------------------------------------------------
-
   const total = cart.reduce(
     (sum, product) =>
       sum + Number(product.price || 0) * Number(product.quantity || 0),
@@ -565,30 +614,21 @@ function renderHeaderCart() {
     totalElement.textContent = `$${total.toLocaleString("es-AR")}`;
   }
 
-  // ---------------------------------------------------
-  // BOTÓN -
-  // ---------------------------------------------------
-
+  // DISMINUIR CANTIDAD
   itemsContainer.querySelectorAll(".drawer-minus").forEach((button) => {
     button.addEventListener("click", () => {
       changeHeaderCartQuantity(button.dataset.id, -1);
     });
   });
 
-  // ---------------------------------------------------
-  // BOTÓN +
-  // ---------------------------------------------------
-
+  // AUMENTAR CANTIDAD
   itemsContainer.querySelectorAll(".drawer-plus").forEach((button) => {
     button.addEventListener("click", () => {
       changeHeaderCartQuantity(button.dataset.id, 1);
     });
   });
 
-  // ---------------------------------------------------
-  // ELIMINAR
-  // ---------------------------------------------------
-
+  // ELIMINAR PRODUCTO
   itemsContainer.querySelectorAll(".cart-drawer-remove").forEach((button) => {
     button.addEventListener("click", () => {
       removeHeaderCartProduct(button.dataset.id);
@@ -605,26 +645,21 @@ function changeHeaderCartQuantity(productId, amount) {
 
   const product = cart.find((item) => String(item.id) === String(productId));
 
-  if (!product) {
-    return;
-  }
+  if (!product) return;
 
   product.quantity = Number(product.quantity || 0) + amount;
 
-  // Si llega a cero, eliminar
+  // Si llega a cero, eliminar el producto
   if (product.quantity <= 0) {
     removeHeaderCartProduct(productId);
-
     return;
   }
 
   localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
 
   updateHeaderCartCount();
-
   renderHeaderCart();
 
-  // Avisamos a otros scripts
   window.dispatchEvent(new CustomEvent("cartUpdated"));
 }
 
@@ -642,7 +677,6 @@ function removeHeaderCartProduct(productId) {
   localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
 
   updateHeaderCartCount();
-
   renderHeaderCart();
 
   window.dispatchEvent(new CustomEvent("cartUpdated"));
@@ -654,17 +688,12 @@ function removeHeaderCartProduct(productId) {
 
 function initHeaderCart() {
   createCartDrawer();
-
   updateHeaderCartCount();
 
-  // ---------------------------------------------------
   // BOTONES DEL HEADER
-  // ---------------------------------------------------
-
   document.querySelectorAll(".cart").forEach((cart) => {
     cart.addEventListener("click", (event) => {
       event.preventDefault();
-
       event.stopPropagation();
 
       cart.classList.add("clicked");
@@ -676,47 +705,32 @@ function initHeaderCart() {
       openCartDrawer();
     });
 
-    // ENTER / ESPACIO
-
     cart.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-
         openCartDrawer();
       }
     });
   });
 
-  // ---------------------------------------------------
-  // CERRAR
-  // ---------------------------------------------------
-
+  // CERRAR CARRITO
   document
     .getElementById("cart-close")
     ?.addEventListener("click", closeCartDrawer);
 
-  // ---------------------------------------------------
-  // OVERLAY
-  // ---------------------------------------------------
-
+  // CERRAR CON OVERLAY
   document
     .getElementById("cart-overlay")
     ?.addEventListener("click", closeCartDrawer);
 
-  // ---------------------------------------------------
-  // ESCAPE
-  // ---------------------------------------------------
-
+  // CERRAR CON ESCAPE
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closeCartDrawer();
     }
   });
 
-  // ---------------------------------------------------
-  // SI CAMBIA EL CARRITO
-  // ---------------------------------------------------
-
+  // ACTUALIZAR SI CAMBIA EL CARRITO
   window.addEventListener("cartUpdated", () => {
     updateHeaderCartCount();
 
@@ -725,10 +739,7 @@ function initHeaderCart() {
     }
   });
 
-  // ---------------------------------------------------
-  // CAMBIOS DE LOCALSTORAGE DESDE OTRA PESTAÑA
-  // ---------------------------------------------------
-
+  // CAMBIOS DESDE OTRA PESTAÑA
   window.addEventListener("storage", (event) => {
     if (event.key === CART_STORAGE_KEY) {
       updateHeaderCartCount();
@@ -773,24 +784,18 @@ if (header) {
 // =====================================================
 
 const hamburger = document.querySelector(".hamburger");
-
 const nav = document.querySelector(".nav");
-
 const overlay = document.querySelector(".overlay");
 
 hamburger?.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-
   nav?.classList.toggle("active");
-
   overlay?.classList.toggle("active");
 });
 
 overlay?.addEventListener("click", () => {
   hamburger?.classList.remove("active");
-
   nav?.classList.remove("active");
-
   overlay?.classList.remove("active");
 });
 
@@ -811,26 +816,24 @@ let headerProducts = [];
 
 // =====================================================
 // SERVICIOS DISPONIBLES EN EL BUSCADOR
-// Agregá acá todos tus servicios
 // =====================================================
 
 const headerServices = [
   {
     nombre: "Lifting",
-    url: "./servicios/lifting.html",
+    url: "/servicios/lifting.html",
   },
-
   {
     nombre: "Perfilado de cejas",
-    url: "./servicios/perfilado.html",
+    url: "/servicios/perfilado.html",
   },
   {
     nombre: "Laminado de cejas",
-    url: "./servicios/laminado_cejas.html",
+    url: "/servicios/laminado_cejas.html",
   },
   {
     nombre: "Spa facial",
-    url: "./servicios/spa_facial.html",
+    url: "/servicios/spa_facial.html",
   },
   {
     nombre: "Limpiezas faciales",
@@ -940,17 +943,14 @@ searchInput?.addEventListener("input", () => {
     return;
   }
 
-  // Buscar servicios
   const matchingServices = headerServices
     .filter((service) => normalizeText(service.nombre).includes(value))
     .slice(0, 6);
 
-  // Buscar productos
   const matchingProducts = headerProducts
     .filter((product) => normalizeText(product.nombre).includes(value))
     .slice(0, 6);
 
-  // Mostrar primero servicios y después productos
   renderSearchResults(matchingServices, matchingProducts);
 });
 
@@ -981,8 +981,7 @@ searchInput?.addEventListener("keydown", (event) => {
     return;
   }
 
-  // Si no hay coincidencia exacta, buscar un servicio
-  // cuyo nombre comience con el texto ingresado
+  // Buscar un servicio cuyo nombre comience con el texto ingresado
   const matchingService = headerServices.find((service) =>
     normalizeText(service.nombre).startsWith(value)
   );
@@ -992,9 +991,8 @@ searchInput?.addEventListener("keydown", (event) => {
     return;
   }
 
-  // Si no coincide con un servicio, mantener
-  // el comportamiento original de productos
-  window.location.href = `productos.html?search=${encodeURIComponent(
+  // Si no coincide con un servicio, buscar productos
+  window.location.href = `/productos.html?search=${encodeURIComponent(
     searchInput.value.trim()
   )}`;
 });
@@ -1018,22 +1016,22 @@ function renderSearchResults(services, products) {
     return;
   }
 
-  // Resultados de servicios: solo el nombre
+  // RESULTADOS DE SERVICIOS
   const servicesHTML = services
     .map(
       (service) => `
-      <div
-        class="search-item search-service"
-        data-type="service"
-        data-url="${service.url}"
-      >
-        ${service.nombre}
-      </div>
-    `
+        <div
+          class="search-item search-service"
+          data-type="service"
+          data-url="${service.url}"
+        >
+          ${service.nombre}
+        </div>
+      `
     )
     .join("");
 
-  // Resultados de productos: imagen, nombre y precio
+  // RESULTADOS DE PRODUCTOS
   const productsHTML = products
     .map((product) => {
       const image =
@@ -1067,7 +1065,7 @@ function renderSearchResults(services, products) {
 
   searchResults.innerHTML = servicesHTML + productsHTML;
 
-  // Asignar navegación a cada resultado
+  // ASIGNAR NAVEGACIÓN A CADA RESULTADO
   searchResults.querySelectorAll(".search-item").forEach((item) => {
     item.addEventListener("click", () => {
       if (item.dataset.type === "service") {
@@ -1087,7 +1085,7 @@ function renderSearchResults(services, products) {
 // =====================================================
 
 function goToProduct(id) {
-  window.location.href = `producto-detalle.html?id=${id}`;
+  window.location.href = `/producto-detalle.html?id=${id}`;
 }
 
 // =====================================================
@@ -1126,6 +1124,16 @@ const cuentaRegresivaSegundos = document.getElementById(
 );
 
 function actualizarCuentaRegresiva() {
+  // La cuenta regresiva puede no existir en todas las páginas.
+  if (
+    !cuentaRegresivaDias ||
+    !cuentaRegresivaHoras ||
+    !cuentaRegresivaMinutos ||
+    !cuentaRegresivaSegundos
+  ) {
+    return;
+  }
+
   const ahora = new Date().getTime();
 
   const fechaObjetivo = new Date(CUENTA_REGRESIVA_FECHA).getTime();
@@ -1150,11 +1158,8 @@ function actualizarCuentaRegresiva() {
   const segundos = Math.floor((diferencia / 1000) % 60);
 
   cuentaRegresivaDias.textContent = String(dias).padStart(2, "0");
-
   cuentaRegresivaHoras.textContent = String(horas).padStart(2, "0");
-
   cuentaRegresivaMinutos.textContent = String(minutos).padStart(2, "0");
-
   cuentaRegresivaSegundos.textContent = String(segundos).padStart(2, "0");
 }
 

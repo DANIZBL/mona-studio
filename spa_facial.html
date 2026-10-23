@@ -3,172 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../src/servicios.css" />
-    <link rel="stylesheet" href="../src/variables.css" />
-    <link rel="stylesheet" href="../src/header.css" />
-      <link rel="stylesheet" href="../src/footer.css" />
-    <title>Document</title>
+     <link rel="stylesheet" href="./src/header.css" />
+    <link rel="stylesheet" href="./src/variables.css" />
+    <link rel="stylesheet" href="./src/servicios.css" />
+    <link rel="stylesheet" href="./src/carrito.css" />
+    <link rel="stylesheet" href="./src/footer.css" />
+    <title>Spa facila</title>
+    <link rel="icon" type="image/png" href="/src/img/logo_ig.webp" />
   </head>
   <body>
     <body>
     <!-- ============================HEDER========================== -->
-    <header class="main-header">
-      <div class="mobile-header">
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <a href="index.html">
-          <img src="./src/img/logomona.webp" alt="Logo" class="mobile-logo" />
-        </a>
-
-        <div class="mobile-actions">
-          <button class="mobile-search-toggle">
-            <img src="./src/img/lupa.svg" alt="Buscar" />
-          </button>
-
-          <div class="cart">
-            <button class="cart-icon">
-              <img src="./src/img/carrito.svg" alt="" />
-            </button>
-
-            <span class="cart-count">0</span>
-          </div>
-        </div>
-      </div>
-
-      <nav class="nav">
-        <a class="boton" href="../index.html">INICIO</a>
-        
-        <!-- ---- MENU SERVICIOS ---- -->
-        <div class="servicios-dropdown">
-          <button
-            type="button"
-            class="boton servicios-toggle"
-            aria-expanded="false"
-            aria-controls="servicios-menu"
-          >
-            SERVICIOS
-            <span class="servicios-flecha" aria-hidden="true">⌄</span>
-          </button>
-
-          <div class="servicios-menu" id="servicios-menu" hidden>
-            <a href="/servicios/lifting.html" class="servicios-menu-link">
-              Lifting
-            </a>
-
-            <a href="/servicios/perfilado.html" class="servicios-menu-link">
-              Perfilado de cejas
-            </a>
-
-            <a
-              href="/servicios/laminado_cejas.html"
-              class="servicios-menu-link"
-            >
-              Laminado de cejas
-            </a>
-
-            <a
-              href="/servicios/limpieza_facil.html"
-              class="servicios-menu-link"
-            >
-              Limpiezas faciales
-            </a>
-
-            <a href="/servicios/peelings.html" class="servicios-menu-link">
-              Peelings - Microneedling - Hidralips
-            </a>
-
-            <a
-              href="/servicios/masajes_corporales.html"
-              class="servicios-menu-link"
-            >
-              Masajes corporales
-            </a>
-
-            <a href="/servicios/spa_facial.html" class="servicios-menu-link">
-              Spa facial
-            </a>
-
-            <a href="/servicios/manicura.html" class="servicios-menu-link">
-              Manicura - Pedicura
-            </a>
-
-            <a href="/novias.html" class="servicios-menu-link"> Novias </a>
-
-            <a href="egresadas.html" class="servicios-menu-link"> Egresadas </a>
-
-            <a href="quinceañeras.html" class="servicios-menu-link">
-              Quinceañeras
-            </a>
-
-            <a href="/servicios/social.html" class="servicios-menu-link">
-              MUNDO MONA
-            </a>
-          </div>
-        </div>
-        <!-- ---- FIN MENU SERVICIOS ---- -->
-        <!-- ----MENU CURSOS---- -->
-        <div class="cursos-dropdown">
-          <button
-            type="button"
-            class="boton cursos-toggle"
-            aria-expanded="false"
-            aria-controls="cursos-menu"
-          >
-            CURSOS
-            <span class="cursos-flecha" aria-hidden="true">⌄</span>
-          </button>
-
-          <div class="cursos-menu" id="cursos-menu" hidden>
-            <a href="curso1.html" class="cursos-menu-link"
-              >MAQUILLAJE PROFESIONAL INICIAL</a
-            >
-            <a href="curso2.html" class="cursos-menu-link"
-              >CURSO DE AUTO MAQUILLAJE</a
-            >
-            <a href="curso3.html" class="cursos-menu-link"
-              >PERFECCIONAMIENTOS DE MAQUILLAJE</a
-            >
-          </div>
-        </div>
-        <!------------------------------->
-        <a href="/index.html">
-          <img src="../src/img/logomona.webp" alt="Logo" class="logo" />
-        </a>
-
-        <a class="boton" href="productos.html">TIENDA</a>
-
-        <a class="boton" href="#">INFO Y CONTACTO</a>
-
-        <div class="search-container">
-          <button class="search-toggle">
-            <img src="../src/img/lupa.svg" alt="Buscar" />
-          </button>
-
-          <div class="search-box">
-            <input
-              type="text"
-              id="header-search"
-              placeholder="Buscar productos..."
-              autocomplete="off"
-            />
-
-            <div id="search-results"></div>
-          </div>
-        </div>
-
-        <div class="cart">
-          <button class="cart-icon">
-            <img src="../src/img/carrito.svg" alt="" />
-          </button>
-          <span class="cart-count">0</span>
-        </div>
-      </nav>
-    </header>
-    <div class="overlay"></div>
+    <div id="header-container"></div>
     <!-- ====================================================== -->
     <!-- =================================================
          CONTENIDO PRINCIPAL
@@ -371,49 +217,12 @@
         </button>
     </div>
 
-        <footer class="footer">
-      <div class="footer-container">
-        <!-- SEGUINOS -->
-        <div class="footer-column">
-          <h3 class="footer-toggle">SEGUINOS</h3>
-          <div class="footer-content">
-            <div class="social-icons">
-              <img
-                src="../src/img/redes1.png"
-                alt="Instagram"
-                class="social-icon"
-              />
-            </div>
-          </div>
-        </div>
+        <!-- ========================FOOTER======================================== -->
+<div id="footer-container"></div>
 
-        <!-- NAVEGACIÓN -->
-        <div class="footer-column">
-          <h3 class="footer-toggle">NAVEGACIÓN</h3>
-          <div class="footer-content">
-            <ul>
-              <li><a href="#">INICIO</a></li>
-              <li><a href="#">SERVICIOS</a></li>
-              <li><a href="#">TIENDA</a></li>
-              <li><a href="#">CURSOS</a></li>
-              <li><a href="#">INFO Y CONTACTO</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- CONTACTO -->
-        <div class="footer-column">
-          <h3 class="footer-toggle">CONTACTÁNOS</h3>
-          <div class="footer-content">
-            <p>WHATSAPP</p>
-            <p>EMAIL</p>
-            <p>DIRECCION</p>
-          </div>
-        </div>
-      </div>
-    </footer>
 
     <script src="../js/seervicios.js"></script>
-        <script src="../js/header.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="../js/header.js"></script>
   </body>
 </html>
