@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       video: "../src/vid/video_header7.mp4",
-      title: "MAKE UP & PEINADO",
+      title: "MAKE UP ﹠ PEINADO",
       description: "Tu próximo evento merece un look a la altura",
     },
 
