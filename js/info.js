@@ -3,8 +3,8 @@
 // ========================================
 
 const info = {
-  telefono: "",
-  email: "",
+  telefono: "3434 57-8448",
+  email: "mona.estudiodebelleza@gmail.com",
 
   direccion: "Av. Ejército, Pablo Crausaz &, Paraná, Entre Ríos",
 
