@@ -37,6 +37,16 @@
   src: url("./fonts/BethEllen.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "cursiva2";
+  src: url("./fonts/adelia.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "cursiva3";
+  src: url("./fonts/Caroline.otf") format("opentype");
+}
+
 :root {
   /* Fuentes */
   --font-principal: "Upstair Sans", sans-serif;
@@ -47,7 +57,8 @@
   --font-4: "Arimo", sans-serif;
   --font-elegante: "the seasons", sans-serif;
   --font-cursiva1: "cursiva1", sans-serif;
-
+  --font-cursiva2: "cursiva2", sans-serif;
+  --font-cursiva3: "cursiva3", sans-serif;
   /* Colores */
   --color-rojo: #b82b2a;
   --color-blanco: #ffff;

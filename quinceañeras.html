@@ -27,23 +27,21 @@
       <div class="quinceaneras-presentacion">
         <!-- IMAGEN -->
 
-        <div class="quinceaneras-imagen">
-          <video
-            id="video-quinceaneras"
-            muted
-            loop
-            autoplay
-            playsinline
-            preload="metadata"
-            aria-label="Maquillaje y peinado para quinceañeras"
-          >
-            <source src="./src/vid/quince3.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <video
+          class="quinceaneras-imagen"
+          id="video-quinceaneras"
+          controls
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src="./src/vid/quince3.mp4" type="video/mp4" />
+        </video>
 
         <!-- Modal del video -->
         <dialog class="quinceaneras-modal" aria-label="Video de quinceañeras">
-          <video class="quinceaneras-video-grande" loop playsinline controls>
+          <video class="quinceaneras-video-grande" controls playsinline>
             <source src="./src/vid/quince3.mp4" type="video/mp4" />
           </video>
         </dialog>
