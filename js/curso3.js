@@ -137,21 +137,19 @@ perfeccionamientoGalleryItems.forEach((item) => {
 const galeriaNoviasItems = [
   {
     type: "image",
-    src: "../src/img/novias14.webp",
-    alt: "Maquillaje para novia",
+    src: "../src/img/novias2.webp",
+    alt: "Maquillaje de novia",
   },
   {
     type: "image",
     src: "../src/img/quince1.webp",
     alt: "Look de novia",
   },
-
   {
     type: "image",
-    src: "../src/img/novias2.webp",
-    alt: "Maquillaje de novia",
+    src: "../src/img/novias14.webp",
+    alt: "Maquillaje para novia",
   },
-
   {
     type: "image",
     src: "../src/img/quince6.webp",

@@ -161,6 +161,10 @@ const momentosEnFamiliaItems = [
   },
   {
     type: "image",
+    src: "../src/img/egre13.webp",
+  },
+  {
+    type: "image",
     src: "../src/img/egre10.webp",
   },
 ];

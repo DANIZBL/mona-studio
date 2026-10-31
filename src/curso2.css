@@ -128,6 +128,13 @@ li {
   overflow: hidden;
 }
 
+.curso-bloque h3 {
+  color: var(--color-rojo);
+  font-weight: 600;
+  font-family: var(--font-4);
+  font-size: 2rem;
+}
+
 .curso-bloque:hover {
   transform: translateY(-10px);
 
@@ -284,6 +291,24 @@ li {
   color: var(--color-rojo);
   margin-bottom: 14px;
   line-height: 1.7;
+}
+
+.curso-completo-precio {
+  display: block;
+  text-align: center;
+}
+
+.curso-completo-precio h3 {
+  font-size: 3rem;
+  font-family: var(--font-3);
+  margin-top: 0;
+  color: var(--color-rojo);
+}
+.curso-completo-precio h2 {
+  font-size: 2rem;
+  font-family: var(--font-3);
+  margin-bottom: 0;
+  color: var(--color-rojo);
 }
 
 /* ================================================= */

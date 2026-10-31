@@ -77,11 +77,12 @@ p {
 
 .banner-content p {
   max-width: 100%;
-  font-family: var(--font-4);
+  font-family: var(--font-cursiva3);
   color: var(--color-rosaoro);
-  margin: 0;
-  font-size: 1.5rem;
   font-weight: 600;
+  margin: 0;
+  font-size: 2rem;
+
   line-height: 1.5;
   transition: opacity 0.5s ease;
 }

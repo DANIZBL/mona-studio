@@ -26,8 +26,8 @@ const quinceanerasGalleryItems = [
   },
 
   {
-    type: "image",
-    src: "../src/img/quince8.webp",
+    type: "video",
+    src: "../src/img_servicios/Quinceañeras-galería.mp4",
     alt: "Maquillaje y peinado de quinceañera",
   },
 
@@ -259,6 +259,7 @@ videoPreview.addEventListener("click", async () => {
 
   const tiempo = videoPreview.currentTime;
   const sonidoActivado = !videoPreview.muted;
+  const estabaReproduciendo = !videoPreview.paused;
 
   videoPreview.pause();
 
@@ -275,7 +276,10 @@ videoPreview.addEventListener("click", async () => {
     }
 
     videoGrande.currentTime = tiempo;
-    await videoGrande.play();
+
+    if (estabaReproduciendo) {
+      await videoGrande.play();
+    }
   } catch (error) {
     console.warn("No se pudo reproducir el video:", error);
   }

@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       video: "../src/vid/video_header1.mp4",
       title: "QUINCEAÑERAS",
-      description: "un look único para tu noche especial",
+      description: "Un look único para tu noche especial",
     },
     {
       video: "../src/vid/video_header5.mp4",

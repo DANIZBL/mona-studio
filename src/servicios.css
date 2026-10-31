@@ -751,7 +751,7 @@ Limpiezas faciales
   color: var(--color-rojo);
   font-size: 2.5rem;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .servicio-presentacion-info h3 {
@@ -2708,11 +2708,16 @@ MANICURIA Y PEDICURIA
   font-weight: 600;
 }
 
-.makeup-staff-contenido h4 {
+.makeup-staff-contenido h1 {
   color: var(--color-rojo);
   font-size: 1.5rem;
-  font-family: var(--font-4);
   font-weight: 600;
+}
+
+.makeup-staff-contenido h4 {
+  color: var(--color-rojo);
+  font-size: 1.3rem;
+  font-family: var(--font-4);
 }
 
 .makeup-staff-titulo {

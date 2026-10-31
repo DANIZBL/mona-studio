@@ -2301,3 +2301,76 @@ body.inscripcion-modal-abierto {
     transition: none;
   }
 }
+
+/* CONTENEDOR DE PRECIOS */
+.perfeccionamiento-precios {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  padding: 40px 20px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* TARJETAS DE PRECIOS */
+.perfeccionamiento-precio-card {
+  flex: 1;
+  max-width: 450px;
+  padding: 30px 25px;
+
+  background: #ffffff;
+  border: 2px solid var(--color-rojo);
+  border-radius: 15px;
+
+  text-align: center;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* TÍTULOS */
+.perfeccionamiento-precio-card h1 {
+  color: var(--color-rojo);
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+}
+
+/* DESCRIPCIONES */
+.perfeccionamiento-precio-card p {
+  color: var(--color-beige);
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* PRECIOS */
+.perfeccionamiento-precio-card span {
+  display: block;
+  color: var(--color-rojo);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 700px) {
+  .perfeccionamiento-precios {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 15px;
+  }
+
+  .perfeccionamiento-precio-card {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .perfeccionamiento-precio-card h1 {
+    font-size: 1.5rem;
+  }
+}
