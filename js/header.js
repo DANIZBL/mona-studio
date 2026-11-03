@@ -441,14 +441,6 @@ function createCartDrawer() {
           <span>Total</span>
           <strong id="cart-drawer-total">$0</strong>
         </div>
-
-        <a
-          href="/carrito.html"
-          class="cart-drawer-button cart-drawer-checkout"
-        >
-          Ver carrito
-        </a>
-
         <a
           href="/carrito.html"
           class="cart-drawer-continue"

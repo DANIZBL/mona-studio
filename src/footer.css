@@ -174,3 +174,10 @@
     justify-content: flex-start;
   }
 }
+
+.footer-whatsapp-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  vertical-align: middle;
+}
